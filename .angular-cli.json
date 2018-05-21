@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "cocina-ng"
+    "name": "facultad"
   },
   "apps": [
     {
@@ -19,9 +19,22 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "assets/css/reset.css",
+        "assets/css/layout.css",
+        "assets/css/style.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "assets/js/cufon-yui.js",
+        "assets/js/cufon-replace.js",
+        "assets/js/Forum_400.font.js",
+        "assets/js/jquery.easing.1.3.js",
+        "assets/js/tms-0.3.js",
+        "assets/js/tms_presets.js",
+        "assets/js/script.js",
+        "assets/js/atooltip.jquery.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
