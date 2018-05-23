@@ -11,14 +11,14 @@
               <li ><a href="#"><img src="assets/images/icon_2.gif" alt=""></a></li>
               <li class="end"><a routerLink="/home"><img src="assets/images/icon_3.gif" alt=""></a></li>
             </ul>
+            <app-search-input></app-search-input>
           </nav>
           <nav>
             <ul id="menu">
-              <li class="active"><a routerLink="/home">Restaurant</a></li>
-              <li><a routerLink="/content">Cuisine</a></li>
-              <li><a routerLink="/home">Wine List</a></li>
-              <li><a routerLink="/content">CookBook</a></li>
-              <li><a routerLink="/home">Contacts</a></li>
+              <li routerLinkActive="active" *ngFor="let item of menu">
+                <a routerLink="{{item.url}}"><i class="{{item.ico}}"></i>{{ item.name | translate}}</a>
+              </li>
+
             </ul>
           </nav>
         </header>
@@ -27,28 +27,33 @@
         <article id="content">
           <div class="slider_bg">
             <div class="slider">
-              <ul class="items">
-                <li> <img src="assets/images/img1.jpg" alt="">
+              <ui-carousel [infinite]="false" [fade]="true" [speed]="900" height="300px" width="700px">
+                <ui-carousel-item>
+                  <img ui-lazy-load="assets/images/img1.jpg" alt="" draggable="false">
                   <div class="banner"> <strong>Italian<span>Fettuccine</span></strong> <b>Dish of the Day</b>
                     <p> <span>Lorem ipsum dolamet consectetur<br>
                       adipisicing elit, sed do eiusmod tempor aliqua enim ad minim veniam, quis nosinci- didunt ut labore et dolore.</span> </p>
                   </div>
-                </li>
-                <li> <img src="assets/images/img2.jpg" alt="">
+                </ui-carousel-item>
+                <ui-carousel-item>
+                  <img ui-lazy-load="assets/images/img2.jpg" alt="" draggable="false">
                   <div class="banner"> <strong>succulent<span>meat</span></strong> <b>Dish of the Day</b>
                     <p> <span>Lorem ipsum dolamet consectetur <br>
                       adipisicing elit, sed do eiusmod tempor aliqua enim ad minim veniam, quis nosinci- didunt ut labore et dolore.</span> </p>
                   </div>
-                </li>
-                <li> <img src="assets/images/img3.jpg" alt="">
+                </ui-carousel-item>
+                <ui-carousel-item>
+                  <img ui-lazy-load="assets/images/img3.jpg" alt="" draggable="false">
                   <div class="banner"> <strong>French-Style<span>Tartlet</span></strong> <b>Dish of the Day</b>
                     <p> <span>Lorem ipsum dolamet consectetur <br>
                       adipisicing elit, sed do eiusmod tempor aliqua enim ad minim veniam, quis nosinci- didunt ut labore et dolore.</span> </p>
                   </div>
-                </li>
-              </ul>
+                </ui-carousel-item>
+              </ui-carousel>
             </div>
           </div>
+
+
           <div class="wrap">
             <section class="cols">
               <div class="box">

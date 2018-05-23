@@ -8,7 +8,21 @@ import {FooterComponent} from './components/footer/footer.component';
 import {HomeComponent} from './sections/home/home.component';
 import {SectionComponent} from './sections/section.component';
 import {ContentComponent} from './sections/content/content.component';
+import {UICarouselModule} from 'ui-carousel';
+import {OrmService} from './services/orm.service';
+import {DataService} from './services/data.service';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {GoResultDirective} from './directives/go-result.directive';
+import {FilterTitlesPipe} from './pipes/filter-titles';
+import {SearchForPipe} from './pipes/search-for';
+import {LiteSearchPipe} from './pipes/lite-search';
+import {SearchInputComponent} from './components/search-input/search-input.component';
 
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -17,13 +31,28 @@ import {ContentComponent} from './sections/content/content.component';
     FooterComponent,
     HomeComponent,
     SectionComponent,
-    ContentComponent
+    ContentComponent,
+    SearchInputComponent,
+    GoResultDirective,
+    FilterTitlesPipe,
+    SearchForPipe,
+    LiteSearchPipe
   ],
   imports: [
-    BrowserModule, AppRoutingModule
+    BrowserModule,
+    AppRoutingModule,
+    UICarouselModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
-  exports: [RouterModule],
-  providers: [],
+  exports: [RouterModule, TranslateModule],
+  providers: [OrmService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

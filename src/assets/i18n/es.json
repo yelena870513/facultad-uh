@@ -1,0 +1,10 @@
+{
+  "PAGE_TITLE": "Facultad",
+  "HOME":{
+    "TITLE": "Facultad"
+  },
+  "NAV":{
+    "HOME": "Inicio",
+    "CONTENT": "Contenido"
+  }
+}
