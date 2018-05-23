@@ -1,5 +1,5 @@
 import { AfterViewInit, Component} from '@angular/core';
-declare var Cufon: any;
+// declare var Cufon: any;
 @Component({
   selector: 'app-section',
   template: `<router-outlet></router-outlet><app-footer></app-footer>`
@@ -7,6 +7,6 @@ declare var Cufon: any;
 
 export class SectionComponent implements AfterViewInit {
   ngAfterViewInit() {
-    Cufon.now();
+   // Cufon.now();
   }
 }
