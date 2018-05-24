@@ -18,7 +18,8 @@ export class HeaderComponent implements AfterViewInit {
        this.menu = [
       {name: 'NAV.HOME', url: '/home', ico: 'fa fa-menu' }
       ];
-     this.headerService.showHeader.subscribe(show => this.showHeader = show);
+     this.headerService.showHeader
+       .subscribe(show => setTimeout(() => this.showHeader = show));
   }
 
   ngAfterViewInit() {
