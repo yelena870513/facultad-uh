@@ -20,19 +20,20 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "assets/css/reset.css",
-        "assets/css/layout.css",
-        "assets/css/style.css",
-        "../libs/awesome/fontawesome-all.css"
+        "../libs/creative/css/bootstrap.min.css",
+        "../libs/creative/css/owl.carousel.css",
+        "../libs/creative/css/owl.theme.default.css",
+        "../libs/creative/css/magnific-popup.css",
+        "../libs/creative/css/font-awesome.min.css",
+        "../libs/creative/css/style.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
-        "assets/js/Forum_400.font.js",
-        "assets/js/jquery.easing.1.3.js",
-        "assets/js/tms-0.3.js",
-        "assets/js/tms_presets.js",
-        "assets/js/script.js",
-        "assets/js/atooltip.jquery.js"
+        "../libs/creative/js/bootstrap.min.js",
+        "../libs/creative/js/owl.carousel.min.js",
+        "../libs/creative/js/jquery.magnific-popup.js",
+        "../libs/creative/js/main.js"
+
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

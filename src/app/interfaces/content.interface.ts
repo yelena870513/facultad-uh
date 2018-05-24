@@ -1,9 +1,7 @@
-export interface ContentInterface {
-  _id: string;
-  _rev: string;
-  _deleted: any;
-  title: string;
+import {ModelInterface} from './model.interface';
+
+export interface ContentInterface extends ModelInterface{
   content: string;
-  tipo: string;
   tags: string [];
+  category: string;
 }

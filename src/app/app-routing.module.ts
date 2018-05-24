@@ -7,7 +7,7 @@ import {ContentComponent} from './sections/content/content.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'content', component: ContentComponent },
+  { path: 'content/:title', component: ContentComponent },
 ];
 
 @NgModule({

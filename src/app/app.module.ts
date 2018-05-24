@@ -19,6 +19,7 @@ import {FilterTitlesPipe} from './pipes/filter-titles';
 import {SearchForPipe} from './pipes/search-for';
 import {LiteSearchPipe} from './pipes/lite-search';
 import {SearchInputComponent} from './components/search-input/search-input.component';
+import {HeaderService} from './services/header.service';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -52,7 +53,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     })
   ],
   exports: [RouterModule, TranslateModule],
-  providers: [OrmService, DataService],
+  providers: [OrmService, DataService, HeaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
