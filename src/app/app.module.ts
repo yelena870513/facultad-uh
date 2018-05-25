@@ -30,6 +30,7 @@ import {ContenidosComponent} from './sections/contenidos/contenidos.component';
 import {DerechoComponent} from './sections/derecho/derecho.component';
 import {BibliotecaComponent} from './sections/biblioteca/biblioteca.component';
 import {OwlSliderDirective} from './directives/owl.slider.directive';
+import {PdfViewerModule} from 'ng2-pdf-viewer';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -62,6 +63,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     UICarouselModule,
     HttpClientModule,
+    PdfViewerModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

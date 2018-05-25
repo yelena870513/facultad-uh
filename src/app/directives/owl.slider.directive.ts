@@ -26,6 +26,8 @@ export class OwlSliderDirective {
             }
           });
         }, 200);
+      }      else {
+        $('#testimonial-slider').owlCarousel('destroy');
       }
     });
   }

@@ -8,11 +8,14 @@
     "BIENVENIDA":"Contenido"
   },
   "ISMAELILLO":{
-    "TITLE": "Proyecto Ismaelillo"
+    "TITLE": "Proyecto Ismaelillo",
+    "BOOKS":"Libros"
   },
   "NAV":{
     "HOME": "Inicio",
-    "CONTENT": "Contenido"
+    "CONTENT": "Contenido",
+    "PREV":"Anterior",
+    "NEXT":"Siguiente"
   },
   "CONTENIDOS":{
     "CATEGORY": "Preguntas"

@@ -1,5 +1,5 @@
 <!-- Blog -->
-<div id="blog" class="section md-padding bg-grey" [hidden]="searchMode && !teamMode" *ngIf="!readMode">
+<div id="blog" class="section md-padding bg-grey" [hidden]="searchMode && currentMode=='panelMode'" *ngIf="!readMode" [@fadeIn]="showLecture" [@fadeOut]="showLecture">
 
   <!-- Container -->
   <div class="container">
@@ -41,7 +41,7 @@
 
 
 <!-- Blog -->
-<div id="blogr" class="section md-padding" [hidden]="searchMode && !teamMode" *ngIf="readMode" [@fadeIn]="showLecture" [@fadeOut]="showLecture" appScrollTop>
+<div id="blogr" class="section md-padding" [hidden]="searchMode && currentMode=='readMode'" *ngIf="readMode" [@fadeIn]="showLecture" [@fadeOut]="showLecture" appScrollTop>
   <div class="row" *ngIf="readItem">
     <div class="col-md-12">
       <h2 class="title">{{readItem.title}}</h2>
@@ -118,3 +118,99 @@
 
 
 <!-- /Testimonial -->
+<!-- Blog -->
+<div id="blog1" class="section md-padding" *ngIf="currentMode=='actionMode'" >
+
+  <!-- Container -->
+  <div class="container">
+
+    <!-- Row -->
+    <div class="row">
+
+      <!-- Aside -->
+      <aside id="aside" class="col-md-3">
+
+        <!-- Search -->
+        <div class="widget">
+          <div class="widget-search">
+            <input class="search-input" type="text" placeholder="search">
+            <button class="search-btn" type="button"><i class="fa fa-search"></i></button>
+          </div>
+        </div>
+        <!-- /Search -->
+
+        <!-- Category -->
+        <div class="widget">
+          <h3 class="title">{{'ISMAELILLO.BOOKS' | translate}}</h3>
+          <div class="widget-category">
+            <a *ngFor="let item of books |paginate: { itemsPerPage: 5, currentPage: page }" (click)="ReadBook(item)">{{item.title}}</a>
+
+          </div>
+          <pagination-controls
+            (pageChange)="page = $event"
+            maxSize="5"
+            previousLabel=""
+            nextLabel=""
+            boundaryLinks="false"
+          >
+
+          </pagination-controls>
+        </div>
+        <!-- /Category -->
+
+
+
+        <!-- Tags -->
+        <div class="widget">
+          <h3 class="title">Tags</h3>
+          <div class="widget-tags">
+            <a href="#">Web</a>
+            <a href="#">Design</a>
+            <a href="#">Graphic</a>
+            <a href="#">Marketing</a>
+            <a href="#">Development</a>
+            <a href="#">Branding</a>
+            <a href="#">Photography</a>
+          </div>
+        </div>
+        <!-- /Tags -->
+
+      </aside>
+      <!-- /Aside -->
+      <!-- Main -->
+      <main id="main2" class="col-md-9">
+        <div class="blog">
+          <div class="blog-img">
+            <img class="img-responsive" src="./assets/images/blog-post.jpg" alt="">
+          </div>
+          <div class="blog-content">
+
+            <h3>{{currentBook.title}}</h3>
+            <div *ngIf="isLoaded" style="text-align: center;">
+              <button (click)="prevPage()" [disabled]="pointer === 1">{{'NAV.PREV' | translate}}</button>
+              <span>{{ pointer }} / {{ pdfPages }}</span>
+              <button (click)="nextPage()" [disabled]="pointer === pdfPages">{{'NAV.NEXT' | translate }}</button>
+            </div>
+
+            <pdf-viewer src="./assets/pdf/{{currentBook.url}}"
+                        [show-all]="false"
+                        [page]="pointer"
+                        [render-text]="false"
+                        (after-load-complete)="afterLoadComplete($event)"
+            ></pdf-viewer>
+          </div>
+        </div>
+      </main>
+      <!-- /Main -->
+
+
+
+
+    </div>
+    <!-- /Row -->
+
+  </div>
+  <!-- /Container -->
+
+</div>
+<!-- /Blog -->

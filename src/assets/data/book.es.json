@@ -1,5 +1,5 @@
 {
-  "data":[
+  "docs":[
 
     {
       "poster":"pdf.png",
@@ -31,7 +31,7 @@
     },
     {
       "poster":"pdf.png",
-      "url":"fiscalía.pdf",
+      "url":"fiscalia.pdf",
       "title":" Código de ética fiscalía",
       "section":"book",
       "tematica":"ContenidosJuridicos"
