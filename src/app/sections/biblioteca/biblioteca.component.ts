@@ -5,11 +5,11 @@ import {CategoryInterface} from '../../interfaces/category.interface';
 import {HeaderService} from '../../services/header.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html'
+  selector: 'app-biblioteca',
+  templateUrl: './biblioteca.component.html'
 })
 
-export class HomeComponent {
+export class BibliotecaComponent {
   categories: CategoryInterface [];
   constructor(private dataService: DataService, private translate: TranslateService, private headerService: HeaderService) {
     this.headerService.Show();

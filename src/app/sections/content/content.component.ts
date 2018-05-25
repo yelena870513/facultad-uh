@@ -5,13 +5,16 @@ import {CategoryInterface} from '../../interfaces/category.interface';
 import {TranslateService} from '@ngx-translate/core';
 import {fadeIn, fadeOut, pulse} from 'ngx-animate/lib';
 import {transition, trigger, useAnimation} from '@angular/animations';
-import {log} from "util";
+import {log} from 'util';
 import {ActivatedRoute, ActivatedRouteSnapshot} from '@angular/router';
 import {HeaderService} from '../../services/header.service';
+import {BehaviourService} from '../../services/behaviour.service';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
+  styleUrls: ['./content.component.css'],
   animations: [
     trigger('fadeIn', [transition('hideLecture => showLecture', useAnimation(fadeIn))]),
     trigger('fadeOut', [transition('showLecture => hideLecture', useAnimation(fadeOut))]),
@@ -41,7 +44,8 @@ export class ContentComponent implements OnInit {
     private dataService: DataService,
     private translate: TranslateService,
     private route: ActivatedRoute,
-    private headerService: HeaderService) {}
+    private headerService: HeaderService,
+    private behaviour: BehaviourService) {}
   ngOnInit(): void {
     this.headerService.Hide();
     this.showLecture = 'hideLecture';
@@ -53,8 +57,16 @@ export class ContentComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.dataService.getContent(this.translate.currentLang)
         .subscribe((data) => {
-          this.content = data.docs.filter(f => (f.tipo === 'content' && !f._deleted ) && f.category.trim() === params.title.trim());
-
+          if (!_.isUndefined(params.title)) {
+            this.content = data.docs.filter(f => (f.tipo === 'content' && !f._deleted ) && f.category.trim() === params.title.trim())
+              .sort((a: any, b: any) => a.order - b.order);
+          } else {
+            this.content = data.docs.filter(f => (f.tipo === 'content' && !f._deleted ) )
+              .sort((a: any, b: any) => a.order - b.order);
+            if (!_.isUndefined(params.searchString)) {
+               this.startSearch(params.searchString);
+            }
+          }
         });
     });
   }
@@ -64,15 +76,19 @@ export class ContentComponent implements OnInit {
     this.seekMode = readMode ? 'selectMode' : 'seekMode';
     this.readItem = item;
     this.searchString = searchString;
+    this.behaviour.CastReadMode(readMode);
+    this.behaviour.CastSearchMode(searchString);
   }
   private startSearch(event) {
     this.searchMode = true;
-    this.searchString = event.target.value;
+    this.searchString = event;
+    this.behaviour.CastSearchMode(this.searchString);
   }
   openReadSearch(item, readMode, searchString) {
     this.openRead(item, readMode, searchString);
     this.searchMode = false;
-    log(searchString);
+    this.behaviour.CastReadMode(readMode);
+    this.behaviour.CastSearchMode(searchString);
   }
 }
 

@@ -20,6 +20,15 @@ import {SearchForPipe} from './pipes/search-for';
 import {LiteSearchPipe} from './pipes/lite-search';
 import {SearchInputComponent} from './components/search-input/search-input.component';
 import {HeaderService} from './services/header.service';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NgxPaginationModule} from 'ngx-pagination';
+import {ScrollTopDirective} from './directives/scroll.top.directive';
+import {BehaviourService} from './services/behaviour.service';
+import {IsmaelilloComponent} from './sections/ismaelillo/ismaelillo.component';
+import {ContenidosComponent} from './sections/contenidos/contenidos.component';
+import {DerechoComponent} from './sections/derecho/derecho.component';
+import {BibliotecaComponent} from './sections/biblioteca/biblioteca.component';
+import {OwlSliderDirective} from './directives/owl.slider.directive';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -31,16 +40,24 @@ export function HttpLoaderFactory(http: HttpClient) {
     HeaderComponent,
     FooterComponent,
     HomeComponent,
+    IsmaelilloComponent,
+    ContenidosComponent,
+    DerechoComponent,
+    BibliotecaComponent,
     SectionComponent,
     ContentComponent,
     SearchInputComponent,
     GoResultDirective,
+    ScrollTopDirective,
+    OwlSliderDirective,
     FilterTitlesPipe,
     SearchForPipe,
     LiteSearchPipe
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    NgxPaginationModule,
     AppRoutingModule,
     UICarouselModule,
     HttpClientModule,
@@ -53,7 +70,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     })
   ],
   exports: [RouterModule, TranslateModule],
-  providers: [OrmService, DataService, HeaderService],
+  providers: [OrmService, DataService, HeaderService, BehaviourService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

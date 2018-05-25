@@ -1,0 +1,120 @@
+<!-- Blog -->
+<div id="blog" class="section md-padding bg-grey" [hidden]="searchMode && !teamMode" *ngIf="!readMode">
+
+  <!-- Container -->
+  <div class="container">
+
+    <!-- Row -->
+    <div class="row">
+
+      <!-- Section header -->
+      <div class="section-header text-center">
+        <h2 class="title">{{ 'ISMAELILLO.TITLE' | translate }}</h2>
+      </div>
+      <!-- /Section header -->
+
+      <!-- blog -->
+      <div class="col-md-3" *ngFor="let item of content | paginate: { itemsPerPage: 4, currentPage: page }">
+        <div class="blog">
+          <div class="blog-img">
+            <img class="img-responsive" src="./assets/images/blog1.jpg" alt="">
+          </div>
+          <div class="blog-content">
+            <h3>{{ item.title }}</h3>
+            <a class="link" (click)="openRead(item, !readMode, '')">{{ 'READMORE' | translate }}</a>
+          </div>
+        </div>
+      </div>
+      <!-- /blog -->
+
+    </div>
+    <!-- /Row -->
+
+  </div>
+  <!-- /Container -->
+
+</div>
+<!-- /Blog -->
+
+
+<!-- Row -->
+
+
+<!-- Blog -->
+<div id="blogr" class="section md-padding" [hidden]="searchMode && !teamMode" *ngIf="readMode" [@fadeIn]="showLecture" [@fadeOut]="showLecture" appScrollTop>
+  <div class="row" *ngIf="readItem">
+    <div class="col-md-12">
+      <h2 class="title">{{readItem.title}}</h2>
+    </div>
+  </div>
+  <!-- Container -->
+  <div class="container">
+
+    <!-- Row -->
+    <div class="row">
+      <a (click)="openRead(undefined, !readMode, '')" ><i class="fa fa-backward"></i></a>
+      <!-- Main -->
+      <main id="main" class="col-md-9" [innerHtml]="readItem.content | liteSearch: searchString">
+
+      </main>
+      <!-- /Main -->
+
+    </div>
+    <!-- /Row -->
+
+  </div>
+  <!-- /Container -->
+
+</div >
+<!-- /Blog -->
+
+<!-- Testimonial -->
+<div id="testimonial" class="section md-padding" *ngIf="teamMode" [@fadeIn]="showLecture">
+
+  <!-- Background Image -->
+  <div class="bg-img" style="background-image: url('./assets/images/background3.jpg');">
+    <div class="overlay"></div>
+  </div>
+  <!-- /Background Image -->
+
+  <!-- Container -->
+  <div class="container">
+
+      <!-- Testimonial slider -->
+      <div class="col-md-10 col-md-offset-1">
+        <div id="testimonial-slider" class="owl-carousel owl-theme" appOwlSlider>
+
+          <!-- testimonial -->
+          <div class="testimonial">
+            <div class="testimonial-meta">
+              <img src="./assets/images/perso1.jpg" alt="">
+              <h3 class="white-text">John Doe</h3>
+              <span>Web Designer</span>
+            </div>
+            <p class="white-text">Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris.</p>
+          </div>
+          <!-- /testimonial -->
+
+          <!-- testimonial -->
+          <div class="testimonial">
+            <div class="testimonial-meta">
+              <img src="./assets/images/perso2.jpg" alt="">
+              <h3 class="white-text">John Doe</h3>
+              <span>Web Designer</span>
+            </div>
+            <p class="white-text">Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris.</p>
+          </div>
+          <!-- /testimonial -->
+
+        </div>
+      </div>
+      <!-- /Testimonial slider -->
+
+    </div>
+    <!-- /Row -->
+
+  </div>
+  <!-- /Container -->
+
+
+<!-- /Testimonial -->

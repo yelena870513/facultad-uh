@@ -1,20 +1,26 @@
 import { AfterViewInit, Component} from '@angular/core';
 import {MenuInterface} from '../../interfaces/menu.interface';
 import {TranslateService} from '@ngx-translate/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {log} from 'util';
 import {HeaderService} from '../../services/header.service';
+import {BehaviourService} from '../../services/behaviour.service';
 declare var $: any;
 
 @Component({
   selector: 'app-header',
-  templateUrl: './header.component.html'
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css' ]
 })
 
 export class HeaderComponent implements AfterViewInit {
   menu: MenuInterface[];
   showHeader = true;
-  constructor(translate: TranslateService, private headerService: HeaderService) {
+  constructor(
+    translate: TranslateService,
+    private headerService: HeaderService,
+    private behave: BehaviourService,
+    private router: Router) {
        this.menu = [
       {name: 'NAV.HOME', url: '/home', ico: 'fa fa-menu' }
       ];
@@ -60,6 +66,10 @@ export class HeaderComponent implements AfterViewInit {
         scrollTop: $('#about').offset().top
       }, 600);
     });
+  }
+  launchSearch(event) {
+    this.behave.CastSearchMode(event.target.value);
+    this.router.navigate(['/content/' + event.target.value]);
   }
 
 }

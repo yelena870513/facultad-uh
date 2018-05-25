@@ -1,10 +1,20 @@
 {
   "PAGE_TITLE": "Facultad",
+  "READMORE": "Leer más...",
   "HOME":{
-    "TITLE": "Facultad"
+    "TITLE": "Facultad",
+    "DESCRIPTION": "Somos creativos",
+    "MORE": "Colchon los contado don comodas referia promesa dio. Duros eso rio vista dejar mar. Morir el mando antes jamas debia la. Yendo ya ir asise mimar so la. Iba semiramis una emperador non cachazudo infiernos adivinaba distraigo",
+    "BIENVENIDA":"Contenido"
+  },
+  "ISMAELILLO":{
+    "TITLE": "Proyecto Ismaelillo"
   },
   "NAV":{
     "HOME": "Inicio",
     "CONTENT": "Contenido"
+  },
+  "CONTENIDOS":{
+    "CATEGORY": "Preguntas"
   }
 }

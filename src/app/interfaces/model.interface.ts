@@ -4,4 +4,5 @@ export interface ModelInterface {
   _deleted: any;
   title: string;
   tipo: string;
+  order: number;
 }

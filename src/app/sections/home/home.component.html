@@ -9,17 +9,25 @@
 
       <!-- Section header -->
       <div class="section-header text-center">
-        <h2 class="title">Welcome to Website</h2>
+        <h2 class="title">{{'HOME.BIENVENIDA' | translate}}</h2>
       </div>
       <!-- /Section header -->
 
       <!-- about -->
-      <div class="col-md-4" *ngFor="let category of categories">
+      <div class="col-md-3">
         <div class="about">
-          <i class="{{category.ico || 'fa fa-cogs'}}"></i>
-          <h3>{{category.title}}</h3>
-          <p>{{category.subtitle}}</p>
-          <a routerLink="/content/{{category.title}}">Leer mas</a>
+          <i class="{{'fa fa-cogs'}}"></i>
+          <h3>Ismaelillo</h3>
+          <p>"Espantado de todo me refugio en ti. Tengo fe en el mejoramiento humano, en la vida futura, en la utilidad de la virtud…".</p>
+          <a routerLink="/ismaelillo">{{ 'READMORE' | translate}}</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="about">
+          <i class="{{'fa fa-cogs'}}"></i>
+          <h3> Contenidos</h3>
+          <p>"Espantado de todo me refugio en ti. Tengo fe en el mejoramiento humano, en la vida futura, en la utilidad de la virtud…".</p>
+          <a routerLink="/contenidos">{{ 'READMORE' | translate}}</a>
         </div>
       </div>
       <!-- /about -->

@@ -10,6 +10,19 @@
     <div class="container">
 
       <div class="navbar-header">
+        <!-- Logo -->
+        <div class="navbar-brand">
+          <a routerLink="/home">
+            <img class="logo" src="./assets/images/logo.png" alt="logo">
+            <img class="logo-alt" src="./assets/images/logo-alt.png" alt="logo">
+          </a>
+        </div>
+        <!-- /Logo -->
+        <!-- Logo -->
+        <div class="navbar-brand">
+          <app-search-input (search)="launchSearch($event)"></app-search-input>
+        </div>
+        <!-- /Logo -->
         <!-- Collapse nav button -->
         <div class="nav-collapse">
           <span></span>
@@ -34,10 +47,9 @@
         <!-- home content -->
         <div class="col-md-10 col-md-offset-1">
           <div class="home-content">
-            <h1 class="white-text">We Are Creative Agency</h1>
-            <p class="white-text">Morbi mattis felis at nunc. Duis viverra diam non justo. In nisl. Nullam sit amet magna in magna gravida vehicula. Mauris tincidunt sem sed arcu. Nunc posuere.
-            </p>
-            <button class="white-btn">Contenido</button>
+            <h1 class="white-text">{{ 'HOME.DESCRIPTION' | translate }}</h1>
+            <p class="white-text">  {{ 'HOME.MORE' | translate }}      </p>
+            <button class="white-btn">{{'NAV.CONTENT' | translate}}</button>
           </div>
         </div>
         <!-- /home content -->
@@ -58,9 +70,15 @@
       <div class="navbar-header">
         <!-- Logo -->
         <div class="navbar-brand">
-          <a href="index.html">
-            <img class="logo" src="img/logo.png" alt="logo">
+          <a routerLink="/home">
+            <img class="logo" src="./assets/images/logo.png" alt="logo">
+            <img class="logo-alt" src="./assets/images/logo-alt.png" alt="logo">
           </a>
+        </div>
+        <!-- /Logo -->
+        <!-- Logo -->
+        <div class="navbar-brand black-layer">
+          <app-search-input (search)="launchSearch($event)"></app-search-input>
         </div>
         <!-- /Logo -->
 

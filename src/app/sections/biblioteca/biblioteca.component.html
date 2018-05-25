@@ -1,0 +1,35 @@
+<!-- About -->
+<div id="about" class="section md-padding">
+
+  <!-- Container -->
+  <div class="container">
+
+    <!-- Row -->
+    <div class="row">
+
+      <!-- Section header -->
+      <div class="section-header text-center">
+        <h2 class="title">{{'HOME.BIENVENIDA' | translate}}</h2>
+      </div>
+      <!-- /Section header -->
+
+      <!-- about -->
+      <div class="col-md-3" *ngFor="let category of categories">
+        <div class="about">
+          <i class="{{category.ico || 'fa fa-cogs'}}"></i>
+          <h3>{{category.title}}</h3>
+          <p>{{category.subtitle}}</p>
+          <a routerLink="/content/{{category.title}}">Leer mas</a>
+        </div>
+      </div>
+      <!-- /about -->
+
+
+    </div>
+    <!-- /Row -->
+
+  </div>
+  <!-- /Container -->
+
+</div>
+<!-- /About -->

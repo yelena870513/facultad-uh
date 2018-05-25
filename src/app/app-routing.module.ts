@@ -3,11 +3,20 @@ import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from './sections/home/home.component';
 import {ContentComponent} from './sections/content/content.component';
+import {IsmaelilloComponent} from './sections/ismaelillo/ismaelillo.component';
+import {ContenidosComponent} from './sections/contenidos/contenidos.component';
+import {DerechoComponent} from './sections/derecho/derecho.component';
+import {BibliotecaComponent} from './sections/biblioteca/biblioteca.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  { path: 'ismaelillo', component: IsmaelilloComponent },
+  { path: 'contenidos', component: ContenidosComponent },
+  { path: 'derecho', component: DerechoComponent },
+  { path: 'biblioteca', component: BibliotecaComponent },
   { path: 'content/:title', component: ContentComponent },
+  { path: 'find/:searchString', component: ContentComponent },
 ];
 
 @NgModule({

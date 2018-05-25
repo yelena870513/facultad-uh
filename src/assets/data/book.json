@@ -1,0 +1,418 @@
+{
+  "data":[
+
+    {
+      "poster":"pdf.png",
+      "url":"abogados.pdf",
+      "title":"Código de ética de los abogados",
+      "section":"book",
+      "tematica":"ContenidosJuridicos"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"tribunales.pdf",
+      "title":"Código de ética de tribunales",
+      "section":"book",
+      "tematica":"ContenidosJuridicos"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"auditores.pdf",
+      "title":"Código de ética para auditores",
+      "section":"book",
+      "tematica":"ContenidosJuridicos"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"cuadros.pdf",
+      "title":" Código de ética de los cuadros",
+      "section":"book",
+      "tematica":"ContenidosJuridicos"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"fiscalía.pdf",
+      "title":" Código de ética fiscalía",
+      "section":"book",
+      "tematica":"ContenidosJuridicos"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"patriotismo.pdf",
+      "title":"Patriotismo",
+      "section":"book",
+      "tematica":"articulos"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"manual1.pdf",
+      "title":"Primer manual de educación cívica en Cuba",
+      "section":"book",
+      "tematica":"articulos"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"fundamentos.pdf",
+      "title":"Participación ciudadana con fundamentos martianos",
+      "section":"book",
+      "tematica":"articulos"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"elDerecho.pdf",
+      "title":"El Derecho entre la Educación Cívica y la Ética",
+      "section":"book",
+      "tematica":"articulos"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"institucionalidad.pdf",
+      "title":" La Institucionalidad un imperativo en las relaciones entre el Derecho y el Estado",
+      "section":"book",
+      "tematica":"articulos"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"separata.pdf",
+      "title":"Separata de Teoría General del Estado",
+      "section":"book",
+      "tematica":"articulos"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"electoral.pdf",
+      "title":"Cien preguntas y respuestas sobre el sistema electoral cubano",
+      "section":"book",
+      "tematica":"articulos"
+    },{
+      "poster":"pdf.png",
+      "url":"folleto.pdf",
+      "title":"Folleto sobre el Sistema Electoral cubano",
+      "section":"book",
+      "tematica":"articulos"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"tutela.pdf",
+      "title":"La tutela constitucional del ambiente",
+      "section":"book",
+      "tematica":"articulos"
+    },{
+      "poster":"pdf.png",
+      "url":"ambienteSano.pdf",
+      "title":" El derecho al disfrute de un medio ambiente sano",
+      "section":"book",
+      "tematica":"articulos"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"pensamiento.pdf",
+      "title":"El pensamiento ambiental cubano",
+      "section":"book",
+      "tematica":"articulos"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"responsabilidad.pdf",
+      "title":"La responsabilidad civil por daños ambientales",
+      "section":"book",
+      "tematica":"articulos"
+    },{
+      "poster":"pdf.png",
+      "url":"administrativa.pdf",
+      "title":" La responsabilidad administrativa ambiental",
+      "section":"book",
+      "tematica":"articulos"
+    },{
+      "poster":"pdf.png",
+      "url":"atmosfera.pdf",
+      "title":"La atmósfera. Estudio de la misma y su vinculación con el derecho",
+      "section":"book",
+      "tematica":"articulos"
+    },{
+      "poster":"pdf.png",
+      "url":"proteccion.pdf",
+      "title":"Protección legal de los ecosistemas costeros en Cuba",
+      "section":"book",
+      "tematica":"articulos"
+    },{
+      "poster":"pdf.png",
+      "url":"seguridad.pdf",
+      "title":" Seguridad biológica. Su tutela legal en Cuba ",
+      "section":"book",
+      "tematica":"articulos"
+    },{
+      "poster":"pdf.png",
+      "url":"importancia.pdf",
+      "title":" Importancia de la protección penal del medio ambiente",
+      "section":"book",
+      "tematica":"articulos"
+    },{
+      "poster":"pdf.png",
+      "url":"menores.pdf",
+      "title":" Los menores en conflicto con la ley penal ",
+      "section":"book",
+      "tematica":"articulos"
+    },{
+      "poster":"contravenciones.png",
+      "url":"Comunicacion1.pdf",
+      "title":"Tutela legal de las contravenciones y los delitos pararelos en Cuba",
+      "section":"book",
+      "tematica":"articulos"
+    },{
+      "poster":"pdf.png",
+      "url":"penitenciario.pdf",
+      "title":" Evolución y desarrollo del sistema penitenciario",
+      "section":"book",
+      "tematica":"articulos"
+    },{
+      "poster":"pdf.png",
+      "url":"carta.pdf",
+      "title":" Carta mundial de la naturaleza",
+      "section":"book",
+      "tematica":"normasInternacionales"
+    },{
+      "poster":"pdf.png",
+      "url":"cambioClimatico.pdf",
+      "title":" Convencion Cambio Climático",
+      "section":"book",
+      "tematica":"normasInternacionales"
+    },{
+      "poster":"pdf.png",
+      "url":"estocolmo.pdf",
+      "title":" Convenio de Estocolmo sobre contaminates orgánicos presistentes",
+      "section":"book",
+      "tematica":"normasInternacionales"
+    },{
+      "poster":"pdf.png",
+      "url":"estocolmo1.pdf",
+      "title":" Declaración de Estocolmo sobre medio humano",
+      "section":"book",
+      "tematica":"normasInternacionales"
+    },{
+      "poster":"pdf.png",
+      "url":"diversidad.pdf",
+      "title":" Convenio sobre la diversidad biológica",
+      "section":"book",
+      "tematica":"normasInternacionales"
+    },{
+      "poster":"pdf.png",
+      "url":"johanesburgo.pdf",
+      "title":" Declaración de Johanesburgo sobre desarrollo sustentable",
+      "section":"book",
+      "tematica":"normasInternacionales"
+    },{
+      "poster":"pdf.png",
+      "url":"nairobi.pdf",
+      "title":" Declaración de Nairobi",
+      "section":"book",
+      "tematica":"normasInternacionales"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"bosques.pdf",
+      "title":"  Declaración de principios sobre los bosques",
+      "section":"book",
+      "tematica":"normasInternacionales"
+    },{
+      "poster":"pdf.png",
+      "url":"rio.pdf",
+      "title":" Declaración de Río",
+      "section":"book",
+      "tematica":"normasInternacionales"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"ATLAS.pdf",
+      "title":" Álbum: Escenarios de peligros y vulnerabilidad de la zona costera cubana asociados  al ascenso  del  nivel  del  mar para los años 2050 y 2100. Versión 9.0, año 2016",
+      "section":"book",
+      "tematica":"normasInternacionales"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"IPCC.pdf",
+      "title":" Anexo B. Glosario de términos",
+      "section":"book",
+      "tematica":"normasInternacionales"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"forestal.pdf",
+      "title":" Ley No. 85, Ley Forestal",
+      "section":"book",
+      "tematica":"normasNacionales"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"ley81.pdf",
+      "title":"Ley 81, del medio ambiente",
+      "section":"book",
+      "tematica":"normasNacionales"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"ley124.pdf",
+      "title":"Ley 124 de 2017 de las aguas terrestres y regalmento decreto 337 de 2017",
+      "section":"book",
+      "tematica":"normasNacionales"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"ley1y2.pdf",
+      "title":" Ley No. 1 y Ley No. 2, Ley de Protección del Patrimonio Cultural y Ley de los Monumentos Nacionales y Locales",
+      "section":"book",
+      "tematica":"normasNacionales"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"ley164.pdf",
+      "title":" Decreto Ley No. 164, reglamento de pesca",
+      "section":"book",
+      "tematica":"normasNacionales"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"ley190.pdf",
+      "title":" Decreto Ley No. 190, de la seguridad biológica",
+      "section":"book",
+      "tematica":"normasNacionales"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"ley200.pdf",
+      "title":" Decreto Ley No.  200, de las contravenciones en materia de medio ambiente ",
+      "section":"book",
+      "tematica":"normasNacionales"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"ley201.pdf",
+      "title":" Decreto Ley No.  201, del sistema nacional de áreas protegidas",
+      "section":"book",
+      "tematica":"normasNacionales"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"ley207.pdf",
+      "title":" Decreto Ley No. 207, sobre el uso de la energía nuclear",
+      "section":"book",
+      "tematica":"normasNacionales"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"ley212.pdf",
+      "title":" Decreto Ley No. 212, Grestión de la Zona Costera",
+      "section":"book",
+      "tematica":"normasNacionales"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"ley309.pdf",
+      "title":" Decreto Ley No. 309, De la Seguridad Química",
+      "section":"book",
+      "tematica":"normasNacionales"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"decreto179.pdf",
+      "title":" GO_O_004_1993 Decreto 179 PROTECCIÓN, USO Y CONSERVACIÓN DE LOS SUELOS, Y SUS CONTRAVENCIONES ",
+      "section":"book",
+      "tematica":"normasNacionales"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"decreto272.pdf",
+      "title":" GO_X_002_2001 Decreto 272 DE LAS CONTRAVENCIONES EN MATERIA DE ORDENAMIENTO TERRITORIAL Y DE URBANISMO",
+      "section":"book",
+      "tematica":"normasNacionales"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"ley16.pdf",
+      "title":" Ley 16 de 1978 Código de la niñez y la juventud",
+      "section":"book",
+      "tematica":"normasCivil"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"familia.pdf",
+      "title":" CÓDIGO DE FAMILIA. ANOTADO",
+      "section":"book",
+      "tematica":"normasCivil"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"ninno.pdf",
+      "title":" Convención internacional derechos del niño",
+      "section":"book",
+      "tematica":"normasCivil"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"leyElectoral.pdf",
+      "title":" Ley Electoral",
+      "section":"book",
+      "tematica":"normasBasicos"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"republica.pdf",
+      "title":" Constitución de la República",
+      "section":"book",
+      "tematica":"normasBasicos"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"fiscalia.pdf",
+      "title":" Fiscalía General de la República 1",
+      "section":"book",
+      "tematica":"normasBasicos"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"consejos.pdf",
+      "title":" Ley de consejos populares",
+      "section":"book",
+      "tematica":"normasBasicos"
+    },{
+      "poster":"pdf.png",
+      "url":"renovacion.pdf",
+      "title":" LEY DE REVOCACION DEL MANDATO DE LOS ELEGIDOS A LOS ORGANOS DEL PODER POPULAR",
+      "section":"book",
+      "tematica":"normasBasicos"
+    },{
+      "poster":"pdf.png",
+      "url":"populares.pdf",
+      "title":" Ley de tribunales populares",
+      "section":"book",
+      "tematica":"publicaciones"
+    },{
+      "poster":"11.png",
+      "url":"RAUL.pdf",
+      "title":" Discurso pronunciado por el General de Ejército Raúl Castro Ruz, Presidente de los Consejos de Estado y de Ministros, ante la Asamblea de la Organización de Estados del Caribe Oriental. Antigua y Barbuda, 9 de diciembre de 2017",
+      "section":"book",
+      "tematica":"publicaciones"
+    },
+    {
+      "poster":"11.png",
+      "url":"Curso2.pdf",
+      "title":" Tabloide del Curso “Cambio Climático”. 2008 (2da parte)",
+      "section":"book",
+      "tematica":"publicaciones"
+    },
+    {
+      "poster":"11.png",
+      "url":"Mitigacion.pdf",
+      "title":" Programas que comprenden medidas para mitigar el Cambio Climático",
+      "section":"book",
+      "tematica":"publicaciones"
+    },
+    {
+      "poster":"11.png",
+      "url":"DISCURSO2.pdf",
+      "title":" Discurso del General de Ejército Raúl Castro Ruz, Presidente de los Consejos de Estado y de Ministros, en la sesión inaugural de la Sexta Cumbre CARICOM-Cuba. Antigua y Barbuda, 8 de diciembre de 2017",
+      "section":"book",
+      "tematica":"publicaciones"
+    }
+  ]
+}
