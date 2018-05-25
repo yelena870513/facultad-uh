@@ -1,3 +1,4 @@
+import { APP_BASE_HREF } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule} from '@angular/router';
@@ -31,7 +32,7 @@ import {BibliotecaComponent} from './sections/biblioteca/biblioteca.component';
 import {OwlSliderDirective} from './directives/owl.slider.directive';
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
@@ -70,7 +71,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     })
   ],
   exports: [RouterModule, TranslateModule],
-  providers: [OrmService, DataService, HeaderService, BehaviourService],
+  providers: [OrmService, DataService, HeaderService, BehaviourService,  { provide: APP_BASE_HREF, useValue: '/' },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

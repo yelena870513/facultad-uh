@@ -36,6 +36,8 @@ export class IsmaelilloComponent {
   resultMode: any;
   searchMode: boolean;
   searchString: string;
+  /*readMode, searchMode, teamMode, actionMode*/
+  currentMode: string;
   constructor(private dataService: DataService,
               private translate: TranslateService,
               private headerService: HeaderService,
@@ -74,6 +76,7 @@ export class IsmaelilloComponent {
     this.resultMode = 'readMode';
     this.searchMode = false;
     this.searchString = '';
+    this.currentMode = '';
     this.page = 1;
   }
   openRead(item, readMode, searchString) {
