@@ -4,6 +4,7 @@ import {HttpClient} from '@angular/common/http';
 
 
 
+
 @Injectable()
 export class DataService {
   constructor(private http: HttpClient) {
@@ -15,4 +16,8 @@ export class DataService {
   public getBooks(lang: string): Observable<any> {
     return this.http.get('assets/data/book.' + lang + '.json');
   }
+
+  public getGlossary(lang: string): Observable<any> {
+  return this.http.get('assets/data/glosario.' + lang + '.json');
+}
 }

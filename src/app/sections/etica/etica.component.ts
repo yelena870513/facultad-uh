@@ -1,0 +1,43 @@
+import { Component } from '@angular/core';
+import {DataService} from "../../services/data.service";
+import {TranslateService} from '@ngx-translate/core';
+import {HeaderService} from "../../services/header.service";
+
+
+@Component({
+  selector: 'app-etica',
+  templateUrl: './etica.component.html'
+})
+
+export class EticaComponent {
+  books: any [];
+  term: any;
+  pointer: number;
+  pdfPages: number;
+  isLoaded: boolean = false;
+  constructor(private dataService: DataService, private translate: TranslateService, private headerService: HeaderService) {
+    this.headerService.Hide();
+    this.dataService.getBooks(this.translate.currentLang).subscribe((data: any) => {
+      this.books = data.docs.filter(f => f.tematica === 'etica');
+      this.term = this.books[0];
+    });
+  }
+
+  ReadBook(item) {
+    this.term = item;
+  }
+  afterLoadComplete(pdfData: any) {
+    this.pdfPages = pdfData.numPages;
+    this.isLoaded = true;
+  }
+
+  nextPage() {
+    this.pointer++;
+  }
+
+  prevPage() {
+    this.pointer--;
+  }
+}
+
+

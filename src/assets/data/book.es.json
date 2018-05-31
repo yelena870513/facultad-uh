@@ -413,6 +413,20 @@
       "title":" Discurso del General de Ejército Raúl Castro Ruz, Presidente de los Consejos de Estado y de Ministros, en la sesión inaugural de la Sexta Cumbre CARICOM-Cuba. Antigua y Barbuda, 8 de diciembre de 2017",
       "section":"book",
       "tematica":"publicaciones"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"abogados.pdf",
+      "title":"Código de ética de los abogados",
+      "section":"book",
+      "tematica":"etica"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"tribunales.pdf",
+      "title":"Código de ética de tribunales",
+      "section":"book",
+      "tematica":"etica"
     }
   ]
 }

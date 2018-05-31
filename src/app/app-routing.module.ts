@@ -7,6 +7,8 @@ import {IsmaelilloComponent} from './sections/ismaelillo/ismaelillo.component';
 import {ContenidosComponent} from './sections/contenidos/contenidos.component';
 import {DerechoComponent} from './sections/derecho/derecho.component';
 import {BibliotecaComponent} from './sections/biblioteca/biblioteca.component';
+import {GlosarioComponent} from './sections/glosario/glosario.component';
+import {EticaComponent} from './sections/etica/etica.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -15,6 +17,8 @@ const routes: Routes = [
   { path: 'contenidos', component: ContenidosComponent },
   { path: 'derecho', component: DerechoComponent },
   { path: 'biblioteca', component: BibliotecaComponent },
+  { path: 'glosario', component: GlosarioComponent },
+  { path: 'etica', component: EticaComponent },
   { path: 'content/:title', component: ContentComponent },
   { path: 'find/:searchString', component: ContentComponent },
 ];

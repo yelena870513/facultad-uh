@@ -31,6 +31,8 @@ import {DerechoComponent} from './sections/derecho/derecho.component';
 import {BibliotecaComponent} from './sections/biblioteca/biblioteca.component';
 import {OwlSliderDirective} from './directives/owl.slider.directive';
 import {PdfViewerModule} from 'ng2-pdf-viewer';
+import {GlosarioComponent} from "./sections/glosario/glosario.component";
+import {EticaComponent} from './sections/etica/etica.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -48,6 +50,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     BibliotecaComponent,
     SectionComponent,
     ContentComponent,
+    GlosarioComponent,
+    EticaComponent,
     SearchInputComponent,
     GoResultDirective,
     ScrollTopDirective,
