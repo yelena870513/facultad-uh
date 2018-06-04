@@ -24,7 +24,7 @@ export class HeaderComponent implements AfterViewInit {
        this.menu = [
       {name: 'NAV.HOME', url: '/home' },
       {name: 'NAV.ISMAELILLO', url: '/ismaelillo' },
-      {name: 'NAV.CONTENT', url: '/content' },
+      {name: 'NAV.CONTENT', url: '/contenidos' },
       {name: 'NAV.DERECHO', url: '/derecho' },
       {name: 'NAV.CATEDRA', url: '/catedra' }
       ];

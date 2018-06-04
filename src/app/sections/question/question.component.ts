@@ -22,7 +22,7 @@ export class QuestionComponent implements OnInit {
   constructor(private headerService: HeaderService, private dataService: DataService, private translate: TranslateService) {
     this.headerService.Hide();
     this.dataService.getQuestion(this.translate.currentLang).subscribe((data: any) => {
-      this.questions = data.docs.sort((a:any, b: any) => a.title - b.title).filter((f) => f.type === 'dragdrop');
+      this.questions = data.docs.sort((a:any, b: any) => a.title - b.title);
     }, ( error1 => {
        console.log(error1);
     } ));

@@ -17,7 +17,7 @@
     "CONTENT": "Contenidos jurídicos",
     "DERECHO": "El derecho en historia",
     "BIBLIOTECA": "Biblioteca jurídica",
-    "CATEDRA": "Catedra",
+    "CATEDRA": "Cátedra",
     "PREV":"Anterior",
     "NEXT":"Siguiente"
   },
@@ -26,6 +26,11 @@
   },
   "FOOTER":{
     "COPY":"Copyright © 2018. Todos los derechos reservados."
+  },
+  "LIBRARY":{
+    "HEADER":"Biblioteca",
+    "THEMES":"Temáticas",
+    "BOOKS":"Libros"
   }
 
 }

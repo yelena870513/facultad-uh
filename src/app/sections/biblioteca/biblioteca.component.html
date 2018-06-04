@@ -1,29 +1,62 @@
-<!-- About -->
-<div id="about" class="section md-padding">
+<!-- Blog -->
+<div id="blog" class="section md-padding">
 
   <!-- Container -->
   <div class="container">
 
     <!-- Row -->
     <div class="row">
+   <aside id="aside" class="col-md-3">
+     <!-- Tags -->
+     <div class="widget" *ngIf="booksShelf.length>0">
+       <h5 class="title">{{'LIBRARY.HEADER' | translate}}</h5>
+       <div class="widget-category">
+         <a *ngFor="let item of booksShelf |paginate: { itemsPerPage: 5, currentPage: page }" (click)="ReadBook(item)" >{{item.title}}</a>
+       </div>
+     </div>
+     <pagination-controls
+       (pageChange)="page = $event"
+       maxSize="5"
+       previousLabel=""
+       nextLabel=""
+       boundaryLinks="false"
+     >
 
-      <!-- Section header -->
-      <div class="section-header text-center">
-        <h2 class="title">{{'HOME.BIENVENIDA' | translate}}</h2>
-      </div>
-      <!-- /Section header -->
+     </pagination-controls>
+     <!-- /Tags -->
 
-      <!-- about -->
-      <div class="col-md-3" *ngFor="let category of categories">
-        <div class="about">
-          <i class="{{category.ico || 'fa fa-cogs'}}"></i>
-          <h3>{{category.title}}</h3>
-          <p>{{category.subtitle}}</p>
-          <a routerLink="/content/{{category.title}}">Leer mas</a>
+   </aside>
+
+      <!-- Main -->
+      <main id="main" class="col-md-9">
+        <div class="blog">
+          <!-- blog tags -->
+          <div class="blog-tags">
+            <h3 class="title">{{'LIBRARY.THEMES' | translate}} :</h3>
+            <a  *ngFor="let item of themes" (click)="setItem(item)"><i class="fa fa-tag"></i>{{item}}</a>
+
+          </div>
+          <!-- blog tags -->
+          <div class="blog-content" *ngIf="reader">
+            <div class="row border-dark">
+              <div class="col-md-12">
+                <div *ngIf="isLoaded" style="text-align: center;">
+                  <button (click)="prevPage()" [disabled]="pointer === 1">{{'NAV.PREV' | translate}}</button>
+                  <span>{{ pointer }} / {{ pdfPages }}</span>
+                  <button (click)="nextPage()" [disabled]="pointer === pdfPages">{{'NAV.NEXT' | translate }}</button>
+                </div>
+                <pdf-viewer src="./assets/pdf/{{reader.url}}"
+                            [show-all]="false"
+                            [page]="pointer"
+                            [render-text]="false"
+                            (after-load-complete)="afterLoadComplete($event)"
+                ></pdf-viewer>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <!-- /about -->
-
+      </main>
+      <!-- /Main -->
 
     </div>
     <!-- /Row -->
@@ -32,4 +65,4 @@
   <!-- /Container -->
 
 </div>
-<!-- /About -->
+<!-- /Blog -->

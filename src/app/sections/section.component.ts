@@ -46,7 +46,7 @@ export class SectionComponent implements AfterViewInit {
       const wScroll = $(this).scrollTop();
 
       // Fixed nav
-      wScroll > 1 ? $('#nav').addClass('fixed-nav') : $('#nav').removeClass('fixed-nav');
+      wScroll > 1 ? $('#nav').addClass('fixed-nav').removeClass('hidden') : $('#nav').removeClass('fixed-nav').addClass('hidden');
 
       // Back To Top Appear
       wScroll > 700 ? $('#back-to-top').fadeIn() : $('#back-to-top').fadeOut();

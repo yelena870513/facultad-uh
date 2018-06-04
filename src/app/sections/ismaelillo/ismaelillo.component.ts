@@ -3,6 +3,7 @@ import {DataService} from '../../services/data.service';
 import {TranslateService} from '@ngx-translate/core';
 import {HeaderService} from '../../services/header.service';
 import {ContentInterface} from '../../interfaces/content.interface';
+//noinspection TypeScriptCheckImport
 import { fadeOut, fadeIn } from 'ngx-animate';
 import {pulse} from 'ngx-animate/lib';
 import {transition, trigger, useAnimation} from '@angular/animations';
@@ -100,6 +101,7 @@ export class IsmaelilloComponent {
     this.currentMode = readMode ? 'panelMode' : 'readMode';
     this.readItem = item;
     this.searchString = searchString;
+    //noinspection TypeScriptUnresolvedFunction
     if (_.isUndefined(item)) {
       this.teamMode = false;
       this.behaviour.CastTeamMode(false);
