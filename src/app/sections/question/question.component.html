@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-md-4" *ngFor="let i of questions | paginate: { itemsPerPage: 1, currentPage: page }">
+    <div class="card" >
+       <div class="card-content">
+         <span class="card-title activator grey-text text-darken-4">{{i.subtitle}} &nbsp;<a class="btn-floating waves-effect waves-light green"><i class="mdi-action-spellcheck right"></i></a></span>
+         <div *ngIf="i.type === 'checkbox'">
+          <ul class="collection">
+            <li class="collection-item" *ngFor="let answer of i.items">
+              <div class="switch">
+                <label [ngClass]="{ 'error': answer.resource ==='F', 'check': answer.resource === 'T' }">{{answer.name}}<input type="checkbox" (change)="checkAnswer(answer,$event)"><span class="lever"></span></label>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div *ngIf="i.type=== 'dragdrop'">
+          <div class="row">
+            <div class="col-md-4">
+              <ul>
+                <li draggable [dragScope] = "p" [dragData]="p" *ngFor="let p of i.posible">{{p}}</li>
+              </ul>
+            </div>
+            <div class="col-md-8">
+              <div droppable [dropScope] = "answer.values" *ngFor="let answer of i.items" (onDrop)="onItemDrop($event, answer)">
+                <p>{{ answer.name }}</p><br>
+                 <ul class="collection" *ngIf="answer.dropped">
+                  <li class="collection-item" *ngFor="let a of answer.dropped">{{a}}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">{{i.title}}<i class="mdi-navigation-close right"></i></span>
+        <p [innerHtml]="i.description"></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <pagination-controls
+      (pageChange)="page = $event"
+      maxSize="5"
+      previousLabel="Anterior"
+      nextLabel="Siguiente"></pagination-controls>
+  </div>
+</div>
+

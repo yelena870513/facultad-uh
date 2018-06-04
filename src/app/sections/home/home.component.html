@@ -16,7 +16,7 @@
       <!-- about -->
       <div class="col-md-3" *ngFor="let item of menu">
         <div class="about">
-          <i class="{{'fa fa-cogs'}}"></i>
+          <i class="{{item.ico}}"></i>
           <h3>{{item.name | translate}}</h3>
           <p>"{{item.frase | translate}}".</p>
           <a routerLink="{{item.url}}">{{ 'READMORE' | translate}}</a>
