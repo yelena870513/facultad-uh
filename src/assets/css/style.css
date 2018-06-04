@@ -27,8 +27,12 @@ body {
 	background:url(../images/bg_bot.jpg) center 0 repeat #faf3ed;
 	border:0;
 	font:14px Georgia, "Times New Roman", Times, serif;
-	color:#200;
-	line-height:24px
+	line-height:24px;
+  color: #333;
+}
+#back-to-top {
+
+  background: rgb(144,128,88);
 }
 .ic, .ic a {
 	border:0;

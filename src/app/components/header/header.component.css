@@ -2,3 +2,22 @@
   color: rgba(0,0,0,0.8);
   background-color: #0b0b0b;
 }
+.bg-img .overlay {
+
+  background: #66512c;
+  opacity: 0.8;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .main-nav > li > a:after {
+
+    background-color: rgb(144,128,88);
+  }
+  .main-nav>li>a:hover, .main-nav>li>a:focus, .main-nav>li.active>a {
+    background: transparent;
+    color: rgb(144,128,88);
+    font-weight: 700;
+    color: #66512c;
+  }
+}

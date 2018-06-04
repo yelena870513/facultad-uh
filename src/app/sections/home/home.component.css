@@ -1,0 +1,30 @@
+.title:after {
+  background-color: rgb(144,128,88) !important;
+}
+.about:after {
+  content: "";
+  background-color: rgb(144,128,88);
+}
+.about {
+
+  border: 1px solid rgb(144,128,88);
+
+}
+.about:hover h3 {
+  color: #fff;
+}
+.about:hover {
+  color: #fff;
+}
+.about:hover a {
+  color: #fff;
+}
+a{
+  color: rgb(144,128,88);
+}
+#back-to-top {
+
+  background: rgb(144,128,88);
+
+}
+
