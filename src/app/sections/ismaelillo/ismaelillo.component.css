@@ -1,3 +1,6 @@
 a.link, .fa-backward{
   cursor: pointer;
 }
+a{
+  color: rgb(144,128,88);;
+}

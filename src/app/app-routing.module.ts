@@ -9,6 +9,7 @@ import {DerechoComponent} from './sections/derecho/derecho.component';
 import {BibliotecaComponent} from './sections/biblioteca/biblioteca.component';
 import {GlosarioComponent} from './sections/glosario/glosario.component';
 import {EticaComponent} from './sections/etica/etica.component';
+import {QuestionComponent} from './sections/question/question.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'biblioteca', component: BibliotecaComponent },
   { path: 'glosario', component: GlosarioComponent },
   { path: 'etica', component: EticaComponent },
+  { path: 'question', component: QuestionComponent },
   { path: 'content/:title', component: ContentComponent },
   { path: 'find/:searchString', component: ContentComponent },
 ];

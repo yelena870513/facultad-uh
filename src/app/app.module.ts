@@ -22,6 +22,7 @@ import {LiteSearchPipe} from './pipes/lite-search';
 import {SearchInputComponent} from './components/search-input/search-input.component';
 import {HeaderService} from './services/header.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+//noinspection TypeScriptCheckImport
 import {NgxPaginationModule} from 'ngx-pagination';
 import {ScrollTopDirective} from './directives/scroll.top.directive';
 import {BehaviourService} from './services/behaviour.service';
@@ -30,9 +31,13 @@ import {ContenidosComponent} from './sections/contenidos/contenidos.component';
 import {DerechoComponent} from './sections/derecho/derecho.component';
 import {BibliotecaComponent} from './sections/biblioteca/biblioteca.component';
 import {OwlSliderDirective} from './directives/owl.slider.directive';
+import {MaterialDropDownDirective} from './directives/material.dropdown.directive';
 import {PdfViewerModule} from 'ng2-pdf-viewer';
-import {GlosarioComponent} from "./sections/glosario/glosario.component";
+import {GlosarioComponent} from './sections/glosario/glosario.component';
 import {EticaComponent} from './sections/etica/etica.component';
+import { QuestionComponent } from './sections/question/question.component';
+import {NgDragDropModule} from 'ng-drag-drop';
+import {SelectableComponent} from './sections/question/selectable.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -56,9 +61,12 @@ export function HttpLoaderFactory(http: HttpClient) {
     GoResultDirective,
     ScrollTopDirective,
     OwlSliderDirective,
+    MaterialDropDownDirective,
     FilterTitlesPipe,
     SearchForPipe,
-    LiteSearchPipe
+    LiteSearchPipe,
+    QuestionComponent,
+    SelectableComponent
   ],
   imports: [
     BrowserModule,
@@ -68,6 +76,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     UICarouselModule,
     HttpClientModule,
     PdfViewerModule,
+    NgDragDropModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -78,6 +87,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   exports: [RouterModule, TranslateModule],
   providers: [OrmService, DataService, HeaderService, BehaviourService,  { provide: APP_BASE_HREF, useValue: '/' },],
+  entryComponents:[SelectableComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

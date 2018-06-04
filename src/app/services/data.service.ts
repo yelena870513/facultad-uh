@@ -18,6 +18,9 @@ export class DataService {
   }
 
   public getGlossary(lang: string): Observable<any> {
-  return this.http.get('assets/data/glosario.' + lang + '.json');
-}
+    return this.http.get('assets/data/glosario.' + lang + '.json');
+  }
+  public getQuestion(lang: string): Observable<any> {
+    return this.http.get('assets/data/preguntas.' + lang + '.json');
+  }
 }

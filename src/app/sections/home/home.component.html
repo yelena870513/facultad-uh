@@ -14,22 +14,15 @@
       <!-- /Section header -->
 
       <!-- about -->
-      <div class="col-md-3">
+      <div class="col-md-3" *ngFor="let item of menu">
         <div class="about">
           <i class="{{'fa fa-cogs'}}"></i>
-          <h3>Ismaelillo</h3>
-          <p>"Espantado de todo me refugio en ti. Tengo fe en el mejoramiento humano, en la vida futura, en la utilidad de la virtud…".</p>
-          <a routerLink="/ismaelillo">{{ 'READMORE' | translate}}</a>
+          <h3>{{item.name | translate}}</h3>
+          <p>"{{item.frase | translate}}".</p>
+          <a routerLink="{{item.url}}">{{ 'READMORE' | translate}}</a>
         </div>
       </div>
-      <div class="col-md-3">
-        <div class="about">
-          <i class="{{'fa fa-cogs'}}"></i>
-          <h3> Contenidos</h3>
-          <p>"Espantado de todo me refugio en ti. Tengo fe en el mejoramiento humano, en la vida futura, en la utilidad de la virtud…".</p>
-          <a routerLink="/contenidos">{{ 'READMORE' | translate}}</a>
-        </div>
-      </div>
+
       <!-- /about -->
 
 
