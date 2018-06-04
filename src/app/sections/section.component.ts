@@ -18,7 +18,8 @@ import { AfterViewInit, Component} from '@angular/core';
     </div>
   </div>
   <!-- /Preloader -->
-  `
+  `,
+  styles: ['#back-to-top {background: burlywood;}']
 })
 
 export class SectionComponent implements AfterViewInit {

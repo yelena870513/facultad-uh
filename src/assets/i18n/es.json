@@ -3,7 +3,7 @@
   "READMORE": "Leer más...",
   "HOME":{
     "TITLE": "Facultad",
-    "DESCRIPTION": "Somos creativos",
+    "DESCRIPTION": "Multimedia de contenido jurídico para la educación cívica",
     "MORE": "Colchon los contado don comodas referia promesa dio. Duros eso rio vista dejar mar. Morir el mando antes jamas debia la. Yendo ya ir asise mimar so la. Iba semiramis una emperador non cachazudo infiernos adivinaba distraigo",
     "BIENVENIDA":"Contenido"
   },
@@ -13,11 +13,19 @@
   },
   "NAV":{
     "HOME": "Inicio",
-    "CONTENT": "Contenido",
+    "ISMAELILLO": "Proyecto Ismaelillo",
+    "CONTENT": "Contenidos jurídicos",
+    "DERECHO": "El derecho en historia",
+    "BIBLIOTECA": "Biblioteca jurídica",
+    "CATEDRA": "Catedra",
     "PREV":"Anterior",
     "NEXT":"Siguiente"
   },
   "CONTENIDOS":{
     "CATEGORY": "Preguntas"
+  },
+  "FOOTER":{
+    "COPY":"Copyright © 2018. Todos los derechos reservados."
   }
+
 }

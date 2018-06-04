@@ -2,7 +2,7 @@ import { AfterViewInit, Component} from '@angular/core';
 import {MenuInterface} from '../../interfaces/menu.interface';
 import {TranslateService} from '@ngx-translate/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {log} from 'util';
+
 import {HeaderService} from '../../services/header.service';
 import {BehaviourService} from '../../services/behaviour.service';
 declare var $: any;
@@ -17,12 +17,16 @@ export class HeaderComponent implements AfterViewInit {
   menu: MenuInterface[];
   showHeader = true;
   constructor(
-    translate: TranslateService,
+
     private headerService: HeaderService,
     private behave: BehaviourService,
     private router: Router) {
        this.menu = [
-      {name: 'NAV.HOME', url: '/home', ico: 'fa fa-menu' }
+      {name: 'NAV.HOME', url: '/home' },
+      {name: 'NAV.ISMAELILLO', url: '/ismaelillo' },
+      {name: 'NAV.CONTENT', url: '/content' },
+      {name: 'NAV.DERECHO', url: '/derecho' },
+      {name: 'NAV.CATEDRA', url: '/catedra' }
       ];
      this.headerService.showHeader
        .subscribe(show => setTimeout(() => this.showHeader = show));
