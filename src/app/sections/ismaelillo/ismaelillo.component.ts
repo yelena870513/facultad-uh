@@ -63,6 +63,7 @@ export class IsmaelilloComponent {
           order: 2,
           content: '',
           title: 'Colectivo Investigador',
+          img: 'comite.jpg',
           tipo: 'research'
         },
           {
@@ -74,12 +75,13 @@ export class IsmaelilloComponent {
             order: 4,
             content: '',
             title: 'Acciones y resultados',
+            img: 'acciones.jpg',
             tipo: 'pdf'
           });
         this.content = this.content.sort((a: any, b: any) => a.order - b.order);
       });
     this.dataService.getBooks(this.translate.currentLang).subscribe((data) => {
-      this.books = data.docs.slice(0, 5);
+      this.books = data.docs.filter((f: any) => f.tematica === 'ismaelillo');
       this.currentBook = this.books[0];
     });
     this.headerService.Hide();

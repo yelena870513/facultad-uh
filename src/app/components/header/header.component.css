@@ -7,6 +7,14 @@
   background: #66512c;
   opacity: 0.8;
 }
+.home-content h1 {
+  text-transform: uppercase;
+  font-size: 32px !important;
+}
+button:focus {
+  outline: none;
+  background-color: burlywood;
+}
 
 @media only screen and (min-width: 768px) {
 
@@ -20,4 +28,11 @@
     font-weight: 700;
     color: #66512c;
   }
+}
+@media (min-width: 992px){
+
+          .col-md-12 {
+             width: 50% ;
+             float: none;
+          }
 }
