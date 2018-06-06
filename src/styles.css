@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.preloader span {
+  display: inline-block;
+  background-color: rgb(144,128,88);
+  width: 25px;
+  height: 25px;
+  -webkit-animation: 1s preload ease-in-out infinite;
+  animation: preload 1s ease-in-out infinite;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  border-radius:50%;
+}

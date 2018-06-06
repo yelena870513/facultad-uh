@@ -29,9 +29,10 @@
     "COPY":"Copyright © 2018. Todos los derechos reservados."
   },
   "LIBRARY":{
-    "HEADER":"Biblioteca",
+    "HEADER":"Pdf",
     "THEMES":"Temáticas",
     "BOOKS":"Libros"
-  }
+  },
+  "articulos":"Artículos"
 
 }
