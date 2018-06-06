@@ -1,0 +1,17 @@
+.widget-category a:hover {
+  display: block;
+  font-size: 14px;
+  color: rgb(144,128,88);
+  border-bottom: 1px solid #EEE;
+  padding: 5px;
+}
+h3 {
+  font-size: 1.92rem;
+  line-height: 2.212rem;
+  margin: 1.46rem 0 1.168rem 0;
+}
+.title:after {
+
+  background-color: rgb(144,128,88);
+
+}

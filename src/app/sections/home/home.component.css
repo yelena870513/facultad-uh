@@ -13,16 +13,27 @@
 .about:hover h3 {
   color: #fff;
 }
-.about:hover {
-  color: #fff;
+.about[_ngcontent-c4][_ngcontent-c4]:hover {
+  border: 2px solid rgb(102,51,0);
+
 }
-.about:hover a {
-  color: #fff;
+.about:hover a, .about:hover i {
+  color: rgb(102,51,0);
 }
 .about i {
   font-size: 36px;
   color: rgb(144,128,88);
   margin-bottom: 0px;
+}
+/*.section {*/
+  /*padding-top: 1rem;*/
+  /*padding-bottom: 1rem;*/
+  /*background: rgb(249,249,242);*/
+/*}*/
+
+h3[_ngcontent-c4] {
+  font-size: 21px;
+  line-height: 24px;
 }
 h2 {
   font-size: 2.56rem;
@@ -41,4 +52,8 @@ h3 {
   font-size: 26px;
 }
 
+.about[_ngcontent-c4] {
+  border: 1px solid rgb(144,128,88);
+  height: 200px;
+}
 

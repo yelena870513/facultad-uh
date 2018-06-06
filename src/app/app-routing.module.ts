@@ -10,6 +10,7 @@ import {BibliotecaComponent} from './sections/biblioteca/biblioteca.component';
 import {GlosarioComponent} from './sections/glosario/glosario.component';
 import {EticaComponent} from './sections/etica/etica.component';
 import {QuestionComponent} from './sections/question/question.component';
+import {ProfesoresComponent} from "./sections/profesores/profesores.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'glosario', component: GlosarioComponent },
   { path: 'etica', component: EticaComponent },
   { path: 'question', component: QuestionComponent },
+  { path: 'profesores', component: ProfesoresComponent },
   { path: 'content/:title', component: ContentComponent },
   { path: 'find/:searchString', component: ContentComponent },
 ];

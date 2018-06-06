@@ -38,6 +38,7 @@ import {EticaComponent} from './sections/etica/etica.component';
 import { QuestionComponent } from './sections/question/question.component';
 import {NgDragDropModule} from 'ng-drag-drop';
 import {SelectableComponent} from './sections/question/selectable.component';
+import { ProfesoresComponent } from './sections/profesores/profesores.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -66,7 +67,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     SearchForPipe,
     LiteSearchPipe,
     QuestionComponent,
-    SelectableComponent
+    SelectableComponent,
+    ProfesoresComponent
   ],
   imports: [
     BrowserModule,

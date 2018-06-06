@@ -1,0 +1,34 @@
+h3 {
+  font-size: 1.92rem;
+  line-height: 2.212rem;
+  margin: 1.46rem 0 1.168rem 0;
+}
+p {
+  padding: 0;
+  text-align: justify;
+}
+.title:after {
+
+  background-color: rgb(144,128,88);
+
+}
+.ngx-pagination .current {
+
+  background: rgb(144,128,88);
+
+}
+.widget-tags a:hover {
+  color: yellow;
+  background-color: rgb(144,128,88);
+}
+
+@media (min-width: 992px) {
+
+  .col-md-3 {
+    width: 30%;
+  }
+  .col-md-9 {
+    width: 60%;
+    margin-left: 89px;
+  }
+}

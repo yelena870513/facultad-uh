@@ -80,6 +80,7 @@ export class IsmaelilloComponent {
           });
         this.content = this.content.sort((a: any, b: any) => a.order - b.order);
       });
+
     this.dataService.getBooks(this.translate.currentLang).subscribe((data) => {
       this.books = data.docs.filter((f: any) => f.tematica === 'ismaelillo');
       this.currentBook = this.books[0];

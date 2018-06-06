@@ -13,8 +13,8 @@
         <!-- Search -->
         <div class="widget">
           <div class="widget-search">
-            <input class="search-input" type="text" placeholder="search">
-            <button class="search-btn" type="button"><i class="fa fa-search"></i></button>
+            <!--<input class="search-input" type="text" placeholder="search">-->
+            <!--<button class="search-btn" type="button"><i class="fa fa-search"></i></button>-->
           </div>
         </div>
         <!-- /Search -->
@@ -23,18 +23,10 @@
         <div class="widget">
           <h3 class="title">{{'ISMAELILLO.BOOKS' | translate}}</h3>
           <div class="widget-category">
-            <a *ngFor="let item of books |paginate: { itemsPerPage: 5, currentPage: page }" (click)="ReadBook(item)">{{item.title}}</a>
+            <a *ngFor="let item of books" (click)="ReadBook(item)">{{item.title}}</a>
 
           </div>
-          <pagination-controls
-            (pageChange)="page = $event"
-            maxSize="5"
-            previousLabel=""
-            nextLabel=""
-            boundaryLinks="false"
-          >
 
-          </pagination-controls>
         </div>
         <!-- /Category -->
 
@@ -44,9 +36,9 @@
       <!-- Main -->
       <main id="main2" class="col-md-9">
         <div class="blog">
-          <div class="blog-img">
-            <img class="img-responsive" src="./assets/images/blog-post.jpg" alt="">
-          </div>
+          <!--<div class="blog-img">-->
+            <!--<img class="img-responsive" src="./assets/images/blog-post.jpg" alt="">-->
+          <!--</div>-->
           <div class="blog-content">
 
             <h3>{{term.title}}</h3>

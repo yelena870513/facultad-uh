@@ -20,28 +20,28 @@
       "url":"tribunales.pdf",
       "title":"Código de ética de tribunales",
       "section":"book",
-      "tematica":"ContenidosJuridicos"
+      "tematica":"etica"
     },
     {
       "poster":"pdf.png",
       "url":"auditores.pdf",
       "title":"Código de ética para auditores",
       "section":"book",
-      "tematica":"ContenidosJuridicos"
+      "tematica":"etica"
     },
     {
       "poster":"pdf.png",
       "url":"cuadros.pdf",
       "title":" Código de ética de los cuadros",
       "section":"book",
-      "tematica":"ContenidosJuridicos"
+      "tematica":"etica"
     },
     {
       "poster":"pdf.png",
       "url":"fiscalia.pdf",
       "title":" Código de ética fiscalía",
       "section":"book",
-      "tematica":"ContenidosJuridicos"
+      "tematica":"etica"
     },
     {
       "poster":"pdf.png",
@@ -430,10 +430,47 @@
     },
     {
       "poster":"pdf.png",
-      "url":"tribunales.pdf",
-      "title":"Código de ética de tribunales",
+      "url":"ruta.pdf",
+      "title":"Ruta crítica para la enseñanza cívica de contenidos jurídicos",
       "section":"book",
-      "tematica":"etica"
+      "tematica":"profesores"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"alternativas.pdf",
+      "title":"Alternativas metodológicas para aplicar en clases",
+      "section":"book",
+      "tematica":"profesores"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"casos.pdf",
+      "title":"Casos prácticos",
+      "section":"book",
+      "tematica":"profesores"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"actividades.pdf",
+      "title":"Actividades de reflexión",
+      "section":"book",
+      "tematica":"estudiantes"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"dilemas.pdf",
+      "title":"Dilemas morales",
+      "section":"book",
+      "tematica":"estudiantes"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"fabulas.pdf",
+      "title":"Fábulas sobre valores",
+      "section":"book",
+      "tematica":"estudiantes"
     }
+
+
   ]
 }

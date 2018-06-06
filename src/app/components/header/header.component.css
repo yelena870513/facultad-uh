@@ -15,12 +15,23 @@ button:focus {
   outline: none;
   background-color: burlywood;
 }
+.white-text {
+  color: yellow !important;
+}
+#nav {
+  padding: 10px 0px;
+  background: rgb(144,128,88);
+}
+
 
 @media only screen and (min-width: 768px) {
 
   .main-nav > li > a:after {
 
     background-color: rgb(144,128,88);
+  }
+  #nav.nav-transparent:not(.fixed-nav) .main-nav>li>a {
+    color: yellow;
   }
   .main-nav>li>a:hover, .main-nav>li>a:focus, .main-nav>li.active>a {
     background: transparent;

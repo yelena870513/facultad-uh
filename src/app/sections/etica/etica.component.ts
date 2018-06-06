@@ -6,7 +6,8 @@ import {HeaderService} from "../../services/header.service";
 
 @Component({
   selector: 'app-etica',
-  templateUrl: './etica.component.html'
+  templateUrl: './etica.component.html',
+  styleUrls: ['./etica.component.css']
 })
 
 export class EticaComponent {

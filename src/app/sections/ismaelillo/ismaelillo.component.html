@@ -20,8 +20,8 @@
             <img class="img-responsive" src="./assets/images/{{item.img}}" alt="">
           </div>
           <div class="blog-content">
-            <h3>{{ item.title }}</h3>
-            <a class="link" (click)="openRead(item, !readMode, '')">{{ 'READMORE' | translate }}</a>
+            <!--<h3 class="ismaelillo">{{ item.title  | translate }}</h3>-->
+            <a class="link ismaelillo" (click)="openRead(item, !readMode, '')">{{ item.title  | translate }}</a>
           </div>
         </div>
       </div>
@@ -55,6 +55,13 @@
       <a (click)="openRead(undefined, !readMode, '')" ><i class="fa fa-backward"></i></a>
       <!-- Main -->
       <main id="main" class="col-md-9" [innerHtml]="readItem.content | liteSearch: searchString">
+        <style>
+          h3.plegable {
+          font-size: 18px;
+          line-height: 22px;
+          margin: 1.46rem 0 1.168rem 0;
+        }
+        </style>
 
       </main>
       <!-- /Main -->
@@ -85,25 +92,18 @@
         <div id="testimonial-slider" class="owl-carousel owl-theme" appOwlSlider>
 
           <!-- testimonial -->
-          <div class="testimonial">
+          <div class="testimonial" *ngFor="let item of cientificos " >
             <div class="testimonial-meta">
-              <img src="./assets/images/perso1.jpg" alt="">
-              <h3 class="white-text">John Doe</h3>
-              <span>Web Designer</span>
+              <img src="./assets/images/{{item.img}}" alt="">
+              <h3 class="white-text">{{item.name}}</h3>
+              <span>{{item.job | translate}}</span>
             </div>
-            <p class="white-text">Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris.</p>
+            <p class="white-text">{{item.description | translate}}</p>
           </div>
           <!-- /testimonial -->
 
           <!-- testimonial -->
-          <div class="testimonial">
-            <div class="testimonial-meta">
-              <img src="./assets/images/perso2.jpg" alt="">
-              <h3 class="white-text">John Doe</h3>
-              <span>Web Designer</span>
-            </div>
-            <p class="white-text">Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris.</p>
-          </div>
+
           <!-- /testimonial -->
 
         </div>
@@ -131,61 +131,42 @@
       <aside id="aside" class="col-md-3">
 
         <!-- Search -->
-        <div class="widget">
-          <div class="widget-search">
-            <input class="search-input" type="text" placeholder="search">
-            <button class="search-btn" type="button"><i class="fa fa-search"></i></button>
-          </div>
-        </div>
+        <!--<div class="widget">-->
+          <!--<div class="widget-search">-->
+            <!--<input class="search-input" type="text" placeholder="search">-->
+            <!--<button class="search-btn" type="button"><i class="fa fa-search"></i></button>-->
+          <!--</div>-->
+        <!--</div>-->
         <!-- /Search -->
 
         <!-- Category -->
-        <div class="widget">
-          <h3 class="title">{{'ISMAELILLO.BOOKS' | translate}}</h3>
-          <div class="widget-category">
-            <a *ngFor="let item of books |paginate: { itemsPerPage: 5, currentPage: page }" (click)="ReadBook(item)">{{item.title}}</a>
+        <!--<div class="widget">-->
+          <!--<h3 class="title">{{'ISMAELILLO.BOOKS' | translate}}</h3>-->
+          <!--<div class="widget-category">-->
+            <!--<a *ngFor="let item of books |paginate: { itemsPerPage: 5, currentPage: page }" (click)="ReadBook(item)">{{item.title}}</a>-->
 
-          </div>
-          <pagination-controls
-            (pageChange)="page = $event"
-            maxSize="5"
-            previousLabel=""
-            nextLabel=""
-            boundaryLinks="false"
-          >
+          <!--</div>-->
+          <!--<pagination-controls-->
+            <!--(pageChange)="page = $event"-->
+            <!--maxSize="5"-->
+            <!--previousLabel=""-->
+            <!--nextLabel=""-->
+            <!--boundaryLinks="false"-->
+          <!--&gt;-->
 
-          </pagination-controls>
-        </div>
+          <!--</pagination-controls>-->
+        <!--</div>-->
         <!-- /Category -->
-
-
-
-        <!-- Tags -->
-        <div class="widget">
-          <h3 class="title">Tags</h3>
-          <div class="widget-tags">
-            <a href="#">Web</a>
-            <a href="#">Design</a>
-            <a href="#">Graphic</a>
-            <a href="#">Marketing</a>
-            <a href="#">Development</a>
-            <a href="#">Branding</a>
-            <a href="#">Photography</a>
-          </div>
-        </div>
-        <!-- /Tags -->
 
       </aside>
       <!-- /Aside -->
       <!-- Main -->
       <main id="main2" class="col-md-9">
         <div class="blog">
-          <div class="blog-img">
-            <img class="img-responsive" src="./assets/images/blog-post.jpg" alt="">
-          </div>
+
           <div class="blog-content">
 
-            <h3>{{currentBook.title}}</h3>
+            <!--<h3>{{currentBook.title}}</h3>-->
             <div *ngIf="isLoaded" style="text-align: center;">
               <button (click)="prevPage()" [disabled]="pointer === 1">{{'NAV.PREV' | translate}}</button>
               <span>{{ pointer }} / {{ pdfPages }}</span>

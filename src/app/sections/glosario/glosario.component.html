@@ -7,13 +7,27 @@
     <!-- Row -->
     <div class="row">
 
+      <aside id="aside" class="col-md-3">
 
+
+
+        <div class="widget">
+          <h3 class="title">&Uacute;tiles</h3>
+          <div class="widget-tags">
+            <a routerLink="/question">Preguntas &nbsp;<i class="fa fa-question"></i></a>
+            <a routerLink="/etica">Etica &nbsp;<i class="fa fa-hand-o-right" aria-hidden="true"></i></a>
+          </div>
+
+        </div>
+        <!-- /Tags -->
+
+      </aside>
       <!-- Main -->
       <main id="main" class="col-md-9">
         <div class="blog">
           <!-- blog tags -->
           <div class="blog-tags">
-            <h5>Tags :</h5>
+            <!--<h5>Tags :</h5>-->
             <a  *ngFor="let item of glossary" (click)="setItem(item)"><i class="fa fa-tag"></i>{{item.index}}</a>
 
           </div>
@@ -21,7 +35,7 @@
           <div class="blog-content" *ngIf="term">
             <div class="row border-dark" *ngFor="let item of term.words">
               <div class="col-md-6">
-                {{item.name}}
+                <p class="name">{{item.name}}</p>
               </div>
               <div class="col-md-6">
                 {{item.description}}

@@ -92,7 +92,7 @@ h1 {
 	padding:0px 0 0 36px
 }
 h2 {
-	font-size:41px;
+	font-size:20px;
 	line-height:1.2em;
 	color:#200000;
 	padding:16px 0 12px 0;
@@ -107,6 +107,11 @@ h3 {
 	line-height:1.2em;
 	padding:20px 0 9px 0;
 	letter-spacing:-1px
+}
+h3.plegable {
+  font-size: 18px;
+  line-height: 22px;
+  margin: 1.46rem 0 1.168rem 0;
 }
 h3 span {
 	color:#a80002
@@ -194,6 +199,7 @@ header {
 	float:right;
 	position:relative
 }
+
 .banner {
 	left:0px;
 	top:0;
@@ -456,3 +462,4 @@ footer a:hover {
 	font:14px Georgia, "Times New Roman", Times, serif;
 	margin:0
 }
+

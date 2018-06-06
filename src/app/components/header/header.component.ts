@@ -23,10 +23,8 @@ export class HeaderComponent implements AfterViewInit {
     private router: Router) {
        this.menu = [
       {name: 'NAV.HOME', url: '/home' },
-      {name: 'NAV.ISMAELILLO', url: '/ismaelillo' },
-      {name: 'NAV.CONTENT', url: '/content' },
-      {name: 'NAV.DERECHO', url: '/derecho' },
-      {name: 'NAV.CATEDRA', url: '/catedra' }
+      {name: 'NAV.ESTUDIANTES', url: '/question' },
+      {name: 'NAV.PROFESORES', url: '/profesores' }
       ];
      this.headerService.showHeader
        .subscribe(show => setTimeout(() => this.showHeader = show));

@@ -1,3 +1,44 @@
 .border-dark {
   border-bottom: solid 1px #343a40;
 }
+.title:after {
+
+  background-color: rgb(144,128,88);
+
+}
+.blog-tags a i {
+  margin-right: 3px;
+  color: rgb(144,128,88);
+}
+.blog-tags[_ngcontent-c4] a[_ngcontent-c4] i[_ngcontent-c4]:hover {
+
+  color: yellow;
+}
+.blog-tags a:hover {
+  margin-right: 3px;
+  color: yellow;
+  background-color: rgb(144,128,88);
+  cursor: pointer;
+}
+.widget-tags a:hover {
+  color: yellow;
+  background-color: rgb(144,128,88);
+}
+h3 {
+  font-size: 1.92rem;
+}
+p.name{
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgb(144,128,88);
+}
+@media (min-width: 992px) {
+
+  .col-md-3 {
+    width: 18%;
+  }
+  .col-md-9 {
+    width: 81%;
+
+  }
+}

@@ -2,5 +2,44 @@ a.link, .fa-backward{
   cursor: pointer;
 }
 a{
-  color: rgb(144,128,88);;
+  color: rgb(144,128,88);
+}
+
+h2{
+  font-size: 2.56rem;
+}
+.title:after {
+  background-color:  rgb(144,128,88);
+}
+.blog .blog-content{
+  text-align: center;
+}
+.section{
+  /*background: rgb(249,249,242);*/
+}
+h3 {
+  font-size: 16px;
+  line-height: 13px;
+  color: #333;
+}
+
+a{text-align: center}
+a.ismaelillo:hover{
+  color: #333;
+  cursor: pointer;
+  border-bottom: 3px solid #66512c;
+  text-align: center;
+}
+@media (min-width: 992px) {
+
+  .col-md-9 {
+    width: 100%;
+  }
+
+}
+@media only screen and (min-width: 993px) {
+
+  .container {
+    width: 90%;
+  }
 }
