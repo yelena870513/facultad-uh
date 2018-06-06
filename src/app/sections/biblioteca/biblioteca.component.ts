@@ -12,7 +12,7 @@ declare var M: any;
 })
 
 export class BibliotecaComponent {
-  @ViewChild("search") search: TemplateRef<any>;
+  @ViewChild("search") search: any;
   books: any [];
   booksShelf: any [];
   themes: any [];

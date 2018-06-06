@@ -43,17 +43,18 @@
       "section":"book",
       "tematica":"etica"
     },
+
     {
       "poster":"pdf.png",
-      "url":"patriotismo.pdf",
-      "title":"Patriotismo",
+      "url":"manual1.pdf",
+      "title":"Primer manual de educación cívica en Cuba",
       "section":"book",
       "tematica":"articulos"
     },
     {
       "poster":"pdf.png",
-      "url":"manual1.pdf",
-      "title":"Primer manual de educación cívica en Cuba",
+      "url":"patriotismo.pdf",
+      "title":"Patriotismo",
       "section":"book",
       "tematica":"articulos"
     },

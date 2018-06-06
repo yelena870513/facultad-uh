@@ -19,7 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css",
+
         "../libs/materialize/css/materialize.css",
         "../libs/creative/css/bootstrap.min.css",
         "../libs/creative/css/owl.carousel.css",
@@ -30,7 +30,8 @@
         "../libs/materialize/css/ghpages-materialize.css",
         "../libs/materialize/css/icon.css",
         "../libs/materialize/css/css.css",
-        "../libs/materialize/css/fonts.css"
+        "../libs/materialize/css/fonts.css",
+        "styles.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
