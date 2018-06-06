@@ -28,6 +28,12 @@
   },
   "FOOTER":{
     "COPY":"Copyright © 2018. Todos los derechos reservados."
-  }
+  },
+  "LIBRARY":{
+    "HEADER":"Pdf",
+    "THEMES":"Temáticas",
+    "BOOKS":"Libros"
+  },
+  "articulos":"Artículos"
 
 }

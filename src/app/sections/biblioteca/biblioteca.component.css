@@ -1,0 +1,22 @@
+a.active{
+  color: #FFF;
+  background-color: #6195FF;
+}
+.ng2-pdf-viewer-container[_ngcontent-c6], .ng2-pdf-viewer-container
+{
+  overflow: inherit !important;
+}
+
+.search-result{
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.widget a{
+  cursor: pointer;
+}
+
+.btn.focus, .btn:focus, .btn:hover {
+  color: whitesmoke;
+  text-decoration: none;
+}

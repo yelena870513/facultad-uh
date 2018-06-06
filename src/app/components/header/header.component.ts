@@ -31,6 +31,7 @@ export class HeaderComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
+    $('#nav').addClass('hidden');
 
     ///////////////////////////
     // Scrollspy

@@ -12,7 +12,7 @@ import {HeaderService} from '../../services/header.service';
 export class DerechoComponent {
   categories: CategoryInterface [];
   constructor(private dataService: DataService, private translate: TranslateService, private headerService: HeaderService) {
-    this.headerService.Show();
+    this.headerService.Hide();
     this.dataService.getContent(this.translate.currentLang)
       .subscribe((data) => {
         this.categories = data.docs.filter(f => (f.tipo === 'category' && !f._deleted) && f.title !== 'Preguntas y respuestas')
