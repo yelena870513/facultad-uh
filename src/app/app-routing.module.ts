@@ -11,6 +11,7 @@ import {GlosarioComponent} from './sections/glosario/glosario.component';
 import {EticaComponent} from './sections/etica/etica.component';
 import {QuestionComponent} from './sections/question/question.component';
 import {ProfesoresComponent} from "./sections/profesores/profesores.component";
+import {LandingComponent} from "./sections/landing/landing.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'profesores', component: ProfesoresComponent },
   { path: 'content/:title', component: ContentComponent },
   { path: 'find/:searchString', component: ContentComponent },
+  { path: 'landing', component: LandingComponent },
 ];
 
 @NgModule({

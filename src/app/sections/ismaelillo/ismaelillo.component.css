@@ -16,6 +16,7 @@ h2{
 }
 .section{
   /*background: rgb(249,249,242);*/
+  margin-bottom: 5rem;
 }
 h3 {
   font-size: 16px;
@@ -42,4 +43,8 @@ a.ismaelillo:hover{
   .container {
     width: 90%;
   }
+}
+.btn.focus, .btn:focus, .btn:hover {
+  color: whitesmoke;
+  text-decoration: none;
 }

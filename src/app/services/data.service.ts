@@ -23,4 +23,7 @@ export class DataService {
   public getQuestion(lang: string): Observable<any> {
     return this.http.get('assets/data/preguntas.' + lang + '.json');
   }
+  public getCientifico(lang: string): Observable<any> {
+    return this.http.get('assets/data/cientificos.' + lang + '.json');
+  }
 }

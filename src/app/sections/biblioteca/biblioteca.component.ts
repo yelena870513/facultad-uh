@@ -74,6 +74,7 @@ export class BibliotecaComponent {
   startSearch() {
     if (this.searchString.length > 3) {
       this.booksShelf = this.books.filter((f: any) => f.title.toLowerCase().search(this.searchString) !== -1);
+      this.reader = this.booksShelf[0];
       this.result = true;
     }
   }

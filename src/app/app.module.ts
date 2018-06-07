@@ -39,6 +39,8 @@ import { QuestionComponent } from './sections/question/question.component';
 import {NgDragDropModule} from 'ng-drag-drop';
 import {SelectableComponent} from './sections/question/selectable.component';
 import { ProfesoresComponent } from './sections/profesores/profesores.component';
+import { LandingComponent } from './sections/landing/landing.component';
+import {FooterService} from "./services/footer.service";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -68,7 +70,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     LiteSearchPipe,
     QuestionComponent,
     SelectableComponent,
-    ProfesoresComponent
+    ProfesoresComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
@@ -88,7 +91,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     })
   ],
   exports: [RouterModule, TranslateModule],
-  providers: [OrmService, DataService, HeaderService, BehaviourService,  { provide: APP_BASE_HREF, useValue: '/' },],
+  providers: [OrmService, DataService, HeaderService, FooterService, BehaviourService,  { provide: APP_BASE_HREF, useValue: '/' },],
   entryComponents:[SelectableComponent],
   bootstrap: [AppComponent]
 })

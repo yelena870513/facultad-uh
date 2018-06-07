@@ -23,7 +23,7 @@
         <div class="widget">
           <h3 class="title">{{'ISMAELILLO.BOOKS' | translate}}</h3>
           <div class="widget-category">
-            <a *ngFor="let item of books" (click)="ReadBook(item)">{{item.title}}</a>
+            <a *ngFor="let item of books" (click)="ReadBook(item)" [ngClass]="{'active': item.title === term.title}">{{item.title}}</a>
 
           </div>
 
@@ -42,10 +42,13 @@
           <div class="blog-content">
 
             <h3>{{term.title}}</h3>
+            <div class="progress"  *ngIf="!isLoaded">
+              <div class="indeterminate"></div>
+            </div>
             <div *ngIf="isLoaded" style="text-align: center;">
-              <button (click)="prevPage()" [disabled]="pointer === 1">{{'NAV.PREV' | translate}}</button>
+              <button class="btn waves-effect waves-light brown" (click)="prevPage()" [disabled]="pointer === 1">{{'NAV.PREV' | translate}} &nbsp;<i class="mdi-av-skip-previous"></i></button>
               <span>{{ pointer }} / {{ pdfPages }}</span>
-              <button (click)="nextPage()" [disabled]="pointer === pdfPages">{{'NAV.NEXT' | translate }}</button>
+              <button class="btn waves-effect waves-light brown" (click)="nextPage()" [disabled]="pointer === pdfPages">{{'NAV.NEXT' | translate }} &nbsp;<i class="mdi-av-skip-next"></i></button>
             </div>
 
             <pdf-viewer src="./assets/pdf/{{term.url}}"

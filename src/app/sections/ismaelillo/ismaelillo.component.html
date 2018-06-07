@@ -92,7 +92,7 @@
         <div id="testimonial-slider" class="owl-carousel owl-theme" appOwlSlider>
 
           <!-- testimonial -->
-          <div class="testimonial" *ngFor="let item of cientificos " >
+          <div style="margin-bottom: 40px" class="testimonial" *ngFor="let item of cientifico " >
             <div class="testimonial-meta">
               <img src="./assets/images/{{item.img}}" alt="">
               <h3 class="white-text">{{item.name}}</h3>
@@ -100,6 +100,7 @@
             </div>
             <p class="white-text">{{item.description | translate}}</p>
           </div>
+
           <!-- /testimonial -->
 
           <!-- testimonial -->
@@ -167,10 +168,13 @@
           <div class="blog-content">
 
             <!--<h3>{{currentBook.title}}</h3>-->
+            <div class="progress"  *ngIf="!isLoaded">
+              <div class="indeterminate"></div>
+            </div>
             <div *ngIf="isLoaded" style="text-align: center;">
-              <button (click)="prevPage()" [disabled]="pointer === 1">{{'NAV.PREV' | translate}}</button>
+              <button class="btn waves-effect waves-light brown" (click)="prevPage()" [disabled]="pointer === 1">{{'NAV.PREV' | translate}} <i class="mdi-av-skip-previous"></i></button>
               <span>{{ pointer }} / {{ pdfPages }}</span>
-              <button (click)="nextPage()" [disabled]="pointer === pdfPages">{{'NAV.NEXT' | translate }}</button>
+              <button class="btn waves-effect waves-light brown" (click)="nextPage()" [disabled]="pointer === pdfPages">{{'NAV.NEXT' | translate }} <i class="mdi-av-skip-next"></i></button>
             </div>
 
             <pdf-viewer src="./assets/pdf/{{currentBook.url}}"

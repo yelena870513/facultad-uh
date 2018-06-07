@@ -26,9 +26,9 @@
   margin-bottom: 0px;
 }
 /*.section {*/
-  /*padding-top: 1rem;*/
-  /*padding-bottom: 1rem;*/
-  /*background: rgb(249,249,242);*/
+/*padding-top: 1rem;*/
+/*padding-bottom: 1rem;*/
+/*background: rgb(249,249,242);*/
 /*}*/
 
 h3[_ngcontent-c4] {
@@ -56,23 +56,4 @@ h3 {
   border: 1px solid rgb(144,128,88);
   height: 200px;
 }
-
-#nav.fixed-nav {
-  position: fixed;
-  left: 0;
-  right: 0;
-  padding: 0px 0px;
-  background-color: rgb(144,128,88) !important;
-  border-bottom: none !important;
-}
-
-.navbar.nav-transparent.fixed-nav{
-  position: fixed;
-  left: 0;
-  right: 0;
-  padding: 0px 0px;
-  background-color: rgb(144,128,88) !important;
-  border-bottom: none !important;
-}
-
 

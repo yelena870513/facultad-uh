@@ -1,9 +1,10 @@
 h3.plegable {
-  font-size: 17px;
-  line-height: 22px;
+  font-size: 23px;
+  line-height: 2.212rem;
   margin: 1.46rem 0 1.168rem 0;
   float: left;
 }
+
 tr {
   border-bottom: 1px solid rgb(144,128,88)!important;
 }
@@ -24,3 +25,17 @@ h4 {
   transform: scale(0);
   border-radius:50%;
 }
+h3 {
+  font-size: 23px;
+  line-height: 2.212rem;
+  margin: 1.46rem 0 1.168rem 0;
+}
+p {
+  margin: 0 0 5px;
+}
+strong {
+  font-weight: 500;
+  float: left;
+}
+
+

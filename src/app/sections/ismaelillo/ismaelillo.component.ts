@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import {DataService} from '../../services/data.service';
 import {TranslateService} from '@ngx-translate/core';
 import {HeaderService} from '../../services/header.service';
@@ -10,6 +10,7 @@ import {transition, trigger, useAnimation} from '@angular/animations';
 import {BehaviourService} from '../../services/behaviour.service';
 import * as _ from 'lodash';
 import {BookInterface} from '../../interfaces/book.interface';
+declare var $: any;
 @Component({
   selector: 'app-ismaelillo',
   templateUrl: './ismaelillo.component.html',
@@ -23,7 +24,7 @@ import {BookInterface} from '../../interfaces/book.interface';
   ],
 })
 
-export class IsmaelilloComponent {
+export class IsmaelilloComponent implements AfterViewInit{
   content: ContentInterface [];
   books: BookInterface [];
   readMode = false;
@@ -46,6 +47,7 @@ export class IsmaelilloComponent {
   currentBook: BookInterface;
   /*panelMode, readMode, searchMode, teamMode, actionMode*/
   currentMode: string;
+  cientifico: any[];
   constructor(private dataService: DataService,
               private translate: TranslateService,
               private headerService: HeaderService,
@@ -84,6 +86,9 @@ export class IsmaelilloComponent {
     this.dataService.getBooks(this.translate.currentLang).subscribe((data) => {
       this.books = data.docs.filter((f: any) => f.tematica === 'ismaelillo');
       this.currentBook = this.books[0];
+    });
+    this.dataService.getCientifico(this.translate.currentLang).subscribe((data:any) => {
+      this.cientifico = data.docs;
     });
     this.headerService.Hide();
     this.showLecture = 'hideLecture';
@@ -141,6 +146,7 @@ export class IsmaelilloComponent {
   afterLoadComplete(pdfData: any) {
     this.pdfPages = pdfData.numPages;
     this.isLoaded = true;
+    this.QuitOverFlow();
   }
 
   nextPage() {
@@ -149,6 +155,14 @@ export class IsmaelilloComponent {
 
   prevPage() {
     this.pointer--;
+  }
+
+  ngAfterViewInit() {
+    $('#nav').addClass('fixed-nav').removeClass('hidden')
+  }
+
+  private QuitOverFlow() {
+    $('.ng2-pdf-viewer-container').css('overflow','inherit');
   }
 }
 

@@ -23,7 +23,7 @@
         <div class="widget">
           <h3 class="title">{{'CONTENIDOS.CATEGORY' | translate}}</h3>
           <div class="widget-category">
-            <a *ngFor="let item of categories |paginate: { itemsPerPage: 5, currentPage: page }" (click)="Selecter(item)">{{item.title}}</a>
+            <a *ngFor="let item of categories |paginate: { itemsPerPage: 5, currentPage: page }" (click)="Selecter(item)" [ngClass]="{'active': item.title === current.title, 'search-result': result}">{{item.title}}</a>
 
           </div>
           <pagination-controls

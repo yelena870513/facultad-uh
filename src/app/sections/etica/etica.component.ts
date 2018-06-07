@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {DataService} from "../../services/data.service";
 import {TranslateService} from '@ngx-translate/core';
 import {HeaderService} from "../../services/header.service";
-
+declare var $: any;
 
 @Component({
   selector: 'app-etica',
@@ -22,6 +22,9 @@ export class EticaComponent {
       this.books = data.docs.filter(f => f.tematica === 'etica');
       this.term = this.books[0];
     });
+    /*PDF Viewer*/
+    this.pointer = 1;
+    this.pdfPages = 1;
   }
 
   ReadBook(item) {
@@ -30,6 +33,7 @@ export class EticaComponent {
   afterLoadComplete(pdfData: any) {
     this.pdfPages = pdfData.numPages;
     this.isLoaded = true;
+    this.QuitOverFlow();
   }
 
   nextPage() {
@@ -38,6 +42,10 @@ export class EticaComponent {
 
   prevPage() {
     this.pointer--;
+  }
+
+  private QuitOverFlow() {
+    $('.ng2-pdf-viewer-container').css('overflow','inherit');
   }
 }
 
