@@ -15,20 +15,35 @@ declare var $: any;
 })
 export class QuestionComponent implements OnInit {
   questions = [];
+  books = [];
   i: any;
+  reader: any;
   droppedItems = [];
+  readMode = false;
   page = 1;
+  page1 = 1;
+  pointer = 1;
+  pdfPages = 1;
+  isLoaded = false;
   removeItem(e: any) {
     this.droppedItems = this.droppedItems.filter((f: any) => f.name !== e.target.innerText);
   }
   constructor(private headerService: HeaderService, private dataService: DataService, private translate: TranslateService) {
     this.headerService.Hide();
     this.dataService.getQuestion(this.translate.currentLang).subscribe((data: any) => {
-      this.questions = data.docs.sort((a:any, b: any) => a.title - b.title);
+      this.questions = data.docs;
       this.i = this.questions[0];
     }, ( error1 => {
        console.log(error1);
     } ));
+
+    this.dataService.getBooks(this.translate.currentLang).subscribe((data: any) => {
+      this.books = data.docs.filter(f => f.tematica === 'estudiantes');
+      this.reader = this.books[0];
+    });
+    /*PDF Viewer*/
+    this.pointer = 1;
+    this.pdfPages = 1;
   }
   checkAnswer(item,event) {
     if(event.target.checked){
@@ -57,10 +72,34 @@ export class QuestionComponent implements OnInit {
 
   Selecter(item) {
     this.i = item;
+    this.readMode = false;
+  }
+
+  ReadBook(book){
+    this.reader = book;
+    this.pointer = 1;
+    this.readMode = true;
+  }
+  afterLoadComplete(pdfData: any) {
+    this.pdfPages = pdfData.numPages;
+    this.isLoaded = true;
+    this.QuitOverFlow();
+  }
+
+  nextPage() {
+    this.pointer++;
+  }
+
+  prevPage() {
+    this.pointer--;
   }
 
   ngOnInit() {
     $('#nav').addClass('fixed-nav').removeClass('hidden');
 
+  }
+
+  private QuitOverFlow() {
+    $('.ng2-pdf-viewer-container').css('overflow','inherit');
   }
 }

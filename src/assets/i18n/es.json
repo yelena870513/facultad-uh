@@ -18,11 +18,20 @@
   },
   "CONTENIDO":{
     "TITLE": "Contenidos jurídicos de la educación cívica",
-    "BOOKS":"Libros"
+    "BOOKS":"Libros",
+    "UTIL":"Útiles",
+    "ETHIC":"Ética",
+    "QUESTION":"Preguntas",
+    "GLOSSARY":"Glosario"
   },
    "BIBLIOTECA":{
     "TITLE": "Biblioteca jurídica",
     "BOOKS":"Libros"
+  },
+  "QUESTION":{
+    "TITLE": "Estudiantes",
+    "BOOKS":"Libros",
+    "QUESTION":"Cuestionario"
   },
    "DERECHO":{
     "TITLE": "El derecho en la historia",
@@ -52,6 +61,7 @@
   "normasInternacionales":"Normas internacionales",
   "normasNacionales":"Normas nacionales",
   "normasBasicos":"Normas básicas",
-  "normasCivil":"Normas civiles"
+  "normasCivil":"Normas civiles",
+  "EXIT": "Salir"
 
 }

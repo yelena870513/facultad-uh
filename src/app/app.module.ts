@@ -41,6 +41,7 @@ import {SelectableComponent} from './sections/question/selectable.component';
 import { ProfesoresComponent } from './sections/profesores/profesores.component';
 import { LandingComponent } from './sections/landing/landing.component';
 import {FooterService} from "./services/footer.service";
+import { StudentComponent } from './sections/student/student.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -71,7 +72,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     QuestionComponent,
     SelectableComponent,
     ProfesoresComponent,
-    LandingComponent
+    LandingComponent,
+    StudentComponent
   ],
   imports: [
     BrowserModule,

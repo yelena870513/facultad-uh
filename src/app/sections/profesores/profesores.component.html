@@ -1,3 +1,68 @@
-<p>
-  profesores works!
-</p>
+<!-- Blog -->
+<div id="blog" class="section md-padding">
+
+  <!-- Container -->
+  <div class="container">
+
+    <!-- Row -->
+    <div class="row">
+      <div class="section-header text-center">
+        <h2 class="title">{{ 'PROFESORES.TITLE' | translate }}</h2>
+      </div>
+
+      <!-- Aside -->
+      <aside id="aside" class="col-md-3">
+
+             <!-- Category -->
+        <div class="widget">
+          <h3 class="title">{{'PROFESORES.BOOKS' | translate}}</h3>
+          <div class="widget-category">
+            <a *ngFor="let item of books" (click)="ReadBook(item)" [ngClass]="{'active': item.title === reader.title}">{{item.title}}</a>
+
+          </div>
+
+        </div>
+
+
+      </aside>
+      <!-- /Aside -->
+
+      <!-- Main -->
+      <main id="main2" class="col-md-9">
+        <div class="blog">
+          <!--<div class="blog-img">-->
+          <!--<img class="img-responsive" src="./assets/images/blog-post.jpg" alt="">-->
+          <!--</div>-->
+          <div class="blog-content">
+
+            <h3>{{reader.title}}</h3>
+            <div class="progress"  *ngIf="!isLoaded">
+              <div class="indeterminate"></div>
+            </div>
+            <div *ngIf="isLoaded" style="text-align: center;">
+              <button class="btn waves-effect waves-light brown" (click)="prevPage()" [disabled]="pointer === 1">{{'NAV.PREV' | translate}} &nbsp;<i class="mdi-av-skip-previous"></i></button>
+              <span>{{ pointer }} / {{ pdfPages }}</span>
+              <button class="btn waves-effect waves-light brown" (click)="nextPage()" [disabled]="pointer === pdfPages">{{'NAV.NEXT' | translate }} &nbsp;<i class="mdi-av-skip-next"></i></button>
+            </div>
+
+            <pdf-viewer src="./assets/pdf/{{reader.url}}"
+                        [show-all]="false"
+                        [page]="pointer"
+                        [render-text]="false"
+                        (after-load-complete)="afterLoadComplete($event)"
+            ></pdf-viewer>
+          </div>
+        </div>
+      </main>
+      <!-- /Main -->
+
+
+
+    </div>
+    <!-- /Row -->
+
+  </div>
+  <!-- /Container -->
+
+</div>
+<!-- /Blog -->

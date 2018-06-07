@@ -6,5 +6,24 @@ label.check{
 }
 a.active{
   color: #FFF;
-  background-color: #6195FF;
+  background-color:rgb(144,128,88);
+}
+
+.widget a{
+  cursor: pointer;
+}
+
+.btn.focus, .btn:focus, .btn:hover {
+  color: whitesmoke;
+  text-decoration: none;
+}
+.title:after {
+
+  background-color: rgb(144,128,88);
+
+}
+.ngx-pagination .current {
+
+  background: rgb(144,128,88);
+
 }
