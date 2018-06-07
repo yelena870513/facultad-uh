@@ -29,6 +29,7 @@ export class EticaComponent {
 
   ReadBook(item) {
     this.term = item;
+    this.pointer = 1;
   }
   afterLoadComplete(pdfData: any) {
     this.pdfPages = pdfData.numPages;

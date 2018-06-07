@@ -21,6 +21,12 @@ p {
   color: yellow;
   background-color: rgb(144,128,88);
 }
+.widget-category a:hover {
+  color: rgb(144,128,88);;
+}
+a.active:hover {
+  color: #FFF !important;
+}
 
 @media (min-width: 992px) {
 

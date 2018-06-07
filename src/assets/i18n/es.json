@@ -16,6 +16,20 @@
     "TITLE": "Proyecto Ismaelillo",
     "BOOKS":"Libros"
   },
+  "CONTENIDO":{
+    "TITLE": "Contenidos jurídicos de la educación cívica",
+    "BOOKS":"Libros"
+  },
+   "BIBLIOTECA":{
+    "TITLE": "Biblioteca jurídica",
+    "BOOKS":"Libros"
+  },
+   "DERECHO":{
+    "TITLE": "El derecho en la historia",
+    "BOOKS":"Libros",
+    "CONSTITUCIONES":"Constituciones cubanas ",
+    "JURISTAS":"Juristas insignes"
+  },
   "NAV":{
     "HOME": "Contenido General",
     "ESTUDIANTES": "Estudiantes",
@@ -30,10 +44,14 @@
     "COPY":"Copyright © 2018. Todos los derechos reservados."
   },
   "LIBRARY":{
-    "HEADER":"Pdf",
-    "THEMES":"Temáticas",
-    "BOOKS":"Libros"
+    "HEADER":"PDF",
+    "THEMES":"TEMÁTICAS",
+    "BOOKS":"LIBROS"
   },
-  "articulos":"Artículos"
+  "articulos":"Artículos",
+  "normasInternacionales":"Normas internacionales",
+  "normasNacionales":"Normas nacionales",
+  "normasBasicos":"Normas básicas",
+  "normasCivil":"Normas civiles"
 
 }

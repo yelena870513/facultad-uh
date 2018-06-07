@@ -470,6 +470,34 @@
       "title":"Fábulas sobre valores",
       "section":"book",
       "tematica":"estudiantes"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"Antonio.pdf",
+      "title":"Antonio el cojo",
+      "section":"book",
+      "tematica":"juristas"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"Armando.pdf",
+      "title":"Armando cojito",
+      "section":"book",
+      "tematica":"juristas"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"DL-99.pdf",
+      "title":"DL-99",
+      "section":"book",
+      "tematica":"leyes"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"DL-107.pdf",
+      "title":"DL-107",
+      "section":"book",
+      "tematica":"leyes"
     }
 
 

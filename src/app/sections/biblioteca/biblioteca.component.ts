@@ -51,11 +51,13 @@ export class BibliotecaComponent {
     this.reader = this.booksShelf[0];
     this.isLoaded = false;
     this.result = false;
+    this.pointer = 1;
     //noinspection TypeScriptUnresolvedVariable
     this.search.nativeElement.value = "";
   }
   ReadBook(book){
     this.reader = book;
+    this.pointer = 1;
   }
   afterLoadComplete(pdfData: any) {
     this.pdfPages = pdfData.numPages;

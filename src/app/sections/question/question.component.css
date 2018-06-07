@@ -4,3 +4,7 @@ label.error{
 label.check{
   color: green;
 }
+a.active{
+  color: #FFF;
+  background-color: #6195FF;
+}

@@ -1,29 +1,99 @@
-<!-- About -->
-<div id="about" class="section md-padding">
+<!-- Blog -->
+<div id="blog" class="section md-padding">
 
   <!-- Container -->
   <div class="container">
 
+    <div class="section-header text-center">
+      <h2 class="title">{{ 'DERECHO.TITLE' | translate }}</h2>
+    </div>
+
+    <!-- Search -->
+    <div class="widget">
+      <div class="widget-search">
+        <input class="search-input" type="text" placeholder="buscar" (change)="FireAction($event)" (keyup)="doSearch($event)" #search>
+        <button class="search-btn btn waves-effect waves-light brown" type="button" (click)="btnSearch()"><i class="fa fa-search"></i></button>
+      </div>
+    </div>
+    <!-- /Search -->
     <!-- Row -->
     <div class="row">
 
-      <!-- Section header -->
-      <div class="section-header text-center">
-        <h2 class="title">{{'HOME.BIENVENIDA' | translate}}</h2>
-      </div>
-      <!-- /Section header -->
+      <aside id="aside" class="col-md-3">
 
-      <!-- about -->
-      <div class="col-md-3" *ngFor="let category of categories">
-        <div class="about">
-          <i class="{{category.ico || 'fa fa-cogs'}}"></i>
-          <h3>{{category.title}}</h3>
-          <p>{{category.subtitle}}</p>
-          <a routerLink="/content/{{category.title}}">Leer mas</a>
+
+        <div class="widget" *ngIf="booksShelf.length>0">
+          <h5 class="title">{{'DERECHO.JURISTAS' | translate}}</h5>
+          <div class="widget-category">
+            <a *ngFor="let item of booksShelf |paginate: { itemsPerPage: 5, currentPage: page }"
+               (click)="ReadBook(item)"
+               [ngClass]="{'active': item.title === reader.title, 'search-result': result}" >{{item.title}}
+            </a>
+          </div>
         </div>
-      </div>
-      <!-- /about -->
+        <pagination-controls
+          *ngIf="booksShelf.length>0"
+          (pageChange)="page = $event"
+          maxSize="5"
+          previousLabel=""
+          nextLabel=""
+          boundaryLinks="false"
+        >
 
+        </pagination-controls>
+        <div class="widget" *ngIf="booksShelf1.length>0">
+          <h5 class="title">{{'DERECHO.CONSTITUCIONES' | translate}}</h5>
+          <div class="widget-category">
+            <a *ngFor="let item of booksShelf1 |paginate: { itemsPerPage: 5, currentPage: page1 }"
+               (click)="ReadBook(item)"
+               [ngClass]="{'active': item.title === reader.title, 'search-result': result}" >{{item.title}}
+            </a>
+          </div>
+        </div>
+        <pagination-controls
+          *ngIf="booksShelf1.length>0"
+          (pageChange)="page = $event"
+          maxSize="5"
+          previousLabel=""
+          nextLabel=""
+          boundaryLinks="false"
+        >
+
+        </pagination-controls>
+        <!-- /Tags -->
+
+      </aside>
+
+      <!-- Main -->
+      <main id="main" class="col-md-9">
+        <div class="blog">
+          <div class="blog-content" *ngIf="reader">
+            <div class="row border-dark">
+              <div class="col-md-12">
+                <div class="progress"  *ngIf="!isLoaded">
+                  <div class="indeterminate"></div>
+                </div>
+                <div *ngIf="isLoaded" style="text-align: center;">
+                  <button class="btn waves-effect waves-light brown" (click)="prevPage()" [disabled]="pointer === 1">
+                    {{'NAV.PREV' | translate}} &nbsp;<i class="mdi-av-skip-previous"></i>
+                  </button>
+                  <span>{{ pointer }} / {{ pdfPages }}</span>
+                  <button class="btn waves-effect waves-light brown" (click)="nextPage()" [disabled]="pointer === pdfPages">
+                    {{'NAV.NEXT' | translate }}&nbsp;<i class="mdi-av-skip-next"></i>
+                  </button>
+                </div>
+                <pdf-viewer src="./assets/pdf/{{reader.url}}"
+                            [show-all]="false"
+                            [page]="pointer"
+                            [render-text]="false"
+                            (after-load-complete)="afterLoadComplete($event)"
+                ></pdf-viewer>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- /Main -->
 
     </div>
     <!-- /Row -->
@@ -32,4 +102,4 @@
   <!-- /Container -->
 
 </div>
-<!-- /About -->
+<!-- /Blog -->

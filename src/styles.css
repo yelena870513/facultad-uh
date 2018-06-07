@@ -38,4 +38,12 @@ strong {
   float: left;
 }
 
-
+.ngx-pagination .current {
+  padding: 0.1875rem 0.625rem;
+  background: rgb(144,128,88)!important;
+  color: #fefefe;
+  cursor: default;
+}
+.canvasWrapper{
+  border: 1px solid rgb(144,128,88)!important;
+}

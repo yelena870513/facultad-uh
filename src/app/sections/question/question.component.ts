@@ -7,6 +7,7 @@ import {TranslateService} from '@ngx-translate/core';
 //noinspection TypeScriptCheckImport
 import {log} from 'util';
 declare var M: any;
+declare var $: any;
 @Component({
   selector: 'app-question',
   templateUrl: './question.component.html',
@@ -14,6 +15,7 @@ declare var M: any;
 })
 export class QuestionComponent implements OnInit {
   questions = [];
+  i: any;
   droppedItems = [];
   page = 1;
   removeItem(e: any) {
@@ -23,6 +25,7 @@ export class QuestionComponent implements OnInit {
     this.headerService.Hide();
     this.dataService.getQuestion(this.translate.currentLang).subscribe((data: any) => {
       this.questions = data.docs.sort((a:any, b: any) => a.title - b.title);
+      this.i = this.questions[0];
     }, ( error1 => {
        console.log(error1);
     } ));
@@ -52,7 +55,12 @@ export class QuestionComponent implements OnInit {
     }
   }
 
+  Selecter(item) {
+    this.i = item;
+  }
+
   ngOnInit() {
+    $('#nav').addClass('fixed-nav').removeClass('hidden');
 
   }
 }

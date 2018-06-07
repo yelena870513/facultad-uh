@@ -1,29 +1,32 @@
 .widget-category a:hover {
-  display: block;
-  font-size: 14px;
   color: rgb(144,128,88);
-  border-bottom: 1px solid #EEE;
-  padding: 5px;
 }
-h3 {
-  font-size: 1.92rem;
-  line-height: 2.212rem;
-  margin: 1.46rem 0 1.168rem 0;
-}
-.title:after {
-
+a.active:hover {
+  color: #FFF !important;
   background-color: rgb(144,128,88);
-
+}
+.ng2-pdf-viewer-container[_ngcontent-c6], .ng2-pdf-viewer-container
+{
+  overflow: inherit !important;
 }
 
+.search-result{
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.widget a{
+  cursor: pointer;
+}
 
 .btn.focus, .btn:focus, .btn:hover {
   color: whitesmoke;
   text-decoration: none;
 }
-a.active{
-  color: #FFF;
+.title:after {
+
   background-color: rgb(144,128,88);
+
 }
 .ngx-pagination .current {
 
@@ -34,9 +37,8 @@ a.active{
   color: yellow;
   background-color: rgb(144,128,88);
 }
-.widget-category a:hover {
-  color: rgb(144,128,88);;
-}
-a.active:hover {
-  color: #FFF !important;
+
+a.active{
+  color: #FFF;
+  background-color: rgb(144,128,88);
 }

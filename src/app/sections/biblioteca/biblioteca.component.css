@@ -1,6 +1,9 @@
-a.active{
-  color: #FFF;
-  background-color: #6195FF;
+.widget-category a:hover {
+  color: rgb(144,128,88);
+}
+a.active:hover {
+  color: #FFF !important;
+  background-color: rgb(144,128,88);
 }
 .ng2-pdf-viewer-container[_ngcontent-c6], .ng2-pdf-viewer-container
 {
@@ -20,3 +23,23 @@ a.active{
   color: whitesmoke;
   text-decoration: none;
 }
+.title:after {
+
+  background-color: rgb(144,128,88);
+
+}
+.ngx-pagination .current {
+
+  background: rgb(144,128,88);
+
+}
+.widget-tags a:hover {
+  color: yellow;
+  background-color: rgb(144,128,88);
+}
+
+a.active{
+  color: #FFF;
+  background-color: rgb(144,128,88);
+}
+
