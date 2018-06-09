@@ -39,6 +39,14 @@
     "CONSTITUCIONES":"Constituciones cubanas ",
     "JURISTAS":"Juristas insignes"
   },
+  "PROFESORES":{
+    "TITLE": "Profesores",
+    "BOOKS":"Libros"
+  },
+  "LANDING":{
+    "TITLE": "Contenido general",
+    "BOOKS":"Libros"
+  },
   "NAV":{
     "HOME": "Contenido General",
     "ESTUDIANTES": "Estudiantes",
@@ -62,6 +70,7 @@
   "normasNacionales":"Normas nacionales",
   "normasBasicos":"Normas básicas",
   "normasCivil":"Normas civiles",
+  "normasPenal":"Normas penales",
   "EXIT": "Salir"
 
 }

@@ -23,7 +23,7 @@
 
 
         <div class="widget" *ngIf="booksShelf.length>0">
-          <h5 class="title">{{'DERECHO.JURISTAS' | translate}}</h5>
+          <h3 class="title">{{'DERECHO.JURISTAS' | translate}}</h3>
           <div class="widget-category">
             <a *ngFor="let item of booksShelf |paginate: { itemsPerPage: 5, currentPage: page }"
                (click)="ReadBook(item)"
@@ -42,7 +42,7 @@
 
         </pagination-controls>
         <div class="widget" *ngIf="booksShelf1.length>0">
-          <h5 class="title">{{'DERECHO.CONSTITUCIONES' | translate}}</h5>
+          <h3 class="title">{{'DERECHO.CONSTITUCIONES' | translate}}</h3>
           <div class="widget-category">
             <a *ngFor="let item of booksShelf1 |paginate: { itemsPerPage: 5, currentPage: page1 }"
                (click)="ReadBook(item)"

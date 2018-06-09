@@ -54,7 +54,7 @@
     {
       "poster":"pdf.png",
       "url":"patriotismo.pdf",
-      "title":"Patriotismo",
+      "title":"Patriotismo. Félix Varela y Morales",
       "section":"book",
       "tematica":"articulos"
     },
@@ -231,20 +231,6 @@
     },
     {
       "poster":"pdf.png",
-      "url":"ATLAS.pdf",
-      "title":" Álbum: Escenarios de peligros y vulnerabilidad de la zona costera cubana asociados  al ascenso  del  nivel  del  mar para los años 2050 y 2100. Versión 9.0, año 2016",
-      "section":"book",
-      "tematica":"normasInternacionales"
-    },
-    {
-      "poster":"pdf.png",
-      "url":"IPCC.pdf",
-      "title":" Anexo B. Glosario de términos",
-      "section":"book",
-      "tematica":"normasInternacionales"
-    },
-    {
-      "poster":"pdf.png",
       "url":"forestal.pdf",
       "title":" Ley No. 85, Ley Forestal",
       "section":"book",
@@ -288,14 +274,14 @@
     {
       "poster":"pdf.png",
       "url":"ley200.pdf",
-      "title":" Decreto Ley No.  200, de las contravenciones en materia de medio ambiente ",
+      "title":" Decreto Ley No. 200, de las contravenciones en materia de medio ambiente ",
       "section":"book",
       "tematica":"normasNacionales"
     },
     {
       "poster":"pdf.png",
       "url":"ley201.pdf",
-      "title":" Decreto Ley No.  201, del sistema nacional de áreas protegidas",
+      "title":" Decreto Ley No. 201, del sistema nacional de áreas protegidas",
       "section":"book",
       "tematica":"normasNacionales"
     },
@@ -323,14 +309,14 @@
     {
       "poster":"pdf.png",
       "url":"decreto179.pdf",
-      "title":" GO_O_004_1993 Decreto 179 PROTECCIÓN, USO Y CONSERVACIÓN DE LOS SUELOS, Y SUS CONTRAVENCIONES ",
+      "title":" GO_O_004_1993 Decreto 179 protección, uso y conservación de los suelos, y sus contravenciones ",
       "section":"book",
       "tematica":"normasNacionales"
     },
     {
       "poster":"pdf.png",
       "url":"decreto272.pdf",
-      "title":" GO_X_002_2001 Decreto 272 DE LAS CONTRAVENCIONES EN MATERIA DE ORDENAMIENTO TERRITORIAL Y DE URBANISMO",
+      "title":" GO_X_002_2001 Decreto 272 de las contravenciones en materia de ordenamiento territorial y de urbanismo",
       "section":"book",
       "tematica":"normasNacionales"
     },
@@ -344,7 +330,7 @@
     {
       "poster":"pdf.png",
       "url":"familia.pdf",
-      "title":" CÓDIGO DE FAMILIA. ANOTADO",
+      "title":" Código de familia",
       "section":"book",
       "tematica":"normasCivil"
     },
@@ -385,7 +371,7 @@
     },{
       "poster":"pdf.png",
       "url":"renovacion.pdf",
-      "title":" LEY DE REVOCACION DEL MANDATO DE LOS ELEGIDOS A LOS ORGANOS DEL PODER POPULAR",
+      "title":" Ley de revocación del mandato de los elegidos a los órganos del poder popular",
       "section":"book",
       "tematica":"normasBasicos"
     },{
@@ -393,34 +379,196 @@
       "url":"populares.pdf",
       "title":" Ley de tribunales populares",
       "section":"book",
-      "tematica":"publicaciones"
-    },{
-      "poster":"11.png",
-      "url":"RAUL.pdf",
-      "title":" Discurso pronunciado por el General de Ejército Raúl Castro Ruz, Presidente de los Consejos de Estado y de Ministros, ante la Asamblea de la Organización de Estados del Caribe Oriental. Antigua y Barbuda, 9 de diciembre de 2017",
-      "section":"book",
-      "tematica":"publicaciones"
+      "tematica":"normasBasicos"
     },
     {
       "poster":"11.png",
-      "url":"Curso2.pdf",
-      "title":" Tabloide del Curso “Cambio Climático”. 2008 (2da parte)",
+      "url":"penal.pdf",
+      "title":" Código penal",
       "section":"book",
-      "tematica":"publicaciones"
+      "tematica":"normasPenal"
+    },
+   {
+      "poster":"11.png",
+      "url":"contravenciones.pdf",
+      "title":" D-141-88 Contravenciones Orden Interior",
+      "section":"book",
+      "tematica":"normasPenal"
+    },
+   {
+      "poster":"11.png",
+      "url":"Vialidad.pdf",
+      "title":" D-193 Contravenciones sobre Vialidad.pdf",
+      "section":"book",
+      "tematica":"normasPenal"
+    },
+   {
+      "poster":"11.png",
+      "url":"D-261.pdf",
+      "title":" D-261 Contravenciones Personales Transporte Terrestre",
+      "section":"book",
+      "tematica":"normasPenal"
+    },
+   {
+      "poster":"11.png",
+      "url":"D-268.pdf",
+      "title":" D-268 Contravenciones Forestales",
+      "section":"book",
+      "tematica":"normasPenal"
+    },
+   {
+      "poster":"11.png",
+      "url":"DL-99.pdf",
+      "title":" DL-99 Contravenciones Personales",
+      "section":"book",
+      "tematica":"normasPenal"
+    },
+   {
+      "poster":"11.png",
+      "url":"ley64.pdf",
+      "title":" Decreto-Ley 64-82",
+      "section":"book",
+      "tematica":"normasPenal"
+    },
+   {
+      "poster":"11.png",
+      "url":"DL-107.pdf",
+      "title":" DL-107 Control sustancias",
+      "section":"book",
+      "tematica":"normasPenal"
+    },
+   {
+      "poster":"11.png",
+      "url":"DL-118.pdf",
+      "title":" DL-118 Protección al medio ambiente",
+      "section":"book",
+      "tematica":"normasPenal"
+    },
+   {
+      "poster":"11.png",
+      "url":"DL-149.pdf",
+      "title":" DL-149 Confiscación por enriquecim. indebido",
+      "section":"book",
+      "tematica":"normasPenal"
+    },
+   {
+      "poster":"11.png",
+      "url":"DL-164.pdf",
+      "title":" DL-164 Reglamento de Pesca",
+      "section":"book",
+      "tematica":"normasPenal"
+    },
+   {
+      "poster":"11.png",
+      "url":"DL-174.pdf",
+      "title":" DL-174 Contravenciones del Trabajo",
+      "section":"book",
+      "tematica":"normasPenal"
+    },
+   {
+      "poster":"11.png",
+      "url":"DL-186.pdf",
+      "title":" DL-186 sobre el sistema de protección física",
+      "section":"book",
+      "tematica":"normasPenal"
+    },
+   {
+      "poster":"11.png",
+      "url":"DL-200.pdf",
+      "title":" DL-200 Contravenciones Medio Ambiente",
+      "section":"book",
+      "tematica":"normasPenal"
     },
     {
       "poster":"11.png",
-      "url":"Mitigacion.pdf",
-      "title":" Programas que comprenden medidas para mitigar el Cambio Climático",
+      "url":"DL-201.pdf",
+      "title":" DL-201 Sistema Nacional Áreas Protegidas",
       "section":"book",
-      "tematica":"publicaciones"
+      "tematica":"normasPenal"
     },
     {
       "poster":"11.png",
-      "url":"DISCURSO2.pdf",
-      "title":" Discurso del General de Ejército Raúl Castro Ruz, Presidente de los Consejos de Estado y de Ministros, en la sesión inaugural de la Sexta Cumbre CARICOM-Cuba. Antigua y Barbuda, 8 de diciembre de 2017",
+      "url":"DL-212.pdf",
+      "title":" DL-212 de las Zonas Costeras",
       "section":"book",
-      "tematica":"publicaciones"
+      "tematica":"normasPenal"
+    },
+    {
+      "poster":"11.png",
+      "url":"DL-224.pdf",
+      "title":" DL-224 del servicio militar",
+      "section":"book",
+      "tematica":"normasPenal"
+    },
+    {
+      "poster":"11.png",
+      "url":"DL-227.pdf",
+      "title":" DL-227 del Patrimonio Estatal",
+      "section":"book",
+      "tematica":"normasPenal"
+    },
+    {
+      "poster":"11.png",
+      "url":"DL-242.pdf",
+      "title":" DL-242 Sistema de Prevención y Atención Social",
+      "section":"book",
+      "tematica":"normasPenal"
+    },
+    {
+      "poster":"11.png",
+      "url":"DL-246.pdf",
+      "title":" DL-246 de infracciones administrativas",
+      "section":"book",
+      "tematica":"normasPenal"
+    },
+    {
+      "poster":"11.png",
+      "url":"DL-248.pdf",
+      "title":" DL-248 Sistema Identificación y Registro de Electores",
+      "section":"book",
+      "tematica":"normasPenal"
+    },
+    {
+      "poster":"11.png",
+      "url":"ley1.pdf",
+      "title":" Ley 1-77 Protección al patrimonio cultural",
+      "section":"book",
+      "tematica":"normasPenal"
+    },
+    {
+      "poster":"11.png",
+      "url":"ley2.pdf",
+      "title":" Ley 2-77 Monumentos locales y nacionales",
+      "section":"book",
+      "tematica":"normasPenal"
+    },
+    {
+      "poster":"11.png",
+      "url":"ley5.pdf",
+      "title":" Ley 5 procedimiento penal",
+      "section":"book",
+      "tematica":"normasPenal"
+    },
+    {
+      "poster":"11.png",
+      "url":"ley65.pdf",
+      "title":" Ley 65 (LGV)",
+      "section":"book",
+      "tematica":"normasPenal"
+    },
+    {
+      "poster":"11.png",
+      "url":"Embargos1.pdf",
+      "title":" GO_O_007_2010 Embargos Cuentas Bancarias",
+      "section":"book",
+      "tematica":"normasPenal"
+    },
+    {
+      "poster":"11.png",
+      "url":"DL-248.pdf",
+      "title":" DL-248 Sistema Identificación y Registro de Electores",
+      "section":"book",
+      "tematica":"normasPenal"
     },
     {
       "poster":"pdf.png",
@@ -474,32 +622,143 @@
     {
       "poster":"pdf.png",
       "url":"Antonio.pdf",
-      "title":"Antonio el cojo",
+      "title":"Antonio Sánchez de Bustamante y Sirven",
       "section":"book",
       "tematica":"juristas"
     },
     {
       "poster":"pdf.png",
       "url":"Armando.pdf",
-      "title":"Armando cojito",
+      "title":"Armando Enrique Hart Dávalos",
       "section":"book",
       "tematica":"juristas"
     },
     {
       "poster":"pdf.png",
-      "url":"DL-99.pdf",
-      "title":"DL-99",
+      "url":"Carlos.pdf",
+      "title":"Carlos Manuel de Céspedes y López del Castillo",
+      "section":"book",
+      "tematica":"juristas"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"Felix.pdf",
+      "title":"Félix Varela Morales",
+      "section":"book",
+      "tematica":"juristas"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"Fidel.pdf",
+      "title":"Fidel Alejandro Castro Ruz",
+      "section":"book",
+      "tematica":"juristas"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"Ignacio.pdf",
+      "title":"Ignacio Agramonte y Loynaz",
+      "section":"book",
+      "tematica":"juristas"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"Jose.pdf",
+      "title":"José Julian Martí Pérez",
+      "section":"book",
+      "tematica":"juristas"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"Manuel.pdf",
+      "title":"Manuel Antonio Sanguily Garrite",
+      "section":"book",
+      "tematica":"juristas"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"Pedro.pdf",
+      "title":"Pedro Felipe Figueredo y Cisneros",
+      "section":"book",
+      "tematica":"juristas"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"Rafael.pdf",
+      "title":"Rafael Montoro y Valdés",
+      "section":"book",
+      "tematica":"juristas"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"13.pdf",
+      "title":"Constituciones cubanas parte 1",
       "section":"book",
       "tematica":"leyes"
     },
     {
       "poster":"pdf.png",
-      "url":"DL-107.pdf",
-      "title":"DL-107",
+      "url":"14.pdf",
+      "title":"Constituciones cubanas parte 2",
+      "section":"book",
+      "tematica":"leyes"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"15.pdf",
+      "title":"Constituciones cubanas parte 3",
+      "section":"book",
+      "tematica":"leyes"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"16.pdf",
+      "title":"Constituciones cubanas parte 4",
+      "section":"book",
+      "tematica":"leyes"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"17.pdf",
+      "title":"Reforma del artículo 115 de la Ley Constitucional de la República de Cuba de 11 de junio del 1935 (1)",
+      "section":"book",
+      "tematica":"leyes"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"18.pdf",
+      "title":"Constitución de la República de Cuba 1 de julio de 1940",
+      "section":"book",
+      "tematica":"leyes"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"19.pdf",
+      "title":"Sección primera de lo bienes y finanzas del Estado ",
+      "section":"book",
+      "tematica":"leyes"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"ConstitucionVigente.pdf",
+      "title":"Constitución cubana vigente",
+      "section":"book",
+      "tematica":"leyes"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"constitucion1812",
+      "title":"Constitución española de 1812",
+      "section":"book",
+      "tematica":"leyes"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"ley59.pdf",
+      "title":"Ley fundamental del 59",
       "section":"book",
       "tematica":"leyes"
     }
-
 
   ]
 }

@@ -93,7 +93,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     })
   ],
   exports: [RouterModule, TranslateModule],
-  providers: [OrmService, DataService, HeaderService, FooterService, BehaviourService,  { provide: APP_BASE_HREF, useValue: '/' },],
+  providers: [OrmService, DataService, HeaderService, FooterService, BehaviourService,  { provide: APP_BASE_HREF, useValue: '.' },],
   entryComponents:[SelectableComponent],
   bootstrap: [AppComponent]
 })

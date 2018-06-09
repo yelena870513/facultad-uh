@@ -4,6 +4,9 @@ a.link, .fa-backward{
 a{
   color: rgb(144,128,88);
 }
+.testimonial span {
+  color: yellow;
+}
 
 h2{
   font-size: 2.56rem;

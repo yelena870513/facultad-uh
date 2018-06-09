@@ -47,3 +47,10 @@ strong {
 .canvasWrapper{
   border: 1px solid rgb(144,128,88)!important;
 }
+h2 {
+  font-size: 2.56rem !important;
+}
+.section-header {
+  margin-bottom: 30px;
+  margin-top: 90px;
+}
