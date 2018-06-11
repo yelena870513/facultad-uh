@@ -1,8 +1,7 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from './sections/home/home.component';
-import {ContentComponent} from './sections/content/content.component';
 import {IsmaelilloComponent} from './sections/ismaelillo/ismaelillo.component';
 import {ContenidosComponent} from './sections/contenidos/contenidos.component';
 import {DerechoComponent} from './sections/derecho/derecho.component';
@@ -12,23 +11,22 @@ import {EticaComponent} from './sections/etica/etica.component';
 import {QuestionComponent} from './sections/question/question.component';
 import {ProfesoresComponent} from "./sections/profesores/profesores.component";
 import {LandingComponent} from "./sections/landing/landing.component";
-import {StudentComponent} from "./sections/student/student.component";
+
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'ismaelillo', component: IsmaelilloComponent },
-  { path: 'contenidos', component: ContenidosComponent },
-  { path: 'derecho', component: DerechoComponent },
-  { path: 'biblioteca', component: BibliotecaComponent },
-  { path: 'glosario', component: GlosarioComponent },
-  { path: 'etica', component: EticaComponent },
-  { path: 'question', component: QuestionComponent },
-  { path: 'profesores', component: ProfesoresComponent },
-  { path: 'content/:title', component: ContentComponent },
-  { path: 'find/:searchString', component: ContentComponent },
-  { path: 'landing', component: LandingComponent },
-  { path: 'student', component: StudentComponent },
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: 'home', component: HomeComponent},
+  {path: 'ismaelillo', component: IsmaelilloComponent},
+  {path: 'contenidos', component: ContenidosComponent},
+  {path: 'derecho', component: DerechoComponent},
+  {path: 'biblioteca', component: BibliotecaComponent},
+  {path: 'glosario', component: GlosarioComponent},
+  {path: 'etica', component: EticaComponent},
+  {path: 'question', component: QuestionComponent},
+  {path: 'profesores', component: ProfesoresComponent},
+
+  {path: 'landing', component: LandingComponent},
+
 ];
 
 @NgModule({
@@ -39,4 +37,5 @@ const routes: Routes = [
   exports: [RouterModule],
   declarations: []
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

@@ -8,7 +8,6 @@ import {HeaderComponent} from './components/header/header.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {HomeComponent} from './sections/home/home.component';
 import {SectionComponent} from './sections/section.component';
-import {ContentComponent} from './sections/content/content.component';
 import {UICarouselModule} from 'ui-carousel';
 import {OrmService} from './services/orm.service';
 import {DataService} from './services/data.service';
@@ -42,7 +41,6 @@ import {SelectableComponent} from './sections/question/selectable.component';
 import { ProfesoresComponent } from './sections/profesores/profesores.component';
 import { LandingComponent } from './sections/landing/landing.component';
 import {FooterService} from "./services/footer.service";
-import { StudentComponent } from './sections/student/student.component';
 import { ModalComponent } from './components/modal/modal.component';
 
 
@@ -61,7 +59,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     DerechoComponent,
     BibliotecaComponent,
     SectionComponent,
-    ContentComponent,
+
     GlosarioComponent,
     EticaComponent,
     SearchInputComponent,
@@ -76,7 +74,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     SelectableComponent,
     ProfesoresComponent,
     LandingComponent,
-    StudentComponent,
+
     ModalComponent,
 
   ],
