@@ -8,6 +8,10 @@ a.active{
   color: #FFF;
   background-color:rgb(144,128,88);
 }
+.widget-category a.active:hover{
+  color: #FFF;
+  background-color:rgb(144,128,88);
+}
 
 .widget a{
   cursor: pointer;
@@ -26,4 +30,10 @@ a.active{
 
   background: rgb(144,128,88);
 
+}
+.widget-category a{
+  font-size: 1em !important;
+}
+.widget-category a:hover{
+ color:  rgb(144,128,88);
 }

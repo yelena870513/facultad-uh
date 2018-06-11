@@ -37,11 +37,14 @@ import {GlosarioComponent} from './sections/glosario/glosario.component';
 import {EticaComponent} from './sections/etica/etica.component';
 import { QuestionComponent } from './sections/question/question.component';
 import {NgDragDropModule} from 'ng-drag-drop';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {SelectableComponent} from './sections/question/selectable.component';
 import { ProfesoresComponent } from './sections/profesores/profesores.component';
 import { LandingComponent } from './sections/landing/landing.component';
 import {FooterService} from "./services/footer.service";
 import { StudentComponent } from './sections/student/student.component';
+import { ModalComponent } from './components/modal/modal.component';
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -73,7 +76,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     SelectableComponent,
     ProfesoresComponent,
     LandingComponent,
-    StudentComponent
+    StudentComponent,
+    ModalComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -84,6 +89,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     HttpClientModule,
     PdfViewerModule,
     NgDragDropModule.forRoot(),
+    NgbModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -94,7 +100,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   exports: [RouterModule, TranslateModule],
   providers: [OrmService, DataService, HeaderService, FooterService, BehaviourService,  { provide: APP_BASE_HREF, useValue: '.' },],
-  entryComponents:[SelectableComponent],
+  entryComponents:[SelectableComponent, ModalComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,7 @@
+.modal, .modal-content, .modal-footer{
+  background-color: rgba(144,128,88,0.6);
+  color: yellow;
+}
+.header {
+  color: yellow;
+}

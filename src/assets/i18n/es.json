@@ -41,7 +41,7 @@
   },
   "PROFESORES":{
     "TITLE": "Profesores",
-    "BOOKS":"Libros"
+    "BOOKS":"Temas"
   },
   "LANDING":{
     "TITLE": "Contenido general",
@@ -52,7 +52,8 @@
     "ESTUDIANTES": "Estudiantes",
     "PROFESORES": "Profesores",
     "PREV":"Anterior",
-    "NEXT":"Siguiente"
+    "NEXT":"Siguiente",
+    "EXIT":"Salir"
   },
   "CONTENIDOS":{
     "CATEGORY": "Preguntas"
@@ -64,6 +65,12 @@
     "HEADER":"PDF",
     "THEMES":"TEMÁTICAS",
     "BOOKS":"LIBROS"
+  },
+  "MODAL":{
+    "HEADER":"Salir",
+    "CONTENT":"Desea salir de la multimedia?",
+    "CANCEL": "Cancelar",
+    "ACCEPT": "Aceptar"
   },
   "articulos":"Artículos",
   "normasInternacionales":"Normas internacionales",

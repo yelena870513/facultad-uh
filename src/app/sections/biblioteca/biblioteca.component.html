@@ -11,7 +11,7 @@
     <!-- Search -->
     <div class="widget">
       <div class="widget-search">
-        <input class="search-input" type="text" placeholder="buscar" (change)="FireAction($event)" (keyup)="doSearch($event)" #search>
+        <input class="search-input" type="text" placeholder="Buscar" (change)="FireAction($event)" (keyup)="doSearch($event)" #search>
         <button class="search-btn btn waves-effect waves-light brown" type="button" (click)="btnSearch()"><i class="fa fa-search"></i></button>
       </div>
     </div>
@@ -23,7 +23,7 @@
 
       <!-- Tags -->
       <div class="widget">
-        <h4 class="title">{{'LIBRARY.THEMES' | translate}}</h4>
+        <h3 class="title">{{'LIBRARY.THEMES' | translate}}</h3>
         <div class="widget-tags">
           <a  *ngFor="let item of themes" (click)="setItem(item)" [ngClass]="{'active': item === themeActual}">
             &nbsp;{{item | translate}}
@@ -33,7 +33,7 @@
       <!-- /Tags -->
        <!-- Tags -->
        <div class="widget" *ngIf="booksShelf.length>0">
-         <h5 class="title">{{'LIBRARY.BOOKS' | translate}}</h5>
+         <h3 class="title">{{themeActual | translate}}</h3>
          <div class="widget-category">
            <a *ngFor="let item of booksShelf |paginate: { itemsPerPage: 5, currentPage: page }"
               (click)="ReadBook(item)"

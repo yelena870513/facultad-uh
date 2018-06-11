@@ -3,10 +3,7 @@ h3 {
   line-height: 2.212rem;
   margin: 1.46rem 0 1.168rem 0;
 }
-p {
-  padding: 0;
-  text-align: justify;
-}
+
 .title:after {
 
   background-color: rgb(144,128,88);
@@ -20,6 +17,9 @@ p {
 .widget-tags a:hover {
   color: yellow;
   background-color: rgb(144,128,88);
+}
+.widget-tags a{
+  font-size: 1em;
 }
 .widget-category a:hover {
   color: rgb(144,128,88);;

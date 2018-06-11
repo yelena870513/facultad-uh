@@ -10,6 +10,7 @@ import {transition, trigger, useAnimation} from '@angular/animations';
 import {BehaviourService} from '../../services/behaviour.service';
 import * as _ from 'lodash';
 import {BookInterface} from '../../interfaces/book.interface';
+import {FooterService} from "../../services/footer.service";
 declare var $: any;
 @Component({
   selector: 'app-ismaelillo',
@@ -51,8 +52,10 @@ export class IsmaelilloComponent implements AfterViewInit{
   constructor(private dataService: DataService,
               private translate: TranslateService,
               private headerService: HeaderService,
+              private footerService: FooterService,
               private behaviour: BehaviourService) {
     this.headerService.Show();
+    this.footerService.Hide();
     this.dataService.getContent(this.translate.currentLang)
       .subscribe((data) => {
         this.content = data.docs.filter(f => (f.tipo === 'content' && !f._deleted) && f.category === 'Proyecto Ismaelillo');

@@ -1,6 +1,6 @@
-<header id="home" *ngIf="showHeader">
+<header id="home" [ngClass]="{'no-vh': !showHeader}">
   <!-- Background Image -->
-  <div class="bg-img" style="background-image: url('./assets/images/background1.jpg');">
+  <div class="bg-img" style="background-image: url('./assets/images/background1.jpg');" *ngIf="showHeader">
     <div class="overlay"></div>
   </div>
   <!-- /Background Image -->
@@ -28,6 +28,7 @@
       <!--  Main navigation  -->
       <ul class="main-nav nav navbar-nav navbar-right">
           <li *ngFor="let item of menu" routerLinkActive="active"><a  routerLink="{{item.url}}">{{item.name | translate}}</a></li>
+          <li [ngClass]="{'salir': isExit}"><a (click)="Salir()" href="#modal1">{{'NAV.EXIT' | translate}}</a></li>
       </ul>
       <!-- /Main navigation -->
 
@@ -35,7 +36,7 @@
   </nav>
   <!-- /Nav -->
   <!-- home wrapper -->
-  <div class="home-wrapper">
+  <div class="home-wrapper" *ngIf="showHeader">
     <div class="container">
       <div class="row">
 
@@ -54,44 +55,14 @@
   </div>
   <!-- /home wrapper -->
 </header>
-
-<!-- Header -->
-<header *ngIf="!showHeader">
-
-  <!-- Nav -->
-  <nav id="nav" class="navbar sailor">
-    <div class="container">
-
-      <div class="navbar-header">
-        <!-- Logo -->
-        <div class="navbar-brand">
-          <a routerLink="/home">
-            <img class="logo" src="./assets/images/logo.png" alt="logo">
-            <img class="logo-alt" src="./assets/images/logo-alt.png" alt="logo">
-          </a>
-        </div>
-        <!-- /Logo -->
-
-
-        <!-- Collapse nav button -->
-        <div class="nav-collapse">
-          <span></span>
-        </div>
-        <!-- /Collapse nav button -->
-      </div>
-
-      <!--  Main navigation  -->
-      <ul class="main-nav nav navbar-nav navbar-right">
-        <li *ngFor="let item of menu" routerLinkActive="active"><a routerLink="{{item.url}}">{{item.name | translate}}</a></li>
-        <li><a>{{ 'EXIT' | translate}}</a></li>
-
-      </ul>
-      <!-- /Main navigation -->
-
-    </div>
-  </nav>
-  <!-- /Nav -->
-
-
-</header>
-<!-- /Header -->
+<!-- Modal Structure -->
+<div id="modal1" class="modal bottom-sheet">
+  <div class="modal-content">
+    <h4 class="header">{{'MODAL.HEADER' | translate}}</h4>
+    <p>{{'MODAL.CONTENT' | translate}}</p>
+  </div>
+  <div class="modal-footer">
+    <button class="modal-close btn waves-effect waves-light brown">{{'MODAL.CANCEL' | translate }}</button>
+    <button  class="btn waves-effect waves-light brown" (click)="LogOut()">{{'MODAL.ACCEPT' | translate}}</button>
+  </div>
+</div>

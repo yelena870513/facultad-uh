@@ -16,7 +16,11 @@ button:focus {
   background-color: burlywood;
 }
 .white-text {
-  color: yellow !important;
+  color: rgb(255, 255, 102) !important;
+}
+.main-nav.nav.navbar-nav.navbar-right{
+  color: rgb(255, 255, 102) !important;
+
 }
 #nav {
   padding: 10px 0px;
@@ -31,6 +35,10 @@ button:focus {
   border-bottom: none !important;
 }
 
+#home.no-vh{
+  height: 5vh;
+}
+
 
 @media only screen and (min-width: 768px) {
 
@@ -39,7 +47,7 @@ button:focus {
     background-color: rgb(144,128,88);
   }
   #nav.nav-transparent:not(.fixed-nav) .main-nav>li>a {
-    color: yellow;
+    color: rgb(255, 255, 102) !important;
   }
   .main-nav>li>a:hover, .main-nav>li>a:focus, .main-nav>li.active>a {
     background: transparent;

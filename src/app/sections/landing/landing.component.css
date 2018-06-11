@@ -56,4 +56,10 @@ h3 {
   border: 1px solid rgb(144,128,88);
   height: 200px;
 }
+@media only screen and (min-width: 768px) {
 
+  .main-nav > li > a:hover, .main-nav > li > a:focus, .main-nav > li.active > a {
+
+    color: rgb(255, 255, 102) !important;
+  }
+}

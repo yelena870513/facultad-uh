@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import {DataService} from '../../services/data.service';
 import {TranslateService} from '@ngx-translate/core';
 import {HeaderService} from '../../services/header.service';
 import {ContentInterface} from '../../interfaces/content.interface';
+declare var $: any;
 
 @Component({
   selector: 'app-contenidos',
@@ -10,7 +11,7 @@ import {ContentInterface} from '../../interfaces/content.interface';
   styleUrls:['./contenidos.component.css']
 })
 
-export class ContenidosComponent {
+export class ContenidosComponent implements AfterViewInit {
   categories: ContentInterface [];
   current: ContentInterface;
   constructor(private dataService: DataService, private translate: TranslateService, private headerService: HeaderService) {
@@ -24,6 +25,11 @@ export class ContenidosComponent {
   }
   Selecter(item) {
     this.current = item;
+  }
+  ngAfterViewInit() {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 600);
   }
 }
 

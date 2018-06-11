@@ -4,6 +4,19 @@ h3.plegable {
   margin: 1.46rem 0 1.168rem 0;
   float: left;
 }
+.white-text {
+  color: rgb(255, 255, 102) !important;
+}
+
+.main-nav>li>a {
+  color: rgb(255, 255, 102) !important;
+}
+.main-nav>li>a:hover {
+  color: rgb(255, 255, 102) !important;
+  font-weight: 700;
+  text-decoration: underline;
+
+}
 
 tr {
   border-bottom: 1px solid rgb(144,128,88)!important;
@@ -26,13 +39,16 @@ h4 {
   border-radius:50%;
 }
 h3 {
-  font-size: 23px;
+  font-size: 23px !important;
   line-height: 2.212rem;
   margin: 1.46rem 0 1.168rem 0;
+  text-transform: uppercase !important;
 }
 p {
   margin: 0 0 5px;
-}
+padding-bottom: 15px;
+  }
+
 strong {
   font-weight: 500;
   float: left;
@@ -53,4 +69,24 @@ h2 {
 .section-header {
   margin-bottom: 30px;
   margin-top: 90px;
+}
+.search-input:focus{
+  border-bottom: 1px solid rgb(144,128,88)!important;
+  box-shadow: 0 1px 0 0 #ccc !important;
+}
+
+.widget-tags a{
+  font-size: 1em;
+}
+.progress {
+
+
+  background-color: rgb(144,128,88);
+}
+.progress .indeterminate {
+  background-color: rgb(255, 255, 102);
+}
+::selection{
+  background-color: #fff;
+  color: #000;
 }

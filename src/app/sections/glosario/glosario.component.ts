@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import {DataService} from "../../services/data.service";
 import {TranslateService} from '@ngx-translate/core';
 import {HeaderService} from "../../services/header.service";
+declare var $: any;
 
 
 @Component({
@@ -10,7 +11,7 @@ import {HeaderService} from "../../services/header.service";
   styleUrls: ['./glosario.component.scss']
 })
 
-export class GlosarioComponent {
+export class GlosarioComponent implements AfterViewInit {
   glossary: any [];
   term: any;
  constructor(private dataService: DataService, private translate: TranslateService, private headerService: HeaderService) {
@@ -23,6 +24,12 @@ export class GlosarioComponent {
   setItem(item) {
     this.term = item;
   }
+  ngAfterViewInit() {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 600);
+  }
+
 }
 
 

@@ -2,23 +2,28 @@ import { AfterViewInit, Component} from '@angular/core';
 import {MenuInterface} from '../../interfaces/menu.interface';
 import {TranslateService} from '@ngx-translate/core';
 import {ActivatedRoute, Router} from '@angular/router';
-
 import {HeaderService} from '../../services/header.service';
 import {BehaviourService} from '../../services/behaviour.service';
+import {fromPromise} from 'rxjs/observable/fromPromise';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {ModalComponent} from '../modal/modal.component';
 declare var $: any;
+declare var win: any;
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css' ]
+  styleUrls: ['./header.component.css', 'modal.css' ]
 })
 
 export class HeaderComponent implements AfterViewInit {
   menu: MenuInterface[];
   showHeader = true;
+  modal : any;
   constructor(
 
     private headerService: HeaderService,
+    private modalService: NgbModal,
     private behave: BehaviourService,
     private router: Router) {
        this.menu = [
@@ -28,6 +33,35 @@ export class HeaderComponent implements AfterViewInit {
       ];
      this.headerService.showHeader
        .subscribe(show => setTimeout(() => this.showHeader = show));
+  }
+
+  Salir(){
+    $('.modal').modal('open');
+  }
+
+  LogOut(){
+
+    //Preguntar primero desde que dispositivo se navega
+    if(!navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/))
+    {
+      try
+      {
+        win.close(true);
+      }
+      catch (reason){
+        window.close();
+
+      }
+
+    }
+    else
+    {
+      window.close();
+
+
+
+    }
+    $('.modal').modal('close');
   }
 
   ngAfterViewInit() {
@@ -68,6 +102,10 @@ export class HeaderComponent implements AfterViewInit {
       $('html, body').animate({
         scrollTop: $('#about').offset().top
       }, 600);
+    });
+
+    $(document).ready(function(){
+     this.modal = $('.modal').modal();
     });
   }
   launchSearch(event) {

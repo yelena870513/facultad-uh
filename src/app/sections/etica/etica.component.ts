@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import {DataService} from "../../services/data.service";
 import {TranslateService} from '@ngx-translate/core';
 import {HeaderService} from "../../services/header.service";
@@ -10,7 +10,7 @@ declare var $: any;
   styleUrls: ['./etica.component.css']
 })
 
-export class EticaComponent {
+export class EticaComponent implements AfterViewInit {
   books: any [];
   term: any;
   pointer: number;
@@ -47,6 +47,11 @@ export class EticaComponent {
 
   private QuitOverFlow() {
     $('.ng2-pdf-viewer-container').css('overflow','inherit');
+  }
+  ngAfterViewInit() {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 600);
   }
 }
 

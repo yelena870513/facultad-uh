@@ -44,7 +44,7 @@
 <div id="blogr" class="section md-padding" [hidden]="searchMode && currentMode=='readMode'" *ngIf="readMode" [@fadeIn]="showLecture" [@fadeOut]="showLecture" appScrollTop>
   <div class="row" *ngIf="readItem">
     <div class="col-md-12">
-      <h2 class="title">{{readItem.title}}</h2>
+      <h2 class="title">{{readItem.title}}</h2> <a (click)="openRead(undefined, !readMode, '')" ><i class="fa fa-backward"></i></a>
     </div>
   </div>
   <!-- Container -->
@@ -52,7 +52,7 @@
 
     <!-- Row -->
     <div class="row">
-      <a (click)="openRead(undefined, !readMode, '')" ><i class="fa fa-backward"></i></a>
+
       <!-- Main -->
       <main id="main" class="col-md-9" [innerHtml]="readItem.content | liteSearch: searchString">
         <style>
@@ -76,7 +76,7 @@
 <!-- /Blog -->
 
 <!-- Testimonial -->
-<div id="testimonial" class="section md-padding" *ngIf="teamMode" [@fadeIn]="showLecture">
+<div id="testimonial" class="section md-padding " *ngIf="teamMode" [@fadeIn]="showLecture">
 
   <!-- Background Image -->
   <div class="bg-img" style="background-image: url('./assets/images/background3.jpg');">

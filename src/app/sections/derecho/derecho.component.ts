@@ -67,9 +67,9 @@ export class DerechoComponent {
   }
 
   startSearch() {
-    if (this.searchString.length > 3) {
-      this.booksShelf = this.books.filter((f: any) => f.title.toLowerCase().search(this.searchString) !== -1);
-      this.reader = this.booksShelf[0];
+    if (this.searchString.length > 2) {
+      this.booksShelf1 = this.books.filter((f: any) => f.title.toLowerCase().search(this.searchString) !== -1);
+      this.reader = this.booksShelf1[0];
       this.result = true;
     }
   }
@@ -77,7 +77,7 @@ export class DerechoComponent {
   doSearch (event)
   {
     if (event.keyCode === 13) {
-      if (this.searchString.length>3) {
+      if (this.searchString.length>2) {
         this.startSearch()
       }
       else{
@@ -87,7 +87,7 @@ export class DerechoComponent {
   }
 
   btnSearch() {
-    if (this.searchString.length>3) {
+    if (this.searchString.length>2) {
       this.startSearch()
     }
     else{

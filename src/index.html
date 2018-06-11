@@ -8,5 +8,14 @@
 </head>
 <body>
   <app-root></app-root>
+<script>
+  try{
+    const gui = require('nw.gui');
+    const win = gui.Window.get();
+  }
+  catch (err){
+    console.warn(err);
+  }
+</script>
 </body>
 </html>
