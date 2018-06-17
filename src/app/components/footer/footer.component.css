@@ -4,4 +4,9 @@
 .footer-copyright p {
   color: #fff;
 }
+@media (min-width: 992px) {
 
+  .col-md-12 {
+    width: auto;
+  }
+}

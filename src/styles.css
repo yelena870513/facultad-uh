@@ -10,6 +10,13 @@ h3.plegable {
 
 .main-nav>li>a {
   color: rgb(255, 255, 102) !important;
+  font-size: 19px;
+}
+.main-nav>li>a:active {
+  color: rgb(255, 255, 102) !important;
+  font-weight: 700 !important;
+  text-decoration: underline !important;
+
 }
 .main-nav>li>a:hover {
   color: rgb(255, 255, 102) !important;
