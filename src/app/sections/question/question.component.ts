@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import * as uuid from 'uuid';
 import {HeaderService} from '../../services/header.service';
 import * as _ from 'lodash';
@@ -30,6 +30,7 @@ export class QuestionComponent implements OnInit {
   }
   constructor(private headerService: HeaderService, private dataService: DataService, private translate: TranslateService) {
     this.headerService.Hide();
+    this.headerService.ChildActive(false);
     this.dataService.getQuestion(this.translate.currentLang).subscribe((data: any) => {
       this.questions = data.docs;
       this.i = this.questions[0];
@@ -46,9 +47,31 @@ export class QuestionComponent implements OnInit {
     this.pdfPages = 1;
   }
   checkAnswer(item,event) {
-    if(event.target.checked){
+    item.checked = event.target.checked;
+    if(event.target.checked)
+    {
+
         if(item.value === true){
             item.resource = 'T';
+
+        }
+        else{
+          item.resource = 'F';
+        }
+    }
+    else{
+      item.resource = 'N';
+    }
+  }
+
+  radioAnswer(item,event,el) {
+    item.checked = event.target.checked;
+    if(event.target.checked)
+    {
+
+        if(item.value === true){
+            item.resource = 'T';
+
         }
         else{
           item.resource = 'F';
@@ -72,6 +95,7 @@ export class QuestionComponent implements OnInit {
 
   Selecter(item) {
     this.i = item;
+    this.i.items = item.items.map((m: any) => { m.resource = 'A'; return m; });
     this.readMode = false;
   }
 

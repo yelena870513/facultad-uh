@@ -4,7 +4,7 @@
   "HOME":{
     "TITLE": "Facultad",
     "DESCRIPTION": "Multimedia de contenido jurídico para la educación cívica",
-    "MORE": "Colchon los contado don comodas referia promesa dio. Duros eso rio vista dejar mar. Morir el mando antes jamas debia la. Yendo ya ir asise mimar so la. Iba semiramis una emperador non cachazudo infiernos adivinaba distraigo",
+    "MORE": "",
     "BIENVENIDA":"Contenido",
     "BUTTON":"Contenido",
     "ISMAELILLO":"Proyecto Ismaelillo",
@@ -18,20 +18,22 @@
   },
   "CONTENIDO":{
     "TITLE": "Contenidos jurídicos de la educación cívica",
-    "BOOKS":"Libros",
+    "BOOKS":"Códigos de ética",
     "UTIL":"Útiles",
     "ETHIC":"Ética",
     "QUESTION":"Preguntas",
     "GLOSSARY":"Glosario"
   },
    "BIBLIOTECA":{
-    "TITLE": "Biblioteca jurídica",
+    "TITLE": "Biblioteca Jurídica",
     "BOOKS":"Libros"
   },
   "QUESTION":{
     "TITLE": "Estudiantes",
     "BOOKS":"Libros",
-    "QUESTION":"Cuestionario"
+    "QUESTION":"Cuestionario",
+    "TRUE":"V",
+    "FALSE":"F"
   },
    "DERECHO":{
     "TITLE": "El derecho en la historia",
@@ -44,10 +46,11 @@
     "BOOKS":"Temas"
   },
   "LANDING":{
-    "TITLE": "Contenido general",
+    "TITLE": "Contenido General",
     "BOOKS":"Libros"
   },
   "NAV":{
+    "START":"Inicio",
     "HOME": "Contenido General",
     "ESTUDIANTES": "Estudiantes",
     "PROFESORES": "Profesores",
@@ -68,11 +71,11 @@
   },
   "MODAL":{
     "HEADER":"Salir",
-    "CONTENT":"Desea salir de la multimedia?",
+    "CONTENT":"¿Desea salir de la multimedia?",
     "CANCEL": "Cancelar",
     "ACCEPT": "Aceptar"
   },
-  "articulos":"Artículos",
+  "articulos":"Artículos científicos",
   "normasInternacionales":"Normas internacionales",
   "normasNacionales":"Normas nacionales",
   "normasBasicos":"Normas básicas",

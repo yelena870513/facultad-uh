@@ -17,6 +17,7 @@ export class ProfesoresComponent implements OnInit {
   isLoaded = false;
   constructor(private headerService: HeaderService, private dataService: DataService, private translate: TranslateService) {
     this.headerService.Hide();
+    this.headerService.ChildActive(false);
     this.dataService.getBooks(this.translate.currentLang).subscribe((data: any) => {
       this.books = data.docs.filter(f => f.tematica === 'profesores');
       this.reader = this.books[0];

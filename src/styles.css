@@ -1,3 +1,9 @@
+body{
+  -webkit-user-select: none ;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 h3.plegable {
   font-size: 23px;
   line-height: 2.212rem;
@@ -10,6 +16,13 @@ h3.plegable {
 
 .main-nav>li>a {
   color: rgb(255, 255, 102) !important;
+  font-size: 17px;
+}
+.main-nav>li>a:active {
+  color: rgb(255, 255, 102) !important;
+  font-weight: 700 !important;
+  text-decoration: underline !important;
+
 }
 .main-nav>li>a:hover {
   color: rgb(255, 255, 102) !important;
@@ -89,4 +102,31 @@ h2 {
 ::selection{
   background-color: #fff;
   color: #000;
+}
+#footer {
+
+  height: 174px;
+}
+.footer-copyright p {
+
+  margin-top: -18px;
+}
+.section-header .title{
+  text-transform: none;
+}
+.widget-category a{
+  font-size: 1.1rem !important;
+}
+@media (min-width: 992px) {
+
+  .col-md-12[_ngcontent-c3] {
+    width: auto;
+    margin-top: -45px;
+  }
+}
+@media only screen and (min-width: 993px) {
+
+  .container {
+    width: 95%;
+  }
 }

@@ -26,8 +26,8 @@ declare var $: any;
 })
 
 export class IsmaelilloComponent implements AfterViewInit{
-  content: ContentInterface [];
-  books: BookInterface [];
+  content : ContentInterface [] = [];
+  books: any [];
   readMode = false;
   teamMode = false;
   readItem = {
@@ -45,7 +45,7 @@ export class IsmaelilloComponent implements AfterViewInit{
   resultMode: any;
   searchMode: boolean;
   searchString: string;
-  currentBook: BookInterface;
+  currentBook: any;
   /*panelMode, readMode, searchMode, teamMode, actionMode*/
   currentMode: string;
   cientifico: any[];
@@ -55,39 +55,20 @@ export class IsmaelilloComponent implements AfterViewInit{
               private footerService: FooterService,
               private behaviour: BehaviourService) {
     this.headerService.Show();
-    this.footerService.Hide();
-    this.dataService.getContent(this.translate.currentLang)
-      .subscribe((data) => {
-        this.content = data.docs.filter(f => (f.tipo === 'content' && !f._deleted) && f.category === 'Proyecto Ismaelillo');
-        this.content.push({
-          _id: '_dev',
-          _rev: '_dev',
-          _deleted: 'false',
-          category: 'research',
-          tags: [],
+    this.headerService.ChildActive(true);
+    this.footerService.Show();
+    this.dataService.getBooks(this.translate.currentLang).subscribe((data: any) => {
+      this.books = data.docs.filter((f: any) => f.tematica === 'ismaelillo').map((m: any) => {m.tipo = 'pdf'; return m;});
+      this.books.push(
+        {
           order: 2,
           content: '',
           title: 'Colectivo Investigador',
           img: 'comite.jpg',
           tipo: 'research'
-        },
-          {
-            _id: '_dev1',
-            _rev: '_dev2',
-            _deleted: 'false',
-            category: 'action',
-            tags: [],
-            order: 4,
-            content: '',
-            title: 'Acciones y resultados',
-            img: 'acciones.jpg',
-            tipo: 'pdf'
-          });
-        this.content = this.content.sort((a: any, b: any) => a.order - b.order);
-      });
-
-    this.dataService.getBooks(this.translate.currentLang).subscribe((data) => {
-      this.books = data.docs.filter((f: any) => f.tematica === 'ismaelillo');
+        }
+      );
+      this.books = this.books.sort((a: any, b: any) => a.order - b.order);
       this.currentBook = this.books[0];
     });
     this.dataService.getCientifico(this.translate.currentLang).subscribe((data:any) => {
@@ -112,6 +93,7 @@ export class IsmaelilloComponent implements AfterViewInit{
     this.currentMode = readMode ? 'panelMode' : 'readMode';
     this.readItem = item;
     this.searchString = searchString;
+    this.pointer=1;
     //noinspection TypeScriptUnresolvedFunction
     if (_.isUndefined(item)) {
       this.teamMode = false;
@@ -134,6 +116,7 @@ export class IsmaelilloComponent implements AfterViewInit{
           this.showLecture = 'hideLecture';
           this.seekMode = 'selectMode';
           this.resultMode = 'readMode';
+          this.currentBook = item;
           break;
         default:
           this.teamMode = false;

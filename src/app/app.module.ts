@@ -42,6 +42,7 @@ import { ProfesoresComponent } from './sections/profesores/profesores.component'
 import { LandingComponent } from './sections/landing/landing.component';
 import {FooterService} from "./services/footer.service";
 import { ModalComponent } from './components/modal/modal.component';
+import {IsChildPipe} from "./pipes/is-child";
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -59,7 +60,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     DerechoComponent,
     BibliotecaComponent,
     SectionComponent,
-
     GlosarioComponent,
     EticaComponent,
     SearchInputComponent,
@@ -70,6 +70,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     FilterTitlesPipe,
     SearchForPipe,
     LiteSearchPipe,
+    IsChildPipe,
     QuestionComponent,
     SelectableComponent,
     ProfesoresComponent,

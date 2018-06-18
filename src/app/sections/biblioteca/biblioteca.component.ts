@@ -1,4 +1,4 @@
-import { Component, ViewChild, TemplateRef } from '@angular/core';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import {DataService} from '../../services/data.service';
 import {TranslateService} from '@ngx-translate/core';
 import {HeaderService} from '../../services/header.service';
@@ -11,7 +11,7 @@ declare var M: any;
   styleUrls: ['./biblioteca.component.css']
 })
 
-export class BibliotecaComponent {
+export class BibliotecaComponent implements AfterViewInit {
   @ViewChild("search") search: any;
   books: any [];
   booksShelf: any [];
@@ -27,6 +27,7 @@ export class BibliotecaComponent {
   result: boolean = false;
   constructor(private dataService: DataService, private translate: TranslateService, private headerService: HeaderService) {
     this.headerService.Hide();
+    this.headerService.ChildActive(true);
     this.dataService.getBooks(this.translate.currentLang)
       .subscribe((data: any) => {
        this.books = data.docs.filter((f: any) => f.tematica === 'articulos' || f.tematica.indexOf('norma') !== -1 );
@@ -54,10 +55,14 @@ export class BibliotecaComponent {
     this.pointer = 1;
     //noinspection TypeScriptUnresolvedVariable
     this.search.nativeElement.value = "";
+
   }
   ReadBook(book){
     this.reader = book;
     this.pointer = 1;
+    $('body,html').animate({
+      scrollTop: 0
+    }, 600);
   }
   afterLoadComplete(pdfData: any) {
     this.pdfPages = pdfData.numPages;
@@ -114,6 +119,12 @@ export class BibliotecaComponent {
 
   private QuitOverFlow() {
     $('.ng2-pdf-viewer-container').css('overflow','inherit');
+  }
+
+  ngAfterViewInit() {
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems,{});
+
   }
 }
 

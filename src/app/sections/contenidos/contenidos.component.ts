@@ -16,6 +16,7 @@ export class ContenidosComponent implements AfterViewInit {
   current: ContentInterface;
   constructor(private dataService: DataService, private translate: TranslateService, private headerService: HeaderService) {
     this.headerService.Hide();
+    this.headerService.ChildActive(true);
     this.dataService.getContent(this.translate.currentLang)
       .subscribe((data) => {
         this.categories = data.docs.filter(f => (f.tipo === 'content' && !f._deleted) && f.category === 'Preguntas y respuestas')

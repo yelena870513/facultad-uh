@@ -22,7 +22,8 @@ h3 {
   font-size: 1em;
 }
 .widget-category a:hover {
-  color: rgb(144,128,88);;
+  color: rgb(144,128,88);
+  cursor: pointer;
 }
 a.active:hover {
   color: #FFF !important;

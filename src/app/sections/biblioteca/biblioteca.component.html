@@ -19,46 +19,37 @@
     <!-- Row -->
     <div class="row">
 
-    <aside id="aside" class="col-md-3">
+    <aside id="aside" class="col-md-4">
 
-      <!-- Tags -->
+
       <div class="widget">
         <h3 class="title">{{'LIBRARY.THEMES' | translate}}</h3>
-        <div class="widget-tags">
-          <a  *ngFor="let item of themes" (click)="setItem(item)" [ngClass]="{'active': item === themeActual}">
-            &nbsp;{{item | translate}}
-          </a>
-        </div>
-      </div>
-      <!-- /Tags -->
-       <!-- Tags -->
-       <div class="widget" *ngIf="booksShelf.length>0">
-         <h3 class="title">{{themeActual | translate}}</h3>
-         <div class="widget-category">
-           <a *ngFor="let item of booksShelf |paginate: { itemsPerPage: 5, currentPage: page }"
-              (click)="ReadBook(item)"
-              [ngClass]="{'active': item.title === reader.title, 'search-result': result}" >{{item.title}}
-           </a>
-         </div>
-       </div>
-       <pagination-controls
-         *ngIf="booksShelf.length>0"
-         (pageChange)="page = $event"
-         maxSize="5"
-         previousLabel=""
-         nextLabel=""
-         boundaryLinks="false"
-       >
 
-       </pagination-controls>
-       <!-- /Tags -->
+        <ul class="collapsible">
+          <li *ngFor="let item of themes" >
+            <div class="collapsible-header" (click)="setItem(item)" [ngClass]="{'active': item === themeActual}">{{item | translate}}</div>
+            <div class="collapsible-body">
+              <ul>
+                <li *ngFor="let item of booksShelf" [ngClass]="{'active': item.title === reader.title, 'search-result': result}">
+                  <a (click)="ReadBook(item)"  >{{item.title}}</a>
+
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+
+
 
    </aside>
 
       <!-- Main -->
-      <main id="main" class="col-md-9">
+      <main id="main" class="col-md-8">
         <div class="blog">
           <div class="blog-content" *ngIf="reader">
+            <h3>{{reader.title}}</h3>
             <div class="row border-dark">
               <div class="col-md-12">
                 <div class="progress"  *ngIf="!isLoaded">

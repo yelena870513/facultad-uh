@@ -1,9 +1,13 @@
+label{
+  font-size: 1.1rem;
+}
 label.error{
   color: red;
 }
 label.check{
   color: green;
 }
+
 a.active{
   color: #FFF;
   background-color:rgb(144,128,88);

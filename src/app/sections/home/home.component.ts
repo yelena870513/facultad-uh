@@ -16,6 +16,7 @@ export class HomeComponent  implements AfterViewInit{
   menu: any [];
   constructor(private dataService: DataService, private translate: TranslateService, private headerService: HeaderService, private footerService: FooterService) {
     this.headerService.Show();
+    this.headerService.ChildActive(false);
     this.footerService.Hide();
     this.dataService.getContent(this.translate.currentLang)
       .subscribe((data) => {
@@ -32,7 +33,7 @@ export class HomeComponent  implements AfterViewInit{
     ];
   }
   ngAfterViewInit() {
-    $('#nav').addClass('fixed-nav').removeClass('hidden')
+    // $('#nav').addClass('fixed-nav').removeClass('hidden')
   }
 }
 
