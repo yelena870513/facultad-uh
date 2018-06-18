@@ -9,15 +9,15 @@
 
       <!-- Section header -->
       <div class="section-header text-center">
-        <h2 class="title">{{ 'ISMAELILLO.TITLE' | translate }}</h2>
+        <h2 class="title ismaelillo">{{ 'ISMAELILLO.TITLE' | translate }}</h2>
       </div>
       <!-- /Section header -->
 
       <!-- blog -->
-      <div class="col-md-3" *ngFor="let item of content | paginate: { itemsPerPage: 4, currentPage: page }">
+      <div class="col-md-3" *ngFor="let item of books | paginate: { itemsPerPage: 4, currentPage: page }">
         <div class="blog">
           <div class="blog-img">
-            <img class="img-responsive" src="./assets/images/{{item.img}}" alt="">
+            <img class="img-responsive contenidos" src="./assets/images/{{item.img}}" alt="" (click)="openRead(item, !readMode, '')">
           </div>
           <div class="blog-content">
             <!--<h3 class="ismaelillo">{{ item.title  | translate }}</h3>-->
@@ -95,7 +95,7 @@
           <div style="margin-bottom: 40px" class="testimonial" *ngFor="let item of cientifico " >
             <div class="testimonial-meta">
               <img src="./assets/images/{{item.img}}" alt="">
-              <h3 class="white-text">{{item.name}}</h3>
+              <h3 class="white-text colectivo">{{item.name}}</h3>
               <span>{{item.job | translate}}</span>
             </div>
             <p class="white-text">{{item.description | translate}}</p>
@@ -131,33 +131,6 @@
       <!-- Aside -->
       <aside id="aside" class="col-md-3">
 
-        <!-- Search -->
-        <!--<div class="widget">-->
-          <!--<div class="widget-search">-->
-            <!--<input class="search-input" type="text" placeholder="search">-->
-            <!--<button class="search-btn" type="button"><i class="fa fa-search"></i></button>-->
-          <!--</div>-->
-        <!--</div>-->
-        <!-- /Search -->
-
-        <!-- Category -->
-        <!--<div class="widget">-->
-          <!--<h3 class="title">{{'ISMAELILLO.BOOKS' | translate}}</h3>-->
-          <!--<div class="widget-category">-->
-            <!--<a *ngFor="let item of books |paginate: { itemsPerPage: 5, currentPage: page }" (click)="ReadBook(item)">{{item.title}}</a>-->
-
-          <!--</div>-->
-          <!--<pagination-controls-->
-            <!--(pageChange)="page = $event"-->
-            <!--maxSize="5"-->
-            <!--previousLabel=""-->
-            <!--nextLabel=""-->
-            <!--boundaryLinks="false"-->
-          <!--&gt;-->
-
-          <!--</pagination-controls>-->
-        <!--</div>-->
-        <!-- /Category -->
 
       </aside>
       <!-- /Aside -->

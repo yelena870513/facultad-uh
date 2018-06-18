@@ -10,6 +10,17 @@ a{
 
 h2{
   font-size: 2.56rem;
+
+}
+h2.ismaelillo{
+  margin-top: -74px;
+}
+.blog .blog-content{
+  padding: 0;
+}
+img.contenidos{
+  height: 160px !important;
+  margin-left: 16px;
 }
 .title:after {
   background-color:  rgb(144,128,88);
@@ -25,6 +36,12 @@ h3 {
   font-size: 16px;
   line-height: 13px;
   color: #333;
+}
+h3.colectivo{
+  font-size: 20px !important;
+}
+img:hover{
+  cursor: pointer;
 }
 
 a{text-align: center}

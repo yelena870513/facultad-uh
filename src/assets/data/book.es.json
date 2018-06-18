@@ -10,10 +10,30 @@
     },
      {
       "poster":"pdf.png",
+      "img":"acciones.jpg",
       "url":"acciones.pdf",
       "title":"Acciones y resultados del proyecto",
       "section":"book",
-      "tematica":"ismaelillo"
+      "tematica":"ismaelillo",
+       "order":4
+    },
+    {
+      "poster":"pdf.png",
+      "img":"ismaelillo.jpg",
+      "url":"plegable.pdf",
+      "title":"Plegable",
+      "section":"book",
+      "tematica":"ismaelillo",
+      "order":1
+    },
+    {
+      "poster":"pdf.png",
+      "img":"presupuestos.jpg",
+      "url":"presupuestos.pdf",
+      "title":"Presupuestos teóricos",
+      "section":"book",
+      "tematica":"ismaelillo",
+      "order":3
     },
     {
       "poster":"pdf.png",

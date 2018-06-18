@@ -9,7 +9,7 @@
 }
 .home-content h1 {
   text-transform: uppercase;
-  font-size: 32px !important;
+  font-size: 30px !important;
 }
 button:focus {
   outline: none;

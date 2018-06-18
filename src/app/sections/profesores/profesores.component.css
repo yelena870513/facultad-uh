@@ -4,6 +4,7 @@
   color: rgb(144,128,88);
   border-bottom: 1px solid #EEE;
   padding: 5px;
+  cursor: pointer;
 }
 h3 {
   font-size: 1.92rem;

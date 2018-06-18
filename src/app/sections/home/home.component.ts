@@ -32,7 +32,7 @@ export class HomeComponent  implements AfterViewInit{
     ];
   }
   ngAfterViewInit() {
-    $('#nav').addClass('fixed-nav').removeClass('hidden')
+    // $('#nav').addClass('fixed-nav').removeClass('hidden')
   }
 }
 

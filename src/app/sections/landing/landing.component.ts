@@ -3,6 +3,7 @@ import {HeaderService} from "../../services/header.service";
 import {DataService} from "../../services/data.service";
 import {CategoryInterface} from "../../interfaces/category.interface";
 import {TranslateService} from '@ngx-translate/core';
+import {FooterService} from "../../services/footer.service";
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
@@ -12,8 +13,9 @@ export class LandingComponent {
 
   categories: CategoryInterface [];
   menu: any [];
-  constructor(private dataService: DataService, private translate: TranslateService, private headerService: HeaderService) {
+  constructor(private dataService: DataService, private translate: TranslateService, private headerService: HeaderService,  private footerService: FooterService) {
     this.headerService.Hide();
+    this.footerService.Show();
     this.dataService.getContent(this.translate.currentLang)
       .subscribe((data) => {
         this.categories = data.docs.filter(f => (f.tipo === 'category' && !f._deleted) && f.title !== 'Preguntas y respuestas')

@@ -24,7 +24,7 @@
 
         <!-- Category -->
         <div class="widget">
-          <h3 class="title">{{'ISMAELILLO.BOOKS' | translate}}</h3>
+          <h3 class="title">{{'CONTENIDO.BOOKS' | translate}}</h3>
           <div class="widget-category">
             <a *ngFor="let item of books" (click)="ReadBook(item)" [ngClass]="{'active': item.title === term.title}">{{item.title}}</a>
 

@@ -24,7 +24,6 @@ const routes: Routes = [
   {path: 'etica', component: EticaComponent},
   {path: 'question', component: QuestionComponent},
   {path: 'profesores', component: ProfesoresComponent},
-
   {path: 'landing', component: LandingComponent},
 
 ];

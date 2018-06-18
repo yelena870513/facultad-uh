@@ -18,14 +18,14 @@
   },
   "CONTENIDO":{
     "TITLE": "Contenidos jurídicos de la educación cívica",
-    "BOOKS":"Libros",
+    "BOOKS":"Códigos de ética",
     "UTIL":"Útiles",
     "ETHIC":"Ética",
     "QUESTION":"Preguntas",
     "GLOSSARY":"Glosario"
   },
    "BIBLIOTECA":{
-    "TITLE": "Biblioteca jurídica",
+    "TITLE": "Biblioteca Jurídica",
     "BOOKS":"Libros"
   },
   "QUESTION":{
@@ -44,10 +44,11 @@
     "BOOKS":"Temas"
   },
   "LANDING":{
-    "TITLE": "Contenido general",
+    "TITLE": "Contenido General",
     "BOOKS":"Libros"
   },
   "NAV":{
+    "START":"Inicio",
     "HOME": "Contenido General",
     "ESTUDIANTES": "Estudiantes",
     "PROFESORES": "Profesores",
@@ -68,11 +69,11 @@
   },
   "MODAL":{
     "HEADER":"Salir",
-    "CONTENT":"Desea salir de la multimedia?",
+    "CONTENT":"¿Desea salir de la multimedia?",
     "CANCEL": "Cancelar",
     "ACCEPT": "Aceptar"
   },
-  "articulos":"Artículos",
+  "articulos":"Artículos científicos",
   "normasInternacionales":"Normas internacionales",
   "normasNacionales":"Normas nacionales",
   "normasBasicos":"Normas básicas",

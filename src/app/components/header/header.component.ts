@@ -27,6 +27,7 @@ export class HeaderComponent implements AfterViewInit {
     private behave: BehaviourService,
     private router: Router) {
        this.menu = [
+      {name: 'NAV.START', url: '/home' },
       {name: 'NAV.HOME', url: '/landing' },
       {name: 'NAV.ESTUDIANTES', url: '/question' },
       {name: 'NAV.PROFESORES', url: '/profesores' }
