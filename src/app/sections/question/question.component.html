@@ -8,7 +8,10 @@
             <h3 class="title">{{'QUESTION.QUESTION' | translate}}</h3>
             <div class="widget">
               <div class="widget-category">
-                <a *ngFor="let item of questions  | paginate: { itemsPerPage: 5, currentPage: page, totalItems: questions.length, id:'question'  }" (click)="Selecter(item)" [ngClass]="{'active': item.title === i.title}">{{item.title}}</a>
+                <a *ngFor="let item of questions  | paginate: { itemsPerPage: 5, currentPage: page, totalItems: questions.length, id:'question'  }"
+                   (click)="Selecter(item)"
+                   [ngClass]="{'active': item.title === i.title}"
+                   >{{item.title}}</a>
 
               </div>
               <pagination-controls
@@ -39,7 +42,7 @@
                   <ul class="collection">
                     <li class="collection-item" *ngFor="let answer of i.items">
                       <div class="switch">
-                        <label [ngClass]="{ 'error': answer.resource ==='F', 'check': answer.resource === 'T' }">{{answer.name}}<input type="checkbox" (change)="checkAnswer(answer,$event)"><span class="lever"></span></label>
+                       <label [ngClass]="{ 'error': answer.resource ==='F', 'check': answer.resource === 'T' }">{{answer.name}}<input type="checkbox" (change)="checkAnswer(answer,$event)"><span class="lever"></span></label>
                       </div>
                     </li>
                   </ul>
@@ -61,9 +64,29 @@
                     </div>
                   </div>
                 </div>
+                 <div *ngIf="i.type=== 'radio'">
+
+                   <div  *ngFor="let answer of i.items; let i = index">
+                     {{answer.name}}
+                     <p>
+                       <label [ngClass]="{ 'error': answer.resource ==='F', 'check': answer.resource === 'T' }">
+                         <input name="group{{i}}" type="radio" (change)="radioAnswer(answer,$event, this)" #ansTrue{{i}} />
+                         <span>{{'QUESTION.TRUE' | translate}}</span>
+                       </label>
+                     </p>
+                     <p>
+                       <label [ngClass]="{ 'check': answer.resource ==='F', 'error': answer.resource === 'T' }">
+                         <input name="group{{i}}" type="radio"  (change)="radioAnswer(answer,$event, this)" #ansFalse{{i}}/>
+                         <span>{{'QUESTION.FALSE' | translate}}</span>
+                       </label>
+                     </p>
+
+                   </div>
+
+                 </div>
               </div>
               <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">{{i.title}}<i class="mdi-navigation-close right"></i></span>
+                <span class="card-title grey-text text-darken-4">{{i.title}}<i class="mdi-navigation-close right"></i></span><br>
                 <p [innerHtml]="i.description"></p>
               </div>
             </div>

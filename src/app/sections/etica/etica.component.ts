@@ -18,6 +18,7 @@ export class EticaComponent implements AfterViewInit {
   isLoaded: boolean = false;
   constructor(private dataService: DataService, private translate: TranslateService, private headerService: HeaderService) {
     this.headerService.Hide();
+    this.headerService.ChildActive(true);
     this.dataService.getBooks(this.translate.currentLang).subscribe((data: any) => {
       this.books = data.docs.filter(f => f.tematica === 'etica');
       this.term = this.books[0];

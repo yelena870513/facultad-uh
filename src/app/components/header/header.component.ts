@@ -17,8 +17,9 @@ declare var win: any;
 })
 
 export class HeaderComponent implements AfterViewInit {
-  menu: MenuInterface[];
+  menu: any[];
   showHeader = true;
+  childActive = false;
   modal : any;
   constructor(
 
@@ -28,12 +29,13 @@ export class HeaderComponent implements AfterViewInit {
     private router: Router) {
        this.menu = [
       {name: 'NAV.START', url: '/home' },
-      {name: 'NAV.HOME', url: '/landing' },
+      {name: 'NAV.HOME', url: '/landing', hasChild: true },
       {name: 'NAV.ESTUDIANTES', url: '/question' },
       {name: 'NAV.PROFESORES', url: '/profesores' }
       ];
      this.headerService.showHeader
        .subscribe(show => setTimeout(() => this.showHeader = show));
+    this.headerService.childActive.subscribe(active => setTimeout(()=> this.childActive = active))
   }
 
   Salir(){

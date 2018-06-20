@@ -16,6 +16,7 @@ export class GlosarioComponent implements AfterViewInit {
   term: any;
  constructor(private dataService: DataService, private translate: TranslateService, private headerService: HeaderService) {
    this.headerService.Hide();
+   this.headerService.ChildActive(true);
    this.dataService.getGlossary(this.translate.currentLang).subscribe((data: any) => {
      this.glossary = data.docs;
      this.term = this.glossary[0];

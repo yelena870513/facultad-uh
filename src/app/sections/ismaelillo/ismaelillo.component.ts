@@ -55,6 +55,7 @@ export class IsmaelilloComponent implements AfterViewInit{
               private footerService: FooterService,
               private behaviour: BehaviourService) {
     this.headerService.Show();
+    this.headerService.ChildActive(true);
     this.footerService.Show();
     this.dataService.getBooks(this.translate.currentLang).subscribe((data: any) => {
       this.books = data.docs.filter((f: any) => f.tematica === 'ismaelillo').map((m: any) => {m.tipo = 'pdf'; return m;});

@@ -31,7 +31,9 @@
   "QUESTION":{
     "TITLE": "Estudiantes",
     "BOOKS":"Libros",
-    "QUESTION":"Cuestionario"
+    "QUESTION":"Cuestionario",
+    "TRUE":"V",
+    "FALSE":"F"
   },
    "DERECHO":{
     "TITLE": "El derecho en la historia",

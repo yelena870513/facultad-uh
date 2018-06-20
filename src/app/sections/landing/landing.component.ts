@@ -15,6 +15,7 @@ export class LandingComponent {
   menu: any [];
   constructor(private dataService: DataService, private translate: TranslateService, private headerService: HeaderService,  private footerService: FooterService) {
     this.headerService.Hide();
+    this.headerService.ChildActive(true);
     this.footerService.Show();
     this.dataService.getContent(this.translate.currentLang)
       .subscribe((data) => {
