@@ -64,7 +64,7 @@ export class QuestionComponent implements OnInit {
     }
   }
 
-  radioAnswer(item,event,el) {
+  radioAnswer(item,event) {
     item.checked = event.target.checked;
     if(event.target.checked)
     {

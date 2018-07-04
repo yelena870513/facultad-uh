@@ -70,13 +70,13 @@
                      {{answer.name}}
                      <p>
                        <label [ngClass]="{ 'error': answer.resource ==='F', 'check': answer.resource === 'T' }">
-                         <input name="group{{i}}" type="radio" (change)="radioAnswer(answer,$event, this)" #ansTrue{{i}} />
+                         <input name="group{{i}}" value="1" type="radio" (change)="radioAnswer(answer,$event)" #ansTrue{{i}} />
                          <span>{{'QUESTION.TRUE' | translate}}</span>
                        </label>
                      </p>
                      <p>
                        <label [ngClass]="{ 'check': answer.resource ==='F', 'error': answer.resource === 'T' }">
-                         <input name="group{{i}}" type="radio"  (change)="radioAnswer(answer,$event, this)" #ansFalse{{i}}/>
+                         <input name="group{{i}}" type="radio" value="0" (change)="radioAnswer(answer,$event)" #ansFalse{{i}}/>
                          <span>{{'QUESTION.FALSE' | translate}}</span>
                        </label>
                      </p>

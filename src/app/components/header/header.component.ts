@@ -1,4 +1,4 @@
-import { AfterViewInit, Component} from '@angular/core';
+import {AfterViewInit, Component} from '@angular/core';
 import {MenuInterface} from '../../interfaces/menu.interface';
 import {TranslateService} from '@ngx-translate/core';
 import {ActivatedRoute, Router} from '@angular/router';
@@ -13,54 +13,57 @@ declare var win: any;
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css', 'modal.css' ]
+  styleUrls: ['./header.component.css', 'modal.css']
 })
 
 export class HeaderComponent implements AfterViewInit {
-  menu: MenuInterface[];
+  menu: any[];
   showHeader = true;
   childActive = false;
-  modal : any;
-  constructor(
+  modal: any;
 
-    private headerService: HeaderService,
-    private modalService: NgbModal,
-    private behave: BehaviourService,
-    private router: Router) {
-       this.menu = [
-      {name: 'NAV.START', url: '/home' },
-      {name: 'NAV.HOME', url: '/landing', hasChild: true },
-      {name: 'NAV.ESTUDIANTES', url: '/question' },
-      {name: 'NAV.PROFESORES', url: '/profesores' }
-      ];
-     this.headerService.showHeader
-       .subscribe(show => setTimeout(() => this.showHeader = show));
+  constructor(private headerService: HeaderService,
+              private modalService: NgbModal,
+              private behave: BehaviourService,
+              private router: Router) {
+    this.menu = [
+      {name: 'NAV.START', url: '/home'},
+      {
+        name: 'NAV.HOME',
+        url: '/landing',
+        hasChild: true,
+        children: [{name: 'NAV.ISMAELILLO', url: '/ismaelillo'}, {
+          name: 'NAV.CONTENIDOS',
+          url: '/contenidos'
+        }, {name: 'NAV.DERECHO', url: '/derecho'}, {name: 'NAV.BIBLIOTECA', url: '/biblioteca'},]
+      },
+      {name: 'NAV.ESTUDIANTES', url: '/question'},
+      {name: 'NAV.PROFESORES', url: '/profesores'}
+    ];
+    this.headerService.showHeader
+      .subscribe(show => setTimeout(() => this.showHeader = show));
     this.headerService.childActive.subscribe(active => setTimeout(()=> this.childActive = active))
   }
 
-  Salir(){
+  Salir() {
     $('.modal').modal('open');
   }
 
-  LogOut(){
+  LogOut() {
 
     //Preguntar primero desde que dispositivo se navega
-    if(!navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/))
-    {
-      try
-      {
+    if (!navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
+      try {
         win.close(true);
       }
-      catch (reason){
+      catch (reason) {
         window.close();
 
       }
 
     }
-    else
-    {
+    else {
       window.close();
-
 
 
     }
@@ -79,7 +82,7 @@ export class HeaderComponent implements AfterViewInit {
 
     ///////////////////////////
     // Smooth scroll
-    $('#nav .main-nav a[href^=\'#\']').on('click', function(e) {
+    $('#nav .main-nav a[href^=\'#\']').on('click', function (e) {
       e.preventDefault();
       const hash = this.hash;
       $('html, body').animate({
@@ -89,14 +92,14 @@ export class HeaderComponent implements AfterViewInit {
 
     ///////////////////////////
     // Btn nav collapse
-    $('#nav .nav-collapse').on('click', function() {
+    $('#nav .nav-collapse').on('click', function () {
       $('#nav').toggleClass('open');
     });
 
 
     ///////////////////////////
     // Mobile dropdown
-    $('.has-dropdown a').on('click', function() {
+    $('.has-dropdown a').on('click', function () {
       $(this).parent().toggleClass('open-drop');
     });
     // Move to about
@@ -107,10 +110,11 @@ export class HeaderComponent implements AfterViewInit {
       }, 600);
     });
 
-    $(document).ready(function(){
-     this.modal = $('.modal').modal();
+    $(document).ready(function () {
+      this.modal = $('.modal').modal();
     });
   }
+
   launchSearch(event) {
     this.behave.CastSearchMode(event.target.value);
     this.router.navigate(['/content/' + event.target.value]);

@@ -52,6 +52,11 @@ export class SectionComponent implements AfterViewInit {
     //   // Back To Top Appear
     //   wScroll > 700 ? $('#back-to-top').fadeIn() : $('#back-to-top').fadeOut();
     // });
+    ///////////////////////////
+    // Mobile dropdown
+    $('.has-dropdown a').on('click', function() {
+      $(this).parent().toggleClass('open-drop');
+    });
 
     ///////////////////////////
     // magnificPopup
