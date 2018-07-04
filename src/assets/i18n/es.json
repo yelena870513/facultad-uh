@@ -52,6 +52,10 @@
   "NAV":{
     "START":"Inicio",
     "HOME": "Contenido General",
+    "ISMAELILLO": "Proyecto Ismaelillo",
+    "CONTENIDOS": "Contenidos Jurídicos",
+    "DERECHO": "El derecho en historia",
+    "BIBLIOTECA": "Biblioteca Jurídica",
     "ESTUDIANTES": "Estudiantes",
     "PROFESORES": "Profesores",
     "PREV":"Anterior",

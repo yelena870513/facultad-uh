@@ -27,7 +27,13 @@
 
       <!--  Main navigation  -->
       <ul class="main-nav nav navbar-nav navbar-right">
-          <li *ngFor="let item of menu" routerLinkActive="active" [ngClass]="{'active': (childActive && item.hasChild)}"><a  routerLink="{{item.url}}">{{item.name | translate}}</a></li>
+          <li *ngFor="let item of menu" routerLinkActive="active" [ngClass]="{'active': (childActive && item.hasChild), 'has-dropdown': item.hasChild }">
+            <a  routerLink="{{item.url}}">{{item.name | translate}}</a>
+            <ul class="dropdown" *ngIf="item.hasChild">
+              <li *ngFor="let child of item.children" routerLinkActive="active"><a routerLink="{{child.url}}">{{child.name | translate}}</a></li>
+            </ul>
+          </li>
+
           <li [ngClass]="{'salir': isExit}"><a (click)="Salir()" href="#modal1">{{'NAV.EXIT' | translate}}</a></li>
       </ul>
       <!-- /Main navigation -->
