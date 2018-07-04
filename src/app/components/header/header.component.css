@@ -26,6 +26,7 @@ button:focus {
 #nav {
   padding: 10px 0px;
   background: rgb(144,128,88);
+  overflow: visible;
 }
 .sailor{
   position: fixed;

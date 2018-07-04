@@ -4,7 +4,7 @@ import {TranslateService} from '@ngx-translate/core';
 import {HeaderService} from '../../services/header.service';
 import {ContentInterface} from '../../interfaces/content.interface';
 declare var $: any;
-
+declare var M: any;
 @Component({
   selector: 'app-contenidos',
   templateUrl: './contenidos.component.html',
@@ -31,6 +31,9 @@ export class ContenidosComponent implements AfterViewInit {
     $('body,html').animate({
       scrollTop: 0
     }, 600);
-  }
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems,{});
+  };
+
 }
 

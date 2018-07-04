@@ -15,40 +15,39 @@
 
         <!-- Search -->
         <div class="widget">
-          <div class="widget-search">
-            <!--<input class="search-input" type="text" placeholder="search">-->
-            <!--<button class="search-btn" type="button"><i class="fa fa-search"></i></button>-->
-          </div>
+          <ul class="collapsible">
+            <li>
+              <div class="collapsible-header">{{'CONTENIDOS.CATEGORY' | translate}}</div>
+              <div class="collapsible-body">
+                <a *ngFor="let item of categories |paginate: { itemsPerPage: 5, currentPage: page }" (click)="Selecter(item)" [ngClass]="{'active': item.title === current.title, 'search-result': result}">{{item.title}}</a>
+                <pagination-controls
+                  (pageChange)="page = $event"
+                  maxSize="5"
+                  previousLabel=""
+                  nextLabel=""
+                  boundaryLinks="false"
+                >
+
+                </pagination-controls>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">{{'CONTENIDO.GLOSSARY' | translate}}</div>
+              <div class="collapsible-body">
+                <a routerLink="/glosario">{{'CONTENIDO.GLOSSARY' | translate}} &nbsp;<i class="fa fa-book"></i></a>
+
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">{{'CONTENIDO.ETHIC' | translate}}</div>
+              <div class="collapsible-body">
+
+                <a routerLink="/etica">{{'CONTENIDO.ETHIC' | translate}} &nbsp;<i class="fa fa-hand-o-right" aria-hidden="true"></i></a>
+              </div>
+            </li>
+          </ul>
         </div>
         <!-- /Search -->
-
-        <!-- Category -->
-        <div class="widget">
-          <h3 class="title">{{'CONTENIDOS.CATEGORY' | translate}}</h3>
-          <div class="widget-category">
-            <a *ngFor="let item of categories |paginate: { itemsPerPage: 5, currentPage: page }" (click)="Selecter(item)" [ngClass]="{'active': item.title === current.title, 'search-result': result}">{{item.title}}</a>
-
-          </div>
-          <pagination-controls
-            (pageChange)="page = $event"
-            maxSize="5"
-            previousLabel=""
-            nextLabel=""
-            boundaryLinks="false"
-          >
-
-          </pagination-controls>
-        </div>
-        <!-- /Category -->
-        <div class="widget">
-          <h3 class="title">{{'CONTENIDO.UTIL' | translate}}</h3>
-          <div class="widget-tags">
-            <a routerLink="/glosario">{{'CONTENIDO.GLOSSARY' | translate}} &nbsp;<i class="fa fa-book"></i></a>
-            <a routerLink="/etica">{{'CONTENIDO.ETHIC' | translate}} &nbsp;<i class="fa fa-hand-o-right" aria-hidden="true"></i></a>
-          </div>
-
-        </div>
-        <!-- /Tags -->
 
       </aside>
       <!-- /Aside -->

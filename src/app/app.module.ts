@@ -43,6 +43,7 @@ import { LandingComponent } from './sections/landing/landing.component';
 import {FooterService} from "./services/footer.service";
 import { ModalComponent } from './components/modal/modal.component';
 import {IsChildPipe} from "./pipes/is-child";
+import { GalleryComponent } from './multimedia/gallery/gallery.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -77,6 +78,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     LandingComponent,
 
     ModalComponent,
+
+    GalleryComponent,
 
   ],
   imports: [

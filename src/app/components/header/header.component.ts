@@ -90,6 +90,17 @@ export class HeaderComponent implements AfterViewInit {
       }, 600);
     });
 
+
+    $(window).on('scroll', function() {
+      const wScroll = $(this).scrollTop();
+
+      // Fixed nav
+      wScroll > 1 ? $('#nav').addClass('fixed-nav') : $('#nav').removeClass('fixed-nav');
+
+      // Back To Top Appear
+      wScroll > 700 ? $('#back-to-top').fadeIn() : $('#back-to-top').fadeOut();
+    });
+
     ///////////////////////////
     // Btn nav collapse
     $('#nav .nav-collapse').on('click', function () {
@@ -100,6 +111,14 @@ export class HeaderComponent implements AfterViewInit {
     ///////////////////////////
     // Mobile dropdown
     $('.has-dropdown a').on('click', function () {
+      $(this).parent().toggleClass('open-drop');
+    });
+    // Mobile dropdown
+    $('.has-dropdown a').on('mouseover', function () {
+      $(this).parent().toggleClass('open-drop');
+    });
+    // Mobile dropdown
+    $('.has-dropdown a').on('mouseout', function () {
       $(this).parent().toggleClass('open-drop');
     });
     // Move to about
