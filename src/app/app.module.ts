@@ -47,7 +47,8 @@ import {VgCoreModule} from 'videogular2/core';
 import {VgControlsModule} from 'videogular2/controls';
 import {VgOverlayPlayModule} from 'videogular2/overlay-play';
 import {VgBufferingModule} from 'videogular2/buffering';
-
+import { LightboxModule } from 'ngx-lightbox';
+import { ThemeFilterPipe } from './pipes/theme-filter.pipe';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -81,6 +82,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     LandingComponent,
     GalleryComponent,
     PlaylistComponent,
+    ThemeFilterPipe,
 
 
   ],
@@ -103,7 +105,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     VgCoreModule,
     VgControlsModule,
     VgOverlayPlayModule,
-    VgBufferingModule
+    VgBufferingModule,
+    LightboxModule
   ],
   exports: [RouterModule, TranslateModule],
   providers: [OrmService, DataService, HeaderService, FooterService, BehaviourService,  { provide: APP_BASE_HREF, useValue: '.' },],

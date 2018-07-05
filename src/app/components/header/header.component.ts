@@ -21,7 +21,6 @@ export class HeaderComponent implements AfterViewInit {
   modal: any;
 
   constructor(private headerService: HeaderService,
-
               private behave: BehaviourService,
               private router: Router) {
     this.menu = [
@@ -30,13 +29,19 @@ export class HeaderComponent implements AfterViewInit {
         name: 'NAV.HOME',
         url: '/landing',
         hasChild: true,
-        children: [{name: 'NAV.ISMAELILLO', url: '/ismaelillo'}, {
-          name: 'NAV.CONTENIDOS',
-          url: '/contenidos'
-        }, {name: 'NAV.DERECHO', url: '/derecho'}, {name: 'NAV.BIBLIOTECA', url: '/biblioteca'},]
+        children: [
+          {name: 'NAV.ISMAELILLO', url: '/ismaelillo'},
+          { name: 'NAV.CONTENIDOS',    url: '/contenidos'},
+          {name: 'NAV.DERECHO', url: '/derecho'}, {name: 'NAV.BIBLIOTECA', url: '/biblioteca'},]
       },
       {name: 'NAV.ESTUDIANTES', url: '/question'},
-      {name: 'NAV.PROFESORES', url: '/profesores'}
+      {name: 'NAV.PROFESORES', url: '/profesores'},
+      {name: 'NAV.MULTIMEDIA', url: '#',
+        hasChild: true,
+        children:[
+        {name: 'NAV.GALLERY', url: '/gallery'},
+        {name: 'NAV.PLAYLIST', url: '/playlist'},
+      ]}
     ];
     this.headerService.showHeader
       .subscribe(show => setTimeout(() => this.showHeader = show));
@@ -89,7 +94,7 @@ export class HeaderComponent implements AfterViewInit {
     });
 
 
-    $(window).on('scroll', function() {
+    $(window).on('scroll', function () {
       const wScroll = $(this).scrollTop();
 
       // Fixed nav
