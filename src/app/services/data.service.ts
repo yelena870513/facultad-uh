@@ -26,4 +26,8 @@ export class DataService {
   public getCientifico(lang: string): Observable<any> {
     return this.http.get('assets/data/cientificos.' + lang + '.json');
   }
+
+  public getGallery(lang: string): Observable<any> {
+    return this.http.get('assets/data/gallery.' + lang + '.json');
+  }
 }

@@ -11,6 +11,8 @@ import {EticaComponent} from './sections/etica/etica.component';
 import {QuestionComponent} from './sections/question/question.component';
 import {ProfesoresComponent} from "./sections/profesores/profesores.component";
 import {LandingComponent} from "./sections/landing/landing.component";
+import {GalleryComponent} from './multimedia/gallery/gallery.component';
+import {PlaylistComponent} from './multimedia/playlist/playlist.component';
 
 
 const routes: Routes = [
@@ -24,8 +26,9 @@ const routes: Routes = [
   {path: 'etica', component: EticaComponent},
   {path: 'question', component: QuestionComponent},
   {path: 'profesores', component: ProfesoresComponent},
-  {path: 'landing', component: LandingComponent
-  },
+  {path: 'landing', component: LandingComponent},
+  {path: 'gallery', component: GalleryComponent},
+  {path: 'playlist', component: PlaylistComponent}
 
 ];
 

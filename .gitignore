@@ -5,6 +5,7 @@
 /dist-server
 /tmp
 /out-tsc
+/build
 
 # dependencies
 /node_modules
@@ -48,3 +49,6 @@ Thumbs.db
 /images
 images
 pdf
+build
+/video
+video

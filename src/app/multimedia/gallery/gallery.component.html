@@ -1,0 +1,64 @@
+<!-- Blog -->
+<div id="blog" class="section md-padding">
+
+  <!-- Container -->
+  <div class="container">
+
+    <div class="section-header text-center">
+      <h2 class="title">{{ 'GALLERY.TITLE' | translate }}</h2>
+    </div>
+
+    <!-- Row -->
+    <div class="row">
+
+      <aside id="aside" class="col-md-4">
+
+
+        <div class="widget">
+          <h3 class="title">{{'GALLERY.THEMES' | translate}}</h3>
+
+          <ul class="collection">
+            <li class="collection-item" *ngFor="let item of themes" [ngClass]="{'active': item==tema}" (click)="setTheme(item)">
+              {{item}}
+            </li>
+          </ul>
+
+        </div>
+
+
+
+      </aside>
+
+      <!-- Main -->
+      <main id="main" class="col-md-8">
+        <div class="blog">
+          <div class="">
+            <a class="" *ngFor="let image of gallery | themeFilter: tema | paginate: { itemsPerPage: 1, currentPage: page}; let i=index" >
+              <img [src]="image.src" src="{{image.src}}" (click)="open(i)"/>
+            </a>
+          </div>
+          <pagination-template #p="paginationApi"
+                               (pageChange)="page = $event">
+
+            <div class="pagination-previous" [class.disabled]="p.isFirstPage()">
+              <a *ngIf="!p.isFirstPage()" (click)="p.previous()"> < </a>
+            </div>
+
+
+            <div class="pagination-next" [class.disabled]="p.isLastPage()">
+              <a *ngIf="!p.isLastPage()" (click)="p.next()"> > </a>
+            </div>
+
+          </pagination-template>
+        </div>
+      </main>
+      <!-- /Main -->
+
+    </div>
+    <!-- /Row -->
+
+  </div>
+  <!-- /Container -->
+
+</div>
+<!-- /Blog -->

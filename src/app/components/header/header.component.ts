@@ -5,8 +5,6 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {HeaderService} from '../../services/header.service';
 import {BehaviourService} from '../../services/behaviour.service';
 import {fromPromise} from 'rxjs/observable/fromPromise';
-import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
-import {ModalComponent} from '../modal/modal.component';
 declare var $: any;
 declare var win: any;
 
@@ -23,7 +21,6 @@ export class HeaderComponent implements AfterViewInit {
   modal: any;
 
   constructor(private headerService: HeaderService,
-              private modalService: NgbModal,
               private behave: BehaviourService,
               private router: Router) {
     this.menu = [
@@ -32,13 +29,19 @@ export class HeaderComponent implements AfterViewInit {
         name: 'NAV.HOME',
         url: '#',
         hasChild: true,
-        children: [{name: 'NAV.ISMAELILLO', url: '/ismaelillo'}, {
-          name: 'NAV.CONTENIDOS',
-          url: '/contenidos'
-        }, {name: 'NAV.DERECHO', url: '/derecho'}, {name: 'NAV.BIBLIOTECA', url: '/biblioteca'},]
+        children: [
+          {name: 'NAV.ISMAELILLO', url: '/ismaelillo'},
+          { name: 'NAV.CONTENIDOS',    url: '/contenidos'},
+          {name: 'NAV.DERECHO', url: '/derecho'}, {name: 'NAV.BIBLIOTECA', url: '/biblioteca'},]
       },
       {name: 'NAV.ESTUDIANTES', url: '/question'},
-      {name: 'NAV.PROFESORES', url: '/profesores'}
+      {name: 'NAV.PROFESORES', url: '/profesores'},
+      {name: 'NAV.MULTIMEDIA', url: '#',
+        hasChild: true,
+        children:[
+        {name: 'NAV.GALLERY', url: '/gallery'},
+        {name: 'NAV.PLAYLIST', url: '/playlist'},
+      ]}
     ];
     this.headerService.showHeader
       .subscribe(show => setTimeout(() => this.showHeader = show));
@@ -90,6 +93,17 @@ export class HeaderComponent implements AfterViewInit {
       }, 600);
     });
 
+
+    $(window).on('scroll', function () {
+      const wScroll = $(this).scrollTop();
+
+      // Fixed nav
+      wScroll > 1 ? $('#nav').addClass('fixed-nav') : $('#nav').removeClass('fixed-nav');
+
+      // Back To Top Appear
+      wScroll > 700 ? $('#back-to-top').fadeIn() : $('#back-to-top').fadeOut();
+    });
+
     ///////////////////////////
     // Btn nav collapse
     $('#nav .nav-collapse').on('click', function () {
@@ -100,6 +114,14 @@ export class HeaderComponent implements AfterViewInit {
     ///////////////////////////
     // Mobile dropdown
     $('.has-dropdown a').on('click', function () {
+      $(this).parent().toggleClass('open-drop');
+    });
+    // Mobile dropdown
+    $('.has-dropdown a').on('mouseover', function () {
+      $(this).parent().toggleClass('open-drop');
+    });
+    // Mobile dropdown
+    $('.has-dropdown a').on('mouseout', function () {
       $(this).parent().toggleClass('open-drop');
     });
     // Move to about

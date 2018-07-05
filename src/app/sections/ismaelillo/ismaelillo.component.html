@@ -1,51 +1,156 @@
 <!-- Blog -->
-<div id="blog" class="section md-padding">
+<div id="blog" class="section md-padding bg-grey" [hidden]="searchMode && currentMode=='panelMode'" *ngIf="!readMode" [@fadeIn]="showLecture" [@fadeOut]="showLecture">
 
   <!-- Container -->
   <div class="container">
 
     <!-- Row -->
     <div class="row">
+
+      <!-- Section header -->
       <div class="section-header text-center">
-        <h2 class="title">{{ 'ISMAELILLO.TITLE' | translate }}</h2>
+        <h2 class="title ismaelillo">{{ 'ISMAELILLO.TITLE' | translate }}</h2>
       </div>
+      <!-- /Section header -->
+
+      <!-- blog -->
+      <div class="col-md-3" *ngFor="let item of books | paginate: { itemsPerPage: 4, currentPage: page }">
+        <div class="blog">
+          <div class="blog-img">
+            <img class="img-responsive contenidos" src="./assets/images/{{item.img}}" alt="" (click)="openRead(item, !readMode, '')">
+          </div>
+          <div class="blog-content">
+            <!--<h3 class="ismaelillo">{{ item.title  | translate }}</h3>-->
+            <a class="link ismaelillo" (click)="openRead(item, !readMode, '')">{{ item.title  | translate }}</a>
+          </div>
+        </div>
+      </div>
+      <!-- /blog -->
+
+    </div>
+    <!-- /Row -->
+
+  </div>
+  <!-- /Container -->
+
+</div>
+<!-- /Blog -->
+
+
+<!-- Row -->
+
+
+<!-- Blog -->
+<div id="blogr" class="section md-padding" [hidden]="searchMode && currentMode=='readMode'" *ngIf="readMode" [@fadeIn]="showLecture" [@fadeOut]="showLecture" appScrollTop>
+  <div class="row" *ngIf="readItem">
+    <div class="col-md-12">
+      <h2 class="title">{{readItem.title}}</h2> <a (click)="openRead(undefined, !readMode, '')" ><i class="fa fa-backward"></i></a>
+    </div>
+  </div>
+  <!-- Container -->
+  <div class="container">
+
+    <!-- Row -->
+    <div class="row">
+
+      <!-- Main -->
+      <main id="main" class="col-md-9" [innerHtml]="readItem.content | liteSearch: searchString">
+        <style>
+          h3.plegable {
+          font-size: 18px;
+          line-height: 22px;
+          margin: 1.46rem 0 1.168rem 0;
+        }
+        </style>
+
+      </main>
+      <!-- /Main -->
+
+    </div>
+    <!-- /Row -->
+
+  </div>
+  <!-- /Container -->
+
+</div >
+<!-- /Blog -->
+
+<!-- Testimonial -->
+<div id="testimonial" class="section md-padding " *ngIf="teamMode" [@fadeIn]="showLecture">
+
+  <!-- Background Image -->
+  <div class="bg-img" style="background-image: url('./assets/images/background3.jpg');">
+    <div class="overlay"></div>
+  </div>
+  <!-- /Background Image -->
+
+  <!-- Container -->
+  <div class="container">
+
+      <!-- Testimonial slider -->
+      <div class="col-md-10 col-md-offset-1">
+        <div id="testimonial-slider" class="owl-carousel owl-theme" appOwlSlider>
+
+          <!-- testimonial -->
+          <div style="margin-bottom: 40px" class="testimonial" *ngFor="let item of cientifico " >
+            <div class="testimonial-meta">
+              <img src="./assets/images/{{item.img}}" alt="">
+              <h3 class="white-text colectivo">{{item.name}}</h3>
+              <span>{{item.job | translate}}</span>
+            </div>
+            <p class="white-text">{{item.description | translate}}</p>
+          </div>
+
+          <!-- /testimonial -->
+
+          <!-- testimonial -->
+
+          <!-- /testimonial -->
+
+        </div>
+      </div>
+      <!-- /Testimonial slider -->
+
+    </div>
+    <!-- /Row -->
+
+  </div>
+  <!-- /Container -->
+
+
+<!-- /Testimonial -->
+<!-- Blog -->
+<div id="blog1" class="section md-padding" *ngIf="currentMode=='actionMode'" >
+
+  <!-- Container -->
+  <div class="container">
+
+    <!-- Row -->
+    <div class="row">
 
       <!-- Aside -->
       <aside id="aside" class="col-md-3">
 
-        <!-- Category -->
-        <div class="widget">
-          <h3 class="title">{{'ISMAELILLO.BOOKS' | translate}}</h3>
-          <div class="widget-category">
-            <a *ngFor="let item of books" (click)="ReadBook(item)" [ngClass]="{'active': item.title === reader.title}">{{item.title}}</a>
-
-          </div>
-
-        </div>
-
 
       </aside>
       <!-- /Aside -->
-
       <!-- Main -->
       <main id="main2" class="col-md-9">
         <div class="blog">
-          <!--<div class="blog-img">-->
-          <!--<img class="img-responsive" src="./assets/images/blog-post.jpg" alt="">-->
-          <!--</div>-->
+
           <div class="blog-content">
 
-            <h3>{{reader.title}}</h3>
+            <!--<h3>{{currentBook.title}}</h3>-->
             <div class="progress"  *ngIf="!isLoaded">
               <div class="indeterminate"></div>
             </div>
             <div *ngIf="isLoaded" style="text-align: center;">
-              <button class="btn waves-effect waves-light brown" (click)="prevPage()" [disabled]="pointer === 1">{{'NAV.PREV' | translate}} &nbsp;<i class="mdi-av-skip-previous"></i></button>
+              <button class="btn waves-effect waves-light brown" (click)="prevPage()" [disabled]="pointer === 1">{{'NAV.PREV' | translate}} <i class="mdi-av-skip-previous"></i></button>
               <span>{{ pointer }} / {{ pdfPages }}</span>
-              <button class="btn waves-effect waves-light brown" (click)="nextPage()" [disabled]="pointer === pdfPages">{{'NAV.NEXT' | translate }} &nbsp;<i class="mdi-av-skip-next"></i></button>
+              <button class="btn waves-effect waves-light brown" (click)="nextPage()" [disabled]="pointer === pdfPages">{{'NAV.NEXT' | translate }} <i class="mdi-av-skip-next"></i></button>
             </div>
 
-            <pdf-viewer src="./assets/pdf/{{reader.url}}"
+            <pdf-viewer src="./assets/pdf/{{currentBook.url}}"
                         [show-all]="false"
                         [page]="pointer"
                         [render-text]="false"
@@ -55,6 +160,7 @@
         </div>
       </main>
       <!-- /Main -->
+
 
 
 
