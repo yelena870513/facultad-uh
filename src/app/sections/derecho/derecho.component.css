@@ -23,6 +23,16 @@ a.active:hover {
   color: whitesmoke;
   text-decoration: none;
 }
+h3.titulo {
+  font-size: 1.92rem;
+  line-height: 2.212rem;
+  margin: 0rem 0 1.168rem 53px;
+}
+h3.titulo1{
+  font-size: 1.92rem;
+  line-height: 2.212rem;
+  margin: -1rem 0 1.168rem 53px;
+}
 .title:after {
 
   background-color: rgb(144,128,88);
@@ -43,3 +53,12 @@ a.active{
   background-color: rgb(144,128,88);
 }
 
+li{
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 12px;
+}
+/*css de collas*/
+div.active {
+  color: #FFF;
+  background-color: rgb(144,128,88);
+}

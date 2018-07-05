@@ -1,3 +1,4 @@
+import { Component, AfterViewInit } from '@angular/core';
 import { Component, ViewChild, TemplateRef } from '@angular/core';
 import {DataService} from '../../services/data.service';
 import {TranslateService} from '@ngx-translate/core';
@@ -12,7 +13,7 @@ declare var M: any;
   styleUrls: ['./derecho.component.css']
 })
 
-export class DerechoComponent {
+export class DerechoComponent implements AfterViewInit {
   @ViewChild("search") search: any;
   books: any [];
   booksShelf: any [];
@@ -20,7 +21,9 @@ export class DerechoComponent {
   themes: any [];
   themeActual: any;
   reader: any;
+  term: any;
   searchString: string;
+  estado: string;
   /*pdf*/
   pointer: number;
   page: number;
@@ -46,9 +49,29 @@ export class DerechoComponent {
     this.pdfPages = 1;
     this.booksShelf = [];
     this.searchString = '';
+    this.estado = 'juristas';
 
   }
+  Estado(estado: string){
+    this.estado= estado;
+    if (this.estado=='juristas'){
+      this.reader = this.booksShelf[0];
 
+    }else {
+      this.reader = this.booksShelf1[0];
+    }
+    this.page=1;
+    $('body,html').animate({
+      scrollTop: 0
+    }, 600);
+  }
+  setTerm(item) {
+    this.term = item;
+    this.pointer = 1;
+    $('body,html').animate({
+      scrollTop: 0
+    }, 600);
+  }
   ReadBook(book){
     this.reader = book;
     this.pointer = 1;
@@ -107,6 +130,14 @@ export class DerechoComponent {
     this.reader = this.booksShelf[0];
 
 
+  }
+  ngAfterViewInit() {
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems,{});
+
+    $('body,html').animate({
+      scrollTop: 0
+    }, 600);
   }
 
   private QuitOverFlow() {

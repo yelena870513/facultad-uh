@@ -30,7 +30,7 @@ export class HeaderComponent implements AfterViewInit {
       {name: 'NAV.START', url: '/home'},
       {
         name: 'NAV.HOME',
-        url: '/landing',
+        url: '#',
         hasChild: true,
         children: [{name: 'NAV.ISMAELILLO', url: '/ismaelillo'}, {
           name: 'NAV.CONTENIDOS',

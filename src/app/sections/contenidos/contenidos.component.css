@@ -1,7 +1,7 @@
 h3 {
   font-size: 1.92rem;
   line-height: 2.212rem;
-  margin: 1.46rem 0 1.168rem 0;
+  margin: 1.3rem 0 1.168rem 0;
 }
 
 .title:after {
@@ -29,6 +29,12 @@ a.active:hover {
   color: #FFF !important;
 }
 
+li.contenidos{
+  border-bottom: 1px solid #EEE;
+  padding: 5px;
+}
+
+
 @media (min-width: 992px) {
 
   .col-md-3 {
@@ -42,4 +48,130 @@ a.active:hover {
 a.active{
   color: #FFF;
   background-color: rgb(144,128,88);
+}
+/* css biblioteca*/
+
+/*.collapsible-body li.active a{*/
+  /*color: #fff;*/
+/*}*/
+/*.collapsible-body li:hover {*/
+  /*background-color: rgb(144,128,88);*/
+  /*color: #fff;*/
+
+/*}*/
+/*.collapsible-body li:hover a {*/
+
+  /*color: rgb(144,128,88);*/
+
+/*}*/
+
+/*.collapsible-body li.active {*/
+  /*background-color: rgb(144,128,88);*/
+  /*color: #fff;*/
+
+/*}*/
+
+/*div.active:hover {*/
+  /*color: #FFF !important;*/
+  /*background-color: rgb(144,128,88);*/
+/*}*/
+
+.ng2-pdf-viewer-container[_ngcontent-c6], .ng2-pdf-viewer-container
+{
+  overflow: inherit !important;
+}
+
+.search-result{
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.widget a{
+  cursor: pointer;
+}
+
+.btn.focus, .btn:focus, .btn:hover {
+  color: whitesmoke;
+  text-decoration: none;
+}
+.title:after {
+
+  background-color: rgb(144,128,88);
+
+}
+.ngx-pagination .current {
+
+  background: rgb(144,128,88);
+
+}
+.widget-tags a:hover {
+  color: yellow;
+  background-color: rgb(144,128,88);
+}
+
+div.active{
+  color: #FFF;
+  background-color: rgb(144,128,88);
+}
+a.active{
+  color: #FFF;
+  background-color: rgb(144,128,88);
+}
+h3.title{
+  text-transform: uppercase;
+}
+li.contenidos{
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 12px;
+}
+/*Glossary css*/
+.border-dark {
+  border-bottom: solid 1px #343a40;
+}
+.title:after {
+
+  background-color: rgb(144,128,88);
+
+}
+.blog-tags a i {
+  margin-right: 3px;
+  color: rgb(144,128,88);
+}
+.blog-tags[_ngcontent-c4] a[_ngcontent-c4] i[_ngcontent-c4]:hover {
+
+  color: yellow;
+}
+.blog-tags a:hover {
+  margin-right: 3px;
+  color: yellow;
+  background-color: rgb(144,128,88);
+  cursor: pointer;
+}
+.widget-category a{
+  font-size: 1em !important;
+}
+.widget-tags a:hover {
+  color: yellow;
+  background-color: rgb(144,128,88);
+}
+h3 {
+  font-size: 1.92rem;
+}
+p.name{
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgb(144,128,88);
+  font-size: 1.4rem;
+}
+.blog .blog-content {
+  padding: 32px 20px 40px;
+}
+a.contenidos.active{
+  background-color:rgb(144,128,88);
+  color: #fff;
+}
+/*etica css*/
+
+.etica {
+  padding: 2px 20px 40px !important;
 }

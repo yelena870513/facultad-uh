@@ -4,37 +4,91 @@
           <div class="section-header text-center">
             <h2 class="title">{{ 'QUESTION.TITLE' | translate }}</h2>
           </div>
+
           <aside id="aside" class="col-md-3">
-            <h3 class="title">{{'QUESTION.QUESTION' | translate}}</h3>
+
+            <!-- Search -->
             <div class="widget">
-              <div class="widget-category">
-                <a *ngFor="let item of questions  | paginate: { itemsPerPage: 5, currentPage: page, totalItems: questions.length, id:'question'  }"
-                   (click)="Selecter(item)"
-                   [ngClass]="{'active': item.title === i.title}"
-                   >{{item.title}}</a>
-
-              </div>
-              <pagination-controls
-                (pageChange)="page = $event"
-                id="question"
-                maxSize="4"
-                previousLabel=""
-                nextLabel=""></pagination-controls>
-                </div>
-
-            <div class="widget" *ngIf="books.length>0">
-              <h3 class="title">{{'QUESTION.BOOKS' | translate}}</h3>
-              <div class="widget-category">
-                <a *ngFor="let item of books"
-                   (click)="ReadBook(item)"
-                   [ngClass]="{'active': item.title === reader.title}" >{{item.title}}
-                </a>
+              <div class="widget-search">
+                <!--<input class="search-input" type="text" placeholder="search">-->
+                <!--<button class="search-btn" type="button"><i class="fa fa-search"></i></button>-->
               </div>
             </div>
+            <!-- /Search -->
+            <h3 class="title">{{'LIBRARY.THEMES' | translate}}</h3>
+            <!-- Category -->
+            <ul class="collapsible">
+              <li >
+                <div class="collapsible-header" (click)="Estado('cuestionario')"  [ngClass]="{'active': estado === 'cuestionario'}">{{'QUESTION.QUESTION' | translate}}</div>
+                <div class="collapsible-body" (click)="setItem(item)"><ul>
+                  <li class="contenidos" *ngFor="let item of questions  | paginate: { itemsPerPage: 5, currentPage: page, totalItems: questions.length, id:'question'  }">
+                    <a class="contenidos" (click)="Selecter(item)"
+                       [ngClass]="{'active': item.title === i.title}"
+                    >{{item.title}}</a>
 
-          </aside>
+                  </li>
+                </ul>
+                  <pagination-controls
+                    (pageChange)="page = $event"
+                    id="question"
+                    maxSize="4"
+                    previousLabel=""
+                    nextLabel=""></pagination-controls></div>
+              </li>
 
-          <div class="col-md-9" *ngIf="i" [hidden]="readMode">
+              <li>
+                <div class="collapsible-header" (click)="Estado('libros')"  [ngClass]="{'active': estado === 'libros'}">{{'QUESTION.BOOKS' | translate}}</div>
+                <div class="collapsible-body" >
+                  <ul>
+                    <li class="contenidos" *ngFor="let item of books ">
+                      <a class="contenidos" (click)="ReadBook(item)"
+                         [ngClass]="{'active': item.title === reader.title}" >{{item.title}}</a>
+
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+</aside>
+
+
+
+
+
+
+
+
+            <!--<aside id="aside1" class="col-md-3">-->
+            <!--<h3 class="title">{{'QUESTION.QUESTION' | translate}}</h3>-->
+            <!--<div class="widget">-->
+              <!--<div class="widget-category">-->
+                <!--<a *ngFor="let item of questions  | paginate: { itemsPerPage: 5, currentPage: page, totalItems: questions.length, id:'question'  }"-->
+                   <!--(click)="Selecter(item)"-->
+                   <!--[ngClass]="{'active': item.title === i.title}"-->
+                   <!--&gt;{{item.title}}</a>-->
+
+              <!--</div>-->
+              <!--<pagination-controls-->
+                <!--(pageChange)="page = $event"-->
+                <!--id="question"-->
+                <!--maxSize="4"-->
+                <!--previousLabel=""-->
+                <!--nextLabel=""></pagination-controls>-->
+                <!--</div>-->
+
+            <!--<div class="widget" *ngIf="books.length>0">-->
+              <!--<h3 class="title">{{'QUESTION.BOOKS' | translate}}</h3>-->
+              <!--<div class="widget-category">-->
+                <!--<a *ngFor="let item of books"-->
+                   <!--(click)="ReadBook(item)"-->
+                   <!--[ngClass]="{'active': item.title === reader.title}" >{{item.title}}-->
+                <!--</a>-->
+              <!--</div>-->
+            <!--</div>-->
+
+          <!--</aside>-->
+
+          <div class="col-md-9" *ngIf="i && estado=='cuestionario'"  >
             <div class="card" >
                <div class="card-content">
                  <span class="card-title activator grey-text text-darken-4">{{i.subtitle}} &nbsp;<a class="btn-floating waves-effect waves-light green"><i class="mdi-action-spellcheck right"></i></a></span>
@@ -92,7 +146,7 @@
             </div>
           </div>
           <!-- Main -->
-          <main id="main" class="col-md-9" [hidden]="!readMode">
+          <main id="main" class="col-md-9" *ngIf="estado=='libros'">
             <div class="blog">
               <div class="blog-content" *ngIf="reader">
                 <div class="row border-dark">

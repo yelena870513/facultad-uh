@@ -1,4 +1,5 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import * as uuid from 'uuid';
 import {HeaderService} from '../../services/header.service';
 import * as _ from 'lodash';
@@ -13,7 +14,7 @@ declare var $: any;
   templateUrl: './question.component.html',
   styleUrls: ['./question.component.css']
 })
-export class QuestionComponent implements OnInit {
+export class QuestionComponent implements OnInit, AfterViewInit {
   questions = [];
   books = [];
   i: any;
@@ -25,6 +26,7 @@ export class QuestionComponent implements OnInit {
   pointer = 1;
   pdfPages = 1;
   isLoaded = false;
+  estado: string;
   removeItem(e: any) {
     this.droppedItems = this.droppedItems.filter((f: any) => f.name !== e.target.innerText);
   }
@@ -45,6 +47,7 @@ export class QuestionComponent implements OnInit {
     /*PDF Viewer*/
     this.pointer = 1;
     this.pdfPages = 1;
+    this.estado = 'cuestionario';
   }
   checkAnswer(item,event) {
     item.checked = event.target.checked;
@@ -80,6 +83,15 @@ export class QuestionComponent implements OnInit {
     else{
       item.resource = 'N';
     }
+  }
+  Estado(estado: string){
+    this.estado= estado;
+    this.page=1;
+    this.readMode = !this.readMode;
+    this.reader = this.books[0];
+    $('body,html').animate({
+      scrollTop: 0
+    }, 600);
   }
   onItemDrop(e: any, answer) {
     // Get the dropped data here
@@ -121,6 +133,14 @@ export class QuestionComponent implements OnInit {
   ngOnInit() {
     $('#nav').addClass('fixed-nav').removeClass('hidden');
 
+  }
+  ngAfterViewInit() {
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems,{});
+
+    $('body,html').animate({
+      scrollTop: 0
+    }, 600);
   }
 
   private QuitOverFlow() {

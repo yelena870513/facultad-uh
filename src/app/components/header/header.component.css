@@ -26,6 +26,7 @@ button:focus {
 #nav {
   padding: 10px 0px;
   background: rgb(144,128,88);
+  overflow: visible;
 }
 .sailor{
   position: fixed;
@@ -56,11 +57,34 @@ button:focus {
     font-weight: 700;
     color: #66512c;
   }
+  .main-nav>.has-dropdown>.dropdown {
+
+    background: rgb(144, 128, 88);
+    padding-left: 17px;
+  }
   .dropdown li a {
     display: block;
-    color: #FFF;
+    color: rgb(255, 255, 102);
     border-top: 1px solid rgba(250, 250, 250, 0.1);
-    padding: 10px 0px;
+    padding: 0px 0px;
+  }
+  .dropdown li a:hover {
+
+    color: rgb(255, 255, 102);
+    background-color: transparent;
+    font-weight: 700;
+  }
+  .dropdown li:hover{
+    background-color: transparent;
+  }
+  .dropdown li a{
+
+    border-top: 1px solid rgba(250, 250, 250, 0.1);
+    padding: 0px 0px;
+    background: transparent;
+  }
+  nav ul li a:hover{
+    background-color: transparent;
   }
   .dropdown li:nth-child(1) a {
     border-top: none;

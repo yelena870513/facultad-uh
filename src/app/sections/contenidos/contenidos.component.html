@@ -16,44 +16,58 @@
         <!-- Search -->
         <div class="widget">
           <div class="widget-search">
-            <!--<input class="search-input" type="text" placeholder="search">-->
-            <!--<button class="search-btn" type="button"><i class="fa fa-search"></i></button>-->
           </div>
         </div>
         <!-- /Search -->
-
+        <h3 class="title">{{'LIBRARY.THEMES' | translate}}</h3>
         <!-- Category -->
-        <div class="widget">
-          <h3 class="title">{{'CONTENIDOS.CATEGORY' | translate}}</h3>
-          <div class="widget-category">
-            <a *ngFor="let item of categories |paginate: { itemsPerPage: 5, currentPage: page }" (click)="Selecter(item)" [ngClass]="{'active': item.title === current.title, 'search-result': result}">{{item.title}}</a>
+        <ul class="collapsible">
+          <li >
+            <div class="collapsible-header" (click)="Estado('preguntas')"  [ngClass]="{'active': estado === 'preguntas'}">{{'CONTENIDOS.CATEGORY' | translate}}</div>
+            <div class="collapsible-body" (click)="setItem(item)"><ul>
+              <li class="contenidos" *ngFor="let item of categories  |paginate: { itemsPerPage: 5, currentPage: page }">
+                <a class="contenidos" (click)="Selecter(item)" [ngClass]="{'active': item.title === current.title, 'search-result': result}">{{item.title}}</a>
 
-          </div>
-          <pagination-controls
-            (pageChange)="page = $event"
-            maxSize="5"
-            previousLabel=""
-            nextLabel=""
-            boundaryLinks="false"
-          >
+              </li>
+            </ul>
+              <pagination-controls
+                (pageChange)="page = $event"
+                maxSize="5"
+                previousLabel=""
+                nextLabel=""
+                boundaryLinks="false"
+              >
 
-          </pagination-controls>
-        </div>
-        <!-- /Category -->
-        <div class="widget">
-          <h3 class="title">{{'CONTENIDO.UTIL' | translate}}</h3>
-          <div class="widget-tags">
-            <a routerLink="/glosario">{{'CONTENIDO.GLOSSARY' | translate}} &nbsp;<i class="fa fa-book"></i></a>
-            <a routerLink="/etica">{{'CONTENIDO.ETHIC' | translate}} &nbsp;<i class="fa fa-hand-o-right" aria-hidden="true"></i></a>
-          </div>
+              </pagination-controls></div>
+          </li>
+          <li>
+            <div class="collapsible-header" (click)="Estado('glossary')"  [ngClass]="{'active': estado === 'glossary'}">{{'CONTENIDO.GLOSSARY' | translate}}</div>
+            <div class="collapsible-body">
+              <ul>
+                <li class="contenidos"  *ngFor="let item of glossary" >
+                  <a class="glosary contenidos"  (click)="setTerm(item)" [ngClass]="{'active': item.index === term1.index}"><i class="fa fa-tag"></i> {{item.index}}</a>
 
-        </div>
-        <!-- /Tags -->
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header" (click)="Estado('ethic')"  [ngClass]="{'active': estado === 'ethic'}">{{'CONTENIDO.ETHIC' | translate}}</div>
+            <div class="collapsible-body" >
+              <ul>
+                <li class="contenidos" *ngFor="let item of books ">
+          <a class="contenidos" (click)="ReadBook(item)" [ngClass]="{'active': item.title === term.title}">{{item.title}}</a>
+
+        </li>
+        </ul>
+       </div>
+          </li>
+        </ul>
 
       </aside>
       <!-- /Aside -->
-      <!-- Main -->
-      <main id="main" class="col-md-9">
+           <!-- Main -->
+      <main id="main" class="col-md-9" *ngIf="estado=='preguntas'">
         <div class="blog">
           <div class="blog-img">
             <img class="img-responsive" src="./img/blog-post.jpg" alt="">
@@ -63,7 +77,56 @@
             <h3>{{current.title}}</h3>
             <div [innerHtml] = "current.content"></div>
           </div>
+        </div>
+      </main>
+
+      <main id="main1" class="col-md-9" *ngIf="estado=='glossary'">
+        <div class="blog">
+
+          <div class="blog-content" *ngIf="term">
+            <div class="row border-dark" *ngFor="let item of term1.words">
+              <div class="col-md-6">
+                <p class="name">{{item.name}}</p>
+              </div>
+              <div class="col-md-6">
+                {{item.description}}
+              </div>
+            </div>
           </div>
+
+
+
+
+
+
+
+
+        </div>
+      </main>
+
+      <main id="main2" class="col-md-9" *ngIf="estado=='ethic'">
+        <div class="blog">
+
+          <div class="blog-content etica">
+
+            <h3>{{term.title}}</h3>
+            <div class="progress"  *ngIf="!isLoaded">
+              <div class="indeterminate"></div>
+            </div>
+            <div *ngIf="isLoaded" style="text-align: center;">
+              <button class="btn waves-effect waves-light brown" (click)="prevPage()" [disabled]="pointer === 1">{{'NAV.PREV' | translate}} &nbsp;<i class="mdi-av-skip-previous"></i></button>
+              <span>{{ pointer }} / {{ pdfPages }}</span>
+              <button class="btn waves-effect waves-light brown" (click)="nextPage()" [disabled]="pointer === pdfPages">{{'NAV.NEXT' | translate }} &nbsp;<i class="mdi-av-skip-next"></i></button>
+            </div>
+
+            <pdf-viewer src="./assets/pdf/{{term.url}}"
+                        [show-all]="false"
+                        [page]="pointer"
+                        [render-text]="false"
+                        (after-load-complete)="afterLoadComplete($event)"
+            ></pdf-viewer>
+          </div>
+        </div>
       </main>
       <!-- /Main -->
 

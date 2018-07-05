@@ -14,7 +14,7 @@
   },
   "ISMAELILLO":{
     "TITLE": "Proyecto Ismaelillo",
-    "BOOKS":"Libros"
+    "BOOKS":"temáticas"
   },
   "CONTENIDO":{
     "TITLE": "Contenidos jurídicos de la educación cívica",
@@ -80,9 +80,9 @@
     "ACCEPT": "Aceptar"
   },
   "articulos":"Artículos científicos",
-  "normasInternacionales":"Normas internacionales",
-  "normasNacionales":"Normas nacionales",
-  "normasBasicos":"Normas básicas",
+  "normasInternacionales":"Normas ambientales internacionales",
+  "normasNacionales":"Normas ambientales nacionales",
+  "normasBasicos":"Normas jurídicas básicas",
   "normasCivil":"Normas civiles",
   "normasPenal":"Normas penales",
   "EXIT": "Salir"

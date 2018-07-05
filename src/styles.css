@@ -68,7 +68,7 @@ strong {
 }
 
 .ngx-pagination .current {
-  padding: 0.1875rem 0.625rem;
+  padding: 0.2875rem 0.625rem;
   background: rgb(144,128,88)!important;
   color: #fefefe;
   cursor: default;
@@ -117,6 +117,55 @@ h2 {
 .widget-category a{
   font-size: 1.1rem !important;
 }
+a {
+  color: #333;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a.active {
+  color: #FFF;
+  background-color: rgb(144,128,88);
+}
+a:hover{
+  color: rgb(144,128,88);
+  cursor: pointer;
+}
+.ngx-pagination .disabled {
+  padding: 1.1875rem 0.625rem !important;
+  color: #cacaca;
+  cursor: default;
+}
+.ngx-pagination a:hover, .ngx-pagination button:hover {
+  background: rgb(144,128,88) !important;
+  opacity: 0.7;
+  color: #fff;
+}
+/*css para el collapsible*/
+
+a.active{
+  color: #FFF;
+  background-color: rgb(144,128,88);
+}
+a.active:hover {
+  background-color: rgb(144,128,88);
+  opacity: 0.6;
+  color: #fff;
+}
+div.active{
+  color: rgb(255, 255, 102) !important;
+  font-size: 17px;
+  font-weight: 700;
+  background-color: rgb(144,128,88);
+}
+.collapsible-header:hover{
+  font-size: 17px;
+}
+li.contenidos{
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 12px;
+}
+
+
 @media (min-width: 992px) {
 
   .col-md-12[_ngcontent-c3] {

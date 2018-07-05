@@ -7,64 +7,101 @@
     <div class="section-header text-center">
       <h2 class="title">{{ 'DERECHO.TITLE' | translate }}</h2>
     </div>
-
-
     <!-- Row -->
     <div class="row">
 
       <aside id="aside" class="col-md-3">
+        <h3 class="title">{{'LIBRARY.THEMES' | translate}}</h3>
+        <!-- Category -->
+        <ul class="collapsible">
+          <li *ngIf="booksShelf&&booksShelf.length>0">
+            <div class="collapsible-header" (click)="Estado('juristas')"  [ngClass]="{'active': estado === 'juristas'}">{{'DERECHO.JURISTAS'  | translate}}</div>
+            <div class="collapsible-body" (click)="setItem(item)"><ul>
+              <li class="contenidos" *ngFor="let item of booksShelf |paginate: { itemsPerPage: 5, currentPage: page, id: 'booksShelf' }">
+                <a class="contenidos" (click)="ReadBook(item)"
+                   [ngClass]="{'active': item.title === reader.title}" >{{item.title}}
+                </a>
 
+              </li>
+            </ul>
+              <pagination-controls
+                *ngIf="booksShelf&&booksShelf.length>0"
+                (pageChange)="page = $event"
+                maxSize="5"
+                id="booksShelf"
+                previousLabel=""
+                nextLabel=""
+                boundaryLinks="false"
+              >
 
-        <div class="widget" *ngIf="booksShelf&&booksShelf.length>0">
-          <h3 class="title">{{'DERECHO.JURISTAS' | translate}}</h3>
-          <div class="widget-category">
-            <a *ngFor="let item of booksShelf |paginate: { itemsPerPage: 5, currentPage: page, id: 'booksShelf' }"
-               (click)="ReadBook(item)"
-               [ngClass]="{'active': item.title === reader.title}" >{{item.title}}
-            </a>
-          </div>
-        </div>
-        <pagination-controls
-          *ngIf="booksShelf&&booksShelf.length>0"
-          (pageChange)="page = $event"
-          maxSize="5"
-          id="booksShelf"
-          previousLabel=""
-          nextLabel=""
-          boundaryLinks="false"
-        >
+              </pagination-controls>
+            </div>
+          </li>
+          <li  *ngIf="booksShelf1&&booksShelf1.length>0">
+            <div class="collapsible-header" (click)="Estado('constituciones')"  [ngClass]="{'active': estado === 'constituciones'}">{{'DERECHO.CONSTITUCIONES' | translate}}</div>
+            <div class="collapsible-body">
+              <ul>
+                <li class="contenidos"  *ngFor="let item of booksShelf1 |paginate: { itemsPerPage: 5, currentPage: page1, id: 'booksShelf1'  }">
+                  <a class="glosary contenidos"  (click)="ReadBook(item)"
+                     [ngClass]="{'active': item.title === reader.title, 'search-result': result}" >{{item.title}}
+                  </a>
 
-        </pagination-controls>
-        <div class="widget" *ngIf="booksShelf1&&booksShelf1.length>0">
-          <h3 class="title">{{'DERECHO.CONSTITUCIONES' | translate}}</h3>
-          <div class="widget-category">
-            <a *ngFor="let item of booksShelf1 |paginate: { itemsPerPage: 5, currentPage: page1, id: 'booksShelf1'  }"
-               (click)="ReadBook(item)"
-               [ngClass]="{'active': item.title === reader.title, 'search-result': result}" >{{item.title}}
-            </a>
-          </div>
-        </div>
-        <pagination-controls
-          *ngIf="booksShelf1&&booksShelf1.length>0"
-          (pageChange)="page1 = $event"
-          maxSize="5"
-          id="booksShelf1"
-          previousLabel=""
-          nextLabel=""
-          boundaryLinks="false"
-        >
+                </li>
+              </ul>
+              <pagination-controls
+                *ngIf="booksShelf1&&booksShelf1.length>0"
+                (pageChange)="page1 = $event"
+                maxSize="5"
+                id="booksShelf1"
+                previousLabel=""
+                nextLabel=""
+                boundaryLinks="false"
+              >
 
-        </pagination-controls>
-        <!-- /Tags -->
+              </pagination-controls>
+            </div>
+          </li>
+
+        </ul>
 
       </aside>
 
       <!-- Main -->
-      <main id="main" class="col-md-9">
+      <main id="main" class="col-md-9" *ngIf="estado=='juristas'">
         <div class="blog">
           <div class="blog-content" *ngIf="reader">
             <div class="row border-dark">
               <div class="col-md-12">
+                <h3 class="titulo">{{reader.title}}</h3>
+                <div class="progress"  *ngIf="!isLoaded">
+                  <div class="indeterminate"></div>
+                </div>
+                <div *ngIf="isLoaded" style="text-align: center;">
+                  <button class="btn waves-effect waves-light brown" (click)="prevPage()" [disabled]="pointer === 1">
+                    {{'NAV.PREV' | translate}} &nbsp;<i class="mdi-av-skip-previous"></i>
+                  </button>
+                  <span>{{ pointer }} / {{ pdfPages }}</span>
+                  <button class="btn waves-effect waves-light brown" (click)="nextPage()" [disabled]="pointer === pdfPages">
+                    {{'NAV.NEXT' | translate }}&nbsp;<i class="mdi-av-skip-next"></i>
+                  </button>
+                </div>
+                <pdf-viewer src="./assets/pdf/{{reader.url}}"
+                            [show-all]="false"
+                            [page]="pointer"
+                            [render-text]="false"
+                            (after-load-complete)="afterLoadComplete($event)"
+                ></pdf-viewer>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <main id="main1" class="col-md-9" *ngIf="estado=='constituciones'">
+        <div class="blog">
+          <div class="blog-content" *ngIf="reader">
+            <div class="row border-dark">
+              <div class="col-md-12">
+                <h3 class="titulo1">{{reader.title}}</h3>
                 <div class="progress"  *ngIf="!isLoaded">
                   <div class="indeterminate"></div>
                 </div>

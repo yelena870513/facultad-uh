@@ -63,137 +63,68 @@
       "section":"book",
       "tematica":"etica"
     },
-
     {
       "poster":"pdf.png",
-      "url":"manual1.pdf",
-      "title":"Primer manual de educación cívica en Cuba",
+      "url":"leyElectoral.pdf",
+      "title":" Ley Electoral",
       "section":"book",
-      "tematica":"articulos"
+      "tematica":"normasBasicos"
     },
     {
       "poster":"pdf.png",
-      "url":"patriotismo.pdf",
-      "title":"Patriotismo. Félix Varela y Morales",
+      "url":"republica.pdf",
+      "title":" Constitución de la República",
       "section":"book",
-      "tematica":"articulos"
+      "tematica":"normasBasicos"
     },
     {
       "poster":"pdf.png",
-      "url":"fundamentos.pdf",
-      "title":"Participación ciudadana con fundamentos martianos",
+      "url":"fiscalia.pdf",
+      "title":" Fiscalía General de la República 1",
       "section":"book",
-      "tematica":"articulos"
+      "tematica":"normasBasicos"
     },
     {
       "poster":"pdf.png",
-      "url":"elDerecho.pdf",
-      "title":"El Derecho entre la Educación Cívica y la Ética",
+      "url":"consejos.pdf",
+      "title":" Ley de consejos populares",
       "section":"book",
-      "tematica":"articulos"
+      "tematica":"normasBasicos"
+    },{
+      "poster":"pdf.png",
+      "url":"renovacion.pdf",
+      "title":" Ley de revocación del mandato de los elegidos a los órganos del poder popular",
+      "section":"book",
+      "tematica":"normasBasicos"
+    },{
+      "poster":"pdf.png",
+      "url":"populares.pdf",
+      "title":" Ley de tribunales populares",
+      "section":"book",
+      "tematica":"normasBasicos"
     },
     {
       "poster":"pdf.png",
-      "url":"institucionalidad.pdf",
-      "title":" La Institucionalidad un imperativo en las relaciones entre el Derecho y el Estado",
+      "url":"ley16.pdf",
+      "title":" Ley 16 de 1978 Código de la niñez y la juventud",
       "section":"book",
-      "tematica":"articulos"
+      "tematica":"normasCivil"
     },
     {
       "poster":"pdf.png",
-      "url":"separata.pdf",
-      "title":"Separata de Teoría General del Estado",
+      "url":"familia.pdf",
+      "title":" Código de familia",
       "section":"book",
-      "tematica":"articulos"
+      "tematica":"normasCivil"
     },
     {
       "poster":"pdf.png",
-      "url":"electoral.pdf",
-      "title":"Cien preguntas y respuestas sobre el sistema electoral cubano",
+      "url":"ninno.pdf",
+      "title":" Convención internacional derechos del niño",
       "section":"book",
-      "tematica":"articulos"
-    },{
-      "poster":"pdf.png",
-      "url":"folleto.pdf",
-      "title":"Folleto sobre el Sistema Electoral cubano",
-      "section":"book",
-      "tematica":"articulos"
+      "tematica":"normasCivil"
     },
     {
-      "poster":"pdf.png",
-      "url":"tutela.pdf",
-      "title":"La tutela constitucional del ambiente",
-      "section":"book",
-      "tematica":"articulos"
-    },{
-      "poster":"pdf.png",
-      "url":"ambienteSano.pdf",
-      "title":" El derecho al disfrute de un medio ambiente sano",
-      "section":"book",
-      "tematica":"articulos"
-    },
-    {
-      "poster":"pdf.png",
-      "url":"pensamiento.pdf",
-      "title":"El pensamiento ambiental cubano",
-      "section":"book",
-      "tematica":"articulos"
-    },
-    {
-      "poster":"pdf.png",
-      "url":"responsabilidad.pdf",
-      "title":"La responsabilidad civil por daños ambientales",
-      "section":"book",
-      "tematica":"articulos"
-    },{
-      "poster":"pdf.png",
-      "url":"administrativa.pdf",
-      "title":" La responsabilidad administrativa ambiental",
-      "section":"book",
-      "tematica":"articulos"
-    },{
-      "poster":"pdf.png",
-      "url":"atmosfera.pdf",
-      "title":"La atmósfera. Estudio de la misma y su vinculación con el derecho",
-      "section":"book",
-      "tematica":"articulos"
-    },{
-      "poster":"pdf.png",
-      "url":"proteccion.pdf",
-      "title":"Protección legal de los ecosistemas costeros en Cuba",
-      "section":"book",
-      "tematica":"articulos"
-    },{
-      "poster":"pdf.png",
-      "url":"seguridad.pdf",
-      "title":" Seguridad biológica. Su tutela legal en Cuba ",
-      "section":"book",
-      "tematica":"articulos"
-    },{
-      "poster":"pdf.png",
-      "url":"importancia.pdf",
-      "title":" Importancia de la protección penal del medio ambiente",
-      "section":"book",
-      "tematica":"articulos"
-    },{
-      "poster":"pdf.png",
-      "url":"menores.pdf",
-      "title":" Los menores en conflicto con la ley penal ",
-      "section":"book",
-      "tematica":"articulos"
-    },{
-      "poster":"contravenciones.png",
-      "url":"Comunicacion1.pdf",
-      "title":"Tutela legal de las contravenciones y los delitos pararelos en Cuba",
-      "section":"book",
-      "tematica":"articulos"
-    },{
-      "poster":"pdf.png",
-      "url":"penitenciario.pdf",
-      "title":" Evolución y desarrollo del sistema penitenciario",
-      "section":"book",
-      "tematica":"articulos"
-    },{
       "poster":"pdf.png",
       "url":"carta.pdf",
       "title":" Carta mundial de la naturaleza",
@@ -339,67 +270,6 @@
       "title":" GO_X_002_2001 Decreto 272 de las contravenciones en materia de ordenamiento territorial y de urbanismo",
       "section":"book",
       "tematica":"normasNacionales"
-    },
-    {
-      "poster":"pdf.png",
-      "url":"ley16.pdf",
-      "title":" Ley 16 de 1978 Código de la niñez y la juventud",
-      "section":"book",
-      "tematica":"normasCivil"
-    },
-    {
-      "poster":"pdf.png",
-      "url":"familia.pdf",
-      "title":" Código de familia",
-      "section":"book",
-      "tematica":"normasCivil"
-    },
-    {
-      "poster":"pdf.png",
-      "url":"ninno.pdf",
-      "title":" Convención internacional derechos del niño",
-      "section":"book",
-      "tematica":"normasCivil"
-    },
-    {
-      "poster":"pdf.png",
-      "url":"leyElectoral.pdf",
-      "title":" Ley Electoral",
-      "section":"book",
-      "tematica":"normasBasicos"
-    },
-    {
-      "poster":"pdf.png",
-      "url":"republica.pdf",
-      "title":" Constitución de la República",
-      "section":"book",
-      "tematica":"normasBasicos"
-    },
-    {
-      "poster":"pdf.png",
-      "url":"fiscalia.pdf",
-      "title":" Fiscalía General de la República 1",
-      "section":"book",
-      "tematica":"normasBasicos"
-    },
-    {
-      "poster":"pdf.png",
-      "url":"consejos.pdf",
-      "title":" Ley de consejos populares",
-      "section":"book",
-      "tematica":"normasBasicos"
-    },{
-      "poster":"pdf.png",
-      "url":"renovacion.pdf",
-      "title":" Ley de revocación del mandato de los elegidos a los órganos del poder popular",
-      "section":"book",
-      "tematica":"normasBasicos"
-    },{
-      "poster":"pdf.png",
-      "url":"populares.pdf",
-      "title":" Ley de tribunales populares",
-      "section":"book",
-      "tematica":"normasBasicos"
     },
     {
       "poster":"11.png",
@@ -589,6 +459,136 @@
       "title":" DL-248 Sistema Identificación y Registro de Electores",
       "section":"book",
       "tematica":"normasPenal"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"manual1.pdf",
+      "title":"Primer manual de educación cívica en Cuba",
+      "section":"book",
+      "tematica":"articulos"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"patriotismo.pdf",
+      "title":"Patriotismo. Félix Varela y Morales",
+      "section":"book",
+      "tematica":"articulos"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"fundamentos.pdf",
+      "title":"Participación ciudadana con fundamentos martianos",
+      "section":"book",
+      "tematica":"articulos"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"elDerecho.pdf",
+      "title":"El Derecho entre la Educación Cívica y la Ética",
+      "section":"book",
+      "tematica":"articulos"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"institucionalidad.pdf",
+      "title":" La Institucionalidad un imperativo en las relaciones entre el Derecho y el Estado",
+      "section":"book",
+      "tematica":"articulos"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"separata.pdf",
+      "title":"Separata de Teoría General del Estado",
+      "section":"book",
+      "tematica":"articulos"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"electoral.pdf",
+      "title":"Cien preguntas y respuestas sobre el sistema electoral cubano",
+      "section":"book",
+      "tematica":"articulos"
+    },{
+      "poster":"pdf.png",
+      "url":"folleto.pdf",
+      "title":"Folleto sobre el Sistema Electoral cubano",
+      "section":"book",
+      "tematica":"articulos"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"tutela.pdf",
+      "title":"La tutela constitucional del ambiente",
+      "section":"book",
+      "tematica":"articulos"
+    },{
+      "poster":"pdf.png",
+      "url":"ambienteSano.pdf",
+      "title":" El derecho al disfrute de un medio ambiente sano",
+      "section":"book",
+      "tematica":"articulos"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"pensamiento.pdf",
+      "title":"El pensamiento ambiental cubano",
+      "section":"book",
+      "tematica":"articulos"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"responsabilidad.pdf",
+      "title":"La responsabilidad civil por daños ambientales",
+      "section":"book",
+      "tematica":"articulos"
+    },{
+      "poster":"pdf.png",
+      "url":"administrativa.pdf",
+      "title":" La responsabilidad administrativa ambiental",
+      "section":"book",
+      "tematica":"articulos"
+    },{
+      "poster":"pdf.png",
+      "url":"atmosfera.pdf",
+      "title":"La atmósfera. Estudio de la misma y su vinculación con el derecho",
+      "section":"book",
+      "tematica":"articulos"
+    },{
+      "poster":"pdf.png",
+      "url":"proteccion.pdf",
+      "title":"Protección legal de los ecosistemas costeros en Cuba",
+      "section":"book",
+      "tematica":"articulos"
+    },{
+      "poster":"pdf.png",
+      "url":"seguridad.pdf",
+      "title":" Seguridad biológica. Su tutela legal en Cuba ",
+      "section":"book",
+      "tematica":"articulos"
+    },{
+      "poster":"pdf.png",
+      "url":"importancia.pdf",
+      "title":" Importancia de la protección penal del medio ambiente",
+      "section":"book",
+      "tematica":"articulos"
+    },{
+      "poster":"pdf.png",
+      "url":"menores.pdf",
+      "title":" Los menores en conflicto con la ley penal ",
+      "section":"book",
+      "tematica":"articulos"
+    },{
+      "poster":"contravenciones.png",
+      "url":"Comunicacion1.pdf",
+      "title":"Tutela legal de las contravenciones y los delitos pararelos en Cuba",
+      "section":"book",
+      "tematica":"articulos"
+    },{
+      "poster":"pdf.png",
+      "url":"penitenciario.pdf",
+      "title":" Evolución y desarrollo del sistema penitenciario",
+      "section":"book",
+      "tematica":"articulos"
     },
     {
       "poster":"pdf.png",

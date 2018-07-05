@@ -20,18 +20,15 @@
     <div class="row">
 
     <aside id="aside" class="col-md-4">
-
-
       <div class="widget">
         <h3 class="title">{{'LIBRARY.THEMES' | translate}}</h3>
-
         <ul class="collapsible">
           <li *ngFor="let item of themes" >
             <div class="collapsible-header" (click)="setItem(item)" [ngClass]="{'active': item === themeActual}">{{item | translate}}</div>
             <div class="collapsible-body">
               <ul>
                 <li *ngFor="let item of booksShelf" [ngClass]="{'active': item.title === reader.title, 'search-result': result}">
-                  <a (click)="ReadBook(item)"  >{{item.title}}</a>
+                  <a [ngClass]="{'active': item.title === reader.title}" (click)="ReadBook(item)"  >{{item.title}}</a>
 
                 </li>
               </ul>

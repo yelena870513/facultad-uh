@@ -15,7 +15,7 @@
 
              <!-- Category -->
         <div class="widget">
-          <h3 class="title">{{'PROFESORES.BOOKS' | translate}}</h3>
+          <h3 class="title">{{'LIBRARY.THEMES' | translate}}</h3>
           <div class="widget-category">
             <a *ngFor="let item of books" (click)="ReadBook(item)" [ngClass]="{'active': item.title === reader.title}">{{item.title}}</a>
 
@@ -35,7 +35,7 @@
           <!--</div>-->
           <div class="blog-content">
 
-            <h3>{{reader.title}}</h3>
+            <h3 class="titulo">{{reader.title}}</h3>
             <div class="progress"  *ngIf="!isLoaded">
               <div class="indeterminate"></div>
             </div>
