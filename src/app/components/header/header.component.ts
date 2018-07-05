@@ -5,8 +5,6 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {HeaderService} from '../../services/header.service';
 import {BehaviourService} from '../../services/behaviour.service';
 import {fromPromise} from 'rxjs/observable/fromPromise';
-import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
-import {ModalComponent} from '../modal/modal.component';
 declare var $: any;
 declare var win: any;
 
@@ -23,7 +21,7 @@ export class HeaderComponent implements AfterViewInit {
   modal: any;
 
   constructor(private headerService: HeaderService,
-              private modalService: NgbModal,
+
               private behave: BehaviourService,
               private router: Router) {
     this.menu = [

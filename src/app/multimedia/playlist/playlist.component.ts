@@ -1,12 +1,12 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {HeaderService} from '../../services/header.service';
 declare var M: any;
 @Component({
-  selector: 'app-gallery',
-  templateUrl: './gallery.component.html',
-  styleUrls: ['./gallery.component.css']
+  selector: 'app-playlist',
+  templateUrl: './playlist.component.html',
+  styleUrls: ['./playlist.component.css']
 })
-export class GalleryComponent implements OnInit, AfterViewInit {
+export class PlaylistComponent implements OnInit,AfterViewInit {
 
   constructor(private headerService: HeaderService) {  this.headerService.Hide();}
 

@@ -36,14 +36,17 @@ import {GlosarioComponent} from './sections/glosario/glosario.component';
 import {EticaComponent} from './sections/etica/etica.component';
 import { QuestionComponent } from './sections/question/question.component';
 import {NgDragDropModule} from 'ng-drag-drop';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {SelectableComponent} from './sections/question/selectable.component';
 import { ProfesoresComponent } from './sections/profesores/profesores.component';
 import { LandingComponent } from './sections/landing/landing.component';
 import {FooterService} from "./services/footer.service";
-import { ModalComponent } from './components/modal/modal.component';
 import {IsChildPipe} from "./pipes/is-child";
 import { GalleryComponent } from './multimedia/gallery/gallery.component';
+import { PlaylistComponent } from './multimedia/playlist/playlist.component';
+import {VgCoreModule} from 'videogular2/core';
+import {VgControlsModule} from 'videogular2/controls';
+import {VgOverlayPlayModule} from 'videogular2/overlay-play';
+import {VgBufferingModule} from 'videogular2/buffering';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -76,10 +79,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     SelectableComponent,
     ProfesoresComponent,
     LandingComponent,
-
-    ModalComponent,
-
     GalleryComponent,
+    PlaylistComponent,
+
 
   ],
   imports: [
@@ -91,18 +93,21 @@ export function HttpLoaderFactory(http: HttpClient) {
     HttpClientModule,
     PdfViewerModule,
     NgDragDropModule.forRoot(),
-    NgbModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    VgCoreModule,
+    VgControlsModule,
+    VgOverlayPlayModule,
+    VgBufferingModule
   ],
   exports: [RouterModule, TranslateModule],
   providers: [OrmService, DataService, HeaderService, FooterService, BehaviourService,  { provide: APP_BASE_HREF, useValue: '.' },],
-  entryComponents:[SelectableComponent, ModalComponent],
+  entryComponents:[SelectableComponent,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

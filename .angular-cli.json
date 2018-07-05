@@ -30,6 +30,7 @@
         "../libs/materialize/css/icon.css",
         "../libs/materialize/css/css.css",
         "../libs/materialize/css/fonts.css",
+        "../node_modules/videogular2/fonts/videogular.css",
         "styles.css"
       ],
       "scripts": [
