@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import * as _ from 'lodash';
 
 @Pipe({
   name: 'themeFilter'
@@ -6,7 +7,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class ThemeFilterPipe implements PipeTransform {
 
   transform(collection: any[], theme: any): any {
-    return collection.filter((f: any) => f.theme === theme);
+    if (_.isUndefined(theme)) {
+      return collection;
+    }
+    return _.isUndefined(collection)?[]:collection.filter((f: any) => f.theme === theme);
   }
 
 }
