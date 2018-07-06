@@ -33,7 +33,7 @@
       <main id="main" class="col-md-8">
         <div class="blog">
           <div class="">
-            <a class="" *ngFor="let image of gallery | themeFilter: tema | paginate: { itemsPerPage: 1, currentPage: page}; let i=index" >
+            <a class="" *ngFor="let image of gallery | themeFilter: tema | paginate: { itemsPerPage: 10, currentPage: page}; let i=index" >
               <img [src]="image.src" src="{{image.src}}" (click)="open(i)"/>
             </a>
           </div>

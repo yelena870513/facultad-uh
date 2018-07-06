@@ -41,8 +41,8 @@ export class GalleryComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(){
-    // const elems = document.querySelectorAll('.carousel');
-    // setTimeout(() => {M.Carousel.init(elems, {})},200);
+    const elems = document.querySelectorAll('.carousel');
+    setTimeout(() => {M.Carousel.init(elems, {})},200);
     // // const instances = M.Carousel.init(elems, {});
   }
 

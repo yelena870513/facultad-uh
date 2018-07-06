@@ -30,6 +30,7 @@
     "core-js": "^2.4.1",
     "jquery": "^3.3.1",
     "lodash": "^4.17.10",
+    "materialize": "^1.0.0",
     "ng-bootstrap": "^1.6.3",
     "ng-drag-drop": "^4.0.1",
     "ng2-pdf-viewer": "^5.0.1",
