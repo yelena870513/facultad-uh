@@ -1,5 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
-import { Component, ViewChild, TemplateRef } from '@angular/core';
+import { Component, ViewChild, AfterViewInit, TemplateRef } from '@angular/core';
 import {DataService} from '../../services/data.service';
 import {TranslateService} from '@ngx-translate/core';
 import {HeaderService} from '../../services/header.service';
@@ -75,6 +74,9 @@ export class DerechoComponent implements AfterViewInit {
   ReadBook(book){
     this.reader = book;
     this.pointer = 1;
+    $('body,html').animate({
+      scrollTop: 0
+    }, 600);
   }
   afterLoadComplete(pdfData: any) {
     this.pdfPages = pdfData.numPages;

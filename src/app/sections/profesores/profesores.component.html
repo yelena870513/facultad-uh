@@ -16,23 +16,21 @@
              <!-- Category -->
         <div class="widget">
           <h3 class="title">{{'LIBRARY.THEMES' | translate}}</h3>
-          <div class="widget-category">
-            <a *ngFor="let item of books" (click)="ReadBook(item)" [ngClass]="{'active': item.title === reader.title}">{{item.title}}</a>
 
+        <ul class="collection">
+          <li class="collection-item" *ngFor="let item of books"[ngClass]="{'active': item.title === reader.title}" (click)="ReadBook(item)">{{item.title | translate}}
+          </li>
+        </ul>
           </div>
-
-        </div>
 
 
       </aside>
       <!-- /Aside -->
 
       <!-- Main -->
-      <main id="main2" class="col-md-9">
+      <main id="main" class="col-md-9">
         <div class="blog">
-          <!--<div class="blog-img">-->
-          <!--<img class="img-responsive" src="./assets/images/blog-post.jpg" alt="">-->
-          <!--</div>-->
+
           <div class="blog-content">
 
             <h3 class="titulo">{{reader.title}}</h3>

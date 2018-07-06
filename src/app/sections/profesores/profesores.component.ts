@@ -29,6 +29,9 @@ export class ProfesoresComponent implements OnInit {
   ReadBook(book){
     this.reader = book;
     this.pointer = 1;
+    $('body,html').animate({
+      scrollTop: 0
+    }, 600);
   }
   afterLoadComplete(pdfData: any) {
     this.pdfPages = pdfData.numPages;

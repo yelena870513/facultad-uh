@@ -12,6 +12,7 @@ import * as _ from 'lodash';
 import {BookInterface} from '../../interfaces/book.interface';
 import {FooterService} from "../../services/footer.service";
 declare var $: any;
+declare var M: any;
 @Component({
   selector: 'app-ismaelillo',
   templateUrl: './ismaelillo.component.html',
@@ -45,6 +46,7 @@ export class IsmaelilloComponent implements AfterViewInit{
   resultMode: any;
   searchMode: boolean;
   searchString: string;
+  estado: string;
   currentBook: any;
   /*panelMode, readMode, searchMode, teamMode, actionMode*/
   currentMode: string;
@@ -81,6 +83,7 @@ export class IsmaelilloComponent implements AfterViewInit{
     this.searchMode = false;
     this.searchString = '';
     this.currentMode = 'panelMode';
+    this.estado = 'libros';
     this.page = 1;
     /*PDF Viewer*/
     this.pointer = 1;
@@ -107,6 +110,8 @@ export class IsmaelilloComponent implements AfterViewInit{
           this.seekMode = 'selectMode';
           this.resultMode = 'readMode';
           this.searchMode = false;
+          this.estado ='testimonial';
+          this.currentBook = item;
           setTimeout(() => {
             this.behaviour.CastTeamMode(true);
           }, 300);
@@ -117,6 +122,7 @@ export class IsmaelilloComponent implements AfterViewInit{
           this.seekMode = 'selectMode';
           this.resultMode = 'readMode';
           this.currentBook = item;
+          this.estado ='libros';
           break;
         default:
           this.teamMode = false;
@@ -125,9 +131,21 @@ export class IsmaelilloComponent implements AfterViewInit{
       }
     }
   }
-
+  Estado(estado: string){
+    this.estado= estado;
+    this.page=1;
+    this.pointer=1;
+    this.readMode = !this.readMode;
+    this.currentBook = this.books[0];
+    $('body,html').animate({
+      scrollTop: 0
+    }, 600);
+  }
   ReadBook(book) {
     this.currentBook = book;
+    $('body,html').animate({
+      scrollTop: 0
+    }, 600);
   }
   afterLoadComplete(pdfData: any) {
     this.pdfPages = pdfData.numPages;

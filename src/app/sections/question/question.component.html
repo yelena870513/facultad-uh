@@ -51,43 +51,6 @@
             </ul>
 </aside>
 
-
-
-
-
-
-
-
-            <!--<aside id="aside1" class="col-md-3">-->
-            <!--<h3 class="title">{{'QUESTION.QUESTION' | translate}}</h3>-->
-            <!--<div class="widget">-->
-              <!--<div class="widget-category">-->
-                <!--<a *ngFor="let item of questions  | paginate: { itemsPerPage: 5, currentPage: page, totalItems: questions.length, id:'question'  }"-->
-                   <!--(click)="Selecter(item)"-->
-                   <!--[ngClass]="{'active': item.title === i.title}"-->
-                   <!--&gt;{{item.title}}</a>-->
-
-              <!--</div>-->
-              <!--<pagination-controls-->
-                <!--(pageChange)="page = $event"-->
-                <!--id="question"-->
-                <!--maxSize="4"-->
-                <!--previousLabel=""-->
-                <!--nextLabel=""></pagination-controls>-->
-                <!--</div>-->
-
-            <!--<div class="widget" *ngIf="books.length>0">-->
-              <!--<h3 class="title">{{'QUESTION.BOOKS' | translate}}</h3>-->
-              <!--<div class="widget-category">-->
-                <!--<a *ngFor="let item of books"-->
-                   <!--(click)="ReadBook(item)"-->
-                   <!--[ngClass]="{'active': item.title === reader.title}" >{{item.title}}-->
-                <!--</a>-->
-              <!--</div>-->
-            <!--</div>-->
-
-          <!--</aside>-->
-
           <div class="col-md-9" *ngIf="i && estado=='cuestionario'"  >
             <div class="card" >
                <div class="card-content">

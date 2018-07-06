@@ -1,34 +1,4 @@
-/*.collapsible-body a{*/
-  /*color: #333;*/
-/*}*/
-/*.collapsible-body li.active a{*/
-  /*color: #fff;*/
-/*}*/
-/*.collapsible-body li:hover {*/
-  /*background-color: rgb(144,128,88);*/
-  /*color: #fff;*/
 
-/*}*/
-/*.collapsible-body li:hover a {*/
-
-  /*color: #fff;*/
-
-/*}*/
-
-/*.collapsible-body li.active {*/
-  /*background-color: rgb(144,128,88);*/
-  /*color: #fff;*/
-
-/*}*/
-
-/*div.active:hover {*/
-  /*color: #FFF !important;*/
-  /*background-color: rgb(144,128,88);*/
-/*}*/
-/*a.active:hover {*/
-  /*color: #FFF !important;*/
-  /*background-color: rgb(144,128,88);*/
-/*}*/
 .ng2-pdf-viewer-container[_ngcontent-c6], .ng2-pdf-viewer-container
 {
   overflow: inherit !important;
@@ -62,18 +32,10 @@
   background-color: rgb(144,128,88);
 }
 
-/*div.active{*/
-  /*color: #FFF;*/
-  /*background-color: rgb(144,128,88);*/
-/*}*/
-/*a.active{*/
-  /*color: #FFF;*/
-  /*background-color: rgb(144,128,88);*/
-/*}*/
 h3.title{
   text-transform: uppercase;
 }
 li{
   border-bottom: 1px solid #ccc;
-  margin-bottom: 12px;
+  margin-bottom: 0px;
 }

@@ -1,11 +1,11 @@
-a.link, .fa-backward{
-  cursor: pointer;
-}
-a{
-  color: rgb(144,128,88);
-}
+
 .testimonial span {
   color: yellow;
+}
+.white-text {
+  color: rgb(255, 255, 102) !important;
+  font-size: 16px;
+  font-weight: normal;
 }
 
 h2{
@@ -18,10 +18,7 @@ h2.ismaelillo{
 .blog .blog-content{
   padding: 0;
 }
-img.contenidos{
-  height: 160px !important;
-  margin-left: 16px;
-}
+
 .title:after {
   background-color:  rgb(144,128,88);
 }
@@ -29,7 +26,6 @@ img.contenidos{
   text-align: center;
 }
 .section{
-  /*background: rgb(249,249,242);*/
   margin-bottom: 5rem;
 }
 h3 {
@@ -38,46 +34,76 @@ h3 {
   color: #333;
 }
 h3.colectivo{
-  font-size: 20px !important;
+  font-size: 15px !important;
+  line-height: 15px;
 }
-img:hover{
+h3.titulo {
+  font-size: 1.92rem;
+  line-height: 2.212rem;
+  margin: -1rem 0 1.168rem 0;
+  text-align: left;
+}
+
+
+a.active{
+  color: #FFF;
+  background-color: rgb(144,128,88);
+}
+a.active:hover {
+  color: #FFF !important;
+}
+a:hover {
+  color: #000;
   cursor: pointer;
 }
 
-a{text-align: center}
-a.ismaelillo:hover{
-  color: #333;
+.collection .collection-item.active {
+  background-color: rgb(144,128,88);
+  color: rgb(255, 255, 102);
   cursor: pointer;
-  border-bottom: 3px solid #66512c;
-  text-align: center;
+  font-weight: 700;
 }
-@media (min-width: 992px) {
+.collection .collection-item.active a {
 
-  .col-md-9 {
-    width: 100%;
-  }
+  color: rgb(255, 255, 102);
 
 }
-@media only screen and (min-width: 993px) {
+.collection .collection-item:hover{
+  cursor: pointer;
+  font-weight: 700;
+}
+.collection .collection-item:hover{
+  cursor: pointer;
+  font-weight: 700;
+}
 
-  .container {
-    width: 90%;
-  }
-}
-.btn.focus, .btn:focus, .btn:hover {
-  color: whitesmoke;
-  text-decoration: none;
-}
-.row{
-  margin-bottom: -6em;
-  margin-top: 4em;
-}
-main{
-  margin-top: -2em;
-}
-.section.md-padding{
-  margin-bottom: 1em;
-}
-#main2{
-  margin-top: -7em;
-}
+/*@media (min-width: 992px) {*/
+
+  /*.col-md-9 {*/
+    /*width: 100%;*/
+  /*}*/
+
+/*}*/
+/*@media only screen and (min-width: 993px) {*/
+
+  /*.container {*/
+    /*width: 90%;*/
+  /*}*/
+/*}*/
+/*.btn.focus, .btn:focus, .btn:hover {*/
+  /*color: whitesmoke;*/
+  /*text-decoration: none;*/
+/*}*/
+/*.row{*/
+  /*margin-bottom: -6em;*/
+  /*margin-top: 4em;*/
+/*}*/
+/*main{*/
+  /*margin-top: -2em;*/
+/*}*/
+/*.section.md-padding{*/
+  /*margin-bottom: 1em;*/
+/*}*/
+/*#main2{*/
+  /*margin-top: -7em;*/
+/*}*/

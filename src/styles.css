@@ -157,14 +157,23 @@ div.active{
   font-weight: 700;
   background-color: rgb(144,128,88);
 }
-.collapsible-header:hover{
+.collapsible-header:hover {
   font-size: 17px;
+  font-weight: 700;
 }
 li.contenidos{
   border-bottom: 1px solid #ccc;
   margin-bottom: 12px;
 }
-
+.owl-carousel.owl-drag .owl-item{
+  background-color: transparent !important;
+}
+.owl-theme .owl-dots .owl-dot.active span {
+  background: rgb(255, 255, 102);
+}
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: rgb(255, 255, 102);
+}
 
 @media (min-width: 992px) {
 

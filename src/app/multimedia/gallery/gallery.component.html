@@ -19,7 +19,7 @@
 
           <ul class="collection">
             <li class="collection-item" *ngFor="let item of themes" [ngClass]="{'active': item==tema}" (click)="setTheme(item)">
-              {{item}}
+              {{item | translate}}
             </li>
           </ul>
 

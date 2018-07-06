@@ -17,9 +17,8 @@
           <li *ngIf="booksShelf&&booksShelf.length>0">
             <div class="collapsible-header" (click)="Estado('juristas')"  [ngClass]="{'active': estado === 'juristas'}">{{'DERECHO.JURISTAS'  | translate}}</div>
             <div class="collapsible-body" (click)="setItem(item)"><ul>
-              <li class="contenidos" *ngFor="let item of booksShelf |paginate: { itemsPerPage: 5, currentPage: page, id: 'booksShelf' }">
-                <a class="contenidos" (click)="ReadBook(item)"
-                   [ngClass]="{'active': item.title === reader.title}" >{{item.title}}
+              <li class="" *ngFor="let item of booksShelf |paginate: { itemsPerPage: 5, currentPage: page, id: 'booksShelf' }">
+                <a class="" (click)="ReadBook(item)" [ngClass]="{'active': item.title === reader.title}" >{{item.title}}
                 </a>
 
               </li>
@@ -41,9 +40,8 @@
             <div class="collapsible-header" (click)="Estado('constituciones')"  [ngClass]="{'active': estado === 'constituciones'}">{{'DERECHO.CONSTITUCIONES' | translate}}</div>
             <div class="collapsible-body">
               <ul>
-                <li class="contenidos"  *ngFor="let item of booksShelf1 |paginate: { itemsPerPage: 5, currentPage: page1, id: 'booksShelf1'  }">
-                  <a class="glosary contenidos"  (click)="ReadBook(item)"
-                     [ngClass]="{'active': item.title === reader.title, 'search-result': result}" >{{item.title}}
+                <li class=""  *ngFor="let item of booksShelf1 |paginate: { itemsPerPage: 5, currentPage: page1, id: 'booksShelf1'  }">
+                  <a class=""  (click)="ReadBook(item)"[ngClass]="{'active': item.title === reader.title, 'search-result': result}" >{{item.title}}
                   </a>
 
                 </li>

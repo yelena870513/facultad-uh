@@ -1,0 +1,18 @@
+.title:after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 40px;
+  background-color:  rgb(144,128,88);
+  margin-top: 20px;
+}
+.collection .collection-item.active {
+  background-color: rgb(144,128,88);
+  color: rgb(255, 255, 102);
+  cursor: pointer;
+  font-weight: 700;
+}
+.collection .collection-item:hover{
+  cursor: pointer;
+  font-weight: 700;
+}

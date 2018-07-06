@@ -1,6 +1,4 @@
-.widget-category a:hover {
-  color: rgb(144,128,88);
-}
+
 a.active:hover {
   color: #FFF !important;
   background-color: rgb(144,128,88);
@@ -48,14 +46,10 @@ h3.titulo1{
   background-color: rgb(144,128,88);
 }
 
-a.active{
-  color: #FFF;
-  background-color: rgb(144,128,88);
-}
 
 li{
   border-bottom: 1px solid #ccc;
-  margin-bottom: 12px;
+  margin-bottom: 0px;
 }
 /*css de collas*/
 div.active {

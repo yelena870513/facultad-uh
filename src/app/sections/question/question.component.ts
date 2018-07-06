@@ -1,5 +1,4 @@
-import { Component, OnInit, TemplateRef } from '@angular/core';
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, TemplateRef } from '@angular/core';
 import * as uuid from 'uuid';
 import {HeaderService} from '../../services/header.service';
 import * as _ from 'lodash';

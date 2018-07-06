@@ -58,6 +58,9 @@
     "BIBLIOTECA": "Biblioteca Jurídica",
     "ESTUDIANTES": "Estudiantes",
     "PROFESORES": "Profesores",
+    "MULTIMEDIA": "Galería",
+    "GALLERY": "Galería de imágenes",
+    "PLAYLIST": "Videos",
     "PREV":"Anterior",
     "NEXT":"Siguiente",
     "EXIT":"Salir"
@@ -78,6 +81,17 @@
     "CONTENT":"¿Desea salir de la multimedia?",
     "CANCEL": "Cancelar",
     "ACCEPT": "Aceptar"
+  },
+  "GALLERY":{
+    "TITLE":"Galería de imágenes",
+    "THEMES":"Temáticas"
+  },
+  "SECTION":{
+    "JURIDICA":"Jurídicos básicos",
+    "CIVIL": "Civil y familia",
+    "PENAL": "Penal",
+    "AMBIENTAL": "Ambiental",
+    "TALLER": "Taller final"
   },
   "articulos":"Artículos científicos",
   "normasInternacionales":"Normas ambientales internacionales",
