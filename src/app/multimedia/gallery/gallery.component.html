@@ -34,7 +34,7 @@
         <div class="blog">
           <div class="">
             <a class="" *ngFor="let image of gallery | themeFilter: tema | paginate: { itemsPerPage: 10, currentPage: page}; let i=index" >
-              <img [src]="image.src" src="{{image.src}}" (click)="open(i)"/>
+              <img class="gallery" [src]="image.src" src="{{image.src}}" (click)="open(i)"/>
             </a>
           </div>
           <pagination-template #p="paginationApi"

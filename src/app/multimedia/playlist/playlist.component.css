@@ -1,0 +1,16 @@
+.title:after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 40px;
+  background-color:  rgb(144,128,88);
+  margin-top: 20px;
+}
+.section-header {
+  margin-bottom: -75px;
+  margin-top: 90px;
+}
+.vg-player {
+
+  margin-top: -82px !important;
+}

@@ -24,7 +24,7 @@
         <ul class="collapsible">
           <li >
             <div class="collapsible-header" (click)="Estado('preguntas')"  [ngClass]="{'active': estado === 'preguntas'}">{{'CONTENIDOS.CATEGORY' | translate}}</div>
-            <div class="collapsible-body" (click)="setItem(item)"><ul>
+            <div class="collapsible-body" ><ul>
               <li class="contenidos" *ngFor="let item of categories  |paginate: { itemsPerPage: 5, currentPage: page }">
                 <a class="contenidos" (click)="Selecter(item)" [ngClass]="{'active': item.title === current.title, 'search-result': result}">{{item.title}}</a>
 

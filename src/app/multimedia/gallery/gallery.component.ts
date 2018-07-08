@@ -48,10 +48,12 @@ export class GalleryComponent implements OnInit, AfterViewInit {
 
   setTheme(theme){
     this.tema = theme;
+
   }
   open(index: number): void {
     // open lightbox
     this._lightbox.open(this.gallery, index);
+
   }
 
 }

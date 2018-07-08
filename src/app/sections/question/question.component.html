@@ -20,7 +20,7 @@
             <ul class="collapsible">
               <li >
                 <div class="collapsible-header" (click)="Estado('cuestionario')"  [ngClass]="{'active': estado === 'cuestionario'}">{{'QUESTION.QUESTION' | translate}}</div>
-                <div class="collapsible-body" (click)="setItem(item)"><ul>
+                <div class="collapsible-body" ><ul>
                   <li class="contenidos" *ngFor="let item of questions  | paginate: { itemsPerPage: 5, currentPage: page, totalItems: questions.length, id:'question'  }">
                     <a class="contenidos" (click)="Selecter(item)"
                        [ngClass]="{'active': item.title === i.title}"
