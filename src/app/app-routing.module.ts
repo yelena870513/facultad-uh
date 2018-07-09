@@ -16,7 +16,7 @@ import {PlaylistComponent} from './multimedia/playlist/playlist.component';
 
 
 const routes: Routes = [
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: '', redirectTo: '/landing', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'ismaelillo', component: IsmaelilloComponent},
   {path: 'contenidos', component: ContenidosComponent},

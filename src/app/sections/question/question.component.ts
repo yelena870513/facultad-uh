@@ -26,9 +26,6 @@ export class QuestionComponent implements OnInit, AfterViewInit {
   pdfPages = 1;
   isLoaded = false;
   estado: string;
-  removeItem(e: any) {
-    this.droppedItems = this.droppedItems.filter((f: any) => f.name !== e.target.innerText);
-  }
   constructor(private headerService: HeaderService, private dataService: DataService, private translate: TranslateService) {
     this.headerService.Hide();
     this.headerService.ChildActive(false);
@@ -48,6 +45,7 @@ export class QuestionComponent implements OnInit, AfterViewInit {
     this.pdfPages = 1;
     this.estado = 'cuestionario';
   }
+
   checkAnswer(item,event) {
     item.checked = event.target.checked;
     if(event.target.checked)
@@ -83,6 +81,11 @@ export class QuestionComponent implements OnInit, AfterViewInit {
       item.resource = 'N';
     }
   }
+
+  removeItem(e: any) {
+    this.droppedItems = this.droppedItems.filter((f: any) => f.name !== e.target.innerText);
+  }
+
   Estado(estado: string){
     this.estado= estado;
     this.page=1;
@@ -92,6 +95,7 @@ export class QuestionComponent implements OnInit, AfterViewInit {
       scrollTop: 0
     }, 600);
   }
+
   onItemDrop(e: any, answer) {
     // Get the dropped data here
     //noinspection TypeScriptUnresolvedFunction
@@ -108,6 +112,9 @@ export class QuestionComponent implements OnInit, AfterViewInit {
     this.i = item;
     this.i.items = item.items.map((m: any) => { m.resource = 'A'; return m; });
     this.readMode = false;
+    this.i.falseValues = [];
+    this.i.trueValues = [];
+    $('.card-reveal').css('display','none');
   }
 
   ReadBook(book){
@@ -115,6 +122,7 @@ export class QuestionComponent implements OnInit, AfterViewInit {
     this.pointer = 1;
     this.readMode = true;
   }
+
   afterLoadComplete(pdfData: any) {
     this.pdfPages = pdfData.numPages;
     this.isLoaded = true;
@@ -133,6 +141,7 @@ export class QuestionComponent implements OnInit, AfterViewInit {
     $('#nav').addClass('fixed-nav').removeClass('hidden');
 
   }
+
   ngAfterViewInit() {
     var elems = document.querySelectorAll('.collapsible');
     var instances = M.Collapsible.init(elems,{});
@@ -140,6 +149,39 @@ export class QuestionComponent implements OnInit, AfterViewInit {
     $('body,html').animate({
       scrollTop: 0
     }, 600);
+  }
+
+  trueAllowed(items: any[]){
+    return items.filter((f: any) => f.value==true).map((m: any) => m.name);
+
+  }
+
+  falseAllowed(items: any[]){
+    return items.filter((f: any) => f.value==false).map((m: any) => m.name);
+  }
+
+  onTrueDrop(e: any, answer){
+    // Get the dropped data here
+    //noinspection TypeScriptUnresolvedFunction
+    if(_.isUndefined(answer.trueValues)){
+      answer.trueValues = [];
+    }
+
+    if( !_.find(answer.trueValues, (value) => value === e.dragData)){
+      answer.trueValues.push(e.dragData);
+    }
+  }
+
+  onFalseDrop(e: any, answer){
+    // Get the dropped data here
+    //noinspection TypeScriptUnresolvedFunction
+    if(_.isUndefined(answer.falseValues)){
+      answer.falseValues = [];
+    }
+
+    if(!_.find(answer.falseValues, (value) => value === e.dragData)){
+      answer.falseValues.push(e.dragData);
+    }
   }
 
   private QuitOverFlow() {

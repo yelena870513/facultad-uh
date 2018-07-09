@@ -85,10 +85,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     GalleryComponent,
     PlaylistComponent,
     ThemeFilterPipe,
-
-
     HighlightsPipe,
-
   ],
   imports: [
     BrowserModule,

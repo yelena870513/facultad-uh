@@ -1,8 +1,8 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChild, ElementRef} from '@angular/core';
 import {HeaderService} from '../../services/header.service';
 import {DataService} from '../../services/data.service';
 import {TranslateService} from '@ngx-translate/core';
-
+import {VgAPI} from 'videogular2/core';
 declare var M: any;
 
 @Component({
@@ -13,7 +13,8 @@ declare var M: any;
 export class PlaylistComponent implements OnInit, AfterViewInit {
   gallery: any[];
   player: any;
-
+  api: VgAPI;
+  @ViewChild('media') media: ElementRef;
   private base = './assets/video/';
   private poster = './assets/images/';
   constructor(private headerService: HeaderService,
@@ -43,9 +44,11 @@ export class PlaylistComponent implements OnInit, AfterViewInit {
 
   setPlayer(player: any){
     this.player = player;
-    const video = <HTMLVideoElement> document.getElementById('singleVideo');
-    video.load();
+    this.media.nativeElement.load();
 
+  }
+  onPlayerReady(api: VgAPI){
+    this.api = api;
   }
 
 }

@@ -32,8 +32,11 @@
     "TITLE": "Estudiantes",
     "BOOKS":"Libros",
     "QUESTION":"Cuestionario",
+    "AFIRMATION":"Afirmaciones",
     "TRUE":"V",
-    "FALSE":"F"
+    "FALSE":"F",
+    "COLUMNA":"Columna A",
+    "COLUMNB":"Columna B"
   },
    "DERECHO":{
     "TITLE": "El derecho en la historia",
@@ -47,7 +50,8 @@
   },
   "LANDING":{
     "TITLE": "Contenido General",
-    "BOOKS":"Libros"
+    "BOOKS":"Libros",
+    "HOME":"Inicio"
   },
   "NAV":{
     "START":"Inicio",

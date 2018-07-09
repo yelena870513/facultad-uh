@@ -17,6 +17,7 @@ declare var win: any;
 export class HeaderComponent implements AfterViewInit {
   menu: any[];
   showHeader = true;
+  displayHeader = true;
   childActive = false;
   modal: any;
 
@@ -45,6 +46,9 @@ export class HeaderComponent implements AfterViewInit {
     ];
     this.headerService.showHeader
       .subscribe(show => setTimeout(() => this.showHeader = show));
+
+    this.headerService.displayHeader
+      .subscribe((display) => this.displayHeader = display);
     this.headerService.childActive.subscribe(active => setTimeout(()=> this.childActive = active))
   }
 

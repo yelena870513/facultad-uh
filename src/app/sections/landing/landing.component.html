@@ -7,23 +7,16 @@
     <!-- Row -->
     <div class="row">
 
-      <!-- Section header -->
-      <div class="section-header text-center">
-        <h2 class="title">{{'LANDING.TITLE' | translate}}</h2>
-      </div>
-      <!-- /Section header -->
-
-      <!-- about -->
-      <div class="col-md-3" *ngFor="let item of menu">
-        <div class="about">
-          <i class="{{item.ico}}"></i>
-          <h3> <a routerLink="{{item.url}}">{{item.name | translate}}</a></h3>
-
-        </div>
-      </div>
-
-      <!-- /about -->
-
+     <main class="col-md-12">
+       <a (click)="goHome()"><i class="fa fa-home"></i>{{'LANDING.HOME' | translate}}</a>
+       <vg-player (onPlayerReady)="onPlayerReady($event)">
+         <vg-overlay-play></vg-overlay-play>
+         <vg-buffering></vg-buffering>
+         <video [vgMedia]="media" #media id="slideVideo" preload="auto" crossorigin autoplay>
+           <source src="./assets/video/redcliff450.webm" type="video/webm">
+         </video>
+       </vg-player>
+     </main>
 
     </div>
     <!-- /Row -->
@@ -33,4 +26,4 @@
 
 </div>
 <!-- /About -->
-<div class="espacio" style=""></div>
+

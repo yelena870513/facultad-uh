@@ -1,4 +1,4 @@
-<header id="home" [ngClass]="{'no-vh': !showHeader}">
+<header id="home" [ngClass]="{'no-vh': !showHeader}" *ngIf="displayHeader">
   <!-- Background Image -->
   <div class="bg-img" style="background-image: url('./assets/images/background1.jpg');" *ngIf="showHeader">
     <div class="overlay"></div>

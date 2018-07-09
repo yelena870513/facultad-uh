@@ -1,143 +1,175 @@
 <div id="blog" class="section md-padding">
   <div class="container">
-        <div class="row">
-          <div class="section-header text-center">
-            <h2 class="title">{{ 'QUESTION.TITLE' | translate }}</h2>
+    <div class="row">
+      <div class="section-header text-center">
+        <h2 class="title">{{ 'QUESTION.TITLE' | translate }}</h2>
+      </div>
+
+      <aside id="aside" class="col-md-3">
+
+        <!-- Search -->
+        <div class="widget">
+          <div class="widget-search">
+            <!--<input class="search-input" type="text" placeholder="search">-->
+            <!--<button class="search-btn" type="button"><i class="fa fa-search"></i></button>-->
           </div>
+        </div>
+        <!-- /Search -->
+        <h3 class="title">{{'LIBRARY.THEMES' | translate}}</h3>
+        <!-- Category -->
+        <ul class="collapsible">
+          <li>
+            <div class="collapsible-header" (click)="Estado('cuestionario')"
+                 [ngClass]="{'active': estado === 'cuestionario'}">{{'QUESTION.QUESTION' | translate}}
+            </div>
+            <div class="collapsible-body">
+              <ul>
+                <li class="contenidos"
+                    *ngFor="let item of questions  | paginate: { itemsPerPage: 5, currentPage: page, totalItems: questions.length, id:'question'  }">
+                  <a class="contenidos" (click)="Selecter(item)"
+                     [ngClass]="{'active': item.title === i.title}"
+                  >{{item.title}}</a>
 
-          <aside id="aside" class="col-md-3">
+                </li>
+              </ul>
+              <pagination-controls
+                (pageChange)="page = $event"
+                id="question"
+                maxSize="4"
+                previousLabel=""
+                nextLabel=""></pagination-controls>
+            </div>
+          </li>
 
-            <!-- Search -->
-            <div class="widget">
-              <div class="widget-search">
-                <!--<input class="search-input" type="text" placeholder="search">-->
-                <!--<button class="search-btn" type="button"><i class="fa fa-search"></i></button>-->
+          <li>
+            <div class="collapsible-header" (click)="Estado('libros')" [ngClass]="{'active': estado === 'libros'}">
+              {{'QUESTION.BOOKS' | translate}}
+            </div>
+            <div class="collapsible-body">
+              <ul>
+                <li class="contenidos" *ngFor="let item of books ">
+                  <a class="contenidos" (click)="ReadBook(item)"
+                     [ngClass]="{'active': item.title === reader.title}">{{item.title}}</a>
+
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </aside>
+
+      <div class="col-md-9" *ngIf="i && estado=='cuestionario'">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">{{i.subtitle}} &nbsp;<a
+              class="btn-floating waves-effect waves-light green"><i class="mdi-action-spellcheck right"></i></a></span>
+            <div *ngIf="i.type === 'checkbox'">
+              <ul class="collection">
+                <li class="collection-item" *ngFor="let answer of i.items">
+                  <div class="switch">
+                    <label [ngClass]="{ 'error': answer.resource ==='F', 'check': answer.resource === 'T' }">{{answer.name}}<input
+                      type="checkbox" (change)="checkAnswer(answer,$event)"><span class="lever"></span></label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div *ngIf="i.type=== 'dragdrop'">
+              <div class="row">
+                <div class="col-md-4">
+                  <ul>
+                    <li>{{'QUESTION.COLUMNA' | translate}}</li>
+                    <li draggable [dragScope]="p" [dragData]="p" *ngFor="let p of i.posible" class="preguntas" [dragHandleClass]="'drag-class'"[dragClass]="'dragClass'" [dragTransitClass]="'dragTransitClass'">{{p}}</li>
+                  </ul>
+                </div>
+                <div class="col-md-8">
+                  <p>{{'QUESTION.COLUMNB' | translate}}</p>
+                  <div droppable [dropScope]="answer.values" *ngFor="let answer of i.items"
+                       class="drop preguntas"
+                       [dragOverClass]="'drag-target-border'"
+                       [dragHintClass]="'drag-target-color'"
+                       (onDrop)="onItemDrop($event, answer)">
+                    <p>{{ answer.name }}</p><br>
+                    <ul class="collection" *ngIf="answer.dropped">
+                      <li class="collection-item preguntas" *ngFor="let a of answer.dropped">{{a}}</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
-            <!-- /Search -->
-            <h3 class="title">{{'LIBRARY.THEMES' | translate}}</h3>
-            <!-- Category -->
-            <ul class="collapsible">
-              <li >
-                <div class="collapsible-header" (click)="Estado('cuestionario')"  [ngClass]="{'active': estado === 'cuestionario'}">{{'QUESTION.QUESTION' | translate}}</div>
-                <div class="collapsible-body" ><ul>
-                  <li class="contenidos" *ngFor="let item of questions  | paginate: { itemsPerPage: 5, currentPage: page, totalItems: questions.length, id:'question'  }">
-                    <a class="contenidos" (click)="Selecter(item)"
-                       [ngClass]="{'active': item.title === i.title}"
-                    >{{item.title}}</a>
-
-                  </li>
-                </ul>
-                  <pagination-controls
-                    (pageChange)="page = $event"
-                    id="question"
-                    maxSize="4"
-                    previousLabel=""
-                    nextLabel=""></pagination-controls></div>
-              </li>
-
-              <li>
-                <div class="collapsible-header" (click)="Estado('libros')"  [ngClass]="{'active': estado === 'libros'}">{{'QUESTION.BOOKS' | translate}}</div>
-                <div class="collapsible-body" >
+            <div *ngIf="i.type=== 'radio'">
+              <div class="row">
+                <div class="col-md-4">
                   <ul>
-                    <li class="contenidos" *ngFor="let item of books ">
-                      <a class="contenidos" (click)="ReadBook(item)"
-                         [ngClass]="{'active': item.title === reader.title}" >{{item.title}}</a>
-
-                    </li>
+                    <li class="preguntas" draggable [dragScope]="p.name" [dragData]="p" *ngFor="let p of i.items"
+                        [dragHandleClass]="'drag-class'"[dragClass]="'dragClass'" [dragTransitClass]="'dragTransitClass'">{{p.name}}</li>
                   </ul>
                 </div>
-              </li>
-            </ul>
-</aside>
-
-          <div class="col-md-9" *ngIf="i && estado=='cuestionario'"  >
-            <div class="card" >
-               <div class="card-content">
-                 <span class="card-title activator grey-text text-darken-4">{{i.subtitle}} &nbsp;<a class="btn-floating waves-effect waves-light green"><i class="mdi-action-spellcheck right"></i></a></span>
-                 <div *ngIf="i.type === 'checkbox'">
-                  <ul class="collection">
-                    <li class="collection-item" *ngFor="let answer of i.items">
-                      <div class="switch">
-                       <label [ngClass]="{ 'error': answer.resource ==='F', 'check': answer.resource === 'T' }">{{answer.name}}<input type="checkbox" (change)="checkAnswer(answer,$event)"><span class="lever"></span></label>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div *ngIf="i.type=== 'dragdrop'">
+                <div class="col-md-8">
                   <div class="row">
-                    <div class="col-md-4">
-                      <ul>
-                        <li draggable [dragScope] = "p" [dragData]="p" *ngFor="let p of i.posible">{{p}}</li>
-                      </ul>
-                    </div>
-                    <div class="col-md-8">
-                      <div droppable [dropScope] = "answer.values" *ngFor="let answer of i.items" (onDrop)="onItemDrop($event, answer)">
-                        <p>{{ answer.name }}</p><br>
-                         <ul class="collection" *ngIf="answer.dropped">
-                          <li class="collection-item" *ngFor="let a of answer.dropped">{{a}}</li>
+                    <div class="col-md-6">
+                      Verdadero
+                      <div droppable [dropScope]="trueAllowed(i.items)"
+                           (onDrop)="onTrueDrop($event, i)" class="drop"
+                           [dragOverClass]="'drag-target-border'"
+                           [dragHintClass]="'drag-target-color'">
+                        <ul class="collection" *ngIf="i.trueValues">
+                          <li class="collection-item" *ngFor="let a of i.trueValues">{{a.name}}</li>
                         </ul>
                       </div>
                     </div>
+                    <div class="col-md-6">
+                      Falso
+                      <div droppable [dropScope]="falseAllowed(i.items)"
+                           (onDrop)="onFalseDrop($event, i)" class="drop" [dragOverClass]="'drag-target-border'">
+                        <ul class="collection" *ngIf="i.falseValues">
+                          <li class="collection-item" *ngFor="let a of i.falseValues">{{a.name}}</li>
+                        </ul>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
-                 <div *ngIf="i.type=== 'radio'">
-
-                   <div  *ngFor="let answer of i.items; let i = index">
-                     {{answer.name}}
-                     <p>
-                       <label [ngClass]="{ 'error': answer.resource ==='F', 'check': answer.resource === 'T' }">
-                         <input name="group{{i}}" value="1" type="radio" (change)="radioAnswer(answer,$event)" #ansTrue{{i}} />
-                         <span>{{'QUESTION.TRUE' | translate}}</span>
-                       </label>
-                     </p>
-                     <p>
-                       <label [ngClass]="{ 'check': answer.resource ==='F', 'error': answer.resource === 'T' }">
-                         <input name="group{{i}}" type="radio" value="0" (change)="radioAnswer(answer,$event)" #ansFalse{{i}}/>
-                         <span>{{'QUESTION.FALSE' | translate}}</span>
-                       </label>
-                     </p>
-
-                   </div>
-
-                 </div>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">{{i.title}}<i class="mdi-navigation-close right"></i></span><br>
-                <p [innerHtml]="i.description"></p>
               </div>
             </div>
           </div>
-          <!-- Main -->
-          <main id="main" class="col-md-9" *ngIf="estado=='libros'">
-            <div class="blog">
-              <div class="blog-content" *ngIf="reader">
-                <div class="row border-dark">
-                  <div class="col-md-12">
-                    <div class="progress"  *ngIf="!isLoaded">
-                      <div class="indeterminate"></div>
-                    </div>
-                    <div *ngIf="isLoaded" style="text-align: center;">
-                      <button class="btn waves-effect waves-light brown" (click)="prevPage()" [disabled]="pointer === 1">
-                        {{'NAV.PREV' | translate}} &nbsp;<i class="mdi-av-skip-previous"></i>
-                      </button>
-                      <span>{{ pointer }} / {{ pdfPages }}</span>
-                      <button class="btn waves-effect waves-light brown" (click)="nextPage()" [disabled]="pointer === pdfPages">
-                        {{'NAV.NEXT' | translate }}&nbsp;<i class="mdi-av-skip-next"></i>
-                      </button>
-                    </div>
-                    <pdf-viewer src="./assets/pdf/{{reader.url}}"
-                                [show-all]="false"
-                                [page]="pointer"
-                                [render-text]="false"
-                                (after-load-complete)="afterLoadComplete($event)"
-                    ></pdf-viewer>
-                  </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">{{i.title}}<i
+              class="mdi-navigation-close right"></i></span><br>
+            <p [innerHtml]="i.description"></p>
+          </div>
+        </div>
+      </div>
+      <!-- Main -->
+      <main id="main" class="col-md-9" *ngIf="estado=='libros'">
+        <div class="blog">
+          <div class="blog-content" *ngIf="reader">
+            <div class="row border-dark">
+              <div class="col-md-12">
+                <div class="progress" *ngIf="!isLoaded">
+                  <div class="indeterminate"></div>
                 </div>
+                <div *ngIf="isLoaded" style="text-align: center;">
+                  <button class="btn waves-effect waves-light brown" (click)="prevPage()" [disabled]="pointer === 1">
+                    {{'NAV.PREV' | translate}} &nbsp;<i class="mdi-av-skip-previous"></i>
+                  </button>
+                  <span>{{ pointer }} / {{ pdfPages }}</span>
+                  <button class="btn waves-effect waves-light brown" (click)="nextPage()"
+                          [disabled]="pointer === pdfPages">
+                    {{'NAV.NEXT' | translate }}&nbsp;<i class="mdi-av-skip-next"></i>
+                  </button>
+                </div>
+                <pdf-viewer src="./assets/pdf/{{reader.url}}"
+                            [show-all]="false"
+                            [page]="pointer"
+                            [render-text]="false"
+                            (after-load-complete)="afterLoadComplete($event)"
+                ></pdf-viewer>
               </div>
             </div>
-          </main>
-          <!-- /Main -->
+          </div>
         </div>
+      </main>
+      <!-- /Main -->
     </div>
+  </div>
 </div>

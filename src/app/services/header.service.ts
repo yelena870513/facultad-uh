@@ -3,6 +3,7 @@ import {EventEmitter, Injectable} from '@angular/core';
 @Injectable()
 export class HeaderService {
   showHeader = new EventEmitter();
+  displayHeader = new EventEmitter();
   childActive = new EventEmitter();
   constructor() { }
   Show() {
@@ -10,6 +11,10 @@ export class HeaderService {
   }
   Hide() {
     this.showHeader.emit(false);
+  }
+
+  Display(display){
+    this.displayHeader.emit(display);
   }
 
   ChildActive(emitter){

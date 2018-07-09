@@ -31,6 +31,7 @@
         "../libs/materialize/css/css.css",
         "../libs/materialize/css/fonts.css",
         "../node_modules/videogular2/fonts/videogular.css",
+        "../node_modules/ng-drag-drop/style.css",
         "../node_modules/ngx-lightbox/lightbox.css",
         "styles.css"
       ],
