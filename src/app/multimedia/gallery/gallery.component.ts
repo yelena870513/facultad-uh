@@ -50,8 +50,9 @@ export class GalleryComponent implements OnInit, AfterViewInit {
     this.tema = theme;
 
   }
-  open(index: number): void {
+  open(image: any): void {
     // open lightbox
+    const index = _.findIndex(this.gallery, (b: any) => b.src === image.src);
     this._lightbox.open(this.gallery, index);
 
   }
