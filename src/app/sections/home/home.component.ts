@@ -42,10 +42,15 @@ export class HomeComponent  implements AfterViewInit, OnInit{
   }
 
   ngOnInit(){
-    //noinspection TypeScriptUnresolvedFunction
-    if (_.isUndefined(window.sessionStorage.getItem('landing'))) {
-      this.router.navigate(['/landing']);
-    }
+ try{
+   //noinspection TypeScriptUnresolvedFunction
+   if (window.sessionStorage.getItem('landing')==null) {
+     this.router.navigate(['/landing']);
+   }
+ }
+ catch (err){
+   alert(err.message);
+ }
   }
 }
 

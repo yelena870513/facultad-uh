@@ -21,6 +21,7 @@ export class PlaylistComponent implements OnInit, AfterViewInit {
               private dataService: DataService,
               private translate: TranslateService) {
     this.headerService.Hide();
+    this.headerService.ChildActive(true);
     this.dataService.getGallery(this.translate.currentLang).subscribe((data: any) =>{
       this.gallery = data.docs.filter((f:any) => f.type === "video")
         .sort((a: any, b: any) => a.order - b.order)

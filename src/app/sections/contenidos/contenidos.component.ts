@@ -53,6 +53,7 @@ export class ContenidosComponent implements AfterViewInit {
     $('body,html').animate({
       scrollTop: 0
     }, 600);
+
   }
   Estado(estado: string){
     this.estado= estado;
@@ -93,6 +94,25 @@ export class ContenidosComponent implements AfterViewInit {
     $('body,html').animate({
       scrollTop: 0
     }, 600);
+    setTimeout(()=>{
+      var elems = document.querySelectorAll('.men');
+      for (let i =0; i<elems.length; i++) {
+        elems[i].addEventListener("click", function( event ){
+            //noinspection TypeScriptUnresolvedVariable
+          switch (elems[i].innerText.toLowerCase()){
+              case 'estado':
+                M.toast({html: 'Estado Cubano'});
+                    break;
+              default:
+                break;
+            }
+
+        });
+
+      }
+
+
+    }, 100);
   }
 
   ngAfterViewInit() {

@@ -51,6 +51,7 @@ export class HeaderComponent implements AfterViewInit {
     this.headerService.displayHeader
       .subscribe((display) => this.displayHeader = display);
     this.headerService.childActive.subscribe(active => setTimeout(()=> this.childActive = active))
+
   }
 
   Salir() {

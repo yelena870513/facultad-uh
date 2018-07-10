@@ -23,6 +23,7 @@ export class GalleryComponent implements OnInit, AfterViewInit {
     private translate: TranslateService,
     private _lightbox: Lightbox) {
     this.headerService.Hide();
+    this.headerService.ChildActive(true);
     this.dataService.getGallery(this.translate.currentLang).subscribe((data: any) =>{
       this.gallery = data.docs.filter((f:any) => f.type === "img")
         .sort((a: any, b: any) => a.order - b.order)
