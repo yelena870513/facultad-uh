@@ -750,6 +750,23 @@
       "theme":"SECTION.TALLER",
       "order":5,
       "type":"video"
+    },
+    {
+      "src":"2.webm",
+      "title":"Civil",
+      "poster":"v2.jpg",
+      "caption":"v2.jpg",
+      "theme":"SECTION.COMPLEMENTARIO",
+      "order":5,
+      "type":"video"
+    },{
+      "src":"3.webm",
+      "title":"Maestro Frank Fernandez. La Comparsa.",
+      "poster":"v3.jpg",
+      "caption":"v3.jpg",
+      "theme":"SECTION.COMPLEMENTARIO",
+      "order":5,
+      "type":"video"
     }
   ]
 }

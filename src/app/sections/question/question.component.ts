@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, TemplateRef } from '@angular/core';
+import { Component, OnInit, AfterViewInit, TemplateRef, ElementRef ,ViewChild} from '@angular/core';
 import * as uuid from 'uuid';
 import {HeaderService} from '../../services/header.service';
 import * as _ from 'lodash';
@@ -30,6 +30,7 @@ export class QuestionComponent implements OnInit, AfterViewInit {
   estado: string;
   base='./assets/video/';
   poster='./assets/images/';
+  @ViewChild('media') media: ElementRef;
   constructor(private headerService: HeaderService,
               private dataService: DataService,
               private translate: TranslateService) {
@@ -48,7 +49,7 @@ export class QuestionComponent implements OnInit, AfterViewInit {
     });
 
     this.dataService.getGallery(this.translate.currentLang).subscribe((data: any) =>{
-      this.gallery = data.docs.filter((f:any) => f.type === "video")
+      this.gallery = data.docs.filter((f:any) => f.type === "video" && f.theme == 'SECTION.COMPLEMENTARIO')
         .sort((a: any, b: any) => a.order - b.order)
         .map((i: any) => {
           i.src = this.base + i.src;
@@ -134,6 +135,12 @@ export class QuestionComponent implements OnInit, AfterViewInit {
     this.i.falseValues = [];
     this.i.trueValues = [];
     $('.card-reveal').css('display','none');
+  }
+
+  setPlayer(player: any){
+    this.player = player;
+    this.media.nativeElement.load();
+
   }
 
   ReadBook(book){

@@ -60,9 +60,9 @@
               {{'QUESTION.COMPLEMENT' | translate}}
             </div>
             <div class="collapsible-body">
-              <ul>
-                <li class="contenidos" >
-
+              <ul class="collection">
+                <li class="contenidos collection-item" *ngFor="let g of gallery" (click)="setPlayer(g)">
+                  {{g.caption}}
                 </li>
               </ul>
             </div>
