@@ -31,10 +31,11 @@
   "QUESTION":{
     "TITLE": "Estudiantes",
     "BOOKS":"Libros",
+    "COMPLEMENT":"Complementarios",
     "QUESTION":"Cuestionario",
     "AFIRMATION":"Afirmaciones",
-    "TRUE":"V",
-    "FALSE":"F",
+    "TRUE":"Verdadero",
+    "FALSE":"Falso",
     "COLUMNA":"Columna A",
     "COLUMNB":"Columna B"
   },
@@ -103,6 +104,7 @@
   "normasBasicos":"Normas jurídicas básicas",
   "normasCivil":"Normas civiles",
   "normasPenal":"Normas penales",
-  "EXIT": "Salir"
+  "EXIT": "Salir",
+  "actividad11a.jpg": "Solución"
 
 }

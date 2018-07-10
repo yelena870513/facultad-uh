@@ -35,11 +35,12 @@ export class PlaylistComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
+    const elems = document.querySelectorAll('.carousel');
+    setTimeout(() => {M.Carousel.init(elems, {})},200);
   }
 
   ngAfterViewInit() {
-    const elems = document.querySelectorAll('.carousel');
-    setTimeout(() => {M.Carousel.init(elems, {})},200);
+
   }
 
   setPlayer(player: any){

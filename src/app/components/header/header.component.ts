@@ -7,6 +7,7 @@ import {BehaviourService} from '../../services/behaviour.service';
 import {fromPromise} from 'rxjs/observable/fromPromise';
 declare var $: any;
 declare var win: any;
+declare var window: any;
 
 @Component({
   selector: 'app-header',
@@ -61,6 +62,7 @@ export class HeaderComponent implements AfterViewInit {
     //Preguntar primero desde que dispositivo se navega
     if (!navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
       try {
+        window.sessionStorage.setItem('landing',undefined);
         win.close(true);
       }
       catch (reason) {

@@ -1,20 +1,23 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, OnInit } from '@angular/core';
 import {DataService} from '../../services/data.service';
 import {TranslateService} from '@ngx-translate/core';
 import {CategoryInterface} from '../../interfaces/category.interface';
 import {HeaderService} from '../../services/header.service';
 import {FooterService} from "../../services/footer.service";
+import {Router} from '@angular/router';
+import * as _ from 'lodash';
 declare var $: any;
+declare var window: any;
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 
-export class HomeComponent  implements AfterViewInit{
+export class HomeComponent  implements AfterViewInit, OnInit{
   categories: CategoryInterface [];
   menu: any [];
-  constructor(private dataService: DataService, private translate: TranslateService, private headerService: HeaderService, private footerService: FooterService) {
+  constructor(private dataService: DataService, private translate: TranslateService, private headerService: HeaderService, private footerService: FooterService,  private router: Router) {
     this.headerService.Show();
     this.headerService.ChildActive(false);
     this.footerService.Hide();
@@ -34,6 +37,15 @@ export class HomeComponent  implements AfterViewInit{
   }
   ngAfterViewInit() {
     // $('#nav').addClass('fixed-nav').removeClass('hidden')
+
+
+  }
+
+  ngOnInit(){
+    //noinspection TypeScriptUnresolvedFunction
+    if (_.isUndefined(window.sessionStorage.getItem('landing'))) {
+      this.router.navigate(['/landing']);
+    }
   }
 }
 

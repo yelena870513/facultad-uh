@@ -4,6 +4,10 @@ body{
   -ms-user-select: none;
   user-select: none;
 }
+.vg-player {
+
+  margin-top: -96px;
+}
 h3.plegable {
   font-size: 23px;
   line-height: 2.212rem;

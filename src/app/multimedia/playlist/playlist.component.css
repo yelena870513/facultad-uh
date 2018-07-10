@@ -10,7 +10,8 @@
   margin-bottom: -75px;
   margin-top: 90px;
 }
-.vg-player {
 
-  margin-top: -82px !important;
+.carousel .carousel-item{
+  height: auto;
 }
+

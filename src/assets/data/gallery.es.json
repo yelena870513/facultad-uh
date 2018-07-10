@@ -1,105 +1,752 @@
 {
   "docs":[
     {
-      "src":"i1.jpg",
-      "thumb":"i1.jpg",
-      "caption":"i1.jpg",
+      "src":"Imagen 1.jpg",
+      "thumb":"Jurídicos básicos. Imagen 1",
+      "caption":"Jurídicos básicos. Imagen 1",
       "theme":"SECTION.JURIDICA",
       "order":1,
       "type":"img"
     },
     {
-      "src":"i6.jpg",
-      "thumb":"i6.jpg",
-      "caption":"i6.jpg",
+      "src":"Imagen 2.jpg",
+      "thumb":"Jurídicos básicos. Imagen 2",
+      "caption":"Jurídicos básicos. Imagen 2",
+      "theme":"SECTION.JURIDICA",
+      "order":1,
+      "type":"img"
+    },{
+      "src":"Imagen 3.jpg",
+      "thumb":"Jurídicos básicos. Imagen 3.",
+      "caption":"Jurídicos básicos. Imagen 3.",
+      "theme":"SECTION.JURIDICA",
+      "order":1,
+      "type":"img"
+    },{
+      "src":"Imagen 4.jpg",
+      "thumb":"Jurídicos básicos. Imagen 4.",
+      "caption":"Jurídicos básicos. Imagen 4.",
+      "theme":"SECTION.JURIDICA",
+      "order":1,
+      "type":"img"
+    },{
+      "src":"Imagen 5.jpg",
+      "thumb":"Jurídicos básicos. Imagen 5.",
+      "caption":"Jurídicos básicos. Imagen 5.",
+      "theme":"SECTION.JURIDICA",
+      "order":1,
+      "type":"img"
+    },{
+      "src":"Imagen 6.jpg",
+      "thumb":"Jurídicos básicos. Imagen 6.",
+      "caption":"Jurídicos básicos. Imagen 6.",
+      "theme":"SECTION.JURIDICA",
+      "order":1,
+      "type":"img"
+    },{
+      "src":"Imagen 7.jpg",
+      "thumb":"Jurídicos básicos. Imagen 7.",
+      "caption":"Jurídicos básicos. Imagen 7.",
+      "theme":"SECTION.JURIDICA",
+      "order":1,
+      "type":"img"
+    },{
+      "src":"Imagen 8.jpg",
+      "thumb":"Jurídicos básicos. Imagen 8.",
+      "caption":"Jurídicos básicos. Imagen 8.",
+      "theme":"SECTION.JURIDICA",
+      "order":1,
+      "type":"img"
+    },{
+      "src":"Imagen 9.jpg",
+      "thumb":"Jurídicos básicos. Imagen 9.",
+      "caption":"Jurídicos básicos. Imagen 9.",
+      "theme":"SECTION.JURIDICA",
+      "order":1,
+      "type":"img"
+    },{
+      "src":"Imagen 10.jpg",
+      "thumb":"Jurídicos básicos. Imagen 10.",
+      "caption":"Jurídicos básicos. Imagen 10.",
+      "theme":"SECTION.JURIDICA",
+      "order":1,
+      "type":"img"
+    },{
+      "src":"Imagen 11.jpg",
+      "thumb":"Jurídicos básicos. Imagen 11.",
+      "caption":"Jurídicos básicos. Imagen 11.",
+      "theme":"SECTION.JURIDICA",
+      "order":1,
+      "type":"img"
+    },{
+      "src":"Imagen 12.jpg",
+      "thumb":"Jurídicos básicos. Imagen 12.",
+      "caption":"Jurídicos básicos. Imagen 12.",
+      "theme":"SECTION.JURIDICA",
+      "order":1,
+      "type":"img"
+    },{
+      "src":"Imagen 13.jpg",
+      "thumb":"Jurídicos básicos. Imagen 13.",
+      "caption":"Jurídicos básicos. Imagen 13.",
+      "theme":"SECTION.JURIDICA",
+      "order":1,
+      "type":"img"
+    },{
+      "src":"Imagen 14.jpg",
+      "thumb":"Jurídicos básicos. Imagen 14.",
+      "caption":"Jurídicos básicos. Imagen 14.",
+      "theme":"SECTION.JURIDICA",
+      "order":1,
+      "type":"img"
+    },{
+      "src":"Imagen 15.jpg",
+      "thumb":"Jurídicos básicos. Imagen 15.",
+      "caption":"Jurídicos básicos. Imagen 15.",
+      "theme":"SECTION.JURIDICA",
+      "order":1,
+      "type":"img"
+    },{
+      "src":"Imagen 16.jpg",
+      "thumb":"Jurídicos básicos. Imagen 16.",
+      "caption":"Jurídicos básicos. Imagen 16.",
+      "theme":"SECTION.JURIDICA",
+      "order":1,
+      "type":"img"
+    },{
+      "src":"Imagen 17.jpg",
+      "thumb":"Jurídicos básicos. Imagen 17.",
+      "caption":"Jurídicos básicos. Imagen 17.",
+      "theme":"SECTION.JURIDICA",
+      "order":1,
+      "type":"img"
+    },{
+      "src":"Imagen 18.jpg",
+      "thumb":"Jurídicos básicos. Imagen 18.",
+      "caption":"Jurídicos básicos. Imagen 18.",
+      "theme":"SECTION.JURIDICA",
+      "order":1,
+      "type":"img"
+    },{
+      "src":"Imagen 19.jpg",
+      "thumb":"Jurídicos básicos. Imagen 19.",
+      "caption":"Jurídicos básicos. Imagen 19.",
+      "theme":"SECTION.JURIDICA",
+      "order":1,
+      "type":"img"
+    },{
+      "src":"Imagen 20.jpg",
+      "thumb":"Jurídicos básicos. Imagen 20.",
+      "caption":"Jurídicos básicos. Imagen 20.",
+      "theme":"SECTION.JURIDICA",
+      "order":1,
+      "type":"img"
+    },{
+      "src":"Imagen 21.jpg",
+      "thumb":"Jurídicos básicos. Imagen 21.",
+      "caption":"Jurídicos básicos. Imagen 21.",
+      "theme":"SECTION.JURIDICA",
+      "order":1,
+      "type":"img"
+    },{
+      "src":"Imagen 22.jpg",
+      "thumb":"Jurídicos básicos. Imagen 22.",
+      "caption":"Jurídicos básicos. Imagen 22.",
+      "theme":"SECTION.JURIDICA",
+      "order":1,
+      "type":"img"
+    },{
+      "src":"Imagen 23.jpg",
+      "thumb":"Jurídicos básicos. Imagen 23.",
+      "caption":"Jurídicos básicos. Imagen 23.",
+      "theme":"SECTION.JURIDICA",
+      "order":1,
+      "type":"img"
+    },{
+      "src":"Imagen 24.jpg",
+      "thumb":"Jurídicos básicos. Imagen 24.",
+      "caption":"Jurídicos básicos. Imagen 24.",
+      "theme":"SECTION.JURIDICA",
+      "order":1,
+      "type":"img"
+    },{
+      "src":"Imagen 25.jpg",
+      "thumb":"Jurídicos básicos. Imagen 25.",
+      "caption":"Jurídicos básicos. Imagen 25.",
       "theme":"SECTION.JURIDICA",
       "order":1,
       "type":"img"
     },
     {
-      "src":"i2.jpg",
-      "thumb":"i2.jpg",
-      "caption":"i2.jpg",
+      "src":"c1.jpg",
+      "thumb":"Civil y familia. Imagen 1.",
+      "caption":"Civil y familia. Imagen 1.",
       "theme":"SECTION.CIVIL",
       "order":2,
       "type":"img"
     }, {
-      "src":"i7.jpg",
-      "thumb":"i7.jpg",
-      "caption":"i7.jpg",
+      "src":"c2.jpg",
+      "thumb":"Civil y familia. Imagen 2.",
+      "caption":"Civil y familia. Imagen 2.",
+      "theme":"SECTION.CIVIL",
+      "order":2,
+      "type":"img"
+    }, {
+      "src":"c3.jpg",
+      "thumb":"Civil y familia. Imagen 3.",
+      "caption":"Civil y familia. Imagen 3.",
+      "theme":"SECTION.CIVIL",
+      "order":2,
+      "type":"img"
+    }, {
+      "src":"c4.jpg",
+      "thumb":"Civil y familia. Imagen 4.",
+      "caption":"Civil y familia. Imagen 4.",
+      "theme":"SECTION.CIVIL",
+      "order":2,
+      "type":"img"
+    }, {
+      "src":"c5.jpg",
+      "thumb":"Civil y familia. Imagen 5.",
+      "caption":"Civil y familia. Imagen 5.",
+      "theme":"SECTION.CIVIL",
+      "order":2,
+      "type":"img"
+    }, {
+      "src":"c6.jpg",
+      "thumb":"Civil y familia. Imagen 6.",
+      "caption":"Civil y familia. Imagen 6.",
+      "theme":"SECTION.CIVIL",
+      "order":2,
+      "type":"img"
+    }, {
+      "src":"c7.jpg",
+      "thumb":"Civil y familia. Imagen 7.",
+      "caption":"Civil y familia. Imagen 7.",
+      "theme":"SECTION.CIVIL",
+      "order":2,
+      "type":"img"
+    }, {
+      "src":"c8.jpg",
+      "thumb":"Civil y familia. Imagen 8.",
+      "caption":"Civil y familia. Imagen 8.",
+      "theme":"SECTION.CIVIL",
+      "order":2,
+      "type":"img"
+    }, {
+      "src":"c9.jpg",
+      "thumb":"Civil y familia. Imagen 9.",
+      "caption":"Civil y familia. Imagen 9.",
+      "theme":"SECTION.CIVIL",
+      "order":2,
+      "type":"img"
+    }, {
+      "src":"c10.jpg",
+      "thumb":"Civil y familia. Imagen 10.",
+      "caption":"Civil y familia. Imagen 10.",
+      "theme":"SECTION.CIVIL",
+      "order":2,
+      "type":"img"
+    }, {
+      "src":"c11.jpg",
+      "thumb":"Civil y familia. Imagen 11.",
+      "caption":"Civil y familia. Imagen 11.",
+      "theme":"SECTION.CIVIL",
+      "order":2,
+      "type":"img"
+    }, {
+      "src":"c12.jpg",
+      "thumb":"Civil y familia. Imagen 12.",
+      "caption":"Civil y familia. Imagen 12.",
       "theme":"SECTION.CIVIL",
       "order":2,
       "type":"img"
     },
     {
-      "src":"i3.jpg",
-      "thumb":"i3.jpg",
-      "caption":"i3.jpg",
-      "theme":"SECTION.PENAL",
-      "order":3,
-      "type":"img"
-    },{
-      "src":"i8.jpg",
-      "thumb":"i8.jpg",
-      "caption":"i8.jpg",
+      "src":"p1.jpg",
+      "thumb":"Penal. Imagen 1.",
+      "caption":"Penal. Imagen 1.",
       "theme":"SECTION.PENAL",
       "order":3,
       "type":"img"
     },
     {
-      "src":"i4.jpg",
-      "thumb":"i4.jpg",
-      "caption":"i4.jpg",
+      "src":"p2.jpg",
+      "thumb":"Penal. Imagen 2.",
+      "caption":"Penal. Imagen 2.",
+      "theme":"SECTION.PENAL",
+      "order":3,
+      "type":"img"
+    },
+    {
+      "src":"p3.jpg",
+      "thumb":"Penal. Imagen 3.",
+      "caption":"Penal. Imagen 3.",
+      "theme":"SECTION.PENAL",
+      "order":3,
+      "type":"img"
+    },
+    {
+      "src":"p4.jpg",
+      "thumb":"Penal. Imagen 4.",
+      "caption":"Penal. Imagen 4.",
+      "theme":"SECTION.PENAL",
+      "order":3,
+      "type":"img"
+    },
+    {
+      "src":"p5.jpg",
+      "thumb":"Penal. Imagen 5.",
+      "caption":"Penal. Imagen 5.",
+      "theme":"SECTION.PENAL",
+      "order":3,
+      "type":"img"
+    },
+    {
+      "src":"p6.jpg",
+      "thumb":"Penal. Imagen 6.",
+      "caption":"Penal. Imagen 6.",
+      "theme":"SECTION.PENAL",
+      "order":3,
+      "type":"img"
+    },
+    {
+      "src":"p7.jpg",
+      "thumb":"Penal. Imagen 7.",
+      "caption":"Penal. Imagen 7.",
+      "theme":"SECTION.PENAL",
+      "order":3,
+      "type":"img"
+    },
+    {
+      "src":"p8.jpg",
+      "thumb":"Penal. Imagen 8.",
+      "caption":"Penal. Imagen 8.",
+      "theme":"SECTION.PENAL",
+      "order":3,
+      "type":"img"
+    },
+    {
+      "src":"p9.jpg",
+      "thumb":"Penal. Imagen 9.",
+      "caption":"Penal. Imagen 9.",
+      "theme":"SECTION.PENAL",
+      "order":3,
+      "type":"img"
+    },
+    {
+      "src":"p10.jpg",
+      "thumb":"Penal. Imagen 10.",
+      "caption":"Penal. Imagen 10.",
+      "theme":"SECTION.PENAL",
+      "order":3,
+      "type":"img"
+    },
+    {
+      "src":"p11.jpg",
+      "thumb":"Penal. Imagen 11.",
+      "caption":"Penal. Imagen 11.",
+      "theme":"SECTION.PENAL",
+      "order":3,
+      "type":"img"
+    },
+    {
+      "src":"p12.jpg",
+      "thumb":"Penal. Imagen 12.",
+      "caption":"Penal. Imagen 12.",
+      "theme":"SECTION.PENAL",
+      "order":3,
+      "type":"img"
+    },
+    {
+      "src":"a1.jpg",
+      "thumb":"Ambiental. Imagen 1.",
+      "caption":"Ambiental. Imagen 1.",
       "theme":"SECTION.AMBIENTAL",
        "order":4,
       "type":"img"
-    },  {
-      "src":"i9.jpg",
-      "caption":"i9.jpg",
+    },
+     {
+      "src":"a2.jpg",
+      "thumb":"Ambiental. Imagen 2.",
+      "caption":"Ambiental. Imagen 2.",
+      "theme":"SECTION.AMBIENTAL",
+       "order":4,
+      "type":"img"
+    },
+     {
+      "src":"a3.jpg",
+      "thumb":"Ambiental. Imagen 3.",
+      "caption":"Ambiental. Imagen 3.",
+      "theme":"SECTION.AMBIENTAL",
+       "order":4,
+      "type":"img"
+    },
+     {
+      "src":"a4.jpg",
+      "thumb":"Ambiental. Imagen 4.",
+      "caption":"Ambiental. Imagen 4.",
+      "theme":"SECTION.AMBIENTAL",
+       "order":4,
+      "type":"img"
+    },
+     {
+      "src":"a5.jpg",
+      "thumb":"Ambiental. Imagen 5.",
+      "caption":"Ambiental. Imagen 5.",
+      "theme":"SECTION.AMBIENTAL",
+       "order":4,
+      "type":"img"
+    },
+     {
+      "src":"a6.jpg",
+      "thumb":"Ambiental. Imagen 6.",
+      "caption":"Ambiental. Imagen 6.",
+      "theme":"SECTION.AMBIENTAL",
+       "order":4,
+      "type":"img"
+    },
+     {
+      "src":"a7.jpg",
+      "thumb":"Ambiental. Imagen 7.",
+      "caption":"Ambiental. Imagen 7.",
+      "theme":"SECTION.AMBIENTAL",
+       "order":4,
+      "type":"img"
+    },
+     {
+      "src":"a8.jpg",
+      "thumb":"Ambiental. Imagen 8.",
+      "caption":"Ambiental. Imagen 8.",
+      "theme":"SECTION.AMBIENTAL",
+       "order":4,
+      "type":"img"
+    },
+     {
+      "src":"a9.jpg",
+      "thumb":"Ambiental. Imagen 9.",
+      "caption":"Ambiental. Imagen 9.",
+      "theme":"SECTION.AMBIENTAL",
+       "order":4,
+      "type":"img"
+    },
+     {
+      "src":"a10.jpg",
+      "thumb":"Ambiental. Imagen 10.",
+      "caption":"Ambiental. Imagen 10.",
+      "theme":"SECTION.AMBIENTAL",
+       "order":4,
+      "type":"img"
+    },
+     {
+      "src":"a11.jpg",
+      "thumb":"Ambiental. Imagen 11.",
+      "caption":"Ambiental. Imagen 11.",
+      "theme":"SECTION.AMBIENTAL",
+       "order":4,
+      "type":"img"
+    },
+     {
+      "src":"a12.jpg",
+      "thumb":"Ambiental. Imagen 12.",
+      "caption":"Ambiental. Imagen 12.",
       "theme":"SECTION.AMBIENTAL",
        "order":4,
       "type":"img"
     },
     {
-      "src":"i4.jpg",
-      "caption":"i4.jpg",
-      "theme":"SECTION.TALLER",
-      "order":5,
+      "src":"a13.jpg",
+      "thumb":"Ambiental. Imagen 13.",
+      "caption":"Ambiental. Imagen 13.",
+      "theme":"SECTION.AMBIENTAL",
+       "order":4,
       "type":"img"
-    }
-  ,
+    },
     {
-      "src":"i10.jpg",
-      "caption":"i10.jpg",
+      "src":"a14.jpg",
+      "thumb":"Ambiental. Imagen 14.",
+      "caption":"Ambiental. Imagen 14.",
+      "theme":"SECTION.AMBIENTAL",
+       "order":4,
+      "type":"img"
+    },
+    {
+      "src":"a15.jpg",
+      "thumb":"Ambiental. Imagen 15.",
+      "caption":"Ambiental. Imagen 15.",
+      "theme":"SECTION.AMBIENTAL",
+       "order":4,
+      "type":"img"
+    },
+    {
+      "src":"a16.jpg",
+      "thumb":"Ambiental. Imagen 16.",
+      "caption":"Ambiental. Imagen 16.",
+      "theme":"SECTION.AMBIENTAL",
+       "order":4,
+      "type":"img"
+    },
+    {
+      "src":"a17.jpg",
+      "thumb":"Ambiental. Imagen 17.",
+      "caption":"Ambiental. Imagen 17.",
+      "theme":"SECTION.AMBIENTAL",
+       "order":4,
+      "type":"img"
+    },
+    {
+      "src":"a18.jpg",
+      "thumb":"Ambiental. Imagen 18.",
+      "caption":"Ambiental. Imagen 18.",
+      "theme":"SECTION.AMBIENTAL",
+       "order":4,
+      "type":"img"
+    },
+    {
+      "src":"a19.jpg",
+      "thumb":"Ambiental. Imagen 19.",
+      "caption":"Ambiental. Imagen 19.",
+      "theme":"SECTION.AMBIENTAL",
+       "order":4,
+      "type":"img"
+    },
+    {
+      "src":"a20.jpg",
+      "thumb":"Ambiental. Imagen 20.",
+      "caption":"Ambiental. Imagen 20.",
+      "theme":"SECTION.AMBIENTAL",
+       "order":4,
+      "type":"img"
+    },
+    {
+      "src":"a21.jpg",
+      "thumb":"Ambiental. Imagen 21.",
+      "caption":"Ambiental. Imagen 21.",
+      "theme":"SECTION.AMBIENTAL",
+       "order":4,
+      "type":"img"
+    },
+    {
+      "src":"a22.jpg",
+      "thumb":"Ambiental. Imagen 22.",
+      "caption":"Ambiental. Imagen 22.",
+      "theme":"SECTION.AMBIENTAL",
+       "order":4,
+      "type":"img"
+    },
+    {
+      "src":"a23.jpg",
+      "thumb":"Ambiental. Imagen 23.",
+      "caption":"Ambiental. Imagen 23.",
+      "theme":"SECTION.AMBIENTAL",
+       "order":4,
+      "type":"img"
+    },
+    {
+      "src":"a24.jpg",
+      "thumb":"Ambiental. Imagen 24.",
+      "caption":"Ambiental. Imagen 24.",
+      "theme":"SECTION.AMBIENTAL",
+       "order":4,
+      "type":"img"
+    },
+    {
+      "src":"a25.jpg",
+      "thumb":"Ambiental. Imagen 25.",
+      "caption":"Ambiental. Imagen 25.",
+      "theme":"SECTION.AMBIENTAL",
+       "order":4,
+      "type":"img"
+    },
+    {
+      "src":"a26.jpg",
+      "thumb":"Ambiental. Imagen 26.",
+      "caption":"Ambiental. Imagen 26.",
+      "theme":"SECTION.AMBIENTAL",
+       "order":4,
+      "type":"img"
+    },
+    {
+      "src":"t1.jpg",
+      "thumb":"Taller final. Imagen 1.",
+      "caption":"Taller final. Imagen 1.",
       "theme":"SECTION.TALLER",
       "order":5,
       "type":"img"
     },
     {
-      "src":"big-buck-bunny_trailer.webm",
-      "poster":"i10.jpg",
-      "caption":"i10.jpg",
+      "src":"t2.jpg",
+      "thumb":"Taller final. Imagen 2.",
+      "caption":"Taller final. Imagen 2.",
+      "theme":"SECTION.TALLER",
+      "order":5,
+      "type":"img"
+    },
+    {
+      "src":"t3.jpg",
+      "thumb":"Taller final. Imagen 3.",
+      "caption":"Taller final. Imagen 3.",
+      "theme":"SECTION.TALLER",
+      "order":5,
+      "type":"img"
+    },
+    {
+      "src":"t4.jpg",
+      "thumb":"Taller final. Imagen 4.",
+      "caption":"Taller final. Imagen 4.",
+      "theme":"SECTION.TALLER",
+      "order":5,
+      "type":"img"
+    },
+    {
+      "src":"t5.jpg",
+      "thumb":"Taller final. Imagen 5.",
+      "caption":"Taller final. Imagen 5.",
+      "theme":"SECTION.TALLER",
+      "order":5,
+      "type":"img"
+    },
+    {
+      "src":"t6.jpg",
+      "thumb":"Taller final. Imagen 6.",
+      "caption":"Taller final. Imagen 6.",
+      "theme":"SECTION.TALLER",
+      "order":5,
+      "type":"img"
+    },
+    {
+      "src":"t7.jpg",
+      "thumb":"Taller final. Imagen 7.",
+      "caption":"Taller final. Imagen 7.",
+      "theme":"SECTION.TALLER",
+      "order":5,
+      "type":"img"
+    },
+    {
+      "src":"t8.jpg",
+      "thumb":"Taller final. Imagen 8.",
+      "caption":"Taller final. Imagen 8.",
+      "theme":"SECTION.TALLER",
+      "order":5,
+      "type":"img"
+    },
+    {
+      "src":"t9.jpg",
+      "thumb":"Taller final. Imagen 9.",
+      "caption":"Taller final. Imagen 9.",
+      "theme":"SECTION.TALLER",
+      "order":5,
+      "type":"img"
+    },
+    {
+      "src":"t10.jpg",
+      "thumb":"Taller final. Imagen 10.",
+      "caption":"Taller final. Imagen 10.",
+      "theme":"SECTION.TALLER",
+      "order":5,
+      "type":"img"
+    },
+    {
+      "src":"t11.jpg",
+      "thumb":"Taller final. Imagen 1.",
+      "caption":"Taller final. Imagen 11.",
+      "theme":"SECTION.TALLER",
+      "order":5,
+      "type":"img"
+    },
+    {
+      "src":"t12.jpg",
+      "thumb":"Taller final. Imagen 12.",
+      "caption":"Taller final. Imagen 12.",
+      "theme":"SECTION.TALLER",
+      "order":5,
+      "type":"img"
+    },
+    {
+      "src":"t13.jpg",
+      "thumb":"Taller final. Imagen 13.",
+      "caption":"Taller final. Imagen 13.",
+      "theme":"SECTION.TALLER",
+      "order":5,
+      "type":"img"
+    },
+    {
+      "src":"t14.jpg",
+      "thumb":"Taller final. Imagen 14.",
+      "caption":"Taller final. Imagen 14.",
+      "theme":"SECTION.TALLER",
+      "order":5,
+      "type":"img"
+    },
+    {
+      "src":"t15.jpg",
+      "thumb":"Taller final. Imagen 15.",
+      "caption":"Taller final. Imagen 15.",
+      "theme":"SECTION.TALLER",
+      "order":5,
+      "type":"img"
+    },
+    {
+      "src":"t16.jpg",
+      "thumb":"Taller final. Imagen 16.",
+      "caption":"Taller final. Imagen 16.",
+      "theme":"SECTION.TALLER",
+      "order":5,
+      "type":"img"
+    },
+    {
+      "src":"t17.jpg",
+      "thumb":"Taller final. Imagen 17.",
+      "caption":"Taller final. Imagen 17.",
+      "theme":"SECTION.TALLER",
+      "order":5,
+      "type":"img"
+    },
+    {
+      "src":"t18.jpg",
+      "thumb":"Taller final. Imagen 18.",
+      "caption":"Taller final. Imagen 18.",
+      "theme":"SECTION.TALLER",
+      "order":5,
+      "type":"img"
+    },
+    {
+      "src":"t19.jpg",
+      "thumb":"Taller final. Imagen 19.",
+      "caption":"Taller final. Imagen 19.",
+      "theme":"SECTION.TALLER",
+      "order":5,
+      "type":"img"
+    },
+    {
+      "src":"t20.jpg",
+      "thumb":"Taller final. Imagen 20.",
+      "caption":"Taller final. Imagen 20.",
+      "theme":"SECTION.TALLER",
+      "order":5,
+      "type":"img"
+    },
+    {
+      "src":"1.webm",
+      "title":"Quinta de los molinos.",
+      "poster":"v1.jpg",
+      "caption":"v1.jpg",
       "theme":"SECTION.TALLER",
       "order":5,
       "type":"video"
     }, {
-      "src":"redcliff450.webm",
-      "poster":"i1.jpg",
-      "caption":"i1.jpg",
+      "src":"2.webm",
+      "title":"Civil",
+      "poster":"v2.jpg",
+      "caption":"v2.jpg",
       "theme":"SECTION.TALLER",
       "order":5,
       "type":"video"
     },{
-      "src":"small.webm",
-      "poster":"i2.jpg",
-      "caption":"i2.jpg",
-      "theme":"SECTION.TALLER",
-      "order":5,
-      "type":"video"
-    },{
-      "src":"videogular.webm",
-      "poster":"i4.jpg",
-      "caption":"i4.jpg",
+      "src":"3.webm",
+      "title":"Maestro Frank Fernandez. La Comparsa.",
+      "poster":"v3.jpg",
+      "caption":"v3.jpg",
       "theme":"SECTION.TALLER",
       "order":5,
       "type":"video"

@@ -43,7 +43,7 @@ a.active{
 }
 .drop{
   border: 1px solid rgb(144,128,88);
-  height: 10em;
+  height: auto;
 }
 .drag-target-border{
   border: 1px solid cyan;

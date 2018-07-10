@@ -17,8 +17,10 @@ export class QuestionComponent implements OnInit, AfterViewInit {
   questions = [];
   books = [];
   i: any;
+  player: any;
   reader: any;
   droppedItems = [];
+  gallery = [];
   readMode = false;
   page = 1;
   page1 = 1;
@@ -26,11 +28,15 @@ export class QuestionComponent implements OnInit, AfterViewInit {
   pdfPages = 1;
   isLoaded = false;
   estado: string;
-  constructor(private headerService: HeaderService, private dataService: DataService, private translate: TranslateService) {
+  base='./assets/video/';
+  poster='./assets/images/';
+  constructor(private headerService: HeaderService,
+              private dataService: DataService,
+              private translate: TranslateService) {
     this.headerService.Hide();
     this.headerService.ChildActive(false);
     this.dataService.getQuestion(this.translate.currentLang).subscribe((data: any) => {
-      this.questions = data.docs;
+      this.questions = data.docs.sort((s: any, s2: any) => s.order - s2.order);
       this.i = this.questions[0];
     }, ( error1 => {
        console.log(error1);
@@ -40,11 +46,24 @@ export class QuestionComponent implements OnInit, AfterViewInit {
       this.books = data.docs.filter(f => f.tematica === 'estudiantes');
       this.reader = this.books[0];
     });
+
+    this.dataService.getGallery(this.translate.currentLang).subscribe((data: any) =>{
+      this.gallery = data.docs.filter((f:any) => f.type === "video")
+        .sort((a: any, b: any) => a.order - b.order)
+        .map((i: any) => {
+          i.src = this.base + i.src;
+          i.poster = this.poster + i.poster;
+          return i;
+        })
+      ;
+      this.player = this.gallery[0];
+    });
     /*PDF Viewer*/
     this.pointer = 1;
     this.pdfPages = 1;
     this.estado = 'cuestionario';
   }
+
 
   checkAnswer(item,event) {
     item.checked = event.target.checked;
