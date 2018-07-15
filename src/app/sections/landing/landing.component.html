@@ -10,7 +10,7 @@
      <main class="col-md-12" *ngIf="player">
         <div class="blog">
           <div class="blog-content">
-            <a (click)="goHome()"><i class="fa fa-home"></i>{{'LANDING.HOME' | translate}}</a>
+            <a class="home" (click)="goHome()"><i class="fa fa-home home"></i> {{'LANDING.HOME' | translate}}</a>
             <vg-player (onPlayerReady)="onPlayerReady($event)">
               <vg-overlay-play></vg-overlay-play>
               <vg-buffering></vg-buffering>

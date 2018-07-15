@@ -72,3 +72,12 @@ li.preguntas::first-letter{
 .card .card-content .card-title {
   line-height: 33px;
 }
+.prev1 .next1{
+  color: rgb(144,128,88);
+  font-size: 1.5rem;
+}
+.next1{
+  color: rgb(144,128,88);
+  font-size: 1.5rem;
+}
+

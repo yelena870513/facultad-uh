@@ -8,9 +8,8 @@
         <div class="carousel">
           <a class="carousel-item" *ngFor="let video of gallery" (click)="setPlayer(video,media)"><img src="{{video.poster}}"></a>
         </div>
+
       </div>
-    </div>
-    <div class="row">
       <div class="col-md-12" *ngIf="player">
         <vg-player>
           <vg-overlay-play></vg-overlay-play>

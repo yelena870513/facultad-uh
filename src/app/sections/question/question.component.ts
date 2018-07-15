@@ -110,6 +110,8 @@ export class QuestionComponent implements OnInit, AfterViewInit {
     this.estado= estado;
     this.page=1;
     this.readMode = !this.readMode;
+    this.player = this.gallery[0];
+    this.media.nativeElement.load();
     this.reader = this.books[0];
     $('body,html').animate({
       scrollTop: 0

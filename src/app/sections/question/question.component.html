@@ -61,8 +61,11 @@
             </div>
             <div class="collapsible-body">
               <ul class="collection">
-                <li class="contenidos collection-item" *ngFor="let g of gallery" (click)="setPlayer(g)">
-                  {{g.caption}}
+                <li class="contenidos collection-item" *ngFor="let g of gallery">
+                  <a class="contenidos" (click)="setPlayer(g)"
+                     [ngClass]="{'active': g.caption === player.caption}"> {{g.caption}}</a>
+
+
                 </li>
               </ul>
             </div>

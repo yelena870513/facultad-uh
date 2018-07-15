@@ -16,7 +16,7 @@ export class PlaylistComponent implements OnInit, AfterViewInit {
   api: VgAPI;
   @ViewChild('media') media: ElementRef;
   private base = './assets/video/';
-  private poster = './assets/images/';
+  private poster = './assets/images/thumb/';
   constructor(private headerService: HeaderService,
               private dataService: DataService,
               private translate: TranslateService) {
@@ -37,7 +37,11 @@ export class PlaylistComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     const elems = document.querySelectorAll('.carousel');
-    setTimeout(() => {M.Carousel.init(elems, {})},200);
+    setTimeout(() => {M.Carousel.init(elems, {
+     numVisible: 3,
+      shift: 5,
+      padding: 3
+    })},500);
   }
 
   ngAfterViewInit() {

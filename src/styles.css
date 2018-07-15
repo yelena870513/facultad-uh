@@ -34,6 +34,15 @@ h3.plegable {
   text-decoration: underline;
 
 }
+.men1{
+  color: #ffffff;
+  background-color: rgb(144,128,88);
+  padding: 5px;
+}
+.men1:hover{
+  opacity: 0.6;
+  color: #ffffff;
+}
 
 tr {
   border-bottom: 1px solid rgb(144,128,88)!important;

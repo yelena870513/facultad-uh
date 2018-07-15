@@ -34,19 +34,19 @@
         <div class="blog">
           <div class="">
             <a class="" *ngFor="let image of gallery | themeFilter: tema | paginate: { itemsPerPage: 12, currentPage: page}; let i=index" >
-              <img class="gallery" [src]="image.src" src="{{image.src}}" (click)="open(image)"/>
+              <img class="gallery" [src]="image.thumb" src="{{image.thumb}}" (click)="open(image)"/>
             </a>
           </div>
           <pagination-template #p="paginationApi"
                                (pageChange)="page = $event">
 
             <div class="pagination-previous" [class.disabled]="p.isFirstPage()">
-              <a *ngIf="!p.isFirstPage()" (click)="p.previous()"> < </a>
+              <a *ngIf="!p.isFirstPage()" (click)="p.previous()"> <i class="fa fa-angle-double-left prev1" aria-hidden="true"></i> </a>
             </div>
 
 
             <div class="pagination-next" [class.disabled]="p.isLastPage()">
-              <a *ngIf="!p.isLastPage()" (click)="p.next()"> > </a>
+              <a *ngIf="!p.isLastPage()" (click)="p.next()"> <i class="fa fa-angle-double-right next1" aria-hidden="true"></i> </a>
             </div>
 
           </pagination-template>

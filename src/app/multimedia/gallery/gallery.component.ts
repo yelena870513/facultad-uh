@@ -17,6 +17,7 @@ export class GalleryComponent implements OnInit, AfterViewInit {
   tema: string;
   page = 1;
   private base = './assets/images/';
+  private thumb = './assets/images/thumb/';
   constructor(
     private headerService: HeaderService,
     private dataService: DataService,
@@ -26,9 +27,11 @@ export class GalleryComponent implements OnInit, AfterViewInit {
     this.headerService.ChildActive(true);
     this.dataService.getGallery(this.translate.currentLang).subscribe((data: any) =>{
       this.gallery = data.docs.filter((f:any) => f.type === "img")
-        .sort((a: any, b: any) => a.order - b.order)
+        .sort((a: any, b: any) => a.order1 - b.order1)
         .map((i: any) => {
-         i.src = this.base + i.src;
+        const dir = i.src;
+         i.src = this.base +dir;
+         i.thumb = this.thumb + dir;
           return i;
         })
       ;
@@ -43,12 +46,15 @@ export class GalleryComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(){
     const elems = document.querySelectorAll('.carousel');
-    setTimeout(() => {M.Carousel.init(elems, {})},200);
+    setTimeout(() => {M.Carousel.init(elems, {
+
+    })},200);
     // // const instances = M.Carousel.init(elems, {});
   }
 
   setTheme(theme){
     this.tema = theme;
+    this.page = 1;
 
   }
   open(image: any): void {
