@@ -4,115 +4,115 @@
     {
       "img":"i1.jpg",
       "name":"Lissette PÉREZ HERNÁNDEZ ",
-      "job":"Doctora en Ciencias Jurídicas",
+      "job":"Jefa de proyecto",
       "description":"(La Habana, 1959). Jurista. Doctora en Ciencias Jurídicas. Profesora Titular de Teoría General del Estado, Ética jurídica y Metodología de la Investigación Jurídica, Facultad de Derecho de la Universidad de La Habana. Correo electrónico: lissette@lex.uh.cu"
+    },
+    {
+      "img":"i6.jpg",
+      "name":"Tania DE ARMAS FONTICOBA",
+      "job":"2da jefa de proyecto",
+      "description":" (La Habana, 1960). Jurista. Doctora en Ciencias Jurídicas. Profesora Titular del Departamento de Ciencias Penales de la Facultad de Derecho de la Universidad de La Habana, Ms. C. en Derecho Público.  Correo electrónico: tania@lex.uh.cu"
+    },
+    {
+      "img":"i10.jpg",
+      "name":"Eulalia VIAMONTES GUILBAUX ",
+      "job":"",
+      "description":"(La Habana, 1953). Doctora en Ciencias Jurídicas. Profesora Consultante de la Facultad de Derecho de la Universidad de La Habana. Correo electrónico: eviamontes@lex.uh.cu"
+    },
+    {
+      "img":"i12.jpg",
+      "name":"Adela HERNÁNDEZ DÍAZ",
+      "job":"",
+      "description":"(La Habana, 1956) Psicóloga. Doctora en Ciencias Psicológicas. Profesora Titular del Centro de Estudios para el Perfeccionamiento de la Educación Superior de la Universidad de La Habana. Correo electrónico: adela@cepes.uh.cu"
+    },
+    {
+      "img":"i5.jpg",
+      "name":"Ángela GÓMEZ PÉREZ",
+      "job":"",
+      "description":"(Remedios, Villa Clara, 1952). Jurista. Doctora en Ciencias Jurídicas. Profesora Titular del Departamento de Ciencias Penales de la Facultad de Derecho de la Universidad de La Habana, Ms. C. en Derecho Público y Ms. C. en Criminología.  Correo electrónico: angela@lex.uh.cu"
+    },
+    {
+      "img":"i7.jpg",
+      "name":"Arlín PÉREZ DUHARTE ",
+      "job":"",
+      "description":"(Santiago de Cuba 1971) Jurista. Doctora en Ciencias Jurídicas. Profesora Titular del Departamento de Ciencias Penales de la Facultad de Derecho de la Universidad de La Habana, Ms. C. en Criminología. Correo electrónico: arlin@lex.uh.cu "
+    },
+    {
+      "img":"i11.jpg",
+      "name":"Dagniselys TOLEDANO CORDERO",
+      "job":"",
+      "description":"(La Habana, 1975). Jurista. Doctora en Ciencias Jurídicas. Profesora Titular de Derecho Ambiental y Derecho Marítimo de la Facultad de Derecho de la Universidad de La Habana. Correo electrónico: dagniselys@lex.uh.cu"
+    },
+    {
+      "img":"i9.jpg",
+      "name":"Elia Esther REGA FERRAN",
+      "job":"",
+      "description":"(La Habana, 1960). Jurista. Doctora en Ciencias Jurídicas. Profesora Titular del departamento de Ciencias Penales de la Facultad de Derecho de la Universidad de la Habana, MsC. en Derecho Público. Correo electrónico:  elia@lex.uh.cu"
+    },
+    {
+      "img":"i8.jpg",
+      "name":"Iracema GÁLVEZ PUEBLA",
+      "job":"",
+      "description":"(La Habana, 1978). Jurista. Doctora en Ciencias Jurídicas. Profesora Titular de Derecho penal y Criminología de la Facultad de Derecho de la Universidad de La Habana Correo electrónico: iracema@lex.uh.cu"
     },
     {
       "img":"i2.jpg",
       "name":"Majela FERRARI YAUNNER ",
-      "job":"Doctora en Ciencias Jurídicas",
+      "job":"",
       "description":"(La Habana, 1979). Jurista. Doctora en Ciencias Jurídicas. Profesora Titular de Filosofía del Derecho, Facultad de Derecho de la Universidad de La Habana. Correo electrónico: majela@lex.uh.cu"
+    },
+    {
+      "img":"i13.jpg",
+      "name":"Joanna PEREIRA PÉREZ",
+      "job":"",
+      "description":"(La Habana, 1984). Jurista. Máster en Bioética. Profesor Auxiliar de Derecho Civil Parte General y Derecho de Sucesiones, Facultad de Derecho de la Universidad de La Habana. Correo electrónico: joanna@lex.uh.cu."
     },
     {
       "img":"i3.jpg",
       "name":"Orisell RICHARDS MARTÍNEZ ",
-      "job":"Doctora en Ciencias Jurídicas",
+      "job":"",
       "description":"(La Habana, 1985). Jurista. Doctora en Ciencias Jurídicas. Máster en Derecho Constitucional y Administrativo. Profesora Auxiliar de Derecho Administrativo, Facultad de Derecho de la Universidad de La Habana. Correo electrónico: orisellrichards1@lex.uh.cu"
     },
     {
       "img":"i4.jpg",
       "name":"Yuri PÉREZ MARTÍNEZ ",
-      "job":"Doctor en Ciencias Jurídicas",
+      "job":"",
       "description":"(Bayamo, 1984). Jurista. Doctor en Ciencias Jurídicas. Máster en Derecho Constitucional y Administrativo. Profesor Auxiliar de Derecho Constitucional y Administrativo, Facultad de Derecho de la Universidad de La Habana. Correo electrónico: yuriperez1@lex.uh.cu"
-    },
-    {
-      "img":"i5.jpg",
-      "name":"Ángela GÓMEZ PÉREZ",
-      "job":"Doctora en Ciencias Jurídicas",
-      "description":"(Remedios, Villa Clara, 1952). Jurista. Doctora en Ciencias Jurídicas. Profesora Titular del Departamento de Ciencias Penales de la Facultad de Derecho de la Universidad de La Habana, Ms. C. en Derecho Público y Ms. C. en Criminología.  Correo electrónico: angela@lex.uh.cu"
-    },
-    {
-      "img":"i6.jpg",
-      "name":"Tania DE ARMAS FONTICOBA",
-      "job":"Doctora en Ciencias Jurídicas",
-      "description":" (La Habana, 1960). Jurista. Doctora en Ciencias Jurídicas. Profesora Titular del Departamento de Ciencias Penales de la Facultad de Derecho de la Universidad de La Habana, Ms. C. en Derecho Público.  Correo electrónico: tania@lex.uh.cu"
-    },
-    {
-      "img":"i7.jpg",
-      "name":"Arlín PÉREZ DUHARTE ",
-      "job":"Doctora en Ciencias Jurídicas",
-      "description":"(Santiago de Cuba 1971) Jurista. Doctora en Ciencias Jurídicas. Profesora Titular del Departamento de Ciencias Penales de la Facultad de Derecho de la Universidad de La Habana, Ms. C. en Criminología. Correo electrónico: arlin@lex.uh.cu "
-    },
-    {
-      "img":"i8.jpg",
-      "name":"Iracema GÁLVEZ PUEBLA",
-      "job":"Doctora en Ciencias Jurídicas",
-      "description":"(La Habana, 1978). Jurista. Doctora en Ciencias Jurídicas. Profesora Titular de Derecho penal y Criminología de la Facultad de Derecho de la Universidad de La Habana Correo electrónico: iracema@lex.uh.cu"
-    },
-    {
-      "img":"i9.jpg",
-      "name":"Elia Esther REGA FERRAN",
-      "job":"Doctora en Ciencias Jurídicas",
-      "description":"(La Habana, 1960). Jurista. Doctora en Ciencias Jurídicas. Profesora titular del departamento de Ciencias Penales de la Facultad de Derecho de la Universidad de la Habana, MsC. en Derecho Público. Correo electrónico:  elia@lex.uh.cu"
-    },
-    {
-      "img":"i10.jpg",
-      "name":"Eulalia VIAMONTES GUILBAUX ",
-      "job":"Doctora en Ciencias Jurídicas",
-      "description":"(La Habana, 1953). Doctora en Ciencias Jurídicas. Profesora Consultante de la Facultad de Derecho de la Universidad de La Habana. Correo electrónico: eviamontes@lex.uh.cu"
-    },
-    {
-      "img":"i11.jpg",
-      "name":"Dagniselys TOLEDANO CORDERO",
-      "job":"Doctora en Ciencias Jurídicas",
-      "description":"(La Habana, 1975). Jurista. Doctora en Ciencias Jurídicas. Profesora Titular de Derecho Ambiental y Derecho Marítimo de la Facultad de Derecho de la Universidad de La Habana. Correo electrónico: dagniselys@lex.uh.cu"
-    },
-    {
-      "img":"i12.jpg",
-      "name":"Adela HERNÁNDEZ DÍAZ",
-      "job":"Doctora en Ciencias Psicológicas",
-      "description":"(La Habana, 1956) Psicóloga. Doctora en Ciencias Psicológicas. Profesora Titular del Centro de Estudios para el Perfeccionamiento de la Educación Superior de la Universidad de La Habana. Correo electrónico: adela@cepes.uh.cu"
-    },
-    {
-      "img":"i13.jpg",
-      "name":"Joanna PEREIRA PÉREZ",
-      "job":"Máster en Bioética",
-      "description":"(La Habana, 1984). Jurista. Máster en Bioética. Profesor Auxiliar de Derecho Civil Parte General y Derecho de Sucesiones, Facultad de Derecho de la Universidad de La Habana. Correo electrónico: joanna@lex.uh.cu."
     },
     {
       "img":"i14.jpg",
       "name":"Lisy Alina JORGE MÉNDEZ",
-      "job":"Licenciada en Derecho",
+      "job":"",
       "description":"(La Habana, 1989). Jurista. Licenciada en Derecho. Graduada del Diplomado de Mediación, Familia y Género. Profesora Asistente de Derecho de Obligaciones y Contratos y la asignatura optativa Derechos de la Infancia y la Adolescencia, Facultad de Derecho de la Universidad de La Habana. Correo electrónico: lisy@lex.uh.cu."
     },
     {
       "img":"i15.jpg",
       "name":"Amanda Laura PRIETO VALDÉS",
-      "job":"Licenciada en Derecho",
+      "job":"",
       "description":"(La Habana, 1991). Jurista. Licenciada en Derecho. Profesora Instructora de Teoría del Estado y Teoría del Derecho de la Facultad de Derecho de la Universidad de La Habana. Correo electrónico: amanda.prieto@lex.uh.cu"
-    },
-    {
-      "img":"i16.jpg",
-      "name":"Lisandra ESQUIVEL CABEZAS",
-      "job":"Licenciada en Derecho",
-      "description":"(La Habana, 1992). Jurista. Licenciada en Derecho. Profesora instructora de Metodología de la Investigación jurídica, Educación para la ciudadanía y Derecho Romano de la Facultad de Derecho de la Universidad de La Habana. Correo electrónico: lisandra_esquivel@lex.uh.cu"
     },
     {
       "img":"i17.jpg",
       "name":"María Carla DE LA GUARDIA ORIOL",
-      "job":"Licenciada en Derecho",
+      "job":"",
       "description":"(La Habana, 1990). Jurista. Licenciada en Derecho. Profesora instructora de Derecho Penal Especial y Criminología de la Facultad de Derecho de la Universidad de La Habana. Correo electrónico: mcarla@lex.uh.cu"
+    },
+    {
+      "img":"i16.jpg",
+      "name":"Lisandra ESQUIVEL CABEZAS",
+      "job":"",
+      "description":"(La Habana, 1992). Jurista. Licenciada en Derecho. Profesora instructora de Metodología de la Investigación jurídica, Educación para la ciudadanía y Derecho Romano de la Facultad de Derecho de la Universidad de La Habana. Correo electrónico: lisandra_esquivel@lex.uh.cu"
     },
     {
       "img":"i18.jpg",
       "name":"Yaraí TOLEDO BARRIOS",
-      "job":"Licenciada en Derecho",
+      "job":"",
       "description":"(Artemisa, 1992). Jurista. Profesora Instructora de Derecho Ambiental de la Facultad de Derecho de la Universidad de La Habana. Correo electrónico: yarai@lex.uh.cu."
     },
     {
       "img":"i19.jpg",
       "name":"Daniel ARAGÓN PÉREZ",
-      "job":"Licenciado en Derecho",
+      "job":"",
       "description":"(La Habana, 1992). Jurista. Adiestrado. Profesor de Derecho Económico de la Facultad de Derecho de la Universidad de La Habana. Correo electrónico: daniel.aragon@lex.uh.cu. "
     }
 

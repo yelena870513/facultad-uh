@@ -35,7 +35,7 @@ export class DerechoComponent implements AfterViewInit {
     this.headerService.ChildActive(true);
     this.dataService.getBooks(this.translate.currentLang)
       .subscribe((data: any) => {
-        this.books = data.docs.filter((f: any) => f.tematica === 'juristas' || f.tematica === 'leyes' );
+        this.books = data.docs.filter((f: any) => f.tematica === 'juristas' || f.tematica === 'leyes' ).sort((a: any, b: any) => a.order - b.order);
         //noinspection TypeScriptUnresolvedFunction
 
         this.populate();

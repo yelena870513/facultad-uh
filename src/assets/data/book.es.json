@@ -30,9 +30,10 @@
       "poster":"pdf.png",
       "img":"presupuestos.jpg",
       "url":"presupuestos.pdf",
-      "title":"Presupuestos teóricos",
+      "title":"Formación de formadores en Educación cívica",
       "section":"book",
       "tematica":"ismaelillo",
+      "option":"presupuesto",
       "order":3
     },
     {
@@ -711,43 +712,36 @@
     },
     {
       "poster":"pdf.png",
+      "url":"constitucion1812",
+      "title":"Constitución española de 1812",
+      "section":"book",
+      "tematica":"leyes"
+    },
+    {
+      "poster":"pdf.png",
       "url":"13.pdf",
-      "title":"Constituciones cubanas parte 1",
+      "title":"Constitución de Guáimaro",
       "section":"book",
       "tematica":"leyes"
     },
     {
       "poster":"pdf.png",
       "url":"14.pdf",
-      "title":"Constituciones cubanas parte 2",
+      "title":"Constitución de Baragúa",
       "section":"book",
       "tematica":"leyes"
     },
     {
       "poster":"pdf.png",
       "url":"15.pdf",
-      "title":"Constituciones cubanas parte 3",
+      "title":"Constitución de Jimaguayú",
       "section":"book",
       "tematica":"leyes"
     },
     {
       "poster":"pdf.png",
       "url":"16.pdf",
-      "title":"Constituciones cubanas parte 4",
-      "section":"book",
-      "tematica":"leyes"
-    },
-    {
-      "poster":"pdf.png",
-      "url":"17.pdf",
-      "title":"Reforma del artículo 115 de la Ley Constitucional de la República de Cuba de 11 de junio del 1935 (1)",
-      "section":"book",
-      "tematica":"leyes"
-    },
-    {
-      "poster":"pdf.png",
-      "url":"18.pdf",
-      "title":"Constitución de la República de Cuba 1 de julio de 1940",
+      "title":"Constitución de La Yaya",
       "section":"book",
       "tematica":"leyes"
     },
@@ -760,24 +754,46 @@
     },
     {
       "poster":"pdf.png",
-      "url":"ConstitucionVigente.pdf",
-      "title":"Constitución cubana vigente",
+      "url":"17.pdf",
+      "title":"Ley Constitucional de 1935",
       "section":"book",
       "tematica":"leyes"
     },
     {
       "poster":"pdf.png",
-      "url":"constitucion1812",
-      "title":"Constitución española de 1812",
+      "url":"18.pdf",
+      "title":"Constitución de 1940",
       "section":"book",
       "tematica":"leyes"
     },
     {
       "poster":"pdf.png",
       "url":"ley59.pdf",
-      "title":"Ley fundamental del 59",
+      "title":"Ley Fundamental de 1959",
       "section":"book",
       "tematica":"leyes"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"ConstitucionVigente.pdf",
+      "title":"Constitución de 1976",
+      "section":"book",
+      "tematica":"leyes"
+    },
+    {
+      "poster":"pdf.png",
+      "url":"presupuestoDerecho.pdf",
+      "title":"Derecho y Educación Cívica",
+      "section":"book",
+      "tematica":"ismaelillo",
+      "option":"presupuesto"
+    },{
+      "poster":"pdf.png",
+      "url":"presupuestoCivicos.pdf",
+      "title":"Enseñanza de los contenidos cívicos",
+      "section":"book",
+      "tematica":"ismaelillo",
+      "option":"presupuesto"
     }
 
   ]

@@ -23,7 +23,24 @@
       <div class="widget">
         <h3 class="title">{{'LIBRARY.THEMES' | translate}}</h3>
         <ul class="collapsible">
-          <li *ngFor="let item of themes" >
+          <li *ngFor="let item of themes | wordExclude: 'articulos'" >
+            <div class="collapsible-header" (click)="setItem(item)" [ngClass]="{'active': item === themeActual}">{{item | translate}}</div>
+            <div class="collapsible-body">
+              <ul>
+                <li *ngFor="let item of booksShelf" [ngClass]="{'active': item.title === reader.title, 'search-result': result}">
+                  <a [ngClass]="{'active': item.title === reader.title}" (click)="ReadBook(item)"  >{{item.title}}</a>
+
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+      <div class="widget">
+        <h3 class="title">{{'LIBRARY.ARTICLE' | translate}}</h3>
+        <ul class="collapsible">
+          <li *ngFor="let item of themes | wordFilter: 'articulos'"  >
             <div class="collapsible-header" (click)="setItem(item)" [ngClass]="{'active': item === themeActual}">{{item | translate}}</div>
             <div class="collapsible-body">
               <ul>

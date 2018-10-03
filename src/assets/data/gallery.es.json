@@ -813,6 +813,78 @@
       "type":"img"
     },
     {
+      "src":"s1.jpg",
+      "thumb":"",
+      "caption":"Seminario “Formación jurídica en pos de la enseñanza de la educación cívica”.",
+      "theme":"SECTION.SEMINARIO",
+      "order":1,
+      "order1":6,
+      "type":"img"
+    },
+   {
+      "src":"s2.jpg",
+      "thumb":"",
+      "caption":"Seminario “Formación jurídica en pos de la enseñanza de la educación cívica”.",
+      "theme":"SECTION.SEMINARIO",
+      "order":2,
+      "order1":6,
+      "type":"img"
+    },
+   {
+      "src":"s3.jpg",
+      "thumb":"",
+      "caption":"Seminario “Formación jurídica en pos de la enseñanza de la educación cívica”.",
+      "theme":"SECTION.SEMINARIO",
+      "order":3,
+      "order1":6,
+      "type":"img"
+    },
+   {
+      "src":"s4.jpg",
+      "thumb":"",
+      "caption":"Seminario “Formación jurídica en pos de la enseñanza de la educación cívica”.",
+      "theme":"SECTION.SEMINARIO",
+      "order":4,
+      "order1":6,
+      "type":"img"
+    },
+   {
+      "src":"s5.jpg",
+      "thumb":"",
+      "caption":"Seminario “Formación jurídica en pos de la enseñanza de la educación cívica”.",
+      "theme":"SECTION.SEMINARIO",
+      "order":5,
+      "order1":6,
+      "type":"img"
+    },
+   {
+      "src":"s6.jpg",
+      "thumb":"",
+      "caption":"Seminario “Formación jurídica en pos de la enseñanza de la educación cívica”.",
+      "theme":"SECTION.SEMINARIO",
+      "order":6,
+      "order1":6,
+      "type":"img"
+    },
+   {
+      "src":"s7.jpg",
+      "thumb":"",
+      "caption":"Seminario “Formación jurídica en pos de la enseñanza de la educación cívica”.",
+      "theme":"SECTION.SEMINARIO",
+      "order":7,
+      "order1":6,
+      "type":"img"
+    },
+   {
+      "src":"s8.jpg",
+      "thumb":"",
+      "caption":"Seminario “Formación jurídica en pos de la enseñanza de la educación cívica”.",
+      "theme":"SECTION.SEMINARIO",
+      "order":8,
+      "order1":6,
+      "type":"img"
+    },
+   {
       "src":"t20.jpg",
       "thumb":"Taller final. Imagen 20.",
       "caption":"Taller final. Imagen 20.",
@@ -848,18 +920,18 @@
     },
     {
       "src":"4.webm",
-      "title":"Discurso de Fidel Castro en la Cumbre de la Tierra, Río de Janeiro (1992)",
+      "title":"Sobre Medio Ambiente (Discurso de Fidel Castro en la Cumbre de la Tierra, Río de Janeiro 1992)",
       "poster":"e1.jpg",
-      "caption":"Discurso de Fidel Castro en la Cumbre de la Tierra, Río de Janeiro (1992)",
+      "caption":"Sobre Medio Ambiente (Discurso de Fidel Castro en la Cumbre de la Tierra, Río de Janeiro 1992)",
       "theme":"SECTION.COMPLEMENTARIO",
       "order":5,
       "type":"video"
     },
     {
       "src":"5.webm",
-      "title":"Trabajo criminología",
+      "title":"Sobre la violencia (Video realizado por los estudiantes del grupo 3ero C de la facultad de Derecho de la Universidad de la Habana)",
       "poster":"e2.jpg",
-      "caption":"Trabajo criminología",
+      "caption":"Sobre la violencia (Video realizado por los estudiantes del grupo 3ero C de la facultad de Derecho de la Universidad de la Habana)",
       "theme":"SECTION.COMPLEMENTARIO",
       "order":5,
       "type":"video"

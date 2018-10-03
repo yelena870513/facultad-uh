@@ -52,6 +52,9 @@ import {VgBufferingModule} from 'videogular2/buffering';
 import { LightboxModule } from 'ngx-lightbox';
 import { ThemeFilterPipe } from './pipes/theme-filter.pipe';
 import { HotWordsDirective } from './directives/hot-words.directive';
+import { OptionPipe } from './pipes/option.pipe';
+import { WordFilterPipe } from './pipes/word-filter.pipe';
+import { WordExcludePipe } from './pipes/word-exclude.pipe';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -87,6 +90,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     ThemeFilterPipe,
     HighlightsPipe,
     HotWordsDirective,
+    OptionPipe,
+    WordFilterPipe,
+    WordExcludePipe,
   ],
   imports: [
     BrowserModule,

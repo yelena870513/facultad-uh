@@ -162,7 +162,9 @@ export class IsmaelilloComponent implements AfterViewInit{
   }
 
   ngAfterViewInit() {
-    $('#nav').addClass('fixed-nav').removeClass('hidden')
+    $('#nav').addClass('fixed-nav').removeClass('hidden');
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems, {});
   }
 
   private QuitOverFlow() {

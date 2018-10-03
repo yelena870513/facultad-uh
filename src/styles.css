@@ -191,7 +191,14 @@ li.contenidos{
 
   margin-top: -82px !important;
 }
-
+.collapsible{
+  border: 1px solid #e0e0e0;
+  box-shadow: none;
+}
+.collapsible-header{
+  border-bottom: 1px solid transparent;
+  padding: 0 1.5rem;
+}
 @media (min-width: 992px) {
 
   .col-md-12[_ngcontent-c3] {
