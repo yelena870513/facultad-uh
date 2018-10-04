@@ -2,8 +2,8 @@
   "docs":[
     {
       "src":"Imagen 1.jpg",
-      "thumb":"Jurídicos básicos. Imagen 1",
-      "caption":"Jurídicos básicos. Imagen 1",
+      "thumb":"",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”",
       "theme":"SECTION.JURIDICA",
       "order":1,
       "order1":1,
@@ -12,7 +12,7 @@
     {
       "src":"Imagen 2.jpg",
       "thumb":"Jurídicos básicos. Imagen 2",
-      "caption":"Jurídicos básicos. Imagen 2",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
       "theme":"SECTION.JURIDICA",
       "order":2,
       "order1":1,
@@ -20,7 +20,7 @@
     },{
       "src":"Imagen 3.jpg",
       "thumb":"Jurídicos básicos. Imagen 3.",
-      "caption":"Jurídicos básicos. Imagen 3.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
       "theme":"SECTION.JURIDICA",
       "order":3,
       "order1":1,
@@ -28,7 +28,7 @@
     },{
       "src":"Imagen 4.jpg",
       "thumb":"Jurídicos básicos. Imagen 4.",
-      "caption":"Jurídicos básicos. Imagen 4.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
       "theme":"SECTION.JURIDICA",
       "order":4,
       "order1":1,
@@ -36,7 +36,7 @@
     },{
       "src":"Imagen 5.jpg",
       "thumb":"Jurídicos básicos. Imagen 5.",
-      "caption":"Jurídicos básicos. Imagen 5.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
       "theme":"SECTION.JURIDICA",
       "order":5,
       "order1":1,
@@ -44,7 +44,7 @@
     },{
       "src":"Imagen 6.jpg",
       "thumb":"Jurídicos básicos. Imagen 6.",
-      "caption":"Jurídicos básicos. Imagen 6.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
       "theme":"SECTION.JURIDICA",
       "order":6,
       "order1":1,
@@ -52,7 +52,7 @@
     },{
       "src":"Imagen 7.jpg",
       "thumb":"Jurídicos básicos. Imagen 7.",
-      "caption":"Jurídicos básicos. Imagen 7.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
       "theme":"SECTION.JURIDICA",
       "order":7,
       "order1":1,
@@ -60,7 +60,7 @@
     },{
       "src":"Imagen 8.jpg",
       "thumb":"Jurídicos básicos. Imagen 8.",
-      "caption":"Jurídicos básicos. Imagen 8.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
       "theme":"SECTION.JURIDICA",
       "order":8,
       "order1":1,
@@ -68,7 +68,7 @@
     },{
       "src":"Imagen 9.jpg",
       "thumb":"Jurídicos básicos. Imagen 9.",
-      "caption":"Jurídicos básicos. Imagen 9.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
       "theme":"SECTION.JURIDICA",
       "order":9,
       "order1":1,
@@ -76,7 +76,7 @@
     },{
       "src":"Imagen 10.jpg",
       "thumb":"Jurídicos básicos. Imagen 10.",
-      "caption":"Jurídicos básicos. Imagen 10.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
       "theme":"SECTION.JURIDICA",
       "order":10,
       "order1":1,
@@ -84,7 +84,7 @@
     },{
       "src":"Imagen 11.jpg",
       "thumb":"Jurídicos básicos. Imagen 11.",
-      "caption":"Jurídicos básicos. Imagen 11.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
       "theme":"SECTION.JURIDICA",
       "order":11,
       "order1":1,
@@ -92,7 +92,7 @@
     },{
       "src":"Imagen 12.jpg",
       "thumb":"Jurídicos básicos. Imagen 12.",
-      "caption":"Jurídicos básicos. Imagen 12.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
       "theme":"SECTION.JURIDICA",
       "order":12,
       "order1":1,
@@ -100,7 +100,7 @@
     },{
       "src":"Imagen 13.jpg",
       "thumb":"Jurídicos básicos. Imagen 13.",
-      "caption":"Jurídicos básicos. Imagen 13.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
       "theme":"SECTION.JURIDICA",
       "order":13,
       "order1":1,
@@ -108,7 +108,7 @@
     },{
       "src":"Imagen 14.jpg",
       "thumb":"Jurídicos básicos. Imagen 14.",
-      "caption":"Jurídicos básicos. Imagen 14.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
       "theme":"SECTION.JURIDICA",
       "order":14,
       "order1":1,
@@ -116,7 +116,7 @@
     },{
       "src":"Imagen 15.jpg",
       "thumb":"Jurídicos básicos. Imagen 15.",
-      "caption":"Jurídicos básicos. Imagen 15.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
       "theme":"SECTION.JURIDICA",
       "order":15,
       "order1":1,
@@ -124,7 +124,7 @@
     },{
       "src":"Imagen 16.jpg",
       "thumb":"Jurídicos básicos. Imagen 16.",
-      "caption":"Jurídicos básicos. Imagen 16.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
       "theme":"SECTION.JURIDICA",
       "order":16,
       "order1":1,
@@ -132,7 +132,7 @@
     },{
       "src":"Imagen 17.jpg",
       "thumb":"Jurídicos básicos. Imagen 17.",
-      "caption":"Jurídicos básicos. Imagen 17.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
       "theme":"SECTION.JURIDICA",
       "order":17,
       "order1":1,
@@ -140,7 +140,7 @@
     },{
       "src":"Imagen 18.jpg",
       "thumb":"Jurídicos básicos. Imagen 18.",
-      "caption":"Jurídicos básicos. Imagen 18.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
       "theme":"SECTION.JURIDICA",
       "order":18,
       "order1":1,
@@ -148,23 +148,15 @@
     },{
       "src":"Imagen 19.jpg",
       "thumb":"Jurídicos básicos. Imagen 19.",
-      "caption":"Jurídicos básicos. Imagen 19.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
       "theme":"SECTION.JURIDICA",
       "order":19,
       "order1":1,
       "type":"img"
     },{
-      "src":"Imagen 20.jpg",
-      "thumb":"Jurídicos básicos. Imagen 20.",
-      "caption":"Jurídicos básicos. Imagen 20.",
-      "theme":"SECTION.JURIDICA",
-      "order":20,
-      "order1":1,
-      "type":"img"
-    },{
       "src":"Imagen 21.jpg",
       "thumb":"Jurídicos básicos. Imagen 21.",
-      "caption":"Jurídicos básicos. Imagen 21.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
       "theme":"SECTION.JURIDICA",
       "order":21,
       "order1":1,
@@ -172,7 +164,7 @@
     },{
       "src":"Imagen 22.jpg",
       "thumb":"Jurídicos básicos. Imagen 22.",
-      "caption":"Jurídicos básicos. Imagen 22.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
       "theme":"SECTION.JURIDICA",
       "order":22,
       "order1":1,
@@ -180,7 +172,7 @@
     },{
       "src":"Imagen 23.jpg",
       "thumb":"Jurídicos básicos. Imagen 23.",
-      "caption":"Jurídicos básicos. Imagen 23.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
       "theme":"SECTION.JURIDICA",
       "order":23,
       "order1":1,
@@ -188,7 +180,7 @@
     },{
       "src":"Imagen 24.jpg",
       "thumb":"Jurídicos básicos. Imagen 24.",
-      "caption":"Jurídicos básicos. Imagen 24.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
       "theme":"SECTION.JURIDICA",
       "order":24,
       "order1":1,
@@ -196,221 +188,221 @@
     },{
       "src":"Imagen 25.jpg",
       "thumb":"Jurídicos básicos. Imagen 25.",
-      "caption":"Jurídicos básicos. Imagen 25.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
       "theme":"SECTION.JURIDICA",
       "order":25,
       "order1":1,
       "type":"img"
     },
     {
-      "src":"c1.jpg",
-      "thumb":"Civil y familia. Imagen 1.",
-      "caption":"Civil y familia. Imagen 1.",
-      "theme":"SECTION.CIVIL",
-      "order":1,
-      "order1":2,
-      "type":"img"
-    }, {
-      "src":"c2.jpg",
-      "thumb":"Civil y familia. Imagen 2.",
-      "caption":"Civil y familia. Imagen 2.",
-      "theme":"SECTION.CIVIL",
-      "order":2,
-      "order1":2,
-      "type":"img"
-    }, {
-      "src":"c3.jpg",
-      "thumb":"Civil y familia. Imagen 3.",
-      "caption":"Civil y familia. Imagen 3.",
-      "theme":"SECTION.CIVIL",
-      "order":3,
-      "order1":2,
-      "type":"img"
-    }, {
-      "src":"c4.jpg",
-      "thumb":"Civil y familia. Imagen 4.",
-      "caption":"Civil y familia. Imagen 4.",
-      "theme":"SECTION.CIVIL",
-      "order":4,
-      "order1":2,
-      "type":"img"
-    }, {
-      "src":"c5.jpg",
-      "thumb":"Civil y familia. Imagen 5.",
-      "caption":"Civil y familia. Imagen 5.",
-      "theme":"SECTION.CIVIL",
-      "order":5,
-      "order1":2,
-      "type":"img"
-    }, {
-      "src":"c6.jpg",
-      "thumb":"Civil y familia. Imagen 6.",
-      "caption":"Civil y familia. Imagen 6.",
-      "theme":"SECTION.CIVIL",
-      "order":6,
-      "order1":2,
-      "type":"img"
-    }, {
-      "src":"c7.jpg",
-      "thumb":"Civil y familia. Imagen 7.",
-      "caption":"Civil y familia. Imagen 7.",
-      "theme":"SECTION.CIVIL",
-      "order":7,
-      "order1":2,
-      "type":"img"
-    }, {
-      "src":"c8.jpg",
-      "thumb":"Civil y familia. Imagen 8.",
-      "caption":"Civil y familia. Imagen 8.",
-      "theme":"SECTION.CIVIL",
-      "order":8,
-      "order1":2,
-      "type":"img"
-    }, {
-      "src":"c9.jpg",
-      "thumb":"Civil y familia. Imagen 9.",
-      "caption":"Civil y familia. Imagen 9.",
-      "theme":"SECTION.CIVIL",
-      "order":9,
-      "order1":2,
-      "type":"img"
-    }, {
-      "src":"c10.jpg",
-      "thumb":"Civil y familia. Imagen 10.",
-      "caption":"Civil y familia. Imagen 10.",
-      "theme":"SECTION.CIVIL",
-      "order":10,
-      "order1":2,
-      "type":"img"
-    }, {
-      "src":"c11.jpg",
-      "thumb":"Civil y familia. Imagen 11.",
-      "caption":"Civil y familia. Imagen 11.",
-      "theme":"SECTION.CIVIL",
-      "order":11,
-      "order1":2,
-      "type":"img"
-    }, {
-      "src":"c12.jpg",
-      "thumb":"Civil y familia. Imagen 12.",
-      "caption":"Civil y familia. Imagen 12.",
-      "theme":"SECTION.CIVIL",
-      "order":12,
-      "order1":2,
-      "type":"img"
-    },
-    {
       "src":"p1.jpg",
-      "thumb":"Penal. Imagen 1.",
-      "caption":"Penal. Imagen 1.",
-      "theme":"SECTION.PENAL",
+      "thumb":"Civil y familia. Imagen 1.",
+      "caption":"Conferencia “Prevención social y derechos socioculturales”.",
+      "theme":"SECTION.CIVIL",
       "order":1,
       "order1":3,
       "type":"img"
-    },
-    {
+    }, {
       "src":"p2.jpg",
-      "thumb":"Penal. Imagen 2.",
-      "caption":"Penal. Imagen 2.",
-      "theme":"SECTION.PENAL",
+      "thumb":"Civil y familia. Imagen 2.",
+      "caption":"Conferencia “Prevención social y derechos socioculturales”.",
+      "theme":"SECTION.CIVIL",
       "order":2,
       "order1":3,
       "type":"img"
-    },
-    {
+    }, {
       "src":"p3.jpg",
-      "thumb":"Penal. Imagen 3.",
-      "caption":"Penal. Imagen 3.",
-      "theme":"SECTION.PENAL",
+      "thumb":"Civil y familia. Imagen 3.",
+      "caption":"Conferencia “Prevención social y derechos socioculturales”.",
+      "theme":"SECTION.CIVIL",
       "order":3,
       "order1":3,
       "type":"img"
-    },
-    {
+    }, {
       "src":"p4.jpg",
-      "thumb":"Penal. Imagen 4.",
-      "caption":"Penal. Imagen 4.",
-      "theme":"SECTION.PENAL",
+      "thumb":"Civil y familia. Imagen 4.",
+      "caption":"Conferencia “Prevención social y derechos socioculturales”.",
+      "theme":"SECTION.CIVIL",
       "order":4,
       "order1":3,
       "type":"img"
-    },
-    {
+    }, {
       "src":"p5.jpg",
-      "thumb":"Penal. Imagen 5.",
-      "caption":"Penal. Imagen 5.",
-      "theme":"SECTION.PENAL",
+      "thumb":"Civil y familia. Imagen 5.",
+      "caption":"Conferencia “Prevención social y derechos socioculturales”.",
+      "theme":"SECTION.CIVIL",
       "order":5,
       "order1":3,
       "type":"img"
-    },
-    {
+    }, {
       "src":"p6.jpg",
-      "thumb":"Penal. Imagen 6.",
-      "caption":"Penal. Imagen 6.",
-      "theme":"SECTION.PENAL",
+      "thumb":"Civil y familia. Imagen 6.",
+      "caption":"Conferencia “Prevención social y derechos socioculturales”.",
+      "theme":"SECTION.CIVIL",
       "order":6,
       "order1":3,
       "type":"img"
-    },
-    {
+    }, {
       "src":"p7.jpg",
-      "thumb":"Penal. Imagen 7.",
-      "caption":"Penal. Imagen 7.",
-      "theme":"SECTION.PENAL",
+      "thumb":"Civil y familia. Imagen 7.",
+      "caption":"Conferencia “Prevención social y derechos socioculturales”.",
+      "theme":"SECTION.CIVIL",
       "order":7,
       "order1":3,
       "type":"img"
-    },
-    {
+    }, {
       "src":"p8.jpg",
-      "thumb":"Penal. Imagen 8.",
-      "caption":"Penal. Imagen 8.",
-      "theme":"SECTION.PENAL",
+      "thumb":"Civil y familia. Imagen 8.",
+      "caption":"Conferencia “Prevención social y derechos socioculturales”.",
+      "theme":"SECTION.CIVIL",
       "order":8,
       "order1":3,
       "type":"img"
-    },
-    {
+    }, {
       "src":"p9.jpg",
-      "thumb":"Penal. Imagen 9.",
-      "caption":"Penal. Imagen 9.",
-      "theme":"SECTION.PENAL",
+      "thumb":"Civil y familia. Imagen 9.",
+      "caption":"Conferencia “Prevención social y derechos socioculturales”.",
+      "theme":"SECTION.CIVIL",
       "order":9,
       "order1":3,
       "type":"img"
-    },
-    {
+    }, {
       "src":"p10.jpg",
-      "thumb":"Penal. Imagen 10.",
-      "caption":"Penal. Imagen 10.",
-      "theme":"SECTION.PENAL",
+      "thumb":"Civil y familia. Imagen 10.",
+      "caption":"Conferencia “Prevención social y derechos socioculturales”.",
+      "theme":"SECTION.CIVIL",
       "order":10,
       "order1":3,
       "type":"img"
-    },
-    {
+    }, {
       "src":"p11.jpg",
-      "thumb":"Penal. Imagen 11.",
-      "caption":"Penal. Imagen 11.",
-      "theme":"SECTION.PENAL",
+      "thumb":"Civil y familia. Imagen 11.",
+      "caption":"Conferencia “Prevención social y derechos socioculturales”.",
+      "theme":"SECTION.CIVIL",
       "order":11,
+      "order1":3,
+      "type":"img"
+    }, {
+      "src":"p12.jpg",
+      "thumb":"Civil y familia. Imagen 12.",
+      "caption":"Conferencia “Prevención social y derechos socioculturales”.",
+      "theme":"SECTION.CIVIL",
+      "order":12,
       "order1":3,
       "type":"img"
     },
     {
-      "src":"p12.jpg",
+      "src":"c1.jpg",
+      "thumb":"Penal. Imagen 1.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
+      "theme":"SECTION.PENAL",
+      "order":1,
+      "order1":2,
+      "type":"img"
+    },
+    {
+      "src":"c2.jpg",
+      "thumb":"Penal. Imagen 2.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
+      "theme":"SECTION.PENAL",
+      "order":2,
+      "order1":2,
+      "type":"img"
+    },
+    {
+      "src":"c3.jpg",
+      "thumb":"Penal. Imagen 3.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
+      "theme":"SECTION.PENAL",
+      "order":3,
+      "order1":2,
+      "type":"img"
+    },
+    {
+      "src":"c4.jpg",
+      "thumb":"Penal. Imagen 4.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
+      "theme":"SECTION.PENAL",
+      "order":4,
+      "order1":2,
+      "type":"img"
+    },
+    {
+      "src":"c5.jpg",
+      "thumb":"Penal. Imagen 5.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
+      "theme":"SECTION.PENAL",
+      "order":5,
+      "order1":2,
+      "type":"img"
+    },
+    {
+      "src":"c6.jpg",
+      "thumb":"Penal. Imagen 6.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
+      "theme":"SECTION.PENAL",
+      "order":6,
+      "order1":2,
+      "type":"img"
+    },
+    {
+      "src":"c7.jpg",
+      "thumb":"Penal. Imagen 7.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
+      "theme":"SECTION.PENAL",
+      "order":7,
+      "order1":2,
+      "type":"img"
+    },
+    {
+      "src":"c8.jpg",
+      "thumb":"Penal. Imagen 8.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
+      "theme":"SECTION.PENAL",
+      "order":8,
+      "order1":2,
+      "type":"img"
+    },
+    {
+      "src":"c9.jpg",
+      "thumb":"Penal. Imagen 9.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
+      "theme":"SECTION.PENAL",
+      "order":9,
+      "order1":2,
+      "type":"img"
+    },
+    {
+      "src":"c10.jpg",
+      "thumb":"Penal. Imagen 10.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
+      "theme":"SECTION.PENAL",
+      "order":10,
+      "order1":2,
+      "type":"img"
+    },
+    {
+      "src":"c11.jpg",
+      "thumb":"Penal. Imagen 11.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
+      "theme":"SECTION.PENAL",
+      "order":11,
+      "order1":2,
+      "type":"img"
+    },
+    {
+      "src":"c12.jpg",
       "thumb":"Penal. Imagen 12.",
-      "caption":"Penal. Imagen 12.",
+      "caption":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva”.",
       "theme":"SECTION.PENAL",
       "order":12,
-      "order1":3,
+      "order1":2,
       "type":"img"
     },
     {
       "src":"a1.jpg",
       "thumb":"Ambiental. Imagen 1.",
-      "caption":"Ambiental. Imagen 1.",
+      "caption":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”.",
       "theme":"SECTION.AMBIENTAL",
        "order":1,
       "order1":4,
@@ -419,7 +411,7 @@
      {
       "src":"a2.jpg",
       "thumb":"Ambiental. Imagen 2.",
-      "caption":"Ambiental. Imagen 2.",
+      "caption":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”.",
       "theme":"SECTION.AMBIENTAL",
        "order":2,
        "order1":4,
@@ -428,7 +420,7 @@
      {
       "src":"a3.jpg",
       "thumb":"Ambiental. Imagen 3.",
-      "caption":"Ambiental. Imagen 3.",
+      "caption":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”.",
       "theme":"SECTION.AMBIENTAL",
        "order":3,
        "order1":4,
@@ -437,7 +429,7 @@
      {
       "src":"a4.jpg",
       "thumb":"Ambiental. Imagen 4.",
-      "caption":"Ambiental. Imagen 4.",
+      "caption":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”.",
       "theme":"SECTION.AMBIENTAL",
        "order":4,
        "order1":4,
@@ -446,7 +438,7 @@
      {
       "src":"a5.jpg",
       "thumb":"Ambiental. Imagen 5.",
-      "caption":"Ambiental. Imagen 5.",
+      "caption":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”.",
       "theme":"SECTION.AMBIENTAL",
        "order":5,
        "order1":4,
@@ -455,7 +447,7 @@
      {
       "src":"a6.jpg",
       "thumb":"Ambiental. Imagen 6.",
-      "caption":"Ambiental. Imagen 6.",
+      "caption":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”.",
       "theme":"SECTION.AMBIENTAL",
        "order":6,
        "order1":4,
@@ -464,7 +456,7 @@
      {
       "src":"a7.jpg",
       "thumb":"Ambiental. Imagen 7.",
-      "caption":"Ambiental. Imagen 7.",
+      "caption":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”.",
       "theme":"SECTION.AMBIENTAL",
        "order":7,
        "order1":4,
@@ -473,7 +465,7 @@
      {
       "src":"a8.jpg",
       "thumb":"Ambiental. Imagen 8.",
-      "caption":"Ambiental. Imagen 8.",
+      "caption":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”.",
       "theme":"SECTION.AMBIENTAL",
        "order":8,
        "order1":4,
@@ -482,7 +474,7 @@
      {
       "src":"a9.jpg",
       "thumb":"Ambiental. Imagen 9.",
-      "caption":"Ambiental. Imagen 9.",
+      "caption":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”.",
       "theme":"SECTION.AMBIENTAL",
        "order":9,
        "order1":4,
@@ -491,7 +483,7 @@
      {
       "src":"a10.jpg",
       "thumb":"Ambiental. Imagen 10.",
-      "caption":"Ambiental. Imagen 10.",
+      "caption":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”.",
       "theme":"SECTION.AMBIENTAL",
        "order":10,
        "order1":4,
@@ -500,7 +492,7 @@
      {
       "src":"a11.jpg",
       "thumb":"Ambiental. Imagen 11.",
-      "caption":"Ambiental. Imagen 11.",
+      "caption":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”.",
       "theme":"SECTION.AMBIENTAL",
        "order":11,
        "order1":4,
@@ -509,7 +501,7 @@
      {
       "src":"a12.jpg",
       "thumb":"Ambiental. Imagen 12.",
-      "caption":"Ambiental. Imagen 12.",
+      "caption":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”.",
       "theme":"SECTION.AMBIENTAL",
        "order":12,
        "order1":4,
@@ -518,7 +510,7 @@
     {
       "src":"a13.jpg",
       "thumb":"Ambiental. Imagen 13.",
-      "caption":"Ambiental. Imagen 13.",
+      "caption":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”.",
       "theme":"SECTION.AMBIENTAL",
        "order":13,
       "order1":4,
@@ -527,7 +519,7 @@
     {
       "src":"a14.jpg",
       "thumb":"Ambiental. Imagen 14.",
-      "caption":"Ambiental. Imagen 14.",
+      "caption":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”.",
       "theme":"SECTION.AMBIENTAL",
        "order":14,
       "order1":4,
@@ -536,7 +528,7 @@
     {
       "src":"a15.jpg",
       "thumb":"Ambiental. Imagen 15.",
-      "caption":"Ambiental. Imagen 15.",
+      "caption":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”.",
       "theme":"SECTION.AMBIENTAL",
        "order":15,
       "order1":4,
@@ -545,7 +537,7 @@
     {
       "src":"a16.jpg",
       "thumb":"Ambiental. Imagen 16.",
-      "caption":"Ambiental. Imagen 16.",
+      "caption":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”.",
       "theme":"SECTION.AMBIENTAL",
        "order":16,
       "order1":4,
@@ -554,7 +546,7 @@
     {
       "src":"a17.jpg",
       "thumb":"Ambiental. Imagen 17.",
-      "caption":"Ambiental. Imagen 17.",
+      "caption":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”.",
       "theme":"SECTION.AMBIENTAL",
        "order":17,
       "order1":4,
@@ -563,7 +555,7 @@
     {
       "src":"a18.jpg",
       "thumb":"Ambiental. Imagen 18.",
-      "caption":"Ambiental. Imagen 18.",
+      "caption":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”.",
       "theme":"SECTION.AMBIENTAL",
        "order":18,
       "order1":4,
@@ -572,7 +564,7 @@
     {
       "src":"a19.jpg",
       "thumb":"Ambiental. Imagen 19.",
-      "caption":"Ambiental. Imagen 19.",
+      "caption":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”.",
       "theme":"SECTION.AMBIENTAL",
        "order":19,
       "order1":4,
@@ -581,7 +573,7 @@
     {
       "src":"a20.jpg",
       "thumb":"Ambiental. Imagen 20.",
-      "caption":"Ambiental. Imagen 20.",
+      "caption":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”.",
       "theme":"SECTION.AMBIENTAL",
        "order":20,
       "order1":4,
@@ -590,7 +582,7 @@
     {
       "src":"a21.jpg",
       "thumb":"Ambiental. Imagen 21.",
-      "caption":"Ambiental. Imagen 21.",
+      "caption":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”.",
       "theme":"SECTION.AMBIENTAL",
        "order":21,
       "order1":4,
@@ -599,7 +591,7 @@
     {
       "src":"a22.jpg",
       "thumb":"Ambiental. Imagen 22.",
-      "caption":"Ambiental. Imagen 22.",
+      "caption":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”.",
       "theme":"SECTION.AMBIENTAL",
        "order":22,
       "order1":4,
@@ -608,7 +600,7 @@
     {
       "src":"a23.jpg",
       "thumb":"Ambiental. Imagen 23.",
-      "caption":"Ambiental. Imagen 23.",
+      "caption":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”.",
       "theme":"SECTION.AMBIENTAL",
        "order":23,
       "order1":4,
@@ -617,7 +609,7 @@
     {
       "src":"a24.jpg",
       "thumb":"Ambiental. Imagen 24.",
-      "caption":"Ambiental. Imagen 24.",
+      "caption":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”.",
       "theme":"SECTION.AMBIENTAL",
        "order":24,
       "order1":4,
@@ -626,7 +618,7 @@
     {
       "src":"a25.jpg",
       "thumb":"Ambiental. Imagen 25.",
-      "caption":"Ambiental. Imagen 25.",
+      "caption":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”.",
       "theme":"SECTION.AMBIENTAL",
        "order":25,
       "order1":4,
@@ -635,7 +627,7 @@
     {
       "src":"a26.jpg",
       "thumb":"Ambiental. Imagen 26.",
-      "caption":"Ambiental. Imagen 26.",
+      "caption":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”.",
       "theme":"SECTION.AMBIENTAL",
        "order":26,
       "order1":4,
@@ -644,172 +636,172 @@
     {
       "src":"t1.jpg",
       "thumb":"Taller final. Imagen 1.",
-      "caption":"Taller final. Imagen 1.",
+      "caption":"Seminario “La Educación cívica en pos de la participación proactiva, la inclusión social, el desarrollo de los derechos socioculturales y el diálogo intercultural”.",
       "theme":"SECTION.TALLER",
       "order":1,
-      "order1":5,
+      "order1":6,
       "type":"img"
     },
     {
       "src":"t2.jpg",
       "thumb":"Taller final. Imagen 2.",
-      "caption":"Taller final. Imagen 2.",
+      "caption":"Seminario “La Educación cívica en pos de la participación proactiva, la inclusión social, el desarrollo de los derechos socioculturales y el diálogo intercultural”.",
       "theme":"SECTION.TALLER",
       "order":2,
-      "order1":5,
+      "order1":6,
       "type":"img"
     },
     {
       "src":"t3.jpg",
       "thumb":"Taller final. Imagen 3.",
-      "caption":"Taller final. Imagen 3.",
+      "caption":"Seminario “La Educación cívica en pos de la participación proactiva, la inclusión social, el desarrollo de los derechos socioculturales y el diálogo intercultural”.",
       "theme":"SECTION.TALLER",
       "order":3,
-      "order1":5,
+      "order1":6,
       "type":"img"
     },
     {
       "src":"t4.jpg",
       "thumb":"Taller final. Imagen 4.",
-      "caption":"Taller final. Imagen 4.",
+      "caption":"Seminario “La Educación cívica en pos de la participación proactiva, la inclusión social, el desarrollo de los derechos socioculturales y el diálogo intercultural”.",
       "theme":"SECTION.TALLER",
       "order":4,
-      "order1":5,
+      "order1":6,
       "type":"img"
     },
     {
       "src":"t5.jpg",
       "thumb":"Taller final. Imagen 5.",
-      "caption":"Taller final. Imagen 5.",
+      "caption":"Seminario “La Educación cívica en pos de la participación proactiva, la inclusión social, el desarrollo de los derechos socioculturales y el diálogo intercultural”.",
       "theme":"SECTION.TALLER",
       "order":5,
-      "order1":5,
+      "order1":6,
       "type":"img"
     },
     {
       "src":"t6.jpg",
       "thumb":"Taller final. Imagen 6.",
-      "caption":"Taller final. Imagen 6.",
+      "caption":"Seminario “La Educación cívica en pos de la participación proactiva, la inclusión social, el desarrollo de los derechos socioculturales y el diálogo intercultural”.",
       "theme":"SECTION.TALLER",
       "order":6,
-      "order1":5,
+      "order1":6,
       "type":"img"
     },
     {
       "src":"t7.jpg",
       "thumb":"Taller final. Imagen 7.",
-      "caption":"Taller final. Imagen 7.",
+      "caption":"Seminario “La Educación cívica en pos de la participación proactiva, la inclusión social, el desarrollo de los derechos socioculturales y el diálogo intercultural”.",
       "theme":"SECTION.TALLER",
       "order":7,
-      "order1":5,
+      "order1":6,
       "type":"img"
     },
     {
       "src":"t8.jpg",
       "thumb":"Taller final. Imagen 8.",
-      "caption":"Taller final. Imagen 8.",
+      "caption":"Seminario “La Educación cívica en pos de la participación proactiva, la inclusión social, el desarrollo de los derechos socioculturales y el diálogo intercultural”.",
       "theme":"SECTION.TALLER",
       "order":8,
-      "order1":5,
+      "order1":6,
       "type":"img"
     },
     {
       "src":"t9.jpg",
       "thumb":"Taller final. Imagen 9.",
-      "caption":"Taller final. Imagen 9.",
+      "caption":"Seminario “La Educación cívica en pos de la participación proactiva, la inclusión social, el desarrollo de los derechos socioculturales y el diálogo intercultural”.",
       "theme":"SECTION.TALLER",
       "order":9,
-      "order1":5,
+      "order1":6,
       "type":"img"
     },
     {
       "src":"t10.jpg",
       "thumb":"Taller final. Imagen 10.",
-      "caption":"Taller final. Imagen 10.",
+      "caption":"Seminario “La Educación cívica en pos de la participación proactiva, la inclusión social, el desarrollo de los derechos socioculturales y el diálogo intercultural”.",
       "theme":"SECTION.TALLER",
       "order":10,
-      "order1":5,
+      "order1":6,
       "type":"img"
     },
     {
       "src":"t11.jpg",
       "thumb":"Taller final. Imagen 1.",
-      "caption":"Taller final. Imagen 11.",
+      "caption":"Seminario “La Educación cívica en pos de la participación proactiva, la inclusión social, el desarrollo de los derechos socioculturales y el diálogo intercultural”.",
       "theme":"SECTION.TALLER",
       "order":11,
-      "order1":5,
+      "order1":6,
       "type":"img"
     },
     {
       "src":"t12.jpg",
       "thumb":"Taller final. Imagen 12.",
-      "caption":"Taller final. Imagen 12.",
+      "caption":"Seminario “La Educación cívica en pos de la participación proactiva, la inclusión social, el desarrollo de los derechos socioculturales y el diálogo intercultural”.",
       "theme":"SECTION.TALLER",
       "order":12,
-      "order1":5,
+      "order1":6,
       "type":"img"
     },
     {
       "src":"t13.jpg",
       "thumb":"Taller final. Imagen 13.",
-      "caption":"Taller final. Imagen 13.",
+      "caption":"Seminario “La Educación cívica en pos de la participación proactiva, la inclusión social, el desarrollo de los derechos socioculturales y el diálogo intercultural”.",
       "theme":"SECTION.TALLER",
       "order":13,
-      "order1":5,
+      "order1":6,
       "type":"img"
     },
     {
       "src":"t14.jpg",
       "thumb":"Taller final. Imagen 14.",
-      "caption":"Taller final. Imagen 14.",
+      "caption":"Seminario “La Educación cívica en pos de la participación proactiva, la inclusión social, el desarrollo de los derechos socioculturales y el diálogo intercultural”.",
       "theme":"SECTION.TALLER",
       "order":14,
-      "order1":5,
+      "order1":6,
       "type":"img"
     },
     {
       "src":"t15.jpg",
       "thumb":"Taller final. Imagen 15.",
-      "caption":"Taller final. Imagen 15.",
+      "caption":"Seminario “La Educación cívica en pos de la participación proactiva, la inclusión social, el desarrollo de los derechos socioculturales y el diálogo intercultural”.",
       "theme":"SECTION.TALLER",
       "order":15,
-      "order1":5,
+      "order1":6,
       "type":"img"
     },
     {
       "src":"t16.jpg",
       "thumb":"Taller final. Imagen 16.",
-      "caption":"Taller final. Imagen 16.",
+      "caption":"Seminario “La Educación cívica en pos de la participación proactiva, la inclusión social, el desarrollo de los derechos socioculturales y el diálogo intercultural”.",
       "theme":"SECTION.TALLER",
       "order":16,
-      "order1":5,
+      "order1":6,
       "type":"img"
     },
     {
       "src":"t17.jpg",
       "thumb":"Taller final. Imagen 17.",
-      "caption":"Taller final. Imagen 17.",
+      "caption":"Seminario “La Educación cívica en pos de la participación proactiva, la inclusión social, el desarrollo de los derechos socioculturales y el diálogo intercultural”.",
       "theme":"SECTION.TALLER",
       "order":17,
-      "order1":5,
+      "order1":6,
       "type":"img"
     },
     {
       "src":"t18.jpg",
       "thumb":"Taller final. Imagen 18.",
-      "caption":"Taller final. Imagen 18.",
+      "caption":"Seminario “La Educación cívica en pos de la participación proactiva, la inclusión social, el desarrollo de los derechos socioculturales y el diálogo intercultural”.",
       "theme":"SECTION.TALLER",
       "order":18,
-      "order1":5,
+      "order1":6,
       "type":"img"
     },
     {
       "src":"t19.jpg",
       "thumb":"Taller final. Imagen 19.",
-      "caption":"Taller final. Imagen 19.",
+      "caption":"Seminario “La Educación cívica en pos de la participación proactiva, la inclusión social, el desarrollo de los derechos socioculturales y el diálogo intercultural”.",
       "theme":"SECTION.TALLER",
       "order":19,
-      "order1":5,
+      "order1":6,
       "type":"img"
     },
     {
@@ -818,7 +810,7 @@
       "caption":"Seminario “Formación jurídica en pos de la enseñanza de la educación cívica”.",
       "theme":"SECTION.SEMINARIO",
       "order":1,
-      "order1":6,
+      "order1":5,
       "type":"img"
     },
    {
@@ -827,7 +819,7 @@
       "caption":"Seminario “Formación jurídica en pos de la enseñanza de la educación cívica”.",
       "theme":"SECTION.SEMINARIO",
       "order":2,
-      "order1":6,
+      "order1":5,
       "type":"img"
     },
    {
@@ -836,7 +828,7 @@
       "caption":"Seminario “Formación jurídica en pos de la enseñanza de la educación cívica”.",
       "theme":"SECTION.SEMINARIO",
       "order":3,
-      "order1":6,
+      "order1":5,
       "type":"img"
     },
    {
@@ -845,7 +837,7 @@
       "caption":"Seminario “Formación jurídica en pos de la enseñanza de la educación cívica”.",
       "theme":"SECTION.SEMINARIO",
       "order":4,
-      "order1":6,
+      "order1":5,
       "type":"img"
     },
    {
@@ -854,7 +846,7 @@
       "caption":"Seminario “Formación jurídica en pos de la enseñanza de la educación cívica”.",
       "theme":"SECTION.SEMINARIO",
       "order":5,
-      "order1":6,
+      "order1":5,
       "type":"img"
     },
    {
@@ -863,7 +855,7 @@
       "caption":"Seminario “Formación jurídica en pos de la enseñanza de la educación cívica”.",
       "theme":"SECTION.SEMINARIO",
       "order":6,
-      "order1":6,
+      "order1":5,
       "type":"img"
     },
    {
@@ -872,7 +864,7 @@
       "caption":"Seminario “Formación jurídica en pos de la enseñanza de la educación cívica”.",
       "theme":"SECTION.SEMINARIO",
       "order":7,
-      "order1":6,
+      "order1":5,
       "type":"img"
     },
    {
@@ -881,41 +873,67 @@
       "caption":"Seminario “Formación jurídica en pos de la enseñanza de la educación cívica”.",
       "theme":"SECTION.SEMINARIO",
       "order":8,
-      "order1":6,
+      "order1":5,
       "type":"img"
-    },
-   {
-      "src":"t20.jpg",
-      "thumb":"Taller final. Imagen 20.",
-      "caption":"Taller final. Imagen 20.",
-      "theme":"SECTION.TALLER",
-      "order":20,
+    },{
+      "src":"s9.jpg",
+      "thumb":"",
+      "caption":"Seminario “Formación jurídica en pos de la enseñanza de la educación cívica”.",
+      "theme":"SECTION.SEMINARIO",
+      "order":8,
+      "order1":5,
+      "type":"img"
+    },{
+      "src":"s10.jpg",
+      "thumb":"",
+      "caption":"Seminario “Formación jurídica en pos de la enseñanza de la educación cívica”.",
+      "theme":"SECTION.SEMINARIO",
+      "order":8,
+      "order1":5,
+      "type":"img"
+    },{
+      "src":"s11.jpg",
+      "thumb":"",
+      "caption":"Seminario “Formación jurídica en pos de la enseñanza de la educación cívica”.",
+      "theme":"SECTION.SEMINARIO",
+      "order":8,
+      "order1":5,
+      "type":"img"
+    },{
+      "src":"s12.jpg",
+      "thumb":"",
+      "caption":"Seminario “Formación jurídica en pos de la enseñanza de la educación cívica”.",
+      "theme":"SECTION.SEMINARIO",
+      "order":8,
       "order1":5,
       "type":"img"
     },
     {
-      "src":"1.webm",
-      "title":"Quinta de los molinos.",
+      "src":"3.webm",
+      "title":"Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”",
       "poster":"v1.jpg",
       "caption":"v1.jpg",
       "theme":"SECTION.TALLER",
       "order":5,
+      "section":"video",
       "type":"video"
     }, {
       "src":"2.webm",
-      "title":"Civil",
+      "title":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva” (Civil)",
       "poster":"v2.jpg",
       "caption":"v2.jpg",
       "theme":"SECTION.TALLER",
-      "order":5,
+      "order":2,
+      "section":"video",
       "type":"video"
     },{
-      "src":"3.webm",
-      "title":"Maestro Frank Fernandez. La Comparsa.",
+      "src":"1.webm",
+      "title":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva” (Jurídico básico)",
       "poster":"v3.jpg",
       "caption":"v3.jpg",
       "theme":"SECTION.TALLER",
-      "order":5,
+      "order":1,
+      "section":"video",
       "type":"video"
     },
     {
@@ -925,6 +943,7 @@
       "caption":"Sobre Medio Ambiente (Discurso de Fidel Castro en la Cumbre de la Tierra, Río de Janeiro 1992)",
       "theme":"SECTION.COMPLEMENTARIO",
       "order":5,
+      "section":"estudiantes",
       "type":"video"
     },
     {
@@ -934,6 +953,7 @@
       "caption":"Sobre la violencia (Video realizado por los estudiantes del grupo 3ero C de la facultad de Derecho de la Universidad de la Habana)",
       "theme":"SECTION.COMPLEMENTARIO",
       "order":5,
+      "section":"estudiantes",
       "type":"video"
     },
     {
@@ -943,6 +963,7 @@
       "caption":"v3.jpg",
       "theme":"SECTION.START",
       "order":100,
+      "section":"inicio",
       "type":"video"
     }
   ]

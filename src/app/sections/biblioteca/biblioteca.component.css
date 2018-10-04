@@ -5,8 +5,12 @@
 }
 
 .search-result{
-  font-weight: 900;
+  color: #795548 !important;
   text-decoration: underline;
+}
+
+.search-result a {
+  color: #795548 !important;
 }
 
 .widget a{
@@ -34,8 +38,13 @@
 
 h3.title{
   text-transform: uppercase;
+  margin-top: 1.5em;
 }
 li{
   border-bottom: 1px solid #ccc;
   margin-bottom: 0px;
+}
+.collapsible-header {
+  border-bottom: 1px solid transparent;
+  padding: 0 0.5rem;
 }

@@ -1,4 +1,4 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, AfterViewInit, ChangeDetectorRef, ChangeDetectionStrategy } from '@angular/core';
 import {DataService} from '../../services/data.service';
 import {TranslateService} from '@ngx-translate/core';
 import {HeaderService} from '../../services/header.service';
@@ -8,7 +8,8 @@ declare var M: any;
 @Component({
   selector: 'app-biblioteca',
   templateUrl: './biblioteca.component.html',
-  styleUrls: ['./biblioteca.component.css']
+  styleUrls: ['./biblioteca.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class BibliotecaComponent implements AfterViewInit {
@@ -17,6 +18,8 @@ export class BibliotecaComponent implements AfterViewInit {
   booksShelf: any [];
   themes: any [];
   themeActual: any;
+  collapsibleParent: any;
+  collapsibleChild: any;
   reader: any;
   searchString: string;
   /*pdf*/
@@ -25,7 +28,11 @@ export class BibliotecaComponent implements AfterViewInit {
   pdfPages: number;
   isLoaded: boolean = false;
   result: boolean = false;
-  constructor(private dataService: DataService, private translate: TranslateService, private headerService: HeaderService) {
+  constructor(private dataService: DataService,
+              private translate: TranslateService,
+              private headerService: HeaderService,
+              private detect : ChangeDetectorRef
+  ) {
     this.headerService.Hide();
     this.headerService.ChildActive(true);
     this.dataService.getBooks(this.translate.currentLang)
@@ -47,19 +54,36 @@ export class BibliotecaComponent implements AfterViewInit {
   }
 
   setItem(theme) {
-    this.themeActual = theme;
-    this.booksShelf = this.books.filter((f: any) => f.tematica.indexOf(theme)!==-1);
+    if (theme.indexOf('articulos')!== -1 || theme === 'norma' ) {
+      this.collapsibleParent.forEach((v) => v.close());
+    }
+
+    if (theme.indexOf('articulos')!== -1) {
+        this.collapsibleParent[0].open();
+    }
+
+    if (theme === 'norma') {
+        this.themeActual = 'normasBasicos';
+      this.collapsibleParent[1].open(0);
+    }
+    else{
+
+      this.themeActual = theme;
+    }
+    this.booksShelf = this.books.filter((f: any) => f.tematica.indexOf(this.themeActual)!==-1);
     this.reader = this.booksShelf[0];
     this.isLoaded = false;
     this.result = false;
     this.pointer = 1;
     //noinspection TypeScriptUnresolvedVariable
     this.search.nativeElement.value = "";
+    this.detect.markForCheck();
 
   }
   ReadBook(book){
     this.reader = book;
     this.pointer = 1;
+    this.result = false;
     $('body,html').animate({
       scrollTop: 0
     }, 600);
@@ -93,7 +117,7 @@ export class BibliotecaComponent implements AfterViewInit {
           this.startSearch()
       }
       else{
-        M.toast({html: '<i>Al menos tres caracteres</i>'})
+        M.toast({html: '<i>Usted debe introducir al menos tres caracteres. </i>'})
       }
     }
   }
@@ -121,10 +145,11 @@ export class BibliotecaComponent implements AfterViewInit {
     $('.ng2-pdf-viewer-container').css('overflow','inherit');
   }
 
-  ngAfterViewInit() {
+  private initCollapse() {
     var elems = document.querySelectorAll('.collapsible');
-    var instances = M.Collapsible.init(elems,{});
-
+    this.collapsibleParent  = M.Collapsible.init(elems,{});
   }
+
+  ngAfterViewInit() { this.initCollapse(); }
 }
 

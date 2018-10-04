@@ -199,6 +199,14 @@ li.contenidos{
   border-bottom: 1px solid transparent;
   padding: 0 1.5rem;
 }
+.section-header.text-center {
+  margin-top: 4em;
+}
+.toast {
+  height: 8em;
+  line-height: 18px;
+}
+/*Media Queries*/
 @media (min-width: 992px) {
 
   .col-md-12[_ngcontent-c3] {

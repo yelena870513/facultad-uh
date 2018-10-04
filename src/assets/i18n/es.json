@@ -14,7 +14,8 @@
   },
   "ISMAELILLO":{
     "TITLE": "Proyecto Ismaelillo",
-    "BOOKS":"temáticas"
+    "BOOKS":"temáticas",
+    "FUNDS": "Presupuesto"
   },
   "CONTENIDO":{
     "TITLE": "Contenidos jurídicos de la educación cívica",
@@ -79,7 +80,8 @@
   "LIBRARY":{
     "HEADER":"PDF",
     "THEMES":"TEMÁTICAS",
-    "BOOKS":"LIBROS"
+    "BOOKS":"LIBROS",
+    "RULES":"Normas jurídicas"
   },
   "MODAL":{
     "HEADER":"Salir",
@@ -92,11 +94,12 @@
     "THEMES":"Temáticas"
   },
   "SECTION":{
-    "JURIDICA":"Jurídicos básicos",
-    "CIVIL": "Civil y familia",
-    "PENAL": "Penal",
-    "AMBIENTAL": "Ambiental",
-    "TALLER": "Taller final"
+    "JURIDICA":"Conferencia “Formación Cívica, derechos socioculturales y participación proactiva” (Jurídico básico) ",
+    "CIVIL": "Conferencia “Formación Cívica, derechos socioculturales y participación proactiva” (Civil)",
+    "PENAL": "Conferencia “Prevención social y derechos socioculturales”",
+    "AMBIENTAL": "Conferencia “Principios éticos para la formación de los jóvenes en pos de la sostenibilidad ambiental”",
+    "TALLER": "Seminario “La Educación cívica en pos de la participación proactiva, la inclusión social, el desarrollo de los derechos socioculturales y el diálogo intercultural”",
+    "SEMINARIO":"Seminario “Formación jurídica en pos de la enseñanza de la educación cívica” "
   },
   "articulos":"Artículos científicos",
   "normasInternacionales":"Normas ambientales internacionales",

@@ -9,7 +9,6 @@ import {pulse} from 'ngx-animate/lib';
 import {transition, trigger, useAnimation} from '@angular/animations';
 import {BehaviourService} from '../../services/behaviour.service';
 import * as _ from 'lodash';
-import {BookInterface} from '../../interfaces/book.interface';
 import {FooterService} from "../../services/footer.service";
 declare var $: any;
 declare var M: any;
@@ -165,6 +164,12 @@ export class IsmaelilloComponent implements AfterViewInit{
     $('#nav').addClass('fixed-nav').removeClass('hidden');
     var elems = document.querySelectorAll('.collapsible');
     var instances = M.Collapsible.init(elems, {});
+  }
+
+  setFirstFund() {
+   //noinspection TypeScriptUnresolvedFunction
+    const item =  _.first(_.filter(this.books,(f: any) => f.option === 'presupuesto'));
+   this.openRead(item, !this.readMode, '');
   }
 
   private QuitOverFlow() {

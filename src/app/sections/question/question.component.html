@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="section-header text-center">
-        <h2 class="title">{{ 'QUESTION.TITLE' | translate }}</h2>
+        <!--<h2 class="title">{{ 'QUESTION.TITLE' | translate }}</h2>-->
       </div>
 
       <aside id="aside" class="col-md-3">
@@ -159,7 +159,6 @@
               class="mdi-navigation-close right"></i></span><br>
             <div class="img" *ngIf="i.type === 'img'">
             <img src="./assets/images/{{i.description}}"/></div>
-            <p [innerHtml]="i.description"></p>
           </div>
         </div>
       </div>
@@ -169,6 +168,7 @@
           <div class="blog-content" *ngIf="reader">
             <div class="row border-dark">
               <div class="col-md-12">
+                <h3>{{reader.title}}</h3>
                 <div class="progress" *ngIf="!isLoaded">
                   <div class="indeterminate"></div>
                 </div>

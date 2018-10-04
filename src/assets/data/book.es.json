@@ -712,73 +712,103 @@
     },
     {
       "poster":"pdf.png",
-      "url":"constitucion1812",
+      "url":"constitucion1812.pdf",
       "title":"Constitución española de 1812",
       "section":"book",
-      "tematica":"leyes"
+      "tematica":"leyes",
+      "order":"1"
     },
     {
       "poster":"pdf.png",
-      "url":"13.pdf",
+      "url":"constitucionguaimaro.pdf",
       "title":"Constitución de Guáimaro",
       "section":"book",
-      "tematica":"leyes"
+      "tematica":"leyes",
+      "order":"2"
     },
     {
       "poster":"pdf.png",
-      "url":"14.pdf",
+      "url":"constitucionbaragua.pdf",
       "title":"Constitución de Baragúa",
       "section":"book",
-      "tematica":"leyes"
+      "tematica":"leyes",
+      "order":"3"
     },
     {
       "poster":"pdf.png",
-      "url":"15.pdf",
+      "url":"constitucionjimaguayu.pdf",
       "title":"Constitución de Jimaguayú",
       "section":"book",
-      "tematica":"leyes"
+      "tematica":"leyes",
+      "order":"4"
     },
     {
       "poster":"pdf.png",
-      "url":"16.pdf",
+      "url":"constitucionyaya.pdf",
       "title":"Constitución de La Yaya",
       "section":"book",
-      "tematica":"leyes"
-    },
-    {
+      "tematica":"leyes",
+      "order":"5"
+    }, {
       "poster":"pdf.png",
-      "url":"19.pdf",
-      "title":"Sección primera de lo bienes y finanzas del Estado ",
+      "url":"constitucion1901.pdf",
+      "title":"Constitución de 1901",
       "section":"book",
-      "tematica":"leyes"
+      "tematica":"leyes",
+      "order":"6"
+    }, {
+      "poster":"pdf.png",
+      "url":"constitucion1928.pdf",
+      "title":"Constitución de 1901 reformada 1928",
+      "section":"book",
+      "tematica":"leyes",
+      "order":"7"
+    }, {
+      "poster":"pdf.png",
+      "url":"constitucionprovisional.pdf",
+      "title":"Estatutos para el Gobierno Provisional de Cuba",
+      "section":"book",
+      "tematica":"leyes",
+      "order":"8"
+    },{
+      "poster":"pdf.png",
+      "url":"constitucion1934.pdf",
+      "title":"Ley Constitucional de 1934",
+      "section":"book",
+      "tematica":"leyes",
+      "order":"9"
     },
     {
       "poster":"pdf.png",
-      "url":"17.pdf",
+      "url":"constitucion1935.pdf",
       "title":"Ley Constitucional de 1935",
       "section":"book",
-      "tematica":"leyes"
+      "tematica":"leyes",
+      "order":"10"
     },
     {
       "poster":"pdf.png",
-      "url":"18.pdf",
+      "url":"constitucion1940.pdf",
       "title":"Constitución de 1940",
       "section":"book",
-      "tematica":"leyes"
+      "tematica":"leyes",
+      "order":"11"
     },
     {
       "poster":"pdf.png",
       "url":"ley59.pdf",
       "title":"Ley Fundamental de 1959",
       "section":"book",
-      "tematica":"leyes"
+      "tematica":"leyes",
+      "order":"12"
     },
     {
       "poster":"pdf.png",
-      "url":"ConstitucionVigente.pdf",
+      "url":"constitucion1976.pdf",
       "title":"Constitución de 1976",
       "section":"book",
-      "tematica":"leyes"
+      "tematica":"leyes",
+      "order":"13"
     },
     {
       "poster":"pdf.png",
