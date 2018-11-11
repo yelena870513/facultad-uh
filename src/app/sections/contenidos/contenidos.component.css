@@ -33,7 +33,9 @@ li.contenidos{
   border-bottom: 1px solid #EEE;
   padding: 5px;
 }
-
+.collapsible-header {
+  border-bottom: 1px solid #ddd;
+}
 
 @media (min-width: 992px) {
 

@@ -25,11 +25,16 @@
         <h3 class="title">{{'LIBRARY.THEMES' | translate}}</h3>
         <ul class="collapsible">
           <li>
-            <div class="collapsible-header" (click)="setItem('norma')" [ngClass]="{'active': 'norma' === themeActual || themeActual.indexOf('norma') !== -1 }">{{'LIBRARY.RULES' | translate}}</div>
+            <div class="collapsible-header" (click)="setItem('norma')" [ngClass]="{'active': 'norma' === themeActual || themeActual.indexOf('norma') !== -1 }" >
+                <i class="material-icons" *ngIf="!isOpen || themeActual.indexOf('norma') === -1">add</i><i class="material-icons" *ngIf="isOpen && themeActual.indexOf('norma') !== -1">remove</i>
+                {{'LIBRARY.RULES' | translate}}
+            </div>
             <div class="collapsible-body">
              <ul class="collapsible">
                    <li *ngFor="let item of themes | wordExclude: 'articulos'" >
-                  <div class="collapsible-header" (click)="setItem(item)" [ngClass]="{'active': item === themeActual}">{{item | translate}}</div>
+                  <div class="collapsible-header" (click)="setItem(item)" [ngClass]="{'active': item === themeActual }">
+                      <i class="material-icons" *ngIf="!isOpen || item !== themeActual">add</i><i class="material-icons" *ngIf="isOpen && item === themeActual">remove</i> {{item | translate}}
+                  </div>
                   <div class="collapsible-body">
                     <ul>
                       <li *ngFor="let item of booksShelf" [ngClass]="{'active': item.title === reader.title, 'search-result': result}">
@@ -43,7 +48,9 @@
             </div>
           </li>
           <li *ngFor="let item of themes | wordFilter: 'articulos'"  >
-            <div class="collapsible-header" (click)="setItem(item)" [ngClass]="{'active': item === themeActual }">{{item | translate}}</div>
+            <div class="collapsible-header" (click)="setItem(item)" [ngClass]="{'active': item === themeActual }">
+                <i class="material-icons" *ngIf="!isOpen || themeActual !== 'articulos'">add</i><i class="material-icons" *ngIf="isOpen && themeActual === 'articulos'">remove</i>  {{item | translate}}
+            </div>
             <div class="collapsible-body">
               <ul>
                 <li *ngFor="let item of booksShelf" [ngClass]="{'active': item.title === reader.title, 'search-result': result}">

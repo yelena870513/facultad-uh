@@ -1,7 +1,9 @@
-import { Component, ViewChild, AfterViewInit, TemplateRef } from '@angular/core';
-import {DataService} from '../../services/data.service';
-import {TranslateService} from '@ngx-translate/core';
-import {HeaderService} from '../../services/header.service';
+import { Component, ViewChild, AfterViewInit, TemplateRef, OnDestroy, ChangeDetectorRef } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
+
+import { DataService } from '../../services/data.service';
+import { HeaderService } from '../../services/header.service';
 import * as _ from 'lodash';
 declare var $: any;
 declare var M: any;
@@ -12,8 +14,8 @@ declare var M: any;
   styleUrls: ['./derecho.component.css']
 })
 
-export class DerechoComponent implements AfterViewInit {
-  @ViewChild("search") search: any;
+export class DerechoComponent implements AfterViewInit, OnDestroy {
+  @ViewChild('search') search: any;
   books: any [];
   booksShelf: any [];
   booksShelf1: any [];
@@ -28,13 +30,23 @@ export class DerechoComponent implements AfterViewInit {
   page: number;
   page1: number;
   pdfPages: number;
-  isLoaded: boolean = false;
-  result: boolean = false;
-  constructor(private dataService: DataService, private translate: TranslateService, private headerService: HeaderService) {
+  isLoaded = false;
+  result = false;
+  subscription: Subscription;
+  dt: ChangeDetectorRef;
+  isOpen = false;
+  constructor(private dataService: DataService,
+    private translate: TranslateService,
+    private headerService: HeaderService,
+    dt: ChangeDetectorRef
+  ) {
+    this.dt = dt;
+    this.subscription = new Subscription();
     this.headerService.Hide();
     this.headerService.ChildActive(true);
-    this.dataService.getBooks(this.translate.currentLang)
+    const s1 = this.dataService.getBooks(this.translate.currentLang)
       .subscribe((data: any) => {
+        // tslint:disable-next-line:max-line-length
         this.books = data.docs.filter((f: any) => f.tematica === 'juristas' || f.tematica === 'leyes' ).sort((a: any, b: any) => a.order - b.order);
         //noinspection TypeScriptUnresolvedFunction
 
@@ -49,17 +61,18 @@ export class DerechoComponent implements AfterViewInit {
     this.booksShelf = [];
     this.searchString = '';
     this.estado = 'juristas';
+    this.subscription.add(s1);
 
   }
   Estado(estado: string){
-    this.estado= estado;
-    if (this.estado=='juristas'){
+    this.estado = estado;
+    if (this.estado === 'juristas') {
       this.reader = this.booksShelf[0];
 
-    }else {
+    } else {
       this.reader = this.booksShelf1[0];
     }
-    this.page=1;
+    this.page = 1;
     $('body,html').animate({
       scrollTop: 0
     }, 600);
@@ -71,7 +84,7 @@ export class DerechoComponent implements AfterViewInit {
       scrollTop: 0
     }, 600);
   }
-  ReadBook(book){
+  ReadBook(book) {
     this.reader = book;
     this.pointer = 1;
     $('body,html').animate({
@@ -100,23 +113,20 @@ export class DerechoComponent implements AfterViewInit {
     }
   }
 
-  doSearch (event)
-  {
+  doSearch (event)  {
     if (event.keyCode === 13) {
-      if (this.searchString.length>2) {
-        this.startSearch()
-      }
-      else{
+      if (this.searchString.length > 2) {
+        this.startSearch();
+      }      else {
         M.toast({html: '<i>Al menos tres caracteres</i>'})
       }
     }
   }
 
   btnSearch() {
-    if (this.searchString.length>2) {
+    if (this.searchString.length > 2) {
       this.startSearch()
-    }
-    else{
+    } else {
       M.toast({html: '<i>Al menos tres caracteres</i>'})
     }
   }
@@ -134,12 +144,28 @@ export class DerechoComponent implements AfterViewInit {
 
   }
   ngAfterViewInit() {
-    var elems = document.querySelectorAll('.collapsible');
-    var instances = M.Collapsible.init(elems,{});
+    const elems = document.querySelectorAll('.collapsible');
+    const component = this;
+    const instances = M.Collapsible.init(elems, {
+      onOpenEnd: function () {
+        component.isOpen = true;
+        //noinspection TypeScriptUnresolvedVariable
+        component.dt.markForCheck();
+      },
+      onCloseEnd: function () {
+        component.isOpen = false;
+        //noinspection TypeScriptUnresolvedVariable
+        component.dt.markForCheck();
+      }
+    });
 
     $('body,html').animate({
       scrollTop: 0
     }, 600);
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
   private QuitOverFlow() {

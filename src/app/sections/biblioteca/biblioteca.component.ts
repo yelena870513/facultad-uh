@@ -1,7 +1,9 @@
-import { Component, ViewChild, AfterViewInit, ChangeDetectorRef, ChangeDetectionStrategy } from '@angular/core';
-import {DataService} from '../../services/data.service';
-import {TranslateService} from '@ngx-translate/core';
-import {HeaderService} from '../../services/header.service';
+import { Component, ViewChild, AfterViewInit, ChangeDetectorRef, ChangeDetectionStrategy, OnDestroy } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
+
+import { DataService } from '../../services/data.service';
+import { HeaderService } from '../../services/header.service';
 import * as _ from 'lodash';
 declare var $: any;
 declare var M: any;
@@ -12,8 +14,9 @@ declare var M: any;
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 
-export class BibliotecaComponent implements AfterViewInit {
-  @ViewChild("search") search: any;
+export class BibliotecaComponent implements AfterViewInit, OnDestroy {
+
+  @ViewChild('search') search: any;
   books: any [];
   booksShelf: any [];
   themes: any [];
@@ -26,16 +29,21 @@ export class BibliotecaComponent implements AfterViewInit {
   pointer: number;
   page: number;
   pdfPages: number;
-  isLoaded: boolean = false;
-  result: boolean = false;
+  isLoaded = false;
+  result = false;
+  subscription: Subscription;
+  isOpen = false;
+  dt: ChangeDetectorRef;
   constructor(private dataService: DataService,
               private translate: TranslateService,
               private headerService: HeaderService,
-              private detect : ChangeDetectorRef
+              detect: ChangeDetectorRef
   ) {
+    this.subscription = new Subscription();
+    this.dt = detect;
     this.headerService.Hide();
     this.headerService.ChildActive(true);
-    this.dataService.getBooks(this.translate.currentLang)
+   const s1 =  this.dataService.getBooks(this.translate.currentLang)
       .subscribe((data: any) => {
        this.books = data.docs.filter((f: any) => f.tematica === 'articulos' || f.tematica.indexOf('norma') !== -1 );
        //noinspection TypeScriptUnresolvedFunction
@@ -50,37 +58,37 @@ export class BibliotecaComponent implements AfterViewInit {
     this.pdfPages = 1;
     this.booksShelf = [];
     this.searchString = '';
-
+    this.subscription.add(s1);
   }
 
   setItem(theme) {
-    if (theme.indexOf('articulos')!== -1 || theme === 'norma' ) {
+    if (theme.indexOf('articulos') !== -1 || theme === 'norma' ) {
       this.collapsibleParent.forEach((v) => v.close());
     }
 
-    if (theme.indexOf('articulos')!== -1) {
+    if (theme.indexOf('articulos') !== -1) {
         this.collapsibleParent[0].open();
     }
 
     if (theme === 'norma') {
         this.themeActual = 'normasBasicos';
       this.collapsibleParent[1].open(0);
-    }
-    else{
+    }   else {
 
       this.themeActual = theme;
     }
-    this.booksShelf = this.books.filter((f: any) => f.tematica.indexOf(this.themeActual)!==-1);
+    this.booksShelf = this.books.filter((f: any) => f.tematica.indexOf(this.themeActual ) !== -1);
     this.reader = this.booksShelf[0];
     this.isLoaded = false;
     this.result = false;
     this.pointer = 1;
     //noinspection TypeScriptUnresolvedVariable
-    this.search.nativeElement.value = "";
-    this.detect.markForCheck();
+    this.search.nativeElement.value = '';
+    this.isOpen = true;
+    this.dt.markForCheck();
 
   }
-  ReadBook(book){
+  ReadBook(book) {
     this.reader = book;
     this.pointer = 1;
     this.result = false;
@@ -110,24 +118,21 @@ export class BibliotecaComponent implements AfterViewInit {
     }
   }
 
-  doSearch (event)
-  {
+  doSearch (event) {
     if (event.keyCode === 13) {
-      if (this.searchString.length>2) {
-          this.startSearch()
-      }
-      else{
+      if (this.searchString.length > 2) {
+          this.startSearch();
+      }     else {
         M.toast({html: '<i>Usted debe introducir al menos tres caracteres. </i>'})
       }
     }
   }
 
   btnSearch() {
-    if (this.searchString.length>2) {
-      this.startSearch()
-    }
-    else{
-      M.toast({html: '<i>Al menos tres caracteres</i>'})
+    if (this.searchString.length > 2) {
+      this.startSearch();
+    }    else {
+      M.toast({html: '<i>Al menos tres caracteres</i>'});
     }
   }
 
@@ -137,19 +142,29 @@ export class BibliotecaComponent implements AfterViewInit {
 
   private populate() {
     this.themeActual = this.themes[0];
-    this.booksShelf = this.books.filter((f: any) => f.tematica.indexOf(this.themeActual)!==-1);
+    this.booksShelf = this.books.filter((f: any) => f.tematica.indexOf(this.themeActual) !== -1);
     this.reader = this.booksShelf[0];
   }
 
   private QuitOverFlow() {
-    $('.ng2-pdf-viewer-container').css('overflow','inherit');
+    $('.ng2-pdf-viewer-container').css('overflow', 'inherit');
   }
 
   private initCollapse() {
-    var elems = document.querySelectorAll('.collapsible');
-    this.collapsibleParent  = M.Collapsible.init(elems,{});
+    const elems = document.querySelectorAll('.collapsible');
+    const component = this;
+    this.collapsibleParent  = M.Collapsible.init(elems, {
+      onOpenEnd: function () {
+        component.isOpen = true;
+        //noinspection TypeScriptUnresolvedVariable
+        component.dt.markForCheck();
+      }
+    });
   }
 
   ngAfterViewInit() { this.initCollapse(); }
+  ngOnDestroy(): void {
+   this.subscription.unsubscribe();
+  }
 }
 

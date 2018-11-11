@@ -1,17 +1,20 @@
-import { Component, AfterViewInit } from '@angular/core';
-import {DataService} from '../../services/data.service';
-import {TranslateService} from '@ngx-translate/core';
-import {HeaderService} from '../../services/header.service';
-import {ContentInterface} from '../../interfaces/content.interface';
+import { Component, AfterViewInit, OnInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
+
+import { DataService } from '../../services/data.service';
+import { HeaderService } from '../../services/header.service';
+import { ContentInterface } from '../../interfaces/content.interface';
 //noinspection TypeScriptCheckImport
 import { fadeOut, fadeIn } from 'ngx-animate';
 import {pulse} from 'ngx-animate/lib';
 import {transition, trigger, useAnimation} from '@angular/animations';
 import {BehaviourService} from '../../services/behaviour.service';
 import * as _ from 'lodash';
-import {FooterService} from "../../services/footer.service";
+import {FooterService} from '../../services/footer.service';
 declare var $: any;
 declare var M: any;
+declare var isOpen: any;
 @Component({
   selector: 'app-ismaelillo',
   templateUrl: './ismaelillo.component.html',
@@ -25,8 +28,8 @@ declare var M: any;
   ],
 })
 
-export class IsmaelilloComponent implements AfterViewInit{
-  content : ContentInterface [] = [];
+export class IsmaelilloComponent implements AfterViewInit, OnInit, OnDestroy {
+  content: ContentInterface [] = [];
   books: any [];
   readMode = false;
   teamMode = false;
@@ -37,7 +40,7 @@ export class IsmaelilloComponent implements AfterViewInit{
   page: number;
   pointer: number;
   pdfPages: number;
-  isLoaded: boolean = false;
+  isLoaded = false;
   fadeIn: any;
   fadeOut: any;
   showLecture: any;
@@ -47,18 +50,25 @@ export class IsmaelilloComponent implements AfterViewInit{
   searchString: string;
   estado: string;
   currentBook: any;
+  instance: any;
   /*panelMode, readMode, searchMode, teamMode, actionMode*/
   currentMode: string;
   cientifico: any[];
+  isOpen =  false;
+  dt: ChangeDetectorRef;
+  subscription: Subscription;
   constructor(private dataService: DataService,
               private translate: TranslateService,
               private headerService: HeaderService,
               private footerService: FooterService,
-              private behaviour: BehaviourService) {
+              private behaviour: BehaviourService,
+              dt: ChangeDetectorRef
+  ) {
+    this.subscription = new Subscription();
     this.headerService.Show();
     this.headerService.ChildActive(true);
     this.footerService.Show();
-    this.dataService.getBooks(this.translate.currentLang).subscribe((data: any) => {
+    const s1 = this.dataService.getBooks(this.translate.currentLang).subscribe((data: any) => {
       this.books = data.docs.filter((f: any) => f.tematica === 'ismaelillo').map((m: any) => {m.tipo = 'pdf'; return m;});
       this.books.push(
         {
@@ -72,7 +82,7 @@ export class IsmaelilloComponent implements AfterViewInit{
       this.books = this.books.sort((a: any, b: any) => a.order - b.order);
       this.currentBook = this.books[0];
     });
-    this.dataService.getCientifico(this.translate.currentLang).subscribe((data:any) => {
+    const s2 = this.dataService.getCientifico(this.translate.currentLang).subscribe((data:any) => {
       this.cientifico = data.docs;
     });
     this.headerService.Hide();
@@ -87,6 +97,10 @@ export class IsmaelilloComponent implements AfterViewInit{
     /*PDF Viewer*/
     this.pointer = 1;
     this.pdfPages = 1;
+    this.isOpen = false;
+    this.dt = dt;
+    this.subscription.add(s1);
+    this.subscription.add(s2);
   }
   openRead(item, readMode, searchString) {
     this.readMode = readMode;
@@ -95,7 +109,7 @@ export class IsmaelilloComponent implements AfterViewInit{
     this.currentMode = readMode ? 'panelMode' : 'readMode';
     this.readItem = item;
     this.searchString = searchString;
-    this.pointer=1;
+    this.pointer = 1;
     //noinspection TypeScriptUnresolvedFunction
     if (_.isUndefined(item)) {
       this.teamMode = false;
@@ -109,7 +123,7 @@ export class IsmaelilloComponent implements AfterViewInit{
           this.seekMode = 'selectMode';
           this.resultMode = 'readMode';
           this.searchMode = false;
-          this.estado ='testimonial';
+          this.estado = 'testimonial';
           this.currentBook = item;
           setTimeout(() => {
             this.behaviour.CastTeamMode(true);
@@ -121,7 +135,7 @@ export class IsmaelilloComponent implements AfterViewInit{
           this.seekMode = 'selectMode';
           this.resultMode = 'readMode';
           this.currentBook = item;
-          this.estado ='libros';
+          this.estado = 'libros';
           break;
         default:
           this.teamMode = false;
@@ -130,10 +144,10 @@ export class IsmaelilloComponent implements AfterViewInit{
       }
     }
   }
-  Estado(estado: string){
-    this.estado= estado;
-    this.page=1;
-    this.pointer=1;
+  Estado(estado: string) {
+    this.estado = estado;
+    this.page = 1;
+    this.pointer = 1;
     this.readMode = !this.readMode;
     this.currentBook = this.books[0];
     $('body,html').animate({
@@ -162,18 +176,37 @@ export class IsmaelilloComponent implements AfterViewInit{
 
   ngAfterViewInit() {
     $('#nav').addClass('fixed-nav').removeClass('hidden');
-    var elems = document.querySelectorAll('.collapsible');
-    var instances = M.Collapsible.init(elems, {});
+    const component = this;
+    const elems = document.querySelectorAll('.collapsible');
+    this.instance = M.Collapsible.init(elems, {
+      onOpenEnd: function () {
+        component.isOpen = true;
+        //noinspection TypeScriptUnresolvedVariable
+        component.dt.markForCheck();
+      },
+      onCloseEnd: function () {
+        component.isOpen = false;
+        //noinspection TypeScriptUnresolvedVariable
+        component.dt.markForCheck();
+      }
+    });
+  }
+  ngOnInit(): void {
+
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
   setFirstFund() {
    //noinspection TypeScriptUnresolvedFunction
-    const item =  _.first(_.filter(this.books,(f: any) => f.option === 'presupuesto'));
+    const item =  _.first(_.filter(this.books, (f: any) => f.option === 'presupuesto'));
    this.openRead(item, !this.readMode, '');
   }
 
   private QuitOverFlow() {
-    $('.ng2-pdf-viewer-container').css('overflow','inherit');
+    $('.ng2-pdf-viewer-container').css('overflow', 'inherit');
   }
 }
 

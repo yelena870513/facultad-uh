@@ -56,3 +56,6 @@ div.active {
   color: #FFF;
   background-color: rgb(144,128,88);
 }
+.collapsible /deep/ div.active, .collapsible-header:hover  {
+  font-size: 16px;
+}

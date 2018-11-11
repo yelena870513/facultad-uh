@@ -23,7 +23,8 @@
         <!-- Category -->
         <ul class="collapsible">
           <li >
-            <div class="collapsible-header" (click)="Estado('preguntas')"  [ngClass]="{'active': estado === 'preguntas'}">{{'CONTENIDOS.CATEGORY' | translate}}</div>
+            <div class="collapsible-header" (click)="Estado('preguntas')"  [ngClass]="{'active': estado === 'preguntas'}">
+              <i class="material-icons" *ngIf="!isOpen || estado !== 'preguntas'">add</i><i class="material-icons" *ngIf="isOpen && estado === 'preguntas'">remove</i>{{'CONTENIDOS.CATEGORY' | translate}}</div>
             <div class="collapsible-body" ><ul>
               <li class="contenidos" *ngFor="let item of categories  |paginate: { itemsPerPage: 5, currentPage: page }">
                 <a class="contenidos" (click)="Selecter(item)" [ngClass]="{'active': item.title === current.title, 'search-result': result}">{{item.title}}</a>
@@ -41,7 +42,9 @@
               </pagination-controls></div>
           </li>
           <li>
-            <div class="collapsible-header" (click)="Estado('glossary')"  [ngClass]="{'active': estado === 'glossary'}">{{'CONTENIDO.GLOSSARY' | translate}}</div>
+            <div class="collapsible-header" (click)="Estado('glossary')"  [ngClass]="{'active': estado === 'glossary'}">
+              <i class="material-icons" *ngIf="!isOpen || estado !== 'glossary'">add</i><i class="material-icons" *ngIf="isOpen && estado === 'glossary'">remove</i>{{'CONTENIDO.GLOSSARY' | translate}}
+            </div>
             <div class="collapsible-body">
               <ul>
                 <li class="contenidos"  *ngFor="let item of glossary" >
@@ -52,7 +55,9 @@
             </div>
           </li>
           <li>
-            <div class="collapsible-header" (click)="Estado('ethic')"  [ngClass]="{'active': estado === 'ethic'}">{{'CONTENIDO.ETHIC' | translate}}</div>
+            <div class="collapsible-header" (click)="Estado('ethic')"  [ngClass]="{'active': estado === 'ethic'}">
+              <i class="material-icons" *ngIf="!isOpen || estado !== 'ethic'">add</i><i class="material-icons" *ngIf="isOpen && estado === 'ethic'">remove</i> {{'CONTENIDO.ETHIC' | translate}}
+            </div>
             <div class="collapsible-body" >
               <ul>
                 <li class="contenidos" *ngFor="let item of books ">
@@ -93,14 +98,6 @@
               </div>
             </div>
           </div>
-
-
-
-
-
-
-
-
         </div>
       </main>
 

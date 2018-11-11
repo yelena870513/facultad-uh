@@ -158,7 +158,9 @@
             <span class="card-title grey-text text-darken-4">{{i.title}}<i
               class="mdi-navigation-close right"></i></span><br>
             <div class="img" *ngIf="i.type === 'img'">
-            <img src="./assets/images/{{i.description}}"/></div>
+              <img src="./assets/images/{{i.description}}"/>
+            </div>
+            <p [innerHtml]="i.description"  *ngIf="i.type !== 'img'"></p>
           </div>
         </div>
       </div>

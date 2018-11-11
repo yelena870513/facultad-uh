@@ -25,7 +25,9 @@
       </ul>
       <ul class="collapsible presupuesto">
         <li >
-          <div [ngClass]="{'active': currentBook && currentBook.option}" class="collapsible-header" (click)="setFirstFund()">{{'ISMAELILLO.FUNDS' | translate}}</div>
+          <div [ngClass]="{'active': currentBook && currentBook.option}" class="collapsible-header has-dropdown" (click)="setFirstFund()">
+            <i class="material-icons" *ngIf="!isOpen">add</i><i class="material-icons" *ngIf="isOpen">remove</i>{{'ISMAELILLO.FUNDS' | translate}}&nbsp;
+          </div>
           <div class="collapsible-body">
             <ul>
               <li class="contenidos" *ngFor="let item of books | option: 'presupuesto' ">

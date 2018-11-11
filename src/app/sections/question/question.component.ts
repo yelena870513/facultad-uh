@@ -1,9 +1,10 @@
-import { Component, OnInit, AfterViewInit, TemplateRef, ElementRef ,ViewChild} from '@angular/core';
+import { Component, OnInit, AfterViewInit, TemplateRef, ElementRef ,ViewChild, OnDestroy} from '@angular/core';
 import * as uuid from 'uuid';
 import {HeaderService} from '../../services/header.service';
 import * as _ from 'lodash';
 import {DataService} from '../../services/data.service';
 import {TranslateService} from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 //noinspection TypeScriptCheckImport
 import {log} from 'util';
 declare var M: any;
@@ -13,7 +14,7 @@ declare var $: any;
   templateUrl: './question.component.html',
   styleUrls: ['./question.component.css']
 })
-export class QuestionComponent implements OnInit, AfterViewInit {
+export class QuestionComponent implements OnInit, AfterViewInit, OnDestroy {
   questions = [];
   books = [];
   i: any;
@@ -31,24 +32,26 @@ export class QuestionComponent implements OnInit, AfterViewInit {
   base='./assets/video/';
   poster='./assets/images/';
   @ViewChild('media') media: ElementRef;
+  subscription: Subscription;
   constructor(private headerService: HeaderService,
               private dataService: DataService,
               private translate: TranslateService) {
+    this.subscription = new Subscription();
     this.headerService.Hide();
     this.headerService.ChildActive(false);
-    this.dataService.getQuestion(this.translate.currentLang).subscribe((data: any) => {
+    const s1 = this.dataService.getQuestion(this.translate.currentLang).subscribe((data: any) => {
       this.questions = data.docs.sort((s: any, s2: any) => s.order - s2.order);
       this.i = this.questions[0];
     }, ( error1 => {
        console.log(error1);
     } ));
 
-    this.dataService.getBooks(this.translate.currentLang).subscribe((data: any) => {
+    const s2 = this.dataService.getBooks(this.translate.currentLang).subscribe((data: any) => {
       this.books = data.docs.filter(f => f.tematica === 'estudiantes');
       this.reader = this.books[0];
     });
 
-    this.dataService.getGallery(this.translate.currentLang).subscribe((data: any) =>{
+    const s3 = this.dataService.getGallery(this.translate.currentLang).subscribe((data: any) =>{
       this.gallery = data.docs.filter((f:any) => f.type === "video" && f.theme == 'SECTION.COMPLEMENTARIO')
         .sort((a: any, b: any) => a.order - b.order)
         .map((i: any) => {
@@ -63,6 +66,9 @@ export class QuestionComponent implements OnInit, AfterViewInit {
     this.pointer = 1;
     this.pdfPages = 1;
     this.estado = 'cuestionario';
+    this.subscription.add(s1);
+    this.subscription.add(s2);
+    this.subscription.add(s3);
   }
 
 
@@ -111,7 +117,11 @@ export class QuestionComponent implements OnInit, AfterViewInit {
     this.page=1;
     this.readMode = !this.readMode;
     this.player = this.gallery[0];
-    this.media.nativeElement.load();
+    //noinspection TypeScriptUnresolvedFunction
+    if (!_.isNil(this.media)) {
+      this.media.nativeElement.load();
+    }
+
     this.reader = this.books[0];
     $('body,html').animate({
       scrollTop: 0
@@ -168,6 +178,10 @@ export class QuestionComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     $('#nav').addClass('fixed-nav').removeClass('hidden');
 
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
   ngAfterViewInit() {

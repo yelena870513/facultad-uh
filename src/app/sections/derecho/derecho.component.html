@@ -15,7 +15,9 @@
         <!-- Category -->
         <ul class="collapsible">
           <li *ngIf="booksShelf&&booksShelf.length>0">
-            <div class="collapsible-header" (click)="Estado('juristas')"  [ngClass]="{'active': estado === 'juristas'}">{{'DERECHO.JURISTAS'  | translate}}</div>
+            <div class="collapsible-header" (click)="Estado('juristas')"  [ngClass]="{'active': estado === 'juristas'}">
+                <i class="material-icons" *ngIf="!isOpen || estado !== 'juristas'">add</i><i class="material-icons" *ngIf="isOpen && estado === 'juristas'">remove</i>{{'DERECHO.JURISTAS'  | translate}}
+            </div>
             <div class="collapsible-body" (click)="setItem(item)"><ul>
               <li class="" *ngFor="let item of booksShelf |paginate: { itemsPerPage: 5, currentPage: page, id: 'booksShelf' }">
                 <a class="" (click)="ReadBook(item)" [ngClass]="{'active': item.title === reader.title}" >{{item.title}}
@@ -37,7 +39,9 @@
             </div>
           </li>
           <li  *ngIf="booksShelf1&&booksShelf1.length>0">
-            <div class="collapsible-header" (click)="Estado('constituciones')"  [ngClass]="{'active': estado === 'constituciones'}">{{'DERECHO.CONSTITUCIONES' | translate}}</div>
+            <div class="collapsible-header" (click)="Estado('constituciones')"  [ngClass]="{'active': estado === 'constituciones'}">
+                <i class="material-icons" *ngIf="!isOpen || estado !== 'constituciones'">add</i><i class="material-icons" *ngIf="isOpen && estado === 'constituciones'">remove</i> {{'DERECHO.CONSTITUCIONES' | translate}}
+            </div>
             <div class="collapsible-body">
               <ul>
                 <li class=""  *ngFor="let item of booksShelf1 |paginate: { itemsPerPage: 5, currentPage: page1, id: 'booksShelf1'  }">
