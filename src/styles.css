@@ -10,7 +10,9 @@
   url('assets/font/MaterialIcons-Regular.woff') format('woff'),
   url('assets/font/MaterialIcons-Regular.ttf') format('truetype');
 }
-
+body {
+  background-color: #fbfdd1;
+}
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -57,7 +59,9 @@ h3.plegable {
 .white-text {
   color: rgb(255, 255, 102) !important;
 }
-
+#main .blog .blog-content {
+  background-color: #fbfdd1;
+}
 .main-nav>li>a {
   color: rgb(255, 255, 102) !important;
   font-size: 17px;
@@ -246,6 +250,8 @@ li.contenidos{
   height: 8em;
   line-height: 18px;
 }
+
+
 /*Media Queries*/
 @media (min-width: 992px) {
 

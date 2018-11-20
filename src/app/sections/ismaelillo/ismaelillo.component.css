@@ -113,3 +113,9 @@ a:hover {
 /*#main2{*/
   /*margin-top: -7em;*/
 /*}*/
+*@media only screen and (max-width: 1024px)
+{
+  h3.titulo {
+    width: 152%;
+  }
+}

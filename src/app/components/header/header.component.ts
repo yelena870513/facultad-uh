@@ -43,7 +43,8 @@ export class HeaderComponent implements AfterViewInit {
         children:[
         {name: 'NAV.GALLERY', url: '/gallery'},
         {name: 'NAV.PLAYLIST', url: '/playlist'},
-      ]}
+      ]},
+      {name: 'NAV.CREDITOS', url: '/creditos'},
     ];
     this.headerService.showHeader
       .subscribe(show => setTimeout(() => this.showHeader = show));

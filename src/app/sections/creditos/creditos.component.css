@@ -1,0 +1,27 @@
+.credit{
+  text-transform: uppercase;
+  line-height: 13px;
+
+}
+h4.creditos{
+  margin-bottom: 3rem;
+  color: rgb(144,128,88);
+  margin-top: 5em;
+}
+.resaltar{
+
+  color: #656565;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+.responsable{
+  text-transform: none;
+  font-size: 16px;
+  text-align: center;
+  line-height: 2px;
+}
+p{
+  margin-left: 0px;
+  font-size: 16px;
+}

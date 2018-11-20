@@ -55,6 +55,7 @@ import { HotWordsDirective } from './directives/hot-words.directive';
 import { OptionPipe } from './pipes/option.pipe';
 import { WordFilterPipe } from './pipes/word-filter.pipe';
 import { WordExcludePipe } from './pipes/word-exclude.pipe';
+import { CreditosComponent } from './sections/creditos/creditos.component';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -93,6 +94,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     OptionPipe,
     WordFilterPipe,
     WordExcludePipe,
+    CreditosComponent,
   ],
   imports: [
     BrowserModule,

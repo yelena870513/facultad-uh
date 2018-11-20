@@ -124,28 +124,13 @@ export class ContenidosComponent implements AfterViewInit, OnDestroy {
               // tslint:disable-next-line:max-line-length
               message = 'Fenómeno social históricamente condicionado. Sistema de órganos de poder público. Organización política de poder soberano.';
               break;
-            case 'enfoque de género':
-              message = 'no está definido';
-              break;
             case 'bioética':
               // tslint:disable-next-line:max-line-length
               message = 'Ciencia moderna que responde a la preocupación del ser humano ante las investigaciones científicas y los adelantos tecnológicos, focalizando su atención en los dilemas éticos alrededor de los procesos investigativos, o sea, los medios que utilizan los científicos para alcanzar su fin último, con énfasis en el respeto a la vida, el desarrollo futuro de la humanidad y la protección del medio ambiente.';
               break;
-            case 'indisciplinas sociales':
-              message = 'no está definido';
-              break;
-            case 'ilicitudes':
-              message = 'no está definido';
-              break;
             case 'responsabilidad ':
               // tslint:disable-next-line:max-line-length
               message = 'Es la exigencia por parte de la ley que se establece cuando ocurre un daño o infracción de una norma jurídica para restaurar el objeto del daño o la infracción a la situación anterior, sancionar al comisor del acto, y prevenir de esa manera futuras conductas semejantes.';
-              break;
-            case 'sanciones':
-              message = 'no está definido';
-              break;
-            case 'estados peligrosos':
-              message = 'no está definido';
               break;
             default:
               break;

@@ -84,3 +84,6 @@ li.preguntas::first-letter{
 
   border-bottom: 1px solid #ddd;
 }
+.reflexion {
+  background-color: #fbfdd1;
+}

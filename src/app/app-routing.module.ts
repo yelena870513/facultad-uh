@@ -13,6 +13,7 @@ import {ProfesoresComponent} from "./sections/profesores/profesores.component";
 import {LandingComponent} from "./sections/landing/landing.component";
 import {GalleryComponent} from './multimedia/gallery/gallery.component';
 import {PlaylistComponent} from './multimedia/playlist/playlist.component';
+import {CreditosComponent} from "./sections/creditos/creditos.component";
 
 
 const routes: Routes = [
@@ -28,7 +29,8 @@ const routes: Routes = [
   {path: 'profesores', component: ProfesoresComponent},
   {path: 'landing', component: LandingComponent},
   {path: 'gallery', component: GalleryComponent},
-  {path: 'playlist', component: PlaylistComponent}
+  {path: 'playlist', component: PlaylistComponent},
+  {path: 'creditos', component: CreditosComponent}
 
 ];
 
