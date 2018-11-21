@@ -30,10 +30,10 @@
                 {{'LIBRARY.RULES' | translate}}
             </div>
             <div class="collapsible-body">
-             <ul class="collapsible">
+             <ul class="collapsible child">
                    <li *ngFor="let item of themes | wordExclude: 'articulos'" >
                   <div class="collapsible-header" (click)="setItem(item)" [ngClass]="{'active': item === themeActual }">
-                      <i class="material-icons" *ngIf="!isOpen || item !== themeActual">add</i><i class="material-icons" *ngIf="isOpen && item === themeActual">remove</i> {{item | translate}}
+                      <i class="material-icons" *ngIf="!childIsOpen || item !== themeActual">add</i><i class="material-icons" *ngIf="childIsOpen && item === themeActual">remove</i> {{item | translate}}
                   </div>
                   <div class="collapsible-body">
                     <ul>
@@ -63,9 +63,6 @@
         </ul>
 
       </div>
-
-
-
    </aside>
 
       <!-- Main -->

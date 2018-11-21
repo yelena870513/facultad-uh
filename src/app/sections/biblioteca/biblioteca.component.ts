@@ -33,6 +33,7 @@ export class BibliotecaComponent implements AfterViewInit, OnDestroy {
   result = false;
   subscription: Subscription;
   isOpen = false;
+  childIsOpen = false;
   dt: ChangeDetectorRef;
   constructor(private dataService: DataService,
               private translate: TranslateService,
@@ -76,6 +77,7 @@ export class BibliotecaComponent implements AfterViewInit, OnDestroy {
     }   else {
 
       this.themeActual = theme;
+
     }
     this.booksShelf = this.books.filter((f: any) => f.tematica.indexOf(this.themeActual ) !== -1);
     this.reader = this.booksShelf[0];
@@ -156,6 +158,15 @@ export class BibliotecaComponent implements AfterViewInit, OnDestroy {
     this.collapsibleParent  = M.Collapsible.init(elems, {
       onOpenEnd: function () {
         component.isOpen = true;
+        component.childIsOpen = true;
+        //noinspection TypeScriptUnresolvedVariable
+        component.dt.markForCheck();
+      },
+      onCloseEnd: function () {
+        const isChild = this.el.className.indexOf('child') > -1;
+        component.isOpen = false;
+        component.childIsOpen = isChild ? false: true;
+        component.isOpen = isChild ? true: false;
         //noinspection TypeScriptUnresolvedVariable
         component.dt.markForCheck();
       }

@@ -87,3 +87,10 @@ li.preguntas::first-letter{
 .reflexion {
   background-color: #fbfdd1;
 }
+.question div.active{
+  font-size: 16px;
+}
+
+.question .collapsible-header:hover{
+  font-size: 16px;
+}

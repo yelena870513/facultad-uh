@@ -1,4 +1,4 @@
-<div id="blog" class="section md-padding">
+<div id="blog" class="section md-padding question">
   <div class="container">
     <div class="row">
       <div class="section-header text-center">
@@ -20,7 +20,8 @@
         <ul class="collapsible">
           <li>
             <div class="collapsible-header" (click)="Estado('cuestionario')"
-                 [ngClass]="{'active': estado === 'cuestionario'}">{{'QUESTION.QUESTION' | translate}}
+                 [ngClass]="{'active': estado === 'cuestionario'}">
+                 <i class="material-icons" *ngIf="!isOpen || estado !== 'cuestionario'">add</i><i class="material-icons" *ngIf="isOpen && estado === 'cuestionario'">remove</i>{{'QUESTION.QUESTION' | translate}}
             </div>
             <div class="collapsible-body">
               <ul>
@@ -43,7 +44,7 @@
 
           <li>
             <div class="collapsible-header" (click)="Estado('libros')" [ngClass]="{'active': estado === 'libros'}">
-              {{'QUESTION.BOOKS' | translate}}
+              <i class="material-icons" *ngIf="!isOpen || estado !== 'libros'">add</i><i class="material-icons" *ngIf="isOpen && estado === 'libros'">remove</i> {{'QUESTION.BOOKS' | translate}}
             </div>
             <div class="collapsible-body">
               <ul>
@@ -57,7 +58,7 @@
           </li>
           <li>
             <div class="collapsible-header" (click)="Estado('complementario')" [ngClass]="{'active': estado === 'complementario'}">
-              {{'QUESTION.COMPLEMENT' | translate}}
+              <i class="material-icons" *ngIf="!isOpen || estado !== 'complementario'">add</i><i class="material-icons" *ngIf="isOpen && estado === 'complementario'">remove</i> {{'QUESTION.COMPLEMENT' | translate}}
             </div>
             <div class="collapsible-body">
               <ul class="collection">

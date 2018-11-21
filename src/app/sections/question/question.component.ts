@@ -1,12 +1,12 @@
-import { Component, OnInit, AfterViewInit, TemplateRef, ElementRef ,ViewChild, OnDestroy} from '@angular/core';
-import * as uuid from 'uuid';
-import {HeaderService} from '../../services/header.service';
-import * as _ from 'lodash';
-import {DataService} from '../../services/data.service';
-import {TranslateService} from '@ngx-translate/core';
+import { Component, OnInit, AfterViewInit, TemplateRef, ElementRef , ViewChild, OnDestroy, ChangeDetectorRef } from '@angular/core';
 import { Subscription } from 'rxjs';
-//noinspection TypeScriptCheckImport
-import {log} from 'util';
+import { TranslateService } from '@ngx-translate/core';
+
+import * as _ from 'lodash';
+
+import { DataService } from '../../services/data.service';
+import { HeaderService } from '../../services/header.service';
+
 declare var M: any;
 declare var $: any;
 @Component({
@@ -29,13 +29,16 @@ export class QuestionComponent implements OnInit, AfterViewInit, OnDestroy {
   pdfPages = 1;
   isLoaded = false;
   estado: string;
-  base='./assets/video/';
-  poster='./assets/images/';
+  base = './assets/video/';
+  poster = './assets/images/';
+  isOpen =  false;
   @ViewChild('media') media: ElementRef;
   subscription: Subscription;
   constructor(private headerService: HeaderService,
               private dataService: DataService,
-              private translate: TranslateService) {
+              private translate: TranslateService,
+              private dt: ChangeDetectorRef
+              ) {
     this.subscription = new Subscription();
     this.headerService.Hide();
     this.headerService.ChildActive(false);
@@ -51,8 +54,8 @@ export class QuestionComponent implements OnInit, AfterViewInit, OnDestroy {
       this.reader = this.books[0];
     });
 
-    const s3 = this.dataService.getGallery(this.translate.currentLang).subscribe((data: any) =>{
-      this.gallery = data.docs.filter((f:any) => f.type === "video" && f.theme == 'SECTION.COMPLEMENTARIO')
+    const s3 = this.dataService.getGallery(this.translate.currentLang).subscribe((data: any) => {
+      this.gallery = data.docs.filter((f: any) => f.type === 'video' && f.theme === 'SECTION.COMPLEMENTARIO')
         .sort((a: any, b: any) => a.order - b.order)
         .map((i: any) => {
           i.src = this.base + i.src;
@@ -72,38 +75,32 @@ export class QuestionComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
 
-  checkAnswer(item,event) {
+  checkAnswer(item, event) {
     item.checked = event.target.checked;
-    if(event.target.checked)
-    {
+    if (event.target.checked) {
 
-        if(item.value === true){
+        if (item.value === true) {
             item.resource = 'T';
 
-        }
-        else{
+        } else {
           item.resource = 'F';
         }
-    }
-    else{
+    } else {
       item.resource = 'N';
     }
   }
 
-  radioAnswer(item,event) {
+  radioAnswer(item, event) {
     item.checked = event.target.checked;
-    if(event.target.checked)
-    {
+    if (event.target.checked) {
 
-        if(item.value === true){
+        if (item.value === true) {
             item.resource = 'T';
 
-        }
-        else{
+        } else {
           item.resource = 'F';
         }
-    }
-    else{
+    } else {
       item.resource = 'N';
     }
   }
@@ -112,9 +109,9 @@ export class QuestionComponent implements OnInit, AfterViewInit, OnDestroy {
     this.droppedItems = this.droppedItems.filter((f: any) => f.name !== e.target.innerText);
   }
 
-  Estado(estado: string){
-    this.estado= estado;
-    this.page=1;
+  Estado(estado: string) {
+    this.estado = estado;
+    this.page = 1;
     this.readMode = !this.readMode;
     this.player = this.gallery[0];
     //noinspection TypeScriptUnresolvedFunction
@@ -131,11 +128,11 @@ export class QuestionComponent implements OnInit, AfterViewInit, OnDestroy {
   onItemDrop(e: any, answer) {
     // Get the dropped data here
     //noinspection TypeScriptUnresolvedFunction
-    if(_.isUndefined(answer.dropped)){
+    if (_.isUndefined(answer.dropped)) {
       answer.dropped = [];
     }
 
-    if(answer.dropped.length < answer.values.length && !_.find(answer.dropped, (value) => value === e.dragData)){
+    if (answer.dropped.length < answer.values.length && !_.find(answer.dropped, (value) => value === e.dragData)) {
     answer.dropped.push(e.dragData);
     }
   }
@@ -146,16 +143,16 @@ export class QuestionComponent implements OnInit, AfterViewInit, OnDestroy {
     this.readMode = false;
     this.i.falseValues = [];
     this.i.trueValues = [];
-    $('.card-reveal').css('display','none');
+    $('.card-reveal').css('display', 'none');
   }
 
-  setPlayer(player: any){
+  setPlayer(player: any) {
     this.player = player;
     this.media.nativeElement.load();
 
   }
 
-  ReadBook(book){
+  ReadBook(book) {
     this.reader = book;
     this.pointer = 1;
     this.readMode = true;
@@ -185,48 +182,60 @@ export class QuestionComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    var elems = document.querySelectorAll('.collapsible');
-    var instances = M.Collapsible.init(elems,{});
+    const component = this;
+    const elems = document.querySelectorAll('.collapsible');
+    const instances = M.Collapsible.init(elems, {
+      onOpenEnd: function () {
+        component.isOpen = true;
+        //noinspection TypeScriptUnresolvedVariable
+        component.dt.markForCheck();
+      },
+      onCloseEnd: function () {
+        component.isOpen = false;
+        //noinspection TypeScriptUnresolvedVariable
+        component.dt.markForCheck();
+      }
+    });
 
     $('body,html').animate({
       scrollTop: 0
     }, 600);
   }
 
-  trueAllowed(items: any[]){
-    return items.filter((f: any) => f.value==true).map((m: any) => m.name);
+  trueAllowed(items: any[]) {
+    return items.filter((f: any) => f.value === true).map((m: any) => m.name);
 
   }
 
   falseAllowed(items: any[]){
-    return items.filter((f: any) => f.value==false).map((m: any) => m.name);
+    return items.filter((f: any) => f.value === false).map((m: any) => m.name);
   }
 
-  onTrueDrop(e: any, answer){
+  onTrueDrop(e: any, answer) {
     // Get the dropped data here
     //noinspection TypeScriptUnresolvedFunction
-    if(_.isUndefined(answer.trueValues)){
+    if (_.isUndefined(answer.trueValues)) {
       answer.trueValues = [];
     }
 
-    if( !_.find(answer.trueValues, (value) => value === e.dragData)){
+    if ( !_.find(answer.trueValues, (value) => value === e.dragData)) {
       answer.trueValues.push(e.dragData);
     }
   }
 
-  onFalseDrop(e: any, answer){
+  onFalseDrop(e: any, answer) {
     // Get the dropped data here
     //noinspection TypeScriptUnresolvedFunction
-    if(_.isUndefined(answer.falseValues)){
+    if (_.isUndefined(answer.falseValues)) {
       answer.falseValues = [];
     }
 
-    if(!_.find(answer.falseValues, (value) => value === e.dragData)){
+    if (!_.find(answer.falseValues, (value) => value === e.dragData)) {
       answer.falseValues.push(e.dragData);
     }
   }
 
   private QuitOverFlow() {
-    $('.ng2-pdf-viewer-container').css('overflow','inherit');
+    $('.ng2-pdf-viewer-container').css('overflow', 'inherit');
   }
 }
